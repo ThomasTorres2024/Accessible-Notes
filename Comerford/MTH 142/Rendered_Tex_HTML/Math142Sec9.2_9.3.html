@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Math142Sec9.2_9.3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.mathpix.com/fonts/cmu.css"/>
+    <style>
+  html,body {
+    width: 100%;
+    height: 100%;
+  }
+  *, *::before,*::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    color: #1E2029;
+    font-size: 14px;
+    line-height: normal;
+  }
+  hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: 500;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+  ol, ul, dl {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+  ol ol, ul ul, ol ul, ul ol {
+    margin-bottom: 0;
+  }
+  dt {
+    font-weight: 500;
+  }
+  dd {
+    margin-bottom: 0.5em;
+    margin-left: 0;
+  }
+  blockquote {
+    margin: 0 0 1em;
+  }
+  dfn {
+    font-style: italic;
+  }
+  b, strong {
+    font-weight: bolder;
+  }
+  small {
+    font-size: 80%;
+  }
+  sub, sup {
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+  a {
+    color: #0B93ff;
+    text-decoration: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  a:hover {
+    color: #33aaff;
+  }
+  a:active {
+    color: #0070d9;
+  }
+  a:active, a:hover {
+    text-decoration: none;
+    outline: 0;
+  }
+  a[disabled] {
+    color: rgba(0, 0, 0, 0.25);
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  pre, code, kbd, samp {
+    font-size: 1em;
+  }
+  pre {
+    margin-top: 0;
+    margin-bottom: 1em;
+    overflow: auto;
+  }
+  figure {
+    margin: 0 0 1em;
+  }
+  img {
+    vertical-align: middle;
+    border-style: none;
+  }
+  svg:not(:root) {
+    overflow: hidden;
+  }
+  table {
+    border-collapse: collapse;
+  }
+  caption {
+    padding-top: 0.75em;
+    padding-bottom: 0.3em;
+    color: rgba(0, 0, 0, 0.45);
+    text-align: left;
+    caption-side: bottom;
+  }
+  th {
+    text-align: inherit;
+  }
+
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+  stroke-width: 3;
+}
+
+    #setText > div {
+        justify-content: inherit;
+        margin-top: 0;
+        margin-bottom: 1em;
+        
+        
+    }
+    
+    
+    
+    #setText div:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    #setText > br, #preview-content br {
+        line-height: 1.2;
+    }
+
+    #preview-content > div {
+        margin-top: 0;
+        margin-bottom: 1em;
+        
+    }    
+    
+    .proof > div, .theorem > div {
+        margin-top: 1rem;
+    }
+
+    #preview-content table {
+      margin-bottom: 1em;
+    }
+
+    #setText table {
+      margin-bottom: 1em;
+    }
+    
+    #preview-content .sub-table table, #setText .sub-table table {
+      margin-bottom: 0;
+    }
+
+    mjx-container {
+      text-indent: 0;
+      overflow-y: hidden;
+      overflow-x: auto;
+      padding-top: 1px;
+      padding-bottom: 1px;
+      
+      
+    }
+    
+    
+    
+    .math-inline mjx-container {
+        display: inline-block !important;
+        page-break-inside: avoid;
+        max-width: 100%;
+        padding: 0;
+        line-height: 0;
+    }
+    .math-inline[data-overflow="visible"] mjx-container {
+      overflow: visible;
+    }
+    .math-inline mjx-container mjx-assistive-mml {
+      max-width: 100%;
+    }
+    .math-block {
+        align-items: center;
+        page-break-after: auto;
+        page-break-inside: avoid;
+        margin: 0;
+        display: block; /* mjx-container has block */
+    }
+    
+    .math-inline {
+      display: inline-flex; /* mjx-container has inline-block. To prevent displacement during use overflow-x: auto;*/
+      max-width: 100%;
+    }
+    
+    .math-block[data-width="full"] {
+      overflow-x: auto;
+      display: flex; /* mjx-container has flex */
+    }
+
+    .math-block[data-width="full"] mjx-container[jax=SVG][display=true] {
+      display: flex;
+      flex: 1 1;
+      justify-content: center;
+    }
+    
+    svg .math-inline {
+      display: initial;
+      max-width: initial;
+    }
+    
+    svg .math-inline mjx-container {
+      max-width: initial;
+    }
+    
+    svg mjx-container {
+      overflow: visible;
+      padding: 0;
+    }
+    
+    svg math-block[data-width="full"] {
+      overflow: visible;
+    }
+    
+    .math-block,.math-inline {
+      --mmd-highlight-color: rgba(0, 147, 255, 0.25);
+      --mmd-highlight-text-color: #1e2029;
+    }
+
+    .math-block[data-highlight-color] mjx-container[jax="SVG"] > svg {
+      background-color: var(--mmd-highlight-color);
+    }    
+    
+    .math-block[data-highlight-text-color] mjx-container[jax="SVG"] > svg {
+      color: var(--mmd-highlight-text-color);
+    }    
+    .math-inline[data-highlight-color] mjx-container[jax="SVG"] {
+      background-color: var(--mmd-highlight-color);
+    }    
+    
+    .math-inline[data-highlight-text-color] mjx-container[jax="SVG"] {
+      color: var(--mmd-highlight-text-color);
+    }
+    
+    .math-block p {
+        flex-shrink: 1;
+    }
+    .math-block mjx-container {
+        margin: 0 !important;
+    }
+    .math-error {
+        background-color: yellow;
+        color: red;
+    }
+
+    #preview-content img, #setText img {
+        max-width: 100%;
+    }
+    
+    #preview-content blockquote,  #setText blockquote {
+        page-break-inside: avoid;
+        color: #666;
+        margin: 0 0 1em 0;
+        padding-left: 3em;
+        border-left: .5em solid #eee;
+    }
+
+    #preview-content pre, #setText pre {
+        border: none;
+        padding: 0;
+        overflow: auto;
+        font-size: 85%;
+        line-height: 1.45;
+        border-radius: 6px;
+        box-sizing: border-box;
+        background: #f8f8fa;
+    }
+    #preview-content pre code, #setText pre code{
+        padding: 1rem;
+        display: block;
+        overflow-x: auto;
+        line-height: 24px;
+    }
+    .empty {
+        text-align: center;
+        font-size: 18px;
+        padding: 50px 0 !important;
+    }
+
+    #setText table, #preview-content table {
+        display: table; 
+        overflow: auto;
+        max-width: 100%;
+        border-collapse: collapse;
+        page-break-inside: avoid;
+    }
+      
+    #setText table th, #preview-content table th {
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    #setText table td, #preview-content table td,
+    #setText table th, #preview-content table th {
+        border: 1px solid #dfe2e5;
+        padding: 6px 13px;
+    }
+      
+    #setText table tr, #preview-content table tr {
+        background-color: #fff;
+        border-top: 1px solid #c6cbd1;
+    }
+    
+    #setText table tr:nth-child(2n), #preview-content table tr:nth-child(2n) {
+        background-color: #f6f8fa;
+    }
+    
+    #preview-content .main-title, #setText .main-title {
+        text-align: center;
+        line-height: 1.2;
+        margin: 0 auto 1em auto;
+    }
+
+    #preview-content .author, #setText .author  {
+        text-align: center;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #preview-content .author p, #setText .author p {
+        min-width: 30%;
+        max-width: 50%;
+        padding: 0 7px;
+    }
+
+    #preview-content .author > p > span, #setText .author > p > span {
+        display: block;
+        text-align: center;
+    }
+
+    #preview-content .section-title, #setText .section-title {
+        margin-top: 1.5em;
+    }
+
+    #preview-content .abstract, #setText .abstract {
+        text-align: justify;
+        margin-bottom: 1em;
+    }
+
+    #preview-content .abstract p, #setText .abstract p {
+        margin-bottom: 0;
+    }
+
+    @media print {
+
+      #preview {
+        font-size: 10pt!important;
+      }
+
+      svg {
+        shape-rendering: crispEdges;
+      }
+
+      .math-block svg, math-inline svg {
+        margin-top: 1px;
+      }
+
+      #preview-content img, #setText img {
+        display: block;
+      }
+      
+      #preview-content .figure_img img, #setText .figure_img img {
+        display: inline;
+      }
+
+      .preview-right {
+        word-break: break-word;
+      }
+
+      #preview-content h1, #setText h1 {
+        page-break-inside: avoid;
+        position: relative;
+        border: 2px solid transparent;
+      }
+  
+      #preview-content h1::after, #setText h1::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-bottom: -100px;
+        position: relative;
+      }
+  
+      #preview-content h2, #setText h2 {
+        page-break-inside: avoid;
+        position: relative;
+        border: 2px solid transparent;
+      }
+  
+      #preview-content h2::after, #setText h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-bottom: -100px;
+        position: relative;
+      }
+  
+      #preview-content h3, #setText h3 {
+        page-break-inside: avoid;
+        position: relative;
+        border: 2px solid transparent;
+      }
+  
+      #preview-content h3::after, #setText h3::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-bottom: -100px;
+        position: relative;
+      }
+  
+      #preview-content h4, #setText h4 {
+        page-break-inside: avoid;
+        position: relative;
+        border: 2px solid transparent;
+      }
+  
+      #preview-content h4::after, #setText h4::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-bottom: -100px;
+        position: relative;
+      }
+  
+      #preview-content h5, #setText h5 {
+        page-break-inside: avoid;
+        position: relative;
+        border: 2px solid transparent;
+      }
+  
+      #preview-content h5::after, #setText h5::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-bottom: -100px;
+        position: relative;
+      }
+  
+      #preview-content h6, #setText h6 {
+        page-break-inside: avoid;
+        position: relative;
+        border: 2px solid transparent;
+      }
+  
+      #preview-content h6::after, #setText h6::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-bottom: -100px;
+        position: relative;
+      }
+    }
+    #preview-content sup, #setText sup {
+      top: -.5em;
+      position: relative;
+      font-size: 75%;
+      line-height: 0;
+      vertical-align: baseline;
+    }
+    
+    #preview-content .text-url, #setText .text-url {
+      color: #0B93ff;
+      cursor: text;
+      pointer-events: none;
+    }
+    
+    #preview-content .text-url a:hover, #setText .text-url a:hover {
+      color: #0B93ff;
+    }
+    
+    mark {
+      background-color: #feffe6;
+    }
+    
+    span[data-underline-type] mark {
+      background: inherit;
+      background-color: #feffe6;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    
+    *[data-has-dotfill] {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    *[data-has-dotfill] .dotfill::after {
+      position: absolute;
+      padding-left: .25ch;
+      content: " . . . . . . . . . . . . . . . . . . . "
+          ". . . . . . . . . . . . . . . . . . . . . . . "
+          ". . . . . . . . . . . . . . . . . . . . . . . "
+          ". . . . . . . . . . . . . . . . . . . . . . . "
+          ". . . . . . . . . . . . . . . . . . . . . . . "
+          ". . . . . . . . . . . . . . . . . . . . . . . "
+          ". . . . . . . . . . . . . . . . . . . . . . . ";
+      text-align: right;
+    }
+    
+   .smiles {
+     text-align: center;
+   }
+
+   div.svg-container, #setText > div.svg-container {
+      display: flex;
+      justify-content: center;
+   }
+
+    #preview-content code, #setText code {
+      font-family: Inconsolata;
+      font-size: inherit;
+      display: initial;
+      background: #f8f8fa;
+    }
+    #preview-content .mmd-highlight code, #setText .mmd-highlight code, 
+    #preview-content pre.mmd-highlight code, #setText pre.mmd-highlight code {
+      background-color: transparent;
+    }
+    #preview-content pre code, #setText pre code {
+      font-family: 'DM Mono', Inconsolata, monospace;
+      color: #333;
+      font-size: 15px;
+    }
+
+    .hljs-comment,
+    .hljs-quote {
+      color: #998;
+      font-style: italic;
+    }
+
+    .hljs-command {
+      color: #005cc5;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-subst {
+      color: #d73a49;
+      font-weight: bold;
+    }
+
+    .hljs-number,
+    .hljs-literal,
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-tag .hljs-attr {
+      color: #005cc5;
+    }
+
+    .hljs-string,
+    .hljs-doctag {
+      color: #24292e;
+    }
+
+    .hljs-title,
+    .hljs-section,
+    .hljs-selector-id {
+      color: #6f42c1;
+      font-weight: bold;
+    }
+
+    .hljs-subst {
+      font-weight: normal;
+    }
+
+    .hljs-type,
+    .hljs-class .hljs-title {
+      color: #458;
+      font-weight: bold;
+    }
+
+    .hljs-tag,
+    .hljs-name,
+    .hljs-attribute {
+      color: #000080;
+      font-weight: normal;
+    }
+
+    .hljs-regexp,
+    .hljs-link {
+      color: #009926;
+    }
+
+    .hljs-symbol,
+    .hljs-bullet {
+      color: #990073;
+    }
+
+    .hljs-built_in,
+    .hljs-builtin-name {
+      color: #24292e;
+    }
+
+    .hljs-meta {
+      color: #999;
+      font-weight: bold;
+    }
+
+    .hljs-meta-keyword {
+      color: #d73a49;
+    }
+
+    .hljs-meta-string {
+      color: #032f62;
+    }
+
+    .hljs-deletion {
+      background: #fdd;
+    }
+
+    .hljs-addition {
+      background: #dfd;
+    }
+
+    .hljs-emphasis {
+      font-style: italic;
+    }
+
+    .hljs-strong {
+      font-weight: bold;
+    }
+
+    .table_tabular table th,  .table_tabular table th {
+        border: none !important;
+        padding: 6px 13px;
+    }
+      
+    .tabular tr, .tabular tr {
+        border-top: none !important;
+        border-bottom: none !important;
+    }
+    .tabular td, .tabular td {
+        border-style: none !important;
+        background-color: #fff;
+        border-color: #000 !important;
+        word-break: keep-all;
+        padding: 0.1em 0.5em !important;
+    }
+    .tabular {
+        display: inline-table !important;
+        height: fit-content;
+    }
+    .tabular td > p {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    .tabular td._empty {
+      height: 1.3em;
+    }
+    .tabular td .f {
+      opacity: 0;
+    }
+    
+    html[data-theme="dark"] .tabular tr, html[data-theme="dark"] .tabular td {
+      background-color: #202226;
+      border-color: #fff !important;
+    }  
+    .table_tabular {
+        overflow-x: auto;
+        padding: 0 2px 0.5em 2px;
+    }
+    .figure_img {
+       margin-bottom: 0.5em;
+       overflow-x: auto;
+    }
+
+  ol.enumerate, ul.itemize {
+    padding-inline-start: 40px;
+  }
+/* It's commented because counter not supporting to change value 
+  ol.enumerate.lower-alpha {
+    counter-reset: item ;
+    list-style-type: none !important;
+  }
+  .enumerate.lower-alpha > li {
+    position: relative;
+  }
+  .enumerate.lower-alpha > li:before { 
+    content: "("counter(item, lower-alpha)")"; 
+    counter-increment: item; 
+    position: absolute;
+    left: -47px;
+    width: 47px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 7px;
+    flex-wrap: nowrap;
+    word-break: keep-all;
+  }
+  */
+  
+  .itemize > li {
+    position: relative;
+    min-height: 1.4em;
+  }
+  .itemize > li > span.li_level, .li_enumerate.not_number > span.li_level { 
+    position: absolute;
+    right: 100%;
+    white-space: nowrap;
+    width: max-content;;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+  .li_enumerate.not_number {
+    position: relative;
+    display: inline-block;
+    list-style-type: none;
+    min-height: 1.4em;
+  }
+  .itemize > li > span.li_level .math-inline,
+  .enumerate > li > span.li_level .math-inline {
+    display: inline-block;
+  }
+
+  #preview {
+    font-family: 'CMU Serif', 'Georgia', Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    visibility: visible;
+    word-break: break-word;
+    padding: 2.5em;
+    max-width: 800px;
+    margin: auto;
+    box-sizing: content-box;
+  }
+
+  #preview h1, #preview h2, #preview h3, #preview h4, #preview h5, #preview strong {
+    font-family: 'CMU Serif Bold', 'Georgia', Helvetica, Arial, sans-serif;
+  }
+
+  #preview  i, #preview  em {
+    font-family: 'CMU Serif Italic', 'Georgia', Helvetica, Arial, sans-serif;
+  }
+
+  .mmd-menu {
+    max-width: 320px;
+    position: absolute;
+    background-color: white;
+    color: black;
+    width: auto;
+    padding: 5px 0px;
+    border: 1px solid #E5E6EB;
+    margin: 0;
+    cursor: default;
+    font: menu;
+    text-align: left;
+    text-indent: 0;
+    text-transform: none;
+    line-height: normal;
+    letter-spacing: normal;
+    word-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    float: none;
+    z-index: 201;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    box-shadow: 0px 10px 20px #808080;
+    -webkit-box-shadow: 0px 10px 20px #808080;
+    -moz-box-shadow: 0px 10px 20px #808080;
+    -khtml-box-shadow: 0px 10px 20px #808080; 
+  }
+  
+  .mmd-menu:focus { outline: none; }
+  
+  .mmd-menu.mmd-menu-sm {
+    max-width: 100vw;
+    padding-bottom: 34px;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -khtml-border-radius: 0;
+  }
+
+  .mmd-menu-item-icon {
+    color: #1e2029;
+    margin-left: auto;
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    display: none; 
+  }
+
+  .mmd-menu-item {
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    display: flex;
+    background: transparent; 
+    height: 52px;
+    max-height: 52px;
+  }
+  .mmd-menu-item:focus { outline: none; }
+
+  .mmd-menu-item.active {
+    background-color: #e1e0e5; 
+  }
+
+  .mmd-menu-item.active .mmd-menu-item-icon {
+    display: flex; 
+  }
+
+  .mmd-menu-item-container {
+    overflow: hidden; 
+  }
+
+  .mmd-menu-item-title {
+    color: #1e2029;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 20px; 
+  }
+
+  .mmd-menu-item-value {
+    color: #7d829c;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 16px; 
+  }
+  
+  html[data-theme="dark"] .mmd-menu-item-title {
+    color: #ebefe7;
+  } 
+  html[data-theme="dark"] .mmd-menu-item.active .mmd-menu-item-title {
+    color: #1e2029;
+  }
+  html[data-theme="dark"] .mmd-menu {
+    background-color: #33363a;
+  }
+  
+  .mmd-context-menu-overlay{
+    background: rgba(0, 0, 0, 0.56);
+  }
+  
+.ClipboardButton {
+  padding: 0;
+  margin: 0.5rem;
+  display: inline-block;
+  cursor: pointer;
+  color: rgb(36, 41, 47);
+  background: rgb(246, 248, 250);
+  border-radius: 6px;
+  border: 1px solid rgba(31, 35, 40, 0.15);
+  box-shadow: rgba(31, 35, 40, 0.04) 0 1px 0 0, rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
+  position: relative;
+}
+
+.ClipboardButton:hover {
+  background-color: rgb(243, 244, 246);
+  border-color: rgba(31, 35, 40, 0.15);
+  transition-duration: .1s;
+}
+
+td .mmd-clipboard-copy-container {
+  line-height: 0;
+}
+
+td .ClipboardButton {
+  margin: 1px;
+  line-height: 0;
+}
+
+td .ClipboardButton .mmd-clipboard-icon {
+  margin: 1px !important;
+  transform: scale(0.6);
+}
+
+.mmd-clipboard-icon {
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.mmd-clipboard-copy-icon {
+  color: rgb(101, 109, 118);
+}
+.mmd-clipboard-check-icon {
+  color: rgb(26, 127, 55);
+}
+
+.mmd-tooltipped-no-delay:hover::before,
+.mmd-tooltipped-no-delay:hover::after {
+  animation-delay: 0s;
+}
+
+.mmd-tooltipped:hover::before,
+.mmd-tooltipped:hover::after {
+  display: inline-block;
+  text-decoration: none;
+  animation-name: tooltip-appear;
+  animation-duration: .1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-delay: .4s;
+}
+
+.mmd-tooltipped-w::before {
+  top: 50%;
+  bottom: 50%;
+  left: -7px;
+  margin-top: -6px;
+  border-left-color: rgb(36, 41, 47);
+}
+
+.mmd-tooltipped::before {
+  position: absolute;
+  z-index: 1000001;
+  display: none;
+  width: 0;
+  height: 0;
+  color: rgb(36, 41, 47);
+  pointer-events: none;
+  content: "";
+  border: 6px solid transparent;
+  opacity: 0;
+}
+
+.mmd-tooltipped-w::after {
+  right: 100%;
+  bottom: 50%;
+  margin-right: 6px;
+  transform: translateY(50%);
+}
+
+
+.mmd-tooltipped::after {
+    position: absolute;
+    z-index: 1000000;
+    display: none;
+    padding: 0.5em 0.75em;
+    font: normal normal 11px/1.5 'CMU Serif', 'Georgia', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: break-word;
+    white-space: pre;
+    pointer-events: none;
+    content: attr(aria-label);
+    background: rgb(36, 41, 47);
+    border-radius: 6px;
+    opacity: 0;
+}
+</style>
+
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+
+</head>
+<body>
+  <div id="preview" class="preview scrollEditor">
+    <div id="container-ruller" />
+    <div id="preview-content">
+      <h1 style="color: rgb(200,0,0);" type="section" data-unnumbered="true" class="section-title preview-paragraph-0 preview-line 0" id="%C2%A79.2%2C9.3-geometric-series-convergence-of-series" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1">
+§9.2,9.3 Geometric Series </h1>
+ 
+<h1 style="color: rgb(200,0,0);"> Convergence of Series</h1>
+<br>
+
+<div class="preview-paragraph-2 preview-line 2" data_line_start="2" data_line_end="2" data_line="2,3" count_line="1">A series is a sum of terms. Series can be either:</div>
+<ul class="preview-paragraph-3 preview-line 3 4 5" data_line_start="3" data_line_end="5" data_line="3,6" count_line="3">
+  <h3><li>finite: <span class="math-block ">$$\sum_{n=1}^{N} a_{n}:=a_{1}+a_{2}+ \dots +a_{N}$$</span></li></h3>
+  <h3><li>infinite: <span class="math-block ">$$\sum_{n=1}^{\infty} a_{n}:=a_{1}+a_{2}+\cdots+a_{n}+\cdots$$</span></li></h3>
+</ul>
+
+<hr>
+
+<h2><div class="preview-paragraph-6 preview-line 6" data_line_start="6" data_line_end="6" data_line="6,7" count_line="1" style="color: rgb(0,150,0);">Examples</div></h2>
+<div class="preview-paragraph-7 preview-line 7 8 9 10 11 12 13" data_line_start="7" data_line_end="13" data_line="7,14" count_line="7"><span class="math-block ">$$
+\begin{aligned}
+&amp; \sum_{i=1}^{n} i=1+2+\cdots+n = \left(\frac{n(n+1)}{2}\right) \\
+&amp; \sum_{n=1}^{\infty} \frac{1}{n}=1+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\cdots \\
+&amp; \sum_{n=1}^{\infty} \frac{1}{n^{2}}=1+\frac{1}{4}+\frac{1}{9}+\frac{1}{16}+\cdots
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-15 preview-line 15 16" data_line_start="15" data_line_end="16" data_line="15,17" count_line="2">A geometric series is a series (finite or infinite) where the ratio between successive terms is fixed, e.g.<br>
+</div>
+<div class="preview-paragraph-17 preview-line 17 18 19 20 21 22" data_line_start="17" data_line_end="22" data_line="17,23" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+&amp; \sum_{n=0}^{5} 3(2)^{n}=3+6+12+24+48+96 \\
+&amp; \sum_{n=0}^{\infty}\left(-\frac{1}{3}\right)^{n}=1-\frac{1}{3}+\frac{1}{9}-\frac{1}{27}+\frac{1}{81}-\frac{1}{243}+\frac{1}{729}-\cdots
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-24 preview-line 24 25" data_line_start="24" data_line_end="25" data_line="24,26" count_line="2">In general
+a finite geometric series has the form: </div>
+<div class="preview-paragraph-26 preview-line 26 27 28" data_line_start="26" data_line_end="28" data_line="26,29" count_line="3"><span class="math-block ">$$\large
+\sum_{i=0}^{n-1} a x^{i}=a+a x+a x^{2}+\cdots+a x^{n-1}
+$$</span></div>
+<div class="preview-paragraph-29 preview-line 29" data_line_start="29" data_line_end="29" data_line="29,30" count_line="1">while an infinite geometric series has the form</div>
+<div class="preview-paragraph-30 preview-line 30 31 32" data_line_start="30" data_line_end="32" data_line="30,33" count_line="3"><span class="math-block ">$$ \large
+\sum_{n=0}^{\infty} a x^{n}=a+a x+a x^{n}+\ldots+a x^{n-1}+a x^{n}+\cdots
+$$</span></div>
+
+<hr>
+
+<h2><div class="preview-paragraph-34 preview-line 34" data_line_start="34" data_line_end="34" data_line="34,35" count_line="1" style="color: rgb(0,0,230);" >Summing a Finite Geometric Series</div></h2>
+<div class="preview-paragraph-36 preview-line 36" data_line_start="36" data_line_end="36" data_line="36,37" count_line="1">Let <span class="math-inline ">$S_{n}$</span> denote the sum: </div>
+<div class="preview-paragraph-37 preview-line 37 38 39" data_line_start="37" data_line_end="39" data_line="37,40" count_line="3"><span class="math-block ">$$ \large
+S_{n}=a+a x+ \dots +a x^{n-1}=\sum_{i=0}^{n-1} a x^{i} \quad \text { (n terms). }
+$$</span></div>
+<div class="preview-paragraph-41 preview-line 41" data_line_start="41" data_line_end="41" data_line="41,42" count_line="1">Then: </div>
+<div class="preview-paragraph-42 preview-line 42 43 44" data_line_start="42" data_line_end="44" data_line="42,45" count_line="3"><span class="math-block ">$$ \large
+x S_{n}=a x+a x^{2}+\cdots + ax^{n}
+$$</span></div>
+<div class="preview-paragraph-46 preview-line 46" data_line_start="46" data_line_end="46" data_line="46,47" count_line="1">And so</div>
+<div class="preview-paragraph-47 preview-line 47 48 49 50 51 52 53 54 55" data_line_start="47" data_line_end="55" data_line="47,56" count_line="9"><span class="math-block ">
+$$\large \begin{matrix}
+S_{n}-x S_{n} = & a & +ax &+ \text{ } \dots &+a x^{n-1} \\ \\
+& -ax & - ax^{2}  & - \text{ }\dots  & -a x^{n-1} & -a x^{n}
+\end{matrix}$$
+
+</span></div>
+<div class="preview-paragraph-57 preview-line 57" data_line_start="57" data_line_end="57" data_line="57,58" count_line="1">So:</div>
+<div class="preview-paragraph-58 preview-line 58 59 60 61 62 63" data_line_start="58" data_line_end="63" data_line="58,64" count_line="6"><span class="math-block ">$$ \large
+\begin{aligned}
+&amp; S_{n}-x S_{n}=a\left(1-x^{n}\right) \\
+&amp; S_{n}(1-x)=a\left(1-x^{n}\right)
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-64 preview-line 64" data_line_start="64" data_line_end="64" data_line="64,65" count_line="1">and if we divide by <span class="math-inline ">$1-x$</span> (which we can do provided <span class="math-inline ">$x \neq 1$</span>, we get: </div>
+<div class="preview-paragraph-65 preview-line 65 66 67" data_line_start="65" data_line_end="67" data_line="65,68" count_line="3"><span class="math-block ">$$ \large
+S_{n}=a+a x+\dots +a x^{n-1}=a \cdot \frac{1-x^{n}}{1-x}, \quad x\neq1 .
+$$</span></div>
+<div class="preview-paragraph-69 preview-line 69" data_line_start="69" data_line_end="69" data_line="69,70" count_line="1">Note that if <span class="math-inline ">$x=1$</span>, then</div>
+<div class="preview-paragraph-70 preview-line 70 71 72" data_line_start="70" data_line_end="72" data_line="70,73" count_line="3"><span class="math-block ">$$ \large S=    {\underbrace{a+ax+ax^2+\dots+ax^n}_{n \text{ terms}}}=na$$
+</span></div>
+
+<hr> 
+
+<h2><div class="preview-paragraph-74 preview-line 74" data_line_start="74" data_line_end="74" data_line="74,75" count_line="1" style="color: rgb(0,0,230);" >Infinite Geometric Series</div></h2>
+<div class="preview-paragraph-76 preview-line 76" data_line_start="76" data_line_end="76" data_line="76,77" count_line="1">Recall that the sequence <span class="math-inline ">$\left\{x^{n}\right\}_{n=1}^{\infty}$</span> was convergent to 0 if <span class="math-inline ">$|x|&lt;1$</span> and divergent if <span class="math-inline ">$|x| \geq 1$</span>.</div>
+<div class="preview-paragraph-78 preview-line 78" data_line_start="78" data_line_end="78" data_line="78,79" count_line="1">Thus if <span class="math-inline ">$|x|&lt;1$</span> : </div>
+<div class="preview-paragraph-79 preview-line 79 80 81" data_line_start="79" data_line_end="81" data_line="79,82" count_line="3"><span class="math-block ">$$
+\large S_{n}=a \frac{\left(1-x^{n}\right)}{1-x} \rightarrow \frac{a}{1-x} \text { as } n \rightarrow \infty .
+$$</span></div>
+<div class="preview-paragraph-83 preview-line 83" data_line_start="83" data_line_end="83" data_line="83,84" count_line="1">In this case we say that the infinite geometric series</div>
+<div class="preview-paragraph-84 preview-line 84 85 86" data_line_start="84" data_line_end="86" data_line="84,87" count_line="3"><span class="math-block ">$$
+\large \sum_{n=0}^{\infty} a x^{n}
+$$</span></div>
+<div class="preview-paragraph-87 preview-line 87" data_line_start="87" data_line_end="87" data_line="87,88" count_line="1">converges and has sum:</div>
+
+<div class="preview-paragraph-88 preview-line 88 89 90" data_line_start="89" data_line_end="91" data_line="88,91" count_line="3"><span class="math-block ">$$ \large
+ S=a+a x+a x^{2}+\cdots+a x^{n}+=\frac{a}{1-x}
+
+$$</span></div>
+
+
+<div class="preview-paragraph-91 preview-line 91" data_line_start="91" data_line_end="91" data_line="91,92" count_line="1">which we can also write as</div>
+<div class="preview-paragraph-92 preview-line 92 93 94" data_line_start="92" data_line_end="94" data_line="92,95" count_line="3"><span class="math-block ">$$ \large
+\sum_{n=0}^{\infty} a x^{n}=\frac{a}{1-x}, \quad|x|&lt;1
+$$</span></div>
+<div class="preview-paragraph-96 preview-line 96" data_line_start="96" data_line_end="96" data_line="96,97" count_line="1">If <span class="math-inline ">$|x|&gt;1$</span> then provided <span class="math-inline ">$a \neq 0$</span>, <span class="math-inline ">$\left|a x^{n}\right| \rightarrow \infty$</span> as <span class="math-inline ">$n \rightarrow \infty$</span> and so <span class="math-inline ">$S_{n}$</span> cannot converge.</div>
+<div class="preview-paragraph-98 preview-line 98" data_line_start="98" data_line_end="98" data_line="98,99" count_line="1">If <span class="math-inline ">$x=1$</span>, then provided <span class="math-inline ">$a \neq 0$</span>,</div>
+<div class="preview-paragraph-99 preview-line 99 100 101" data_line_start="99" data_line_end="101" data_line="99,102" count_line="3"><span class="math-block ">$$
+S_{n}=a t \quad+a=n a
+$$</span></div>
+<div class="preview-paragraph-102 preview-line 102 103" data_line_start="102" data_line_end="103" data_line="102,104" count_line="2">which also doesn't converge.<br><br>
+Finally, if <span class="math-inline ">$x=-1$</span>, then provided <span class="math-inline ">$a \neq 0$</span></div>
+<div class="preview-paragraph-104 preview-line 104 105 106" data_line_start="104" data_line_end="106" data_line="104,107" count_line="3"><span class="math-block ">$$
+S_{n}=a-a+a-a+\dots+(-1)^{n-1} a= \begin{cases}a, &amp; n \text { odd } \\ 0, &amp; n \text { even }\end{cases}
+$$</span></div>
+<div class="preview-paragraph-107 preview-line 107 108" data_line_start="107" data_line_end="108" data_line="107,109" count_line="2">which also doesn't converge.<br><br> 
+Thus, if <span class="math-inline ">$|x| \geq 1$</span>, provided <span class="math-inline ">$a \neq 0$</span>, the sequence <span class="math-inline ">$S_{n}$</span> diverges and we say that the infinite series</div>
+<div class="preview-paragraph-109 preview-line 109 110 111" data_line_start="109" data_line_end="111" data_line="109,112" count_line="3"><span class="math-block ">$$ \large
+\sum_{n=0}^{\infty} a x^{n} \quad \text { diverges. }
+$$</span></div>
+
+<hr> 
+
+<div class="preview-paragraph-113 preview-line 113" data_line_start="113" data_line_end="113" data_line="113,114" count_line="1"> <h2 style="color: rgb(0,150,0);">Example <br> <h3>a)</h3> </h2> <span class="math-block "> $$\large 1+\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\cdots=\sum_{n=0}^{\infty}\left(\frac{1}{2}\right)^{n}$$ </h2> </span></div>
+<div class="preview-paragraph-115 preview-line 115" data_line_start="115" data_line_end="115" data_line="115,116" count_line="1">Here <span class="math-inline ">$a=1, x=\frac{1}{2}$</span> and <span class="math-inline ">$\left|\frac{1}{2}\right|&lt;1$</span>, so the series is convergent with sum: </div>
+<div class="preview-paragraph-116 preview-line 116 117 118" data_line_start="116" data_line_end="118" data_line="116,119" count_line="3"><span class="math-block ">$$ \large
+\frac{1}{1-\frac{1}{2}}=2
+$$</span></div>
+
+<div class="preview-paragraph-119 preview-line 119 120" data_line_start="119" data_line_end="120" data_line="119,121" count_line="2"> <h3>b)</h3> <span class="math-block ">$$\large \begin{array}{ll}  3-1+\frac{1}{3}-\frac{1}{9}+\frac{1}{27}- = 3\left(-\frac{1}{3}\right)^{n}\cdots \\ \uparrow \end{array} $$</span><br>
+The first term always gives you <span class="math-inline ">$a$</span>. dividing the secend term by the first gives you <span class="math-inline ">$x$</span>, in this case <span class="math-inline ">$x=-1 / 3$</span>.</div>
+<div class="preview-paragraph-122 preview-line 122" data_line_start="122" data_line_end="122" data_line="122,123" count_line="1">Here <span class="math-inline ">$a=3, x=-\frac{1}{3}$</span> and <span class="math-inline ">$\large \left|-\frac{1}{3}\right|&lt;1$</span>, so the series is convergent with sum</div>
+<div class="preview-paragraph-123 preview-line 123 124 125" data_line_start="123" data_line_end="125" data_line="123,126" count_line="3"><span class="math-block ">$$
+\frac{3}{1-\left(-\frac{1}{3}\right)}-\frac{3}{4 / 3}=\frac{9}{4} .
+$$</span></div>
+<div class="preview-paragraph-126 preview-line 126" data_line_start="126" data_line_end="126" data_line="126,127" count_line="1"> <h3>c)</h3> <span class="math-block ">$$ \large 1-7+49-343+\cdots =\sum_{n=0}^{\infty}(-7)^{n}$$</span></div>
+<div class="preview-paragraph-128 preview-line 128" data_line_start="128" data_line_end="128" data_line="128,129" count_line="1">Here <span class="math-inline ">$a=1$</span>, <span class="math-inline ">$x=-7$</span> and <span class="math-inline ">$|-7| \geq 1$</span>, so the series is divergent.</div>
+
+<br>
+<hr>
+<br>
+
+<div class="preview-paragraph-130 preview-line 130" data_line_start="130" data_line_end="130" data_line="130,131" count_line="1">The situation with geometric senes is an example of the more general phenomenon of convergence or divergence of a general infinite series.</div>
+<div class="preview-paragraph-132 preview-line 132" data_line_start="132" data_line_end="132" data_line="132,133" count_line="1">Let <span class="math-inline ">$\large \sum_{n=1}^{\infty} a_{n}$</span> be an infinite series and for cach <span class="math-inline ">$n \geq 1$</span> define the <span class="math-inline ">$n$</span>th partial sum</div>
+<div class="preview-paragraph-133 preview-line 133 134 135" data_line_start="133" data_line_end="135" data_line="133,136" count_line="3"><span class="math-block ">$$
+S_{n}=\sum_{i=1}^{n} a_{i}=a_{1}+a_{2}+\cdots+a_{n}
+$$</span></div>
+<div class="preview-paragraph-137 preview-line 137" data_line_start="137" data_line_end="137" data_line="137,138" count_line="1">The numbers</div>
+<div class="preview-paragraph-138 preview-line 138 139 140" data_line_start="138" data_line_end="140" data_line="138,141" count_line="3"><span class="math-block ">$$
+S_{1}, S_{2}, S_{3}, \ldots, S_{n},
+$$</span></div>
+<div class="preview-paragraph-141 preview-line 141" data_line_start="141" data_line_end="141" data_line="141,142" count_line="1">give us an infinite sequence, the sequence of partial sums <span class="math-inline ">$\large \left\{S_{n}\right\}_{n=1}^{\infty}$</span>.</div>
+<div class="preview-paragraph-143 preview-line 143" data_line_start="143" data_line_end="143" data_line="143,144" count_line="1">If <span class="math-inline ">$\large \left\{S_{n}\right\}_{n=1}^{\infty}$</span> is convergent with some (finite) limit <span class="math-inline ">$S$</span>, then we say that <span class="math-inline ">$\large \sum_{n=1}^{\infty} a_{n}$</span> is convergent with sum <span class="math-inline ">$S$</span> and we write</div>
+
+<div class="preview-paragraph-144 preview-line 144 145 146" data_line_start="144" data_line_end="146" data_line="144,147" count_line="3"><span class="math-block ">$$
+\large \sum_{n=1}^{\infty} a_{n}=S
+$$</span></div>
+
+<div class="preview-paragraph-148 preview-line 148" data_line_start="148" data_line_end="148" data_line="148,149" count_line="1">Otherwise if 
+  <span class="math-inline ">$\large \left\{S_{n}\right\}_{n=1}^{\infty}$</span> 
+  is divergent, we say 
+  <span class="math-inline ">$\large \sum_{n=1}^{\infty} a_{n}$</span> 
+  is divergent
+</div>
+
+<hr>
+
+<h2 style="color: rgb(0,0,230);" type="section" data-unnumbered="true" class="section-title preview-paragraph-150 preview-line 150" id="visualizing-series" data_line_start="150" data_line_end="150" data_line="150,151" count_line="1">
+Visualizing Series</h2>
+
+
+<div class="preview-paragraph-152 preview-line 152 153" data_line_start="152" data_line_end="153" data_line="152,154" count_line="2">If we make the following graph where each relaingle over the interval <span class="math-inline ">$[n-1, n]$</span><br>
+
+<div>
+  <span class="math-block">
+
+  <script type="text/tikz">
+    \begin{tikzpicture}[scale=2.2]
+
+    % Axes
+    \draw[->] (0,0) -- (8,0) node[right] {$n$};
+    \draw[->] (0,0) -- (0,5) node[above] {};
+
+    % Y-axis labels
+    \node[left] at (0,4.5) {$a_1$};
+    \node[left] at (0,3.8) {$a_3$};
+    \node[left] at (0,3.2) {$a_2$};
+    \node[left] at (0,2.2) {$a_4$};
+    \node[left] at (0,1.2) {$a_n$};
+
+    % X-axis ticks
+    \foreach \x in {1,2,3,4}
+        \draw (\x,0) -- (\x,0.0) node[below] {\x};
+
+    \draw (6.8,0) -- (6.8,0.0) node[below] {$n-1$};
+    \draw (7.5,0) -- (7.5,0.0) node[below] {$n$};
+
+    % Rectangles (example heights to match sketch)
+    \fill[blue!20] (0,0) rectangle (1,4.5);   % a1
+    \draw (0,0) rectangle (1,4.5);   % a1
+    \draw (1,0) rectangle (2,3.2);   % a2
+    \fill[blue!20]  (1,0) rectangle (2,3.2);   % a2
+
+    \draw (2,0) rectangle (3,3.8);   % a3
+    \fill[blue!20]  (2,0) rectangle (3,3.8);   % a3
+    \draw (3,0) rectangle (4,2.2);   % a4
+    \fill[blue!20]  (3,0) rectangle (4,2.2);   % a4
+    \draw (6.8,0) rectangle (7.5,1.2); % a_n
+    \fill[blue!20]  (6.8,0) rectangle (7.5,1.2); % a_n
+
+    \end{tikzpicture}
+  </script>
+
+  </span>
+</div>
+
+has height <span class="math-inline ">$a_{n}$</span>, then <span class="math-inline ">$\large \sum_{n=1}^{\infty} a_{n}$</span> represents the sum of all the areas of the rectangles. 
+This is basically an improper integral of type <span class="math-inline ">$\large \int_{1}^{\infty}f(x) d x$</span>.</div>
+
+<br> 
+<hr>
+
+<h2 style="color: rgb(0,0,230);" type="section" data-unnumbered="true" class="section-title preview-paragraph-155 preview-line 155" id="convergence-properties-of-series" data_line_start="155" data_line_end="155" data_line="155,156" count_line="1">
+Convergence Properties of Series</h2>
+<ol class="preview-paragraph-156 preview-line 156 157 158 159 160 161 162" data_line_start="156" data_line_end="162" data_line="156,163" count_line="7">
+
+  <li>If <span class="math-inline ">$\large \sum_{n=1}^{\infty} a_{n}$</span> and <span class="math-inline ">$\large \sum_{n=1}^{\infty} b_{n}$</span> converge and <span class="math-inline ">$k$</span> is a constant, then:<br>
+
+  <ul>
+    <br>
+    <li>
+      i) <span class="math-inline ">$\large \sum_{n=1}^{\infty}\left(a_{n}+b_{n}\right)$</span> converges to <span class="math-inline ">$\large \sum_{n=1}^{\infty} a_{n}+\sum_{n=1}^{\infty} b_{n}$</span><br>
+    </li>
+    <br>
+    <li>
+      ii) <span class="math-inline ">$\sum_{n=1}^{\infty} k a_{n}$</span> converges to <span class="math-inline ">$k \sum_{n=1}^{\infty} a_{n}$</span>.
+    </li>
+  </ul>
+  </li>
+
+  <br>
+  <li>Changing a finite number of terms in a series does not change whether or not it converges, although it may change the value of its sum if it does converge</li>
+  <br>
+  <li>If <span class="math-inline ">$\large \sum_{n=1}^{\infty} a_{n}$</span> converges, then <span class="math-inline ">$\large \lim _{n \rightarrow \infty} a_{n}=0$</span>. Equivalently if <span class="math-inline ">$\large \lim _{n \rightarrow \infty} a_{n} \neq 0$</span> or <span class="math-inline ">$\large \lim _{n \rightarrow \infty} a_{n}$</span> does not exist, then <span class="math-inline ">$\large \sum_{n=1}^{\infty} a_{n}$</span> diverges. (<strong>Divergence test</strong>)</li>
+  <br>
+  <li>If <span class="math-inline ">$\large \sum_{n=1}^{\infty} a_{n}$</span> diverges, then <span class="math-inline ">$\large \sum_{n=1}^{\infty} k a_{n}$</span> diverges if <span class="math-inline ">$k \neq 0$</span>.</li>
+</ol>
+
+<hr> 
+<br> 
+<div class="preview-paragraph-163 preview-line 163" data_line_start="163" data_line_end="163" data_line="163,164" count_line="1"><h2 style="color: rgb(0,150,0);">Example:</h2> <span class="math-block ">$$\quad \sum_{n=1}^{\infty}\left(1-e^{-n}\right)$$</span></div>
+
+<div class="preview-paragraph-164 preview-line 164 165 166" data_line_start="164" data_line_end="166" data_line="164,167" count_line="3"><span class="math-block ">$$
+1-e^{-n} \rightarrow 1-0=1 \text { as } n \rightarrow \infty
+$$</span></div>
+
+<div class="preview-paragraph-168 preview-line 168" data_line_start="168" data_line_end="168" data_line="168,169" count_line="1">Since the limit of the terms is not 0 , this series must diverge by propery 3 above.</div>
+<div class="preview-paragraph-170 preview-line 170" data_line_start="170" data_line_end="170" data_line="170,171" count_line="1"><h2 style="color: rgb(0,150,0);">Example: The Harmonic Series</h2> </div>
+
+<div class="preview-paragraph-171 preview-line 171 172 173" data_line_start="171" data_line_end="173" data_line="171,174" count_line="3"><span class="math-block ">$$\large
+\sum_{n=1}^{\infty} \frac{1}{n}=1+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\cdots+\frac{1}{n}+\cdots
+$$</span></div>
+
+<div class="preview-paragraph-175 preview-line 175 176 177 178" data_line_start="175" data_line_end="178" data_line="175,179" count_line="4">We claim this series diverges.<br>
+See this by approximating <span class="math-inline ">$\large \int_{1}^{\infty} \frac{1}{x} d x$</span> as a left-handed sum:<br>
+
+<br>
+<br>
+<div>
+  <span class="math-block">
+
+  <script type="text/tikz">
+      \begin{tikzpicture}[scale=2]
+
+      % Axes
+
+      % Rectangles (example heights to match sketch)
+      \fill[blue!20] (1,0) rectangle (2,1);   % a1
+      \fill[blue!20] (2,0) rectangle (3,0.5);   % a1
+      \fill[blue!20] (3,0) rectangle (4,1/3);   % a1
+      \fill[blue!20] (4,0) rectangle (5,1/4);   % a1
+      \fill[blue!20] (4,0) rectangle (5,1/4);   % a1
+      \fill[blue!20] (7,0) rectangle (8,1/5);   % a1
+
+
+      \fill[red, domain=1:8, samples=200]
+          (1,0)
+          -- plot (\x, {1/\x})
+          -- (8,0)
+          -- cycle;
+
+      % Draw the curve on top
+      \draw[blue, thick, domain=1:8, samples=200]
+          plot (\x, {1/\x});
+
+      % Draw the curve on top
+      \draw[blue, thick, domain=0.2:1, samples=200]
+          plot (\x, {1/\x});
+
+      \draw (1,0) rectangle (2,1);   % a1
+      \draw (2,0) rectangle (3,1/2);   % a1
+      \draw (3,0) rectangle (4,1/3);   % a1
+      \draw (4,0) rectangle (5,1/4);   % a1
+      \draw (4,0) rectangle (5,1/4);   % a1
+      \draw (7,0) rectangle (8,1/5);   % a1
+
+      \draw[->] (0,0) -- (1.1,0) node[right] {};
+      \draw[->] (0,0) -- (0,5) node[above] {};
+
+      % Y-axis labels
+      \node[left] at (0,1) {$1$};
+      \node[left] at (0,0.5) {$\frac{1}{2}$};
+      \node[left] at (0,1) {$1$};
+      \node[left] at (0,0.5) {$\frac{1}{2}$};
+
+      % X-axis ticks
+      \foreach \x in {1,2,3,4,5}
+          \draw (\x,0) -- (\x,0.0) node[below] {\x};
+
+      \draw (7,0) -- (7,0.0) node[below] {$n$};
+      \draw (8,0) -- (8,0.0) node[below] {$n+1$};
+
+      %node area info
+      \node at (2,1.3) {area $=1$};
+      \draw[->] (2,1.2) -- (1.5,.7);
+
+      \node at (3,0.8) {area $=\frac{1}{2}$};
+      \draw[->] (3,0.70) -- (2.5,0.45);
+
+      \node at (4,0.8) {area $=\frac{1}{3}$};
+      \draw[->] (4,0.70) -- (3.5,0.34);
+
+      \node at (5,0.8) {area $=\frac{1}{4}$};
+      \draw[->] (5,0.70) -- (4.5,0.24);
+
+      \node at (8,0.8) {area $=\frac{1}{n}$};
+      \draw[->] (8,0.70) -- (7.5,0.20);
+
+      \end{tikzpicture}
+  </script>
+
+  </span>
+</div>
+<br>
+
+(Recall that <span class="math-inline ">$\int_{1}^{\infty} \frac{1}{x} d x$</span> diverges. )</div>
+<div class="preview-paragraph-180 preview-line 180" data_line_start="180" data_line_end="180" data_line="180,181" count_line="1">Since <span class="math-inline ">$\frac{1}{x}$</span> is decreasing, we see by looking at areas that</div>
+<div class="preview-paragraph-181 preview-line 181 182 183 184 185 186" data_line_start="181" data_line_end="186" data_line="181,187" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+S_{n}=1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}&gt;\int_{1}^{n+1} \frac{1}{x} d x &amp; =[\ln x]_{1}^{n+1} \\
+&amp; =\ln (n+1)-0 .
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-188 preview-line 188" data_line_start="188" data_line_end="188" data_line="188,189" count_line="1">Since <span class="math-inline ">$\ln (n+1) \rightarrow \infty$</span> as <span class="math-inline ">$n \rightarrow \infty, S_{n} \rightarrow \infty$</span> as <span class="math-inline ">$n \rightarrow \infty$</span> and so <span class="math-inline ">$\large \sum_{n=1}^{\infty} \frac{1}{n}$</span> does indeed diverge.</div>
+<div class="preview-paragraph-190 preview-line 190" data_line_start="190" data_line_end="190" data_line="190,191" count_line="1"> <strong>Remark</strong> <br>
+   There is also a more elementary way of doing this which doesn't use integration.</div>
+
+
+<div class="preview-paragraph-192 preview-line 192 193" data_line_start="192" data_line_end="193" data_line="192,194" count_line="2"> <h2 style="color: rgb(0,150,0);"> Example: </h2>  <span class="math-block ">$$\large \sum_{n=1}^{\infty} \frac{1}{n^{2}}$$</span><br>
+In this case, we compare with <span class="math-inline ">$\int_{1}^{\infty} \frac{1}{x^{2}} d x$</span> and since this integral converges, we guess that <span class="math-inline ">$\sum_{n=1}^{\infty} \frac{1}{n^{2}}$</span> should also converge.</div>
+<div class="preview-paragraph-195 preview-line 195 196" data_line_start="195" data_line_end="196" data_line="195,197" count_line="2">In this case we should use a right-hand sum.<br>
+
+<div>
+  <span class="math-block">
+
+  <script type="text/tikz">
+    \begin{tikzpicture}[scale=2]
+
+    % Axes
+
+
+
+    \fill[red, domain=1:8, samples=200]
+        (1,0)
+        -- plot (\x, {1/(\x *\x)})
+        -- (8,0)
+        -- cycle;
+
+    % Draw the curve on top
+    \draw[blue, thick, domain=0.5:1, samples=200]
+        plot (\x, {1/(\x * \x)});
+
+    % Draw the curve on top
+    \draw[blue, thick, domain=1:8, samples=200]
+        plot (\x, {1/(\x * \x)});
+
+    % Rectangles (example heights to match sketch)
+    \fill[blue!20] (1,0) rectangle (2,1/4);   % a1
+    \fill[blue!20] (2,0) rectangle (3,1/9);   % a1
+    \fill[blue!20] (3,0) rectangle (4,1/16);   % a1
+    \fill[blue!20] (4,0) rectangle (5,1/25);   % a1
+    \fill[blue!20] (7,0) rectangle (8,1/50);   % a1
+
+    \draw (1,0) rectangle (2,1/4);   % a1
+    \draw (2,0) rectangle (3,1/9);   % a1
+    \draw (3,0) rectangle (4,1/16);   % a1
+    \draw (4,0) rectangle (5,1/25);   % a1
+    \draw (7,0) rectangle (8,1/50);   % a1
+
+    \draw[->] (0,0) -- (1.1,0) node[right] {};
+    \draw[->] (0,0) -- (0,4) node[above] {};
+
+    % Y-axis labels
+    \node[left] at (0,1) {$1$};
+    \node[left] at (0,0.5) {$0.25$};
+    \node[left] at (0,0.3) {$0.09$};
+    \node[left] at (0,0.1) {$0.0625$};
+
+
+    % X-axis ticks
+    \foreach \x in {1,2,3,4,5}
+        \draw (\x,0) -- (\x,0.0) node[below] {\x};
+
+    \draw (7,0) -- (7,0.0) node[below] {$n$};
+    \draw (8,0) -- (8,0.0) node[below] {$n+1$};
+
+    %node area info
+    \node at (2,1.3) {area $=\frac{1}{4}$};
+    \draw[->] (2,1.2) -- (1.5,1/9);
+
+    \node at (3,0.8) {area $=\frac{1}{9}$};
+    \draw[->] (3,0.70) -- (2.5,1/16);
+
+    \node at (4,0.8) {area $=\frac{1}{16}$};
+    \draw[->] (4,0.70) -- (3.5,1/16);
+
+    \node at (5,0.8) {area $=\frac{1}{25}$};
+    \draw[->] (5,0.70) -- (4.5,1/16);
+
+    \node at (8,0.8) {area $=\frac{1}{(n+1)^2}$};
+    \draw[->] (8,0.70) -- (7.5,1/49);
+
+    \end{tikzpicture}
+  </script>
+
+  </span>
+</div>
+
+
+  <div class="preview-paragraph-198 preview-line 198" data_line_start="198" data_line_end="198" data_line="198,199" count_line="1">Again by area we see:</div>
+<div class="preview-paragraph-199 preview-line 199 200 201 202 203 204 205" data_line_start="199" data_line_end="205" data_line="199,206" count_line="7"><span class="math-block ">$$
+\begin{aligned}
+\frac{1}{4}+\frac{1}{9}+\frac{1}{16}+\frac{1}{n^{2}} &amp;\leq \int_{1}^{n} \frac{1}{x^{2}} d x \\
+&amp; =\left[\frac{-1}{x}\right]_{1}^{n} \\
+&amp; =\frac{-1}{n}-(-1) .
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-207 preview-line 207" data_line_start="207" data_line_end="207" data_line="207,208" count_line="1">Thus</div>
+<div class="preview-paragraph-208 preview-line 208 209 210" data_line_start="208" data_line_end="210" data_line="208,211" count_line="3"><span class="math-block ">$$
+\frac{1}{4}+\frac{1}{9}+\frac{1}{16}+\cdots+\frac{1}{n^{2}}\leq 1-\frac{1}{n}
+$$</span></div>
+<div class="preview-paragraph-211 preview-line 211" data_line_start="211" data_line_end="211" data_line="211,212" count_line="1">and so, adding 1 to both sides</div>
+<div class="preview-paragraph-212 preview-line 212 213 214 215 216 217" data_line_start="212" data_line_end="217" data_line="212,218" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+S_{n}=1+\frac{1}{4}+\frac{1}{9}+\dots+\frac{1}{n^{2}} &amp; \leq 2-\frac{1}{n} \\
+&amp; &lt;2 .
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-219 preview-line 219" data_line_start="219" data_line_end="219" data_line="219,220" count_line="1">The sequence <span class="math-inline ">$\left\{S_{n}\right\}_{n=1}^{\infty}$</span> is increasing as we're always adding positive terms <span class="math-inline ">$\frac{1}{n^{2}}$</span> and we've just shown that it is bounded above and hence bounded.</div>
+<br>
+<div class="preview-paragraph-221 preview-line 221" data_line_start="221" data_line_end="221" data_line="221,222" count_line="1">By our earlier results on sequences, we can then say that <span class="math-inline ">$\large \left\{S_{n}\right\}_{n=1}^{\infty}$</span> converges and hence so does</div>
+<div class="preview-paragraph-222 preview-line 222 223 224" data_line_start="222" data_line_end="224" data_line="222,225" count_line="3"><span class="math-block ">$$
+\sum_{n=1}^{\infty} \frac{1}{n^{2}}
+$$</span></div>
+<div class="preview-paragraph-226 preview-line 226" data_line_start="226" data_line_end="226" data_line="226,227" count_line="1">In fact, Euler showed that</div>
+<div class="preview-paragraph-227 preview-line 227 228 229" data_line_start="227" data_line_end="229" data_line="227,230" count_line="3"><span class="math-block ">$$
+\sum_{n=1}^{\infty} \frac{1}{n^{2}}=\frac{\pi^{2}}{6}
+$$</span></div>
+<div class="preview-paragraph-231 preview-line 231" data_line_start="231" data_line_end="231" data_line="231,232" count_line="1"><strong>Remark</strong><br> One can also shas <span class="math-inline ">$\large \sum_{n=1}^{\infty} \frac{1}{n^{4}}=\frac{\pi^{4}}{90}$</span>, but what about <span class="math-inline ">$\large \sum_{n=1}^{\infty} \frac{1}{n^{3}}$</span> ? If you can do this one, you'll probably get a Fields medal!</div>
+
+<br>
+<div class="preview-paragraph-233 preview-line 233" data_line_start="233" data_line_end="233" data_line="233,234" count_line="1">The method of the last two examples can be used to prove the following (Integral Test).</div>
+
+<br>
+<hr> 
+
+<h2 style="color: rgb(0,0,230);" type="section" data-unnumbered="true" class="section-title preview-paragraph-235 preview-line 235" id="the-integral-test" data_line_start="235" data_line_end="235" data_line="235,236" count_line="1">
+
+  The Integral Test</h2>
+<div class="preview-paragraph-237 preview-line 237 238 239" data_line_start="237" data_line_end="239" data_line="237,240" count_line="3">Suppose <span class="math-inline ">$a_{n}=f(n)$</span>, where <span class="math-inline ">$f(x)$</span> is decreasing and positive for <span class="math-inline ">$x \geq c$</span>.<br>
+<br>
+<ul>
+
+  <li>i) If <span class="math-inline ">$\int_{c}^{\infty} f(x) d x$</span> converges, then <span class="math-inline ">$\sum a_{n}$</span> converges. </li> <br>
+  
+  <li> ii) If <span class="math-inline ">$\int_{c}^{\infty} f(x) d x$</span> diverges, then <span class="math-inline ">$\sum a_{n}$</span> diverges. </li> </div>
+
+</ul>
+
+
+<div class="preview-paragraph-241 preview-line 241" data_line_start="241" data_line_end="241" data_line="241,242" count_line="1">Recall that we showed in <span class="math-inline ">$\S 7.7$ </span> that</div>
+<div class="preview-paragraph-242 preview-line 242 243 244" data_line_start="242" data_line_end="244" data_line="242,245" count_line="3"><span class="math-block ">$$
+\int_{1}^{\infty} \frac{1}{x^{p}} d x
+$$</span></div>
+<div class="preview-paragraph-245 preview-line 245" data_line_start="245" data_line_end="245" data_line="245,246" count_line="1">was convergent for <span class="math-inline ">$p&gt;1$</span> and divergent for <span class="math-inline ">$p \leq 1$</span>.</div> <br>
+<div class="preview-paragraph-247 preview-line 247 248" data_line_start="247" data_line_end="248" data_line="247,249" count_line="2">Now let us look at the series <span class="math-inline ">$\large \sum_{n=1}^{\infty} \frac{1}{n^{p}}$</span><br>
+(p-series). </div> <br> 
+
+<div class="preview-paragraph-250 preview-line 250" data_line_start="250" data_line_end="250" data_line="250,251" count_line="1">First, if <span class="math-inline ">$p\leq 0, \frac{1}{n^{p}}=n^{-p}$</span> does not tend to <span class="math-inline ">$0$</span> as <span class="math-inline ">$n \rightarrow \infty$</span>. Hence in this case</div>
+<div class="preview-paragraph-251 preview-line 251 252 253 254 255 256" data_line_start="251" data_line_end="256" data_line="251,257" count_line="6"><span class="math-block ">$$
+\large \begin{array}{r}
+\sum_{n=1}^{\infty} \frac{1}{n p} \text { diverges by the divergence test } \\
+(\text { property } 3)
+\end{array}
+$$</span></div> <br> 
+<div class="preview-paragraph-258 preview-line 258" data_line_start="258" data_line_end="258" data_line="258,259" count_line="1">On the other hand, if <span class="math-inline ">$p&gt;0$</span>, then <span class="math-inline ">$\frac{1}{x^{p}}$</span> is a positive decreasing function for <span class="math-inline ">$x \geq 1$</span> and we can apply the integral test.</div> <br> 
+
+<div class="preview-paragraph-260 preview-line 260" data_line_start="260" data_line_end="260" data_line="260,261" count_line="1">Hence, in this case, we can say that <span class="\large math-inline ">$\sum_{n=1}^{\infty} \frac{1}{n^{p}}$</span> diverges fer <span class="math-inline ">$0&lt;p&lt;1$</span> and converges for <span class="math-inline ">$p&gt;1$</span>.</div>
+<br>
+
+<div class="preview-paragraph-262 preview-line 262" data_line_start="262" data_line_end="262" data_line="262,263" count_line="1">We can summarize what we have found as follows:</div>
+<div class="preview-paragraph-264 preview-line 264" data_line_start="264" data_line_end="264" data_line="264,265" count_line="1">The p-series</div>
+<div class="preview-paragraph-265 preview-line 265 266 267" data_line_start="265" data_line_end="267" data_line="265,268" count_line="3"><span class="math-block ">$$
+\sum_{n=1}^{\infty} \frac{1}{n^{p}}
+$$</span></div>
+<div class="preview-paragraph-268 preview-line 268" data_line_start="268" data_line_end="268" data_line="268,269" count_line="1">converges if <span class="math-inline ">$p&gt;1$</span> and diverges if <span class="math-inline ">$p\geq 1$</span>.</div>
+
+    </div>
+  </div>
+  <script>
+(() => {
+  window.MathpixRenderConfig = {"width":1200,"outMath":{"output_format":"svg","include_svg":true,"include_asciimath":true,"include_latex":true,"include_mathml":true,"include_mathml_word":true,"include_tsv":true,"include_table_markdown":true,"include_smiles":true},"accessibility":{"assistive_mml":true,"include_speech":false}};
+  const autoScript = document.createElement('script');
+  autoScript.src = "https://cdn.jsdelivr.net/npm/mathpix-markdown-it@2.0.36/es5/browser/auto-render.js";
+  autoScript.onload = () => {
+    console.log("[Mathpix] auto-render loaded");
+  };
+  autoScript.onerror = () => {
+    console.error("[Mathpix] Failed to load auto-render script:", autoScript.src);
+  };
+  document.head.append(autoScript);
+})();
+</script>
+    <script>
+(() => {
+  const ctxScript = document.createElement('script');
+  ctxScript.src = "https://cdn.jsdelivr.net/npm/mathpix-markdown-it@2.0.36/es5/context-menu.js";
+  ctxScript.onload = () => {
+    const init = () => {
+      window.addListenerContextMenuEvents?.();
+    };
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init, { once: true });
+    } else {
+      init();
+    }
+    if (!window.__mathpixContextMenuKeyHandlerInstalled) {
+      window.__mathpixContextMenuKeyHandlerInstalled = true;
+      document.addEventListener("keydown", (e) => {
+        if (e.key !== "ArrowUp" && e.key !== "ArrowDown") return;
+        const el = document.querySelector(".mmd-menu");
+        if (el) e.preventDefault();
+      });
+    }
+  };
+  ctxScript.onerror = () => {
+    console.error("[Mathpix] Failed to load context-menu script:", ctxScript.src);
+  };
+  document.head.appendChild(ctxScript);
+})();
+</script>
+</body>
+</html>
