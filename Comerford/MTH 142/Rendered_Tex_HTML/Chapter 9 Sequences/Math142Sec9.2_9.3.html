@@ -670,7 +670,7 @@ mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
    }
 
     #preview-content code, #setText code {
-      font-family: Inconsolata;
+      font-family: helvetica;
       font-size: inherit;
       display: initial;
       background: #f8f8fa;
@@ -680,7 +680,7 @@ mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
       background-color: transparent;
     }
     #preview-content pre code, #setText pre code {
-      font-family: 'DM Mono', Inconsolata, monospace;
+      font-family:  helvetica;
       color: #333;
       font-size: 15px;
     }
@@ -878,7 +878,7 @@ mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
   }
 
   #preview {
-    font-family: 'CMU Serif', 'Georgia', Helvetica, Arial, sans-serif;
+    font-family: helvetica;
     font-size: 17px;
     visibility: visible;
     word-break: break-word;
@@ -889,11 +889,11 @@ mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
   }
 
   #preview h1, #preview h2, #preview h3, #preview h4, #preview h5, #preview strong {
-    font-family: 'CMU Serif Bold', 'Georgia', Helvetica, Arial, sans-serif;
+    font-family:  helvetica;
   }
 
   #preview  i, #preview  em {
-    font-family: 'CMU Serif Italic', 'Georgia', Helvetica, Arial, sans-serif;
+    font-family: helvetica;
   }
 
   .mmd-menu {
@@ -1098,7 +1098,7 @@ td .ClipboardButton .mmd-clipboard-icon {
     z-index: 1000000;
     display: none;
     padding: 0.5em 0.75em;
-    font: normal normal 11px/1.5 'CMU Serif', 'Georgia', Helvetica, Arial, sans-serif;
+    font: helvetica;
     -webkit-font-smoothing: subpixel-antialiased;
     color: rgb(255, 255, 255);
     text-align: center;
@@ -1121,9 +1121,13 @@ td .ClipboardButton .mmd-clipboard-icon {
 
 </head>
 <body>
-  <div id="preview" class="preview scrollEditor">
+
+<div style="font-family: comic;" >
+
+<div id="preview" class="preview scrollEditor">
     <div id="container-ruller" />
     <div id="preview-content">
+
       <h1 style="color: rgb(200,0,0);" type="section" data-unnumbered="true" class="section-title preview-paragraph-0 preview-line 0" id="%C2%A79.2%2C9.3-geometric-series-convergence-of-series" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1">
 §9.2,9.3 Geometric Series </h1>
  
@@ -1146,7 +1150,7 @@ td .ClipboardButton .mmd-clipboard-icon {
 &amp; \sum_{n=1}^{\infty} \frac{1}{n^{2}}=1+\frac{1}{4}+\frac{1}{9}+\frac{1}{16}+\cdots = \frac{\pi^2}{6}
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-15 preview-line 15 16" data_line_start="15" data_line_end="16" data_line="15,17" count_line="2">A geometric series is a series (finite or infinite) where the ratio between successive terms is fixed, e.g.<br>
+<div class="preview-paragraph-15 preview-line 15 16" data_line_start="15" data_line_end="16" data_line="15,17" count_line="2">A <u>geometric series </u> is a series (finite or infinite) where the ratio between successive terms is fixed, e.g.<br>
 </div>
 <div class="preview-paragraph-17 preview-line 17 18 19 20 21 22" data_line_start="17" data_line_end="22" data_line="17,23" count_line="6"><span class="math-block ">$$ \large
 \begin{aligned}
@@ -1643,6 +1647,9 @@ $$</span></div>
 
     </div>
   </div>
+
+</div>
+
   <script>
 (() => {
   window.MathpixRenderConfig = {"width":1200,"outMath":{"output_format":"svg","include_svg":true,"include_asciimath":true,"include_latex":true,"include_mathml":true,"include_mathml_word":true,"include_tsv":true,"include_table_markdown":true,"include_smiles":true},"accessibility":{"assistive_mml":true,"include_speech":false}};
