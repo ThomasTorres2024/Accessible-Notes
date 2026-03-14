@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>10.5_Fourier_Series</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.mathpix.com/fonts/cmu.css"/>
+    <style>html,body {
+  width: 100%;
+  height: 100%;
+}
+*, *::before,*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  color: #1E2029;
+  font-size: 14px;
+  line-height: normal;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 500;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+ol, ul, dl {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+ol ol, ul ul, ol ul, ul ol {
+  margin-bottom: 0;
+}
+dt {
+  font-weight: 500;
+}
+dd {
+  margin-bottom: 0.5em;
+  margin-left: 0;
+}
+blockquote {
+  margin: 0 0 1em;
+}
+dfn {
+  font-style: italic;
+}
+b, strong {
+  font-weight: bolder;
+}
+small {
+  font-size: 80%;
+}
+sub, sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+a {
+  color: #0B93ff;
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+a:hover {
+  color: #33aaff;
+}
+a:active {
+  color: #0070d9;
+}
+a:active, a:hover {
+  text-decoration: none;
+  outline: 0;
+}
+a[disabled] {
+  color: rgba(0, 0, 0, 0.25);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+pre, code, kbd, samp {
+  font-size: 1em;
+}
+pre {
+  margin-top: 0;
+  margin-bottom: 1em;
+  overflow: auto;
+}
+figure {
+  margin: 0 0 1em;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+table {
+  border-collapse: collapse;
+}
+caption {
+  padding-top: 0.75em;
+  padding-bottom: 0.3em;
+  color: rgba(0, 0, 0, 0.45);
+  text-align: left;
+  caption-side: bottom;
+}
+th {
+  text-align: inherit;
+}
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+  stroke-width: 3;
+}
+#setText > div {
+  justify-content: inherit;
+  margin-top: 0;
+  margin-bottom: 1em;
+  
+  
+}
+#setText div:last-child {
+  margin-bottom: 0 !important;
+}
+#setText > br, #preview-content br {
+  line-height: 1.2;
+}
+#preview-content > div {
+  margin-top: 0;
+  margin-bottom: 1em;
+  
+}
+.proof > div,
+#preview-content .proof > div, #setText .proof > div,
+.theorem > div,
+#preview-content .theorem > div, #setText .theorem > div {
+  margin-top: 1rem;
+}
+mjx-container {
+  text-indent: 0;
+  overflow-y: hidden;
+  overflow-x: auto;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  
+}
+.math-inline mjx-container {
+  display: inline-block !important;
+  page-break-inside: avoid;
+  max-width: 100%;
+  padding: 0;
+  line-height: 0;
+}
+.math-inline[data-overflow="visible"] mjx-container {
+  overflow: visible;
+}
+.math-inline mjx-container mjx-assistive-mml {
+  max-width: 100%;
+}
+.math-block {
+  align-items: center;
+  page-break-after: auto;
+  page-break-inside: avoid;
+  margin: 0;
+  display: block;
+}
+.math-inline {
+  display: inline-flex;
+  max-width: 100%;
+}
+.math-block[data-width="full"] {
+  overflow-x: auto;
+  display: flex;
+}
+.math-block[data-width="full"] mjx-container[jax=SVG][display=true] {
+  display: flex;
+  flex: 1 1;
+  justify-content: center;
+}
+svg .math-inline {
+  display: initial;
+  max-width: initial;
+}
+svg .math-inline mjx-container {
+  max-width: initial;
+}
+svg mjx-container {
+  overflow: visible;
+  padding: 0;
+}
+svg .math-block[data-width="full"] {
+  overflow: visible;
+}
+.math-block, .math-inline {
+  --mmd-highlight-color: rgba(0, 147, 255, 0.25);
+  --mmd-highlight-text-color: #1e2029;
+}
+.math-block[data-highlight-color] mjx-container[jax="SVG"] > svg {
+  background-color: var(--mmd-highlight-color);
+}
+.math-block[data-highlight-text-color] mjx-container[jax="SVG"] > svg {
+  color: var(--mmd-highlight-text-color);
+}
+.math-inline[data-highlight-color] mjx-container[jax="SVG"] {
+  background-color: var(--mmd-highlight-color);
+}
+.math-inline[data-highlight-text-color] mjx-container[jax="SVG"] {
+  color: var(--mmd-highlight-text-color);
+}
+.math-block p {
+  flex-shrink: 1;
+}
+.math-block mjx-container {
+  margin: 0 !important;
+}
+.math-error {
+  background-color: yellow;
+  color: red;
+}
+#preview-content img, #setText img {
+  max-width: 100%;
+}
+#preview-content blockquote, #setText blockquote {
+  page-break-inside: avoid;
+  color: #666;
+  margin: 0 0 1em 0;
+  padding-left: 3em;
+  border-left: .5em solid #eee;
+}
+#preview-content pre, #setText pre {
+  border: none;
+  padding: 0;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background: #f8f8fa;
+}
+#preview-content pre code, #setText pre code {
+  padding: 1rem;
+  display: block;
+  overflow-x: auto;
+  line-height: 24px;
+}
+#preview-content table, #setText table {
+  display: table;
+  overflow: auto;
+  max-width: 100%;
+  border-collapse: collapse;
+  page-break-inside: avoid;
+  margin-bottom: 1em;
+}
+#preview-content table th, #setText table th {
+  text-align: center;
+  font-weight: bold;
+}
+#preview-content table td, #setText table td,
+#preview-content table th, #setText table th {
+  border: 1px solid #dfe2e5;
+  padding: 6px 13px;
+}
+#preview-content table tr, #setText table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+#preview-content table tr:nth-child(2n), #setText table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+.main-title,
+#preview-content .main-title, #setText .main-title {
+  text-align: center;
+  line-height: 1.2;
+  margin: 0 auto 1em auto;
+}
+.author,
+#preview-content .author, #setText .author {
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.author p,
+#preview-content .author p, #setText .author p {
+  min-width: 30%;
+  max-width: 50%;
+  padding: 0 7px;
+}
+.author > p > span,
+#preview-content .author > p > span, #setText .author > p > span {
+  display: block;
+  text-align: center;
+}
+.section-title,
+#preview-content .section-title, #setText .section-title {
+  margin-top: 1.5em;
+}
+.abstract,
+#preview-content .abstract, #setText .abstract {
+  text-align: justify;
+  margin-bottom: 1em;
+}
+.abstract p,
+#preview-content .abstract p, #setText .abstract p {
+  margin-bottom: 0;
+}
+#preview-content sup, #setText sup {
+  top: -.5em;
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+.text-url,
+#preview-content .text-url, #setText .text-url {
+  color: #0B93ff;
+  cursor: text;
+  pointer-events: none;
+}
+.text-url a:hover,
+#preview-content .text-url a:hover, #setText .text-url a:hover {
+  color: #0B93ff;
+}
+mark,
+#preview-content mark, #setText mark {
+  background-color: #feffe6;
+}
+span[data-underline-type] mark,
+#preview-content span[data-underline-type] mark,
+#setText span[data-underline-type] mark {
+  background: inherit;
+  background-color: #feffe6;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+*[data-has-dotfill] {
+  position: relative;
+  overflow: hidden;
+}
+*[data-has-dotfill] .dotfill::after {
+  position: absolute;
+  padding-left: .25ch;
+  content: " . . . . . . . . . . . . . . . . . . . "
+      ". . . . . . . . . . . . . . . . . . . . . . . "
+      ". . . . . . . . . . . . . . . . . . . . . . . "
+      ". . . . . . . . . . . . . . . . . . . . . . . "
+      ". . . . . . . . . . . . . . . . . . . . . . . "
+      ". . . . . . . . . . . . . . . . . . . . . . . "
+      ". . . . . . . . . . . . . . . . . . . . . . . ";
+  text-align: right;
+}
+.smiles,
+#preview-content .smiles, #setText .smiles {
+  text-align: center;
+}
+div.svg-container,
+#preview-content > div.svg-container,
+#setText > div.svg-container {
+  display: flex;
+  justify-content: center;
+}
+@media print {
+  #preview {
+    font-size: 10pt !important;
+  }
+  .math-block svg, .math-inline svg {
+    shape-rendering: crispEdges;
+    margin-top: 1px;
+  }
+  #preview-content img, #setText img {
+    display: block;
+  }
+  #preview-content .figure_img img, #setText .figure_img img {
+    display: inline;
+  }
+  #preview-content h1, #preview-content h2, #preview-content h3,
+  #preview-content h4, #preview-content h5, #preview-content h6,
+  #setText h1, #setText h2, #setText h3,
+  #setText h4, #setText h5, #setText h6 {
+    page-break-inside: avoid;
+    position: relative;
+    border: 2px solid transparent;
+  }
+  #preview-content h1::after, #preview-content h2::after, #preview-content h3::after,
+  #preview-content h4::after, #preview-content h5::after, #preview-content h6::after,
+  #setText h1::after, #setText h2::after, #setText h3::after,
+  #setText h4::after, #setText h5::after, #setText h6::after {
+    content: "";
+    display: block;
+    height: 100px;
+    margin-bottom: -100px;
+    position: relative;
+  }
+}
+#preview-content code, #setText code {
+  font-family: Inconsolata;
+  font-size: inherit;
+  display: initial;
+  background: #f8f8fa;
+}
+#preview-content .mmd-highlight code, #setText .mmd-highlight code,
+#preview-content pre.mmd-highlight code, #setText pre.mmd-highlight code {
+  background-color: transparent;
+}
+#preview-content pre code, #setText pre code {
+  font-family: 'DM Mono', Inconsolata, monospace;
+  color: #333;
+  font-size: 15px;
+}
+.hljs-comment, .hljs-quote,
+#preview-content .hljs-comment, #setText .hljs-comment,
+#preview-content .hljs-quote, #setText .hljs-quote {
+  color: #998;
+  font-style: italic;
+}
+.hljs-command,
+#preview-content .hljs-command, #setText .hljs-command {
+  color: #005cc5;
+}
+.hljs-keyword, .hljs-selector-tag, .hljs-subst,
+#preview-content .hljs-keyword, #setText .hljs-keyword,
+#preview-content .hljs-selector-tag, #setText .hljs-selector-tag,
+#preview-content .hljs-subst, #setText .hljs-subst {
+  color: #d73a49;
+  font-weight: bold;
+}
+.hljs-number, .hljs-literal, .hljs-variable,
+.hljs-template-variable, .hljs-tag .hljs-attr,
+#preview-content .hljs-number, #setText .hljs-number,
+#preview-content .hljs-literal, #setText .hljs-literal,
+#preview-content .hljs-variable, #setText .hljs-variable,
+#preview-content .hljs-template-variable, #setText .hljs-template-variable,
+#preview-content .hljs-tag .hljs-attr, #setText .hljs-tag .hljs-attr {
+  color: #005cc5;
+}
+.hljs-string, .hljs-doctag,
+#preview-content .hljs-string, #setText .hljs-string,
+#preview-content .hljs-doctag, #setText .hljs-doctag {
+  color: #24292e;
+}
+.hljs-title, .hljs-section, .hljs-selector-id,
+#preview-content .hljs-title, #setText .hljs-title,
+#preview-content .hljs-section, #setText .hljs-section,
+#preview-content .hljs-selector-id, #setText .hljs-selector-id {
+  color: #6f42c1;
+  font-weight: bold;
+}
+.hljs-subst,
+#preview-content .hljs-subst, #setText .hljs-subst {
+  font-weight: normal;
+}
+.hljs-type, .hljs-class .hljs-title,
+#preview-content .hljs-type, #setText .hljs-type,
+#preview-content .hljs-class .hljs-title, #setText .hljs-class .hljs-title {
+  color: #458;
+  font-weight: bold;
+}
+.hljs-tag, .hljs-name, .hljs-attribute,
+#preview-content .hljs-tag, #setText .hljs-tag,
+#preview-content .hljs-name, #setText .hljs-name,
+#preview-content .hljs-attribute, #setText .hljs-attribute {
+  color: #000080;
+  font-weight: normal;
+}
+.hljs-regexp, .hljs-link,
+#preview-content .hljs-regexp, #setText .hljs-regexp,
+#preview-content .hljs-link, #setText .hljs-link {
+  color: #009926;
+}
+.hljs-symbol, .hljs-bullet,
+#preview-content .hljs-symbol, #setText .hljs-symbol,
+#preview-content .hljs-bullet, #setText .hljs-bullet {
+  color: #990073;
+}
+.hljs-built_in, .hljs-builtin-name,
+#preview-content .hljs-built_in, #setText .hljs-built_in,
+#preview-content .hljs-builtin-name, #setText .hljs-builtin-name {
+  color: #24292e;
+}
+.hljs-meta,
+#preview-content .hljs-meta, #setText .hljs-meta {
+  color: #999;
+  font-weight: bold;
+}
+.hljs-meta-keyword,
+#preview-content .hljs-meta-keyword, #setText .hljs-meta-keyword {
+  color: #d73a49;
+}
+.hljs-meta-string,
+#preview-content .hljs-meta-string, #setText .hljs-meta-string {
+  color: #032f62;
+}
+.hljs-deletion,
+#preview-content .hljs-deletion, #setText .hljs-deletion {
+  background: #fdd;
+}
+.hljs-addition,
+#preview-content .hljs-addition, #setText .hljs-addition {
+  background: #dfd;
+}
+.hljs-emphasis,
+#preview-content .hljs-emphasis, #setText .hljs-emphasis {
+  font-style: italic;
+}
+.hljs-strong,
+#preview-content .hljs-strong, #setText .hljs-strong {
+  font-weight: bold;
+}
+.table_tabular,
+#preview-content .table_tabular, #setText .table_tabular {
+  overflow-x: auto;
+  padding: 0 2px 0.5em 2px;
+}
+.tabular,
+#preview-content .tabular, #setText .tabular {
+  display: inline-table !important;
+  width: auto;
+  table-layout: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0 0 1em;
+  font-size: inherit;
+  height: fit-content;
+}
+.tabular th,
+#preview-content .tabular th, #setText .tabular th {
+  border: none !important;
+  padding: 6px 13px;
+  background-color: transparent;
+  font-weight: bold;
+}
+.tabular tr,
+#preview-content .tabular tr, #setText .tabular tr {
+  border-top: none !important;
+  border-bottom: none !important;
+  background-color: transparent;
+}
+.tabular td,
+#preview-content .tabular td, #setText .tabular td {
+  border-style: none !important;
+  background-color: #fff;
+  border-color: #000 !important;
+  word-break: keep-all;
+  padding: 0.1em 0.5em !important;
+}
+.tabular td > p,
+#preview-content .tabular td > p, #setText .tabular td > p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.tabular td._empty,
+#preview-content .tabular td._empty, #setText .tabular td._empty {
+  height: 1.3em;
+}
+.tabular td .f,
+#preview-content .tabular td .f, #setText .tabular td .f {
+  opacity: 0;
+}
+#preview-content .sub-table table, #setText .sub-table table {
+  margin-bottom: 0;
+}
+html[data-theme="dark"] .tabular tr,
+html[data-theme="dark"] #preview-content .tabular tr, html[data-theme="dark"] #setText .tabular tr,
+html[data-theme="dark"] .tabular td,
+html[data-theme="dark"] #preview-content .tabular td, html[data-theme="dark"] #setText .tabular td {
+  background-color: #202226;
+  border-color: #fff !important;
+}
+.figure_img,
+#preview-content .figure_img, #setText .figure_img {
+  margin-bottom: 0.5em;
+  overflow-x: auto;
+}
+div.figure_img img,
+#preview-content div.figure_img img, #setText div.figure_img img {
+  display: inline;
+  margin: 0;
+}
+ol.enumerate, ul.itemize,
+#preview-content ol.enumerate, #setText ol.enumerate,
+#preview-content ul.itemize, #setText ul.itemize {
+  padding-inline-start: 40px;
+  margin: 0 0 1em 0;
+}
+li > ol.enumerate, li > ul.itemize,
+#preview-content li > ol.enumerate, #setText li > ol.enumerate,
+#preview-content li > ul.itemize, #setText li > ul.itemize {
+  margin: 0;
+}
+ul.itemize > li,
+#preview-content ul.itemize > li, #setText ul.itemize > li {
+  position: relative;
+  min-height: 1.4em;
+  margin-bottom: 0;
+}
+.enumerate > .li_enumerate,
+#preview-content .enumerate > .li_enumerate, #setText .enumerate > .li_enumerate {
+  margin-bottom: 0;
+}
+.itemize > li > span.li_level, .li_enumerate.not_number > span.li_level,
+#preview-content .itemize > li > span.li_level, #setText .itemize > li > span.li_level,
+#preview-content .li_enumerate.not_number > span.li_level, #setText .li_enumerate.not_number > span.li_level {
+  position: absolute;
+  right: 100%;
+  white-space: nowrap;
+  width: max-content;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.li_enumerate.not_number,
+#preview-content .li_enumerate.not_number, #setText .li_enumerate.not_number {
+  position: relative;
+  display: inline-block;
+  list-style-type: none;
+  min-height: 1.4em;
+}
+.itemize > li > span.li_level .math-inline,
+.enumerate > li > span.li_level .math-inline,
+#preview-content .itemize > li > span.li_level .math-inline,
+#setText .itemize > li > span.li_level .math-inline,
+#preview-content .enumerate > li > span.li_level .math-inline,
+#setText .enumerate > li > span.li_level .math-inline {
+  display: inline-block;
+}
+#preview {
+  font-family: 'CMU Serif', 'Georgia', Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  visibility: visible;
+  word-break: break-word;
+  padding: 2.5em;
+  max-width: 800px;
+  margin: auto;
+  box-sizing: content-box;
+}
+#preview h1, #preview h2, #preview h3, #preview h4, #preview h5, #preview strong {
+  font-family: 'CMU Serif Bold', 'Georgia', Helvetica, Arial, sans-serif;
+}
+#preview i, #preview em {
+  font-family: 'CMU Serif Italic', 'Georgia', Helvetica, Arial, sans-serif;
+}
+.mmd-menu {
+  max-width: 320px;
+  position: absolute;
+  background-color: white;
+  color: black;
+  width: auto;
+  padding: 5px 0;
+  border: 1px solid #E5E6EB;
+  margin: 0;
+  cursor: default;
+  font: menu;
+  text-align: left;
+  text-indent: 0;
+  text-transform: none;
+  line-height: normal;
+  letter-spacing: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  float: none;
+  z-index: 201;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  box-shadow: 0 10px 20px #808080;
+  -webkit-box-shadow: 0 10px 20px #808080;
+  -moz-box-shadow: 0 10px 20px #808080;
+  -khtml-box-shadow: 0 10px 20px #808080;
+}
+.mmd-menu:focus { outline: none; }
+.mmd-menu.mmd-menu-sm {
+  max-width: 100vw;
+  padding-bottom: 34px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -khtml-border-radius: 0;
+}
+.mmd-menu-item-icon {
+  color: #1E2029;
+  margin-left: auto;
+  align-items: center;
+  display: none;
+  flex-shrink: 0;
+}
+.mmd-menu-item {
+  padding: 8px 1.25rem;
+  display: flex;
+  background: transparent;
+  height: 52px;
+  max-height: 52px;
+}
+.mmd-menu-item:focus { outline: none; }
+.mmd-menu-item.active {
+  background-color: #e1e0e5;
+}
+.mmd-menu-item.active .mmd-menu-item-icon {
+  display: flex;
+}
+.mmd-menu-item-container {
+  overflow: hidden;
+}
+.mmd-menu-item-title {
+  color: #1E2029;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 20px;
+}
+.mmd-menu-item-value {
+  color: #7d829c;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 16px;
+}
+html[data-theme="dark"] .mmd-menu-item-title {
+  color: #ebefe7;
+}
+html[data-theme="dark"] .mmd-menu-item.active .mmd-menu-item-title {
+  color: #1E2029;
+}
+html[data-theme="dark"] .mmd-menu {
+  background-color: #33363a;
+}
+.mmd-context-menu-overlay {
+  background: rgba(0, 0, 0, 0.56);
+}
+.ClipboardButton {
+  padding: 0;
+  margin: 0.5rem;
+  display: inline-block;
+  cursor: pointer;
+  color: rgb(36, 41, 47);
+  background: rgb(246, 248, 250);
+  border-radius: 6px;
+  border: 1px solid rgba(31, 35, 40, 0.15);
+  box-shadow: rgba(31, 35, 40, 0.04) 0 1px 0 0, rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
+  position: relative;
+}
+.ClipboardButton:hover {
+  background-color: rgb(243, 244, 246);
+  border-color: rgba(31, 35, 40, 0.15);
+  transition-duration: .1s;
+}
+td .mmd-clipboard-copy-container {
+  line-height: 0;
+}
+td .ClipboardButton {
+  margin: 1px;
+  line-height: 0;
+}
+td .ClipboardButton .mmd-clipboard-icon {
+  margin: 1px !important;
+  transform: scale(0.6);
+}
+.mmd-clipboard-icon {
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+.mmd-clipboard-copy-icon {
+  color: rgb(101, 109, 118);
+}
+.mmd-clipboard-check-icon {
+  color: rgb(26, 127, 55);
+}
+.mmd-tooltipped-no-delay:hover::before,
+.mmd-tooltipped-no-delay:hover::after {
+  animation-delay: 0s;
+}
+.mmd-tooltipped:hover::before,
+.mmd-tooltipped:hover::after {
+  display: inline-block;
+  text-decoration: none;
+  animation-name: tooltip-appear;
+  animation-duration: .1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-delay: .4s;
+}
+.mmd-tooltipped-w::before {
+  top: 50%;
+  bottom: 50%;
+  left: -7px;
+  margin-top: -6px;
+  border-left-color: rgb(36, 41, 47);
+}
+.mmd-tooltipped::before {
+  position: absolute;
+  z-index: 1000001;
+  display: none;
+  width: 0;
+  height: 0;
+  color: rgb(36, 41, 47);
+  pointer-events: none;
+  content: "";
+  border: 6px solid transparent;
+  opacity: 0;
+}
+.mmd-tooltipped-w::after {
+  right: 100%;
+  bottom: 50%;
+  margin-right: 6px;
+  transform: translateY(50%);
+}
+.mmd-tooltipped::after {
+  position: absolute;
+  z-index: 1000000;
+  display: none;
+  padding: 0.5em 0.75em;
+  font: normal normal 11px/1.5 'CMU Serif', 'Georgia', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: break-word;
+  white-space: pre;
+  pointer-events: none;
+  content: attr(aria-label);
+  background: rgb(36, 41, 47);
+  border-radius: 6px;
+  opacity: 0;
+}</style>
+</head>
+<body>
+  <div id="preview" class="preview scrollEditor">
+    <div id="container-ruller" />
+    <div id="preview-content">
+      <h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-0 preview-line 0" id="%24%5Coint-10.5%24-fourier-series" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1">
+<span class="math-inline ">$\oint 10.5$</span> Fourier Series</h2>
+<div class="preview-paragraph-2 preview-line 2 3" data_line_start="2" data_line_end="3" data_line="2,4" count_line="2">With Taylor series we approximated a sn using powers of <span class="math-inline ">$(x-a),(x-a)^{n}$</span>.<br>
+For Fourier series, we appreximate a fro using sines and cosines of the type <span class="math-inline ">$\sin k x, \cos k x$</span>.</div>
+<div class="preview-paragraph-5 preview-line 5 6 7 8" data_line_start="5" data_line_end="8" data_line="5,9" count_line="4">Since these for are all penodic, we can only hope do approximate periodic fus.<br>
+e.g.<br>
+Square Ware<br>
+<figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/5ced30d6-e10f-4099-817b-641f56ca0402-01.jpg?height=381&amp;width=1013&amp;top_left_y=1780&amp;top_left_x=251" alt="" data-align="center"></figure></div>
+<div class="preview-paragraph-10 preview-line 10 11" data_line_start="10" data_line_end="11" data_line="10,12" count_line="2">Trangular ware<br>
+<figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/5ced30d6-e10f-4099-817b-641f56ca0402-01.jpg?height=322&amp;width=932&amp;top_left_y=2356&amp;top_left_x=258" alt="" data-align="center"></figure></div>
+<div class="preview-paragraph-13 preview-line 13" data_line_start="13" data_line_end="13" data_line="13,14" count_line="1">We will attempt to approximate <span class="math-inline ">$f$</span> with a sum of trig. pos of the form</div>
+<div class="preview-paragraph-14 preview-line 14 15 16 17 18 19 20" data_line_start="14" data_line_end="20" data_line="14,21" count_line="7"><span class="math-block ">$$
+\begin{aligned}
+f(x) \approx &amp; F_{n}(x) \\
+= &amp; a_{0}+a_{1} \cos x+a_{2} \cos (2 x)+a_{3} \cos (3 x)+\cdots+a_{n} \cos (n x) \\
+&amp; +b_{1} \sin x+b_{2} \sin (2 x)+b_{3} \sin (3 x)+\cdots+b_{n} \sin (n x)
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-21 preview-line 21" data_line_start="21" data_line_end="21" data_line="21,22" count_line="1"><span class="math-inline ">$F_{n}(x)$</span> is called the Fourier polynomial of degree <span class="math-inline ">$n$</span> (even though it isn't actually a polynomial) and the numbers <span class="math-inline ">$a_{k}, b_{k}$</span> are called the Fourier coefficients.</div>
+<div class="preview-paragraph-23 preview-line 23" data_line_start="23" data_line_end="23" data_line="23,24" count_line="1">Note that since all the for cos(kex), sindex) repeat every <span class="math-inline ">$2 \pi$</span>, so must the onginal po <span class="math-inline ">$f(x)$</span>.</div>
+<div class="preview-paragraph-25 preview-line 25" data_line_start="25" data_line_end="25" data_line="25,26" count_line="1">For such a po there is a formula for the Fourier coefficients which gives a good approximation to <span class="math-inline ">$f$</span>.</div>
+<div class="preview-paragraph-27 preview-line 27" data_line_start="27" data_line_end="27" data_line="27,28" count_line="1">The Fourier Coefficients for a Periodie Function <span class="math-inline ">$f$</span> of Period <span class="math-inline ">$2 \pi$</span></div>
+<div class="preview-paragraph-28 preview-line 28 29 30 31 32 33 34" data_line_start="28" data_line_end="34" data_line="28,35" count_line="7"><span class="math-block ">$$
+\begin{aligned}
+&amp; a_{0}=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f(x) d x \\
+&amp; a_{k}=\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos (k x) d x, \quad k&gt;0 \\
+&amp; b_{k}=\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin (k x) d x, \quad k&gt;0
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-36 preview-line 36" data_line_start="36" data_line_end="36" data_line="36,37" count_line="1">Note that <span class="math-inline ">$a_{0}$</span> is simply the average value of <span class="math-inline ">$f$</span> on <span class="math-inline ">$[-\pi, \pi]$</span>.</div>
+<div class="preview-paragraph-38 preview-line 38" data_line_start="38" data_line_end="38" data_line="38,39" count_line="1">Ex. Construct successive Fourier pulynomrals for the square wave <span class="math-inline ">$f$</span> of period <span class="math-inline ">$2 \pi$</span> given by</div>
+<div class="preview-paragraph-39 preview-line 39 40 41" data_line_start="39" data_line_end="41" data_line="39,42" count_line="3"><span class="math-block ">$$
+f(x)= \begin{cases}0, &amp; -\pi \leqslant x&lt;0 \\ 1, &amp; 0 \leqslant x&lt;\pi\end{cases}
+$$</span></div>
+<div class="preview-paragraph-42 preview-line 42" data_line_start="42" data_line_end="42" data_line="42,43" count_line="1"><figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/5ced30d6-e10f-4099-817b-641f56ca0402-04.jpg?height=551&amp;width=1172&amp;top_left_y=901&amp;top_left_x=180" alt="" data-align="center"></figure></div>
+<div class="preview-paragraph-44 preview-line 44" data_line_start="44" data_line_end="44" data_line="44,45" count_line="1">Since <span class="math-inline ">$a_{0}$</span> is the average value on <span class="math-inline ">$[-\pi, \pi]$</span>, it's reasonable to guess that <span class="math-inline ">$a_{0}=\frac{1}{2}$</span>. Checking gives</div>
+<div class="preview-paragraph-45 preview-line 45 46 47 48 49 50" data_line_start="45" data_line_end="50" data_line="45,51" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+a_{0} &amp; =\frac{1}{2 \pi} \int_{-\pi}^{\pi} f(x) d x \\
+&amp; =\frac{1}{2 \pi} \int_{-\pi}^{0} 0 d x+\frac{1}{2 \pi} \int_{0}^{\pi} 1 d x=0+\frac{1}{2 \pi}(\pi)=\frac{1}{2} .
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-51 preview-line 51 52 53 54 55 56 57 58 59 60 61 62" data_line_start="51" data_line_end="62" data_line="51,63" count_line="12"><span class="math-block ">$$
+\begin{aligned}
+a_{k} &amp; =\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos (k x) d x \\
+&amp; =\frac{1}{\pi} \int_{-\pi}^{0} 0 d x+\frac{1}{2 \pi} \int_{0}^{\pi} \cos (k x) d x \\
+&amp; =0+\frac{1}{\pi}\left[\frac{\sin (k x)}{k}\right]_{0}^{\pi} \\
+&amp; =0+\frac{1}{\pi}\left(\frac{\sin (k \pi)}{k}-\frac{\sin 0}{k}\right) \\
+&amp; =0+\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin (k x) d x \\
+b_{k} &amp; =\frac{1}{\pi} \int_{-\pi}^{0} d x+\frac{1}{\pi} \int_{0}^{\pi} \sin (k x) d x \\
+&amp; =0+\frac{1}{\pi}\left[-\frac{1}{k} \cos (k x)\right]_{0}^{\pi} \\
+&amp; =\frac{1}{\pi}\left(-\frac{1}{k} \cos (k \pi)-\left(-\frac{1}{k} \cos 0\right)\right)
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-63 preview-line 63 64 65" data_line_start="63" data_line_end="65" data_line="63,66" count_line="3"><span class="math-block ">$$
+=\frac{1}{\pi k}(1-\cos (k \pi))
+$$</span></div>
+<div class="preview-paragraph-67 preview-line 67 68" data_line_start="67" data_line_end="68" data_line="67,69" count_line="2">Now <span class="math-inline ">$\cos (k \pi)=\left\{\begin{aligned}-1, &amp; k \text { odd } \\ 1, &amp; k \text { even }\end{aligned}\right.$</span><br>
+and so</div>
+<div class="preview-paragraph-69 preview-line 69 70 71 72 73 74" data_line_start="69" data_line_end="74" data_line="69,75" count_line="6"><span class="math-block ">$$
+b_{k}=\left\{\begin{array}{cc}
+\frac{2}{\pi k}, &amp; k \text { odd } \\
+0, &amp; k \text { even. }
+\end{array}\right.
+$$</span></div>
+<div class="preview-paragraph-76 preview-line 76" data_line_start="76" data_line_end="76" data_line="76,77" count_line="1">From this we see that</div>
+<div class="preview-paragraph-77 preview-line 77 78 79 80 81 82 83 84 85" data_line_start="77" data_line_end="85" data_line="77,86" count_line="9"><span class="math-block ">$$
+\begin{aligned}
+&amp; F_{1}(x)=\frac{1}{2}+\frac{2}{\pi} \sin x \\
+&amp; F_{2}(x)=\frac{1}{2}+\frac{2}{\pi} \sin x \\
+&amp; F_{3}(x)=\frac{1}{2}+\frac{2}{\pi} \sin x+\frac{2}{3 \pi} \sin (3 x) \\
+&amp; F_{4}(x)=\frac{1}{2}+\frac{2}{\pi} \sin x+\frac{2}{3 \pi} \sin (3 x) \quad(+0 \sin (4 x)) \\
+&amp; F_{5}(x)=\frac{1}{2}+\frac{2}{\pi} \sin x+\frac{2}{3 \pi} \sin (3 x)+\frac{2}{5 \pi} \sin (5 x)
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-86 preview-line 86" data_line_start="86" data_line_end="86" data_line="86,87" count_line="1">ete.</div>
+<div class="preview-paragraph-88 preview-line 88" data_line_start="88" data_line_end="88" data_line="88,89" count_line="1">Using Maple, we can see har the Fourier polynomials give better and better approxmations to the square ware.</div>
+<div class="preview-paragraph-90 preview-line 90" data_line_start="90" data_line_end="90" data_line="90,91" count_line="1">Note that as <span class="math-inline ">$n \rightarrow \infty$</span>, the approximation given by <span class="math-inline ">$F_{n}$</span> gats better everywhere (except for the pornts of discontinuity).</div>
+<div class="preview-paragraph-92 preview-line 92" data_line_start="92" data_line_end="92" data_line="92,93" count_line="1">Note also that this is different to the situation with Taglor pulynomials Where the approximation is usually just on an interval (ie. lucally).</div>
+<div class="preview-paragraph-94 preview-line 94" data_line_start="94" data_line_end="94" data_line="94,95" count_line="1">As <span class="math-inline ">$n \rightarrow \infty$</span>, the Fourice polynomials <span class="math-inline ">$F_{n}$</span> give us the Fourier Series Jor of.</div>
+<div class="preview-paragraph-96 preview-line 96" data_line_start="96" data_line_end="96" data_line="96,97" count_line="1">On the interval <span class="math-inline ">$[-\pi, \pi]$</span>, the Founer Series for <span class="math-inline ">$f$</span> is given by</div>
+<div class="preview-paragraph-97 preview-line 97 98 99 100 101 102" data_line_start="97" data_line_end="102" data_line="97,103" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+a_{0} &amp; +a_{1} \cos x+a_{2} \cos (2 x)+a_{3} \cos (3 x)+\cdots \\
+&amp; +b_{1} \sin x+b_{2} \sin (2 x)+b_{3} \sin (3 x)+\cdots
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-103 preview-line 103" data_line_start="103" data_line_end="103" data_line="103,104" count_line="1">where <span class="math-inline ">$a_{k}$</span> and <span class="math-inline ">$b_{k}$</span> are the Fourer coefficients whose formulae were given carlier.</div>
+<div class="preview-paragraph-105 preview-line 105" data_line_start="105" data_line_end="105" data_line="105,106" count_line="1">If <span class="math-inline ">$f$</span> is differentiable, then this fourier series converges to <span class="math-inline ">$f(x)$</span> and we have</div>
+<div class="preview-paragraph-106 preview-line 106 107 108 109 110 111" data_line_start="106" data_line_end="111" data_line="106,112" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+f(x)=a_{0} &amp; +a_{1} \cos x+a_{2} \cos (2 x)+a_{3} \cos (3 x)+\cdots \\
+&amp; +b_{1} \sin x+b_{2} \sin (2 x)+b_{3} \sin (3 x)+\cdots
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-113 preview-line 113" data_line_start="113" data_line_end="113" data_line="113,114" count_line="1">The term</div>
+<div class="preview-paragraph-114 preview-line 114 115 116" data_line_start="114" data_line_end="116" data_line="114,117" count_line="3"><span class="math-block ">$$
+a_{1} \cos x+b_{1} \sin x
+$$</span></div>
+<div class="preview-paragraph-117 preview-line 117" data_line_start="117" data_line_end="117" data_line="117,118" count_line="1">of period <span class="math-inline ">$2 \pi$</span> is called the fundamental harmenic of <span class="math-inline ">$f$</span> while the term</div>
+<div class="preview-paragraph-118 preview-line 118 119 120" data_line_start="118" data_line_end="120" data_line="118,121" count_line="3"><span class="math-block ">$$
+a_{k} \cos (k x)+b_{k} \sin (k x)
+$$</span></div>
+<div class="preview-paragraph-121 preview-line 121 122" data_line_start="121" data_line_end="122" data_line="121,123" count_line="2">of perod <span class="math-inline ">$\frac{2 \pi}{k}$</span> is called the kth hamonic of <span class="math-inline ">$f$</span>.<br>
+e.g In the last example, the fundumentul harmonic was</div>
+<div class="preview-paragraph-123 preview-line 123 124 125" data_line_start="123" data_line_end="125" data_line="123,126" count_line="3"><span class="math-block ">$$
+\frac{2}{\pi} \sin x
+$$</span></div>
+<div class="preview-paragraph-126 preview-line 126" data_line_start="126" data_line_end="126" data_line="126,127" count_line="1">while the <span class="math-inline ">$k$</span> th harmonk was</div>
+<div class="preview-paragraph-127 preview-line 127 128 129 130 131 132" data_line_start="127" data_line_end="132" data_line="127,133" count_line="6"><span class="math-block ">$$
+\begin{gathered}
+\frac{2}{k+\pi} \sin (k x), \quad k \text { odd } \\
+0, \quad k \text { even }
+\end{gathered}
+$$</span></div>
+<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-134 preview-line 134" id="energy-and-the-energy-theorem" data_line_start="134" data_line_end="134" data_line="134,135" count_line="1">
+Energy and the Energy Theorem</h2>
+<div class="preview-paragraph-136 preview-line 136" data_line_start="136" data_line_end="136" data_line="136,137" count_line="1">We define the energy <span class="math-inline ">$E$</span> of a periodic so <span class="math-inline ">$f$</span> of period <span class="math-inline ">$2 \pi$</span> by</div>
+<div class="preview-paragraph-137 preview-line 137 138 139" data_line_start="137" data_line_end="139" data_line="137,140" count_line="3"><span class="math-block ">$$
+E=\frac{1}{\pi} \int_{-\pi}^{\pi}(f(x))^{2} d x
+$$</span></div>
+<div class="preview-paragraph-141 preview-line 141" data_line_start="141" data_line_end="141" data_line="141,142" count_line="1">One can check that for the kth harmanic</div>
+<div class="preview-paragraph-142 preview-line 142 143 144" data_line_start="142" data_line_end="144" data_line="142,145" count_line="3"><span class="math-block ">$$
+a_{k} \cos (k x)+b_{k} \sin (k x)
+$$</span></div>
+<div class="preview-paragraph-145 preview-line 145" data_line_start="145" data_line_end="145" data_line="145,146" count_line="1">the energy is given by</div>
+<div class="preview-paragraph-146 preview-line 146 147 148 149 150 151" data_line_start="146" data_line_end="151" data_line="146,152" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+\frac{1}{\pi} \int_{-\pi}^{\pi}\left(a_{k} \cos (k x)+b_{k} \sin (k x)\right)^{2} d x &amp; =a_{k}^{2}+b_{k}^{2} \\
+&amp; =A_{k}^{2}
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-153 preview-line 153" data_line_start="153" data_line_end="153" data_line="153,154" count_line="1">Where <span class="math-inline ">$A_{k}=\sqrt{a_{k}^{2}+b_{k}^{2}}$</span> is called the amplitude of the <span class="math-inline ">$k$</span>-th harmanic.</div>
+<div class="preview-paragraph-155 preview-line 155" data_line_start="155" data_line_end="155" data_line="155,156" count_line="1">The energy of the constant tem ao in the Founer senes is gren by</div>
+<div class="preview-paragraph-156 preview-line 156 157 158" data_line_start="156" data_line_end="158" data_line="156,159" count_line="3"><span class="math-block ">$$
+E=\frac{1}{\pi} \int_{-\pi}^{\pi} a_{0}^{2} d x=2 a_{0}^{2}
+$$</span></div>
+<div class="preview-paragraph-159 preview-line 159" data_line_start="159" data_line_end="159" data_line="159,160" count_line="1">and so we define the amplitucle to of the constant tem by</div>
+<div class="preview-paragraph-160 preview-line 160 161 162" data_line_start="160" data_line_end="162" data_line="160,163" count_line="3"><span class="math-block ">$$
+A_{0}=\sqrt{2 A_{0}^{2}}=\sqrt{2} \cdot a_{0} .
+$$</span></div>
+<div class="preview-paragraph-164 preview-line 164" data_line_start="164" data_line_end="164" data_line="164,165" count_line="1">The big result is then that for a for <span class="math-inline ">$f$</span> Which is periodic of period <span class="math-inline ">$2 \pi$</span></div>
+<div class="preview-paragraph-165 preview-line 165 166 167 168 169 170 171" data_line_start="165" data_line_end="171" data_line="165,172" count_line="7"><span class="math-block ">$$
+\begin{aligned}
+E=\frac{1}{\pi} \int_{-\pi}^{\pi}(f(x))^{2} d x= &amp; A_{0}^{2}+A_{1}^{2}+A_{2}^{2}+A_{3}^{2}+ \\
+= &amp; 2 a_{1}^{2}+a_{1}^{2}+a_{2}^{2}+a_{3}^{2}+ \\
+&amp; +b_{1}^{2}+b_{2}^{2}+b_{3}^{2}+
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-173 preview-line 173" data_line_start="173" data_line_end="173" data_line="173,174" count_line="1">This is the so-called energy theorem (also lenam as Parseral's identity).</div>
+<div class="preview-paragraph-175 preview-line 175 176" data_line_start="175" data_line_end="176" data_line="175,177" count_line="2">It can be thought of as an infinitedimensional version of Pythagoras' theorem.<br>
+e.g. In the example with the square wave</div>
+<div class="preview-paragraph-177 preview-line 177 178 179 180 181 182 183 184 185 186" data_line_start="177" data_line_end="186" data_line="177,187" count_line="10"><span class="math-block ">$$
+\begin{aligned}
+&amp; E=\frac{1}{\pi} \int_{-\pi}^{\pi}(f(x))^{2} d x=\frac{1}{\pi} \int_{4}^{\pi} 1^{2} d x=1 \\
+&amp; a_{0}=\frac{1}{2}, \quad a_{k}=0, \quad k \geqslant 1 \\
+&amp; b_{k}=\left\{\begin{array}{lll}
+\frac{2 \pi}{k}, &amp; k &amp; \text { odd } \\
+0, &amp; k &amp; \text { even. }
+\end{array}\right.
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-188 preview-line 188" data_line_start="188" data_line_end="188" data_line="188,189" count_line="1">Thus <span class="math-inline ">$A_{0}^{2}=2 a_{0}^{2}=2\left(\frac{1}{2}\right)^{2}=\frac{1}{2}$</span>.</div>
+<div class="preview-paragraph-189 preview-line 189 190 191 192 193 194" data_line_start="189" data_line_end="194" data_line="189,195" count_line="6"><span class="math-block ">$$
+A_{k}^{2}=\left\{\begin{array}{cl}
+\frac{4}{\pi^{2}}, &amp; k \text { odd } \\
+0, &amp; k \text { even. }
+\end{array}\right.
+$$</span></div>
+<div class="preview-paragraph-196 preview-line 196" data_line_start="196" data_line_end="196" data_line="196,197" count_line="1">Then</div>
+<div class="preview-paragraph-197 preview-line 197 198 199 200 201 202 203 204 205 206" data_line_start="197" data_line_end="206" data_line="197,207" count_line="10"><span class="math-block ">$$
+\begin{aligned}
+&amp; A_{0}^{2}+A_{1}^{2}+A_{2}^{2}+A_{3}^{2}+ \\
+= &amp; \frac{1}{2}+\frac{4}{\pi^{2} 1^{2}}+0+\frac{4}{\pi^{2} \cdot 3^{2}}+\cdots \\
+= &amp; \frac{1}{2}+\frac{4}{\pi^{2}}\left(\frac{1}{1^{2}}+\frac{1}{3^{2}}+\frac{1}{5^{2}}+\cdots\right) \\
+= &amp; \frac{1}{2}+\frac{4}{\pi^{2}}\left(\frac{\pi^{2}}{8}\right) \\
+= &amp; \frac{1}{2}+\frac{1}{2}=1 \\
+&amp; 1+\frac{1}{3^{2}}+\frac{1}{5^{2}}+\frac{1}{7^{2}}+\cdots=\frac{\pi^{2}}{8} .
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-208 preview-line 208" data_line_start="208" data_line_end="208" data_line="208,209" count_line="1">Functions which Have Periods Other than <span class="math-inline ">$2 \pi$</span></div>
+<div class="preview-paragraph-210 preview-line 210" data_line_start="210" data_line_end="210" data_line="210,211" count_line="1">Suppose <span class="math-inline ">$f(x)$</span> has period b.</div>
+<div class="preview-paragraph-212 preview-line 212" data_line_start="212" data_line_end="212" data_line="212,213" count_line="1">If we let</div>
+<div class="preview-paragraph-213 preview-line 213 214 215" data_line_start="213" data_line_end="215" data_line="213,216" count_line="3"><span class="math-block ">$$
+x=\frac{b t}{2 \pi},
+$$</span></div>
+<div class="preview-paragraph-216 preview-line 216" data_line_start="216" data_line_end="216" data_line="216,217" count_line="1">then as <span class="math-inline ">$x$</span> ranges over the interval <span class="math-inline ">$[-b / 2, b / 2]$</span>, <span class="math-inline ">$t$</span> will range over the interval <span class="math-inline ">$[-\pi, \pi]$</span>.</div>
+<div class="preview-paragraph-218 preview-line 218" data_line_start="218" data_line_end="218" data_line="218,219" count_line="1">Now set</div>
+<div class="preview-paragraph-219 preview-line 219 220 221" data_line_start="219" data_line_end="221" data_line="219,222" count_line="3"><span class="math-block ">$$
+g(t)=f\left(\frac{b t}{2 \pi}\right)=f(x) .
+$$</span></div>
+<div class="preview-paragraph-222 preview-line 222" data_line_start="222" data_line_end="222" data_line="222,223" count_line="1"><span class="math-inline ">$g$</span> is then periodic of period <span class="math-inline ">$2 \pi$</span> and we can find the Fourier series for <span class="math-inline ">$g$</span> in the usual way.</div>
+<div class="preview-paragraph-223 preview-line 223 224 225 226 227 228" data_line_start="223" data_line_end="228" data_line="223,229" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+g(t)=a_{0} &amp; +a_{1} \cos t+a_{2} \cos (2 t)+a_{3} \cos (3 t)+\cdots \\
+&amp; +b_{1} \sin t+b_{2} \sin (2 t)+b_{3} \sin (3 t)+\cdots
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-230 preview-line 230" data_line_start="230" data_line_end="230" data_line="230,231" count_line="1">Thus, <span class="math-inline ">$\sin \theta \quad t=\frac{2 \pi x}{b}$</span></div>
+<div class="preview-paragraph-231 preview-line 231 232 233 234 235 236" data_line_start="231" data_line_end="236" data_line="231,237" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+f(x)=g(t)=a_{0} &amp; +a_{1} \cos \left(\frac{2 \pi x}{b}\right)+a_{2} \cos \left(\frac{4 \pi x}{b}\right)+a_{3} \cos \left(\frac{6 \pi x}{b}\right)+\cdots \\
+&amp; +b_{1} \sin \left(\frac{2 \pi x}{b}\right)+b_{2} \sin \left(\frac{4 \pi x}{b}\right)+b_{3} \sin \left(\frac{6 \pi x}{b}\right)+\cdots
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-238 preview-line 238 239" data_line_start="238" data_line_end="239" data_line="238,240" count_line="2">What about the Fourier coefficients?<br>
+well.</div>
+<div class="preview-paragraph-240 preview-line 240 241 242 243 244 245" data_line_start="240" data_line_end="245" data_line="240,246" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+a_{0}=\frac{1}{2 \pi} \int_{-\pi}^{\pi} g(t) d t &amp; =\frac{1}{2 \pi} \int_{-b / 2}^{b / 2} f(x) \cdot \frac{2 \pi d x}{b} \\
+&amp; =\frac{1}{b} \int_{-b / 2}^{b / 2} f(x) d x
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-246 preview-line 246 247" data_line_start="246" data_line_end="247" data_line="246,248" count_line="2">as <span class="math-inline ">$g(t)=f(x)$</span> and <span class="math-inline ">$t=\frac{2 \pi x}{b}$</span><br>
+so <span class="math-inline ">$d t=\frac{2 a}{b} d x$</span>.</div>
+<div class="preview-paragraph-249 preview-line 249" data_line_start="249" data_line_end="249" data_line="249,250" count_line="1">For <span class="math-inline ">$l \geqslant 1$</span></div>
+<div class="preview-paragraph-250 preview-line 250 251 252 253 254 255 256" data_line_start="250" data_line_end="256" data_line="250,257" count_line="7"><span class="math-block ">$$
+\begin{aligned}
+a_{k} &amp; =\frac{1}{\pi} \int_{-\pi}^{\pi} g(t) \cos (k t) d t \\
+&amp; =\frac{1}{\pi} \int_{-b / 2}^{b / 2} f(x) \cdot \cos \left(\frac{2 \pi k x}{b}\right) \cdot \frac{2 \pi d x}{b} \quad a g a i n, \\
+&amp; =\frac{2}{b} \int_{-b / 2}^{b / 2} f(x) \cos \left(\frac{2 \pi k x}{b}\right) d x
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-258 preview-line 258" data_line_start="258" data_line_end="258" data_line="258,259" count_line="1">Similarly, for <span class="math-inline ">$k \geqslant 1$</span>.</div>
+<div class="preview-paragraph-259 preview-line 259 260 261" data_line_start="259" data_line_end="261" data_line="259,262" count_line="3"><span class="math-block ">$$
+b_{k}=\frac{2}{b} \int_{-b / 2}^{b / 2} f(x) \sin \left(\frac{2 \pi k x}{b}\right) d x
+$$</span></div>
+<div class="preview-paragraph-263 preview-line 263" data_line_start="263" data_line_end="263" data_line="263,264" count_line="1">To summarize.</div>
+<div class="preview-paragraph-265 preview-line 265" data_line_start="265" data_line_end="265" data_line="265,266" count_line="1">If <span class="math-inline ">$f$</span> is periodic of period b, then the Fourier series for <span class="math-inline ">$f$</span> on <span class="math-inline ">$[-b / 2, b / 2]$</span> is given by</div>
+<div class="preview-paragraph-266 preview-line 266 267 268" data_line_start="266" data_line_end="268" data_line="266,269" count_line="3"><span class="math-block ">$$
+f(x)=a_{0}+\sum_{k=1}^{\infty}\left(a_{k} \cos \left(\frac{2 \pi k x}{b}\right)+b_{k} \sin \left(\frac{2 \pi k x}{b}\right)\right)
+$$</span></div>
+<div class="preview-paragraph-269 preview-line 269" data_line_start="269" data_line_end="269" data_line="269,270" count_line="1">where</div>
+<div class="preview-paragraph-270 preview-line 270 271 272" data_line_start="270" data_line_end="272" data_line="270,273" count_line="3"><span class="math-block ">$$
+a_{0}=\frac{1}{b} \int_{-\frac{b}{2}}^{\frac{b}{2}} f(x) d x
+$$</span></div>
+<div class="preview-paragraph-273 preview-line 273" data_line_start="273" data_line_end="273" data_line="273,274" count_line="1">and for <span class="math-inline ">$k \geqslant 1$</span>,</div>
+<div class="preview-paragraph-274 preview-line 274 275 276 277 278 279" data_line_start="274" data_line_end="279" data_line="274,280" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+&amp; a_{k}=\frac{2}{b} \int_{-b / 2}^{b / 2} f(x) \cos \left(\frac{2 \pi b x}{b}\right) d x \\
+&amp; b_{k}=\frac{2}{b} \int_{-b / 2}^{b / 2} f(x) \sin \left(\frac{2 \pi b x}{b}\right) d x
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-281 preview-line 281" data_line_start="281" data_line_end="281" data_line="281,282" count_line="1">Ex. <span class="math-inline ">$f(x)=x^{2}$</span> on <span class="math-inline ">$[-1,1]$</span></div>
+<div class="preview-paragraph-283 preview-line 283" data_line_start="283" data_line_end="283" data_line="283,284" count_line="1">Here <span class="math-inline ">$b=2, \quad b / 2=1$</span> and</div>
+<div class="preview-paragraph-284 preview-line 284 285 286" data_line_start="284" data_line_end="286" data_line="284,287" count_line="3"><span class="math-block ">$$
+a_{0}=\frac{1}{2} \int_{-1}^{1} x^{2} d x=\frac{1}{2}\left[\frac{x^{3}}{3}\right]_{-1}^{1}=\frac{1}{2}\left(\frac{1}{3}-\left(-\frac{1}{3}\right)\right)=\frac{1}{3} .
+$$</span></div>
+<div class="preview-paragraph-288 preview-line 288" data_line_start="288" data_line_end="288" data_line="288,289" count_line="1">For <span class="math-inline ">$k \geqslant 1$</span></div>
+<div class="preview-paragraph-289 preview-line 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304" data_line_start="289" data_line_end="304" data_line="289,305" count_line="16"><span class="math-block ">$$
+\begin{aligned}
+&amp; a_{k}=\frac{2}{2} \int_{-1}^{1} x^{2} \cos \left(\frac{2 \pi k}{2}\right) d x \\
+&amp; =\int_{-1}^{1} x^{2} \cos (\pi k x) d x \\
+&amp; \text { by parts } \\
+&amp; \begin{aligned}
+u &amp; =x^{2}, d v=\cos (\pi h x) d x \\
+d u &amp; =2 x d x, v=\frac{\sin (\pi h x)}{\pi k}
+\end{aligned} \\
+&amp; =\left[x^{2} \sin (\pi k x)\right]_{-1}^{1}-\frac{2}{\pi k} \int_{-1}^{1} x \sin (\pi k x) d x \\
+&amp; \text { by parts again } \\
+&amp; u=x, d v=\sin (a k x) d x \\
+&amp; d u=c n, \quad v=-\cos \frac{(d h)}{d t} \\
+&amp; =\left[\frac{x^{2} \sin (\pi k x)}{\pi k}\right]_{-1}^{1}-\frac{2}{\pi k}\left\{\left[\frac{-x \cos (\pi h x)}{\pi k}\right]_{-1}^{1}-\int_{-1}^{1}-\frac{(\cos (\pi k) x}{\pi k} d x\right\}
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-305 preview-line 305 306 307 308 309 310 311 312" data_line_start="305" data_line_end="312" data_line="305,313" count_line="8"><span class="math-block ">$$
+\begin{aligned}
+&amp; =\left[\frac{x^{2} \sin (\pi k x)}{\pi k}\right]_{-1}^{1}-\frac{2}{\pi k}\left\{\left[\frac{-x \cos (\pi k x)}{\pi k}\right]_{-1}^{1}+\int_{-1}^{1} \frac{\cos (\pi k x)}{\pi k} d x\right\} \\
+&amp; =\left[x^{2} \frac{\sin (\pi k x)}{\pi k}\right]_{-1}^{1}-\frac{2}{\pi k}\left\{\left[-x \frac{\cos (\pi k x)}{\pi k}\right]_{-1}^{1}+\left[\frac{\sin (\pi k x)}{\pi^{2} k^{2}}\right]_{-1}^{1}\right\} \\
+&amp; =1^{2} \frac{\sin (\pi k)}{\pi k}-(-1)^{2} \sin (-\pi k) \\
+&amp; -\frac{2}{\pi k}\left\{-1 \cos (\pi k)-\left(-(1) \frac{\cos (-\pi k)}{\pi k}\right)+\frac{\sin (\pi k)}{\pi k}-\sin \frac{(-\pi k)}{\pi^{2} k^{2}}\right\}
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-314 preview-line 314 315" data_line_start="314" data_line_end="315" data_line="314,316" count_line="2">Now <span class="math-inline ">$\quad \sin (\pi k)=\sin (-\pi k)=0$</span><br>
+Whice <span class="math-inline ">$\quad \cos (\pi k)=\cos (-\pi k)=(-1)^{k}$</span> and so we get</div>
+<div class="preview-paragraph-316 preview-line 316 317 318 319 320 321 322" data_line_start="316" data_line_end="322" data_line="316,323" count_line="7"><span class="math-block ">$$
+\begin{aligned}
+a_{k} &amp; =0-0 \\
+&amp; -\frac{2}{\pi k}\left\{-\frac{2(-1)^{k}}{\pi k}+0-0\right\} \\
+&amp; =\frac{4}{\pi^{2}}(-1)^{k}
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-324 preview-line 324" data_line_start="324" data_line_end="324" data_line="324,325" count_line="1">Now</div>
+<div class="preview-paragraph-325 preview-line 325 326 327" data_line_start="325" data_line_end="327" data_line="325,328" count_line="3"><span class="math-block ">$$
+b_{k}=\frac{2}{2} \int_{-1}^{1} x^{2} \sin (\pi k x) d x
+$$</span></div>
+<div class="preview-paragraph-329 preview-line 329" data_line_start="329" data_line_end="329" data_line="329,330" count_line="1">We could integrate this by parts as before, but it is much simpler to observe that as the integrand is an odd go and we are integrating orer an interval which is symmetric about <span class="math-inline ">$O$</span>, we must have</div>
+<div class="preview-paragraph-330 preview-line 330 331 332" data_line_start="330" data_line_end="332" data_line="330,333" count_line="3"><span class="math-block ">$$
+b_{n}=0 .
+$$</span></div>
+<div class="preview-paragraph-334 preview-line 334" data_line_start="334" data_line_end="334" data_line="334,335" count_line="1">Thus we have</div>
+<div class="preview-paragraph-335 preview-line 335 336 337" data_line_start="335" data_line_end="337" data_line="335,338" count_line="3"><span class="math-block ">$$
+x^{2}=\frac{1}{3}+\frac{4}{\pi^{2}} \sum_{k=1}^{\infty} \frac{(-1)^{k}}{k^{2}} \cos (\pi k x), \quad-1 \leqslant x \leqslant 1
+$$</span></div>
+<div class="preview-paragraph-339 preview-line 339" data_line_start="339" data_line_end="339" data_line="339,340" count_line="1">Note that in this example which was an even go, there ware no sine tems in the Fourier series while for the last example (the square wave), there were no cosine terms.</div>
+<div class="preview-paragraph-341 preview-line 341" data_line_start="341" data_line_end="341" data_line="341,342" count_line="1">This is an example of the following general feature</div>
+<ul class="preview-paragraph-342 preview-line 342 343 344" data_line_start="342" data_line_end="344" data_line="342,345" count_line="3">
+<li>The Fourier series on <span class="math-inline ">$[-b / 2, b / 2]$</span> for a gr which is even contains no sine terms.</li>
+<li>The Founer series on <span class="math-inline ">$\left[-\frac{b}{2}, \frac{b}{2}\right]$</span> dor a fr which is etther odd or a vertically shifted odd on contains no cosine tems.</li>
+</ul>
+<div class="preview-paragraph-345 preview-line 345" data_line_start="345" data_line_end="345" data_line="345,346" count_line="1">Finally, some entertainment!</div>
+<div class="preview-paragraph-347 preview-line 347" data_line_start="347" data_line_end="347" data_line="347,348" count_line="1">If we let <span class="math-inline ">$x=1$</span> in</div>
+<div class="preview-paragraph-348 preview-line 348 349 350" data_line_start="348" data_line_end="350" data_line="348,351" count_line="3"><span class="math-block ">$$
+x^{2}=\frac{1}{3}+\frac{4}{\pi^{2}} \sum_{k=1}^{\infty} \frac{(-1)^{k}}{k^{2}} \cos (\pi k x)
+$$</span></div>
+<div class="preview-paragraph-351 preview-line 351" data_line_start="351" data_line_end="351" data_line="351,352" count_line="1">we get</div>
+<div class="preview-paragraph-352 preview-line 352 353 354" data_line_start="352" data_line_end="354" data_line="352,355" count_line="3"><span class="math-block ">$$
+1=\frac{1}{3}+\frac{4}{\pi^{2}} \sum_{k=1}^{\infty} \frac{(-1)^{k}}{k^{2}} \cos (\pi k)
+$$</span></div>
+<div class="preview-paragraph-355 preview-line 355" data_line_start="355" data_line_end="355" data_line="355,356" count_line="1">and since <span class="math-inline ">$\cos (\pi k)=(-1)^{k}$</span></div>
+<div class="preview-paragraph-356 preview-line 356 357 358 359 360 361" data_line_start="356" data_line_end="361" data_line="356,362" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+&amp; 1=\frac{1}{3}+\frac{4}{\pi^{2}} \sum_{k=1}^{\infty} \frac{(-1)^{k}}{k^{2}}(-1)^{k} \\
+&amp; 1=\frac{1}{3}+\frac{4}{\pi^{2}} \sum_{k=1}^{\infty} \frac{(-1)^{2 k}}{k^{2}}
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-363 preview-line 363" data_line_start="363" data_line_end="363" data_line="363,364" count_line="1">So</div>
+<div class="preview-paragraph-364 preview-line 364 365 366 367 368 369" data_line_start="364" data_line_end="369" data_line="364,370" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+&amp; 1=\frac{1}{3}+\frac{4}{\pi^{2}} \sum_{k=1}^{\infty} \frac{1}{k^{2}} \\
+&amp; \frac{2}{3}=\frac{4}{\pi^{2}} \sum_{k=1}^{\infty} \frac{1}{k^{2}}
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-371 preview-line 371" data_line_start="371" data_line_end="371" data_line="371,372" count_line="1">Thus</div>
+<div class="preview-paragraph-372 preview-line 372 373 374" data_line_start="372" data_line_end="374" data_line="372,375" count_line="3"><span class="math-block ">$$
+\sum_{k=1}^{\infty} \frac{1}{h^{2}}=\frac{2}{3} \cdot \frac{\pi^{2}}{4}=\frac{\pi^{2}}{6}
+$$</span></div>
+<div class="preview-paragraph-376 preview-line 376" data_line_start="376" data_line_end="376" data_line="376,377" count_line="1">So using Fourier series we have proved that</div>
+<div class="preview-paragraph-377 preview-line 377 378 379" data_line_start="377" data_line_end="379" data_line="377,380" count_line="3"><span class="math-block ">$$
+\sum_{n=1}^{\infty} \frac{1}{n^{2}}=\frac{\pi^{2}}{6}!
+$$</span></div>
+
+    </div>
+  </div>
+  <script>
+(() => {
+  window.MathpixRenderConfig = {"width":1200,"outMath":{"output_format":"svg","include_svg":true,"include_asciimath":true,"include_latex":true,"include_mathml":true,"include_mathml_word":true,"include_tsv":true,"include_table_markdown":true,"include_smiles":true},"accessibility":{"assistive_mml":true,"include_speech":false}};
+  const autoScript = document.createElement('script');
+  autoScript.src = "https://cdn.jsdelivr.net/npm/mathpix-markdown-it@2.0.37/es5/browser/auto-render.js";
+  autoScript.onload = () => {
+    console.log("[Mathpix] auto-render loaded");
+  };
+  autoScript.onerror = () => {
+    console.error("[Mathpix] Failed to load auto-render script:", autoScript.src);
+  };
+  document.head.append(autoScript);
+})();
+</script>
+    <script>
+(() => {
+  const ctxScript = document.createElement('script');
+  ctxScript.src = "https://cdn.jsdelivr.net/npm/mathpix-markdown-it@2.0.37/es5/context-menu.js";
+  ctxScript.onload = () => {
+    const init = () => {
+      window.addListenerContextMenuEvents?.();
+    };
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init, { once: true });
+    } else {
+      init();
+    }
+    if (!window.__mathpixContextMenuKeyHandlerInstalled) {
+      window.__mathpixContextMenuKeyHandlerInstalled = true;
+      document.addEventListener("keydown", (e) => {
+        if (e.key !== "ArrowUp" && e.key !== "ArrowDown") return;
+        const el = document.querySelector(".mmd-menu");
+        if (el) e.preventDefault();
+      });
+    }
+  };
+  ctxScript.onerror = () => {
+    console.error("[Mathpix] Failed to load context-menu script:", ctxScript.src);
+  };
+  document.head.appendChild(ctxScript);
+})();
+</script>
+</body>
+</html>
