@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <title>10.1_Taylor_Polynomials</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.mathpix.com/fonts/cmu.css"/>
+    <!-- <link rel="stylesheet" href="https://cdn.mathpix.com/fonts/cmu.css"/> -->
+
+    <!-- <link rel="stylesheet" /> -->
+
     <style>html,body {
   width: 100%;
   height: 100%;
@@ -254,7 +257,7 @@ mjx-status {
 }
 
 foreignObject[data-mjx-xml] {
-  font-family: initial;
+  font-family: sans-serif;
   line-height: normal;
   overflow: visible;
 }
@@ -544,7 +547,7 @@ div.svg-container,
   }
 }
 #preview-content code, #setText code {
-  font-family: Inconsolata;
+  font-family:  sans-serif;
   font-size: inherit;
   display: initial;
   background: #f8f8fa;
@@ -554,7 +557,7 @@ div.svg-container,
   background-color: transparent;
 }
 #preview-content pre code, #setText pre code {
-  font-family: 'DM Mono', Inconsolata, monospace;
+  font-family:  sans-serif;
   color: #333;
   font-size: 15px;
 }
@@ -776,7 +779,7 @@ ul.itemize > li,
   display: inline-block;
 }
 #preview {
-  font-family: 'CMU Serif', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
   font-size: 17px;
   visibility: visible;
   word-break: break-word;
@@ -786,10 +789,10 @@ ul.itemize > li,
   box-sizing: content-box;
 }
 #preview h1, #preview h2, #preview h3, #preview h4, #preview h5, #preview strong {
-  font-family: 'CMU Serif Bold', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
 }
 #preview i, #preview em {
-  font-family: 'CMU Serif Italic', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
 }
 .mmd-menu {
   max-width: 320px;
@@ -980,6 +983,11 @@ td .ClipboardButton .mmd-clipboard-icon {
   border-radius: 6px;
   opacity: 0;
 }</style>
+
+  <link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+  <script src="https://tikzjax.com/v1/tikzjax.js"></script>
+
+
 </head>
 <body>
   <div id="preview" class="preview scrollEditor">
@@ -992,7 +1000,7 @@ Chapter 10</h1>
 Approximating Functions Using Series</h1>
 
 <h1 type="section" data-unnumbered="true" class="section-title preview-paragraph-4 preview-line 4" id="%C2%A710.1-taylor-polynomials" data_line_start="4" data_line_end="4" data_line="4,5" count_line="1" style="color:rgb(204,0.0,0.0)">
-<span class="math-inline ">$\S$</span> Taylor Polynomials</h1>
+<span class="math-inline ">$\S$</span> 10.1 Taylor Polynomials</h1>
 
 <div class="preview-paragraph-6 preview-line 6" data_line_start="6" data_line_end="6" data_line="6,7" count_line="1">The idea in this section is to find a way of choosing a polynomial which gives a good approximation of the values of some function <span class="math-inline ">$f(x)$</span> near a chosen point <span class="math-inline ">$x=a$</span>.</div>
 
@@ -1001,7 +1009,7 @@ Approximating Functions Using Series</h1>
 <div class="preview-paragraph-10 preview-line 10" data_line_start="10" data_line_end="10" data_line="10,11" count_line="1">For example, if <span class="math-inline ">$f(x)$</span> is continuous (cts.) at <span class="math-inline ">$x=a$</span>, then for <span class="math-inline ">$x$</span> near <span class="math-inline ">$a$</span>,</div>
 
 <div class="preview-paragraph-11 preview-line 11 12 13" data_line_start="11" data_line_end="13" data_line="11,14" count_line="3"><span class="math-block ">$$\large
-f(x) \approx f(a) \approx(\text { is } f(x) \text { is clase to } f(a))
+f(x) \approx f(a) \approx(\text { is } f(x) \text { is close to } f(a))
 $$</span></div>
 
 <div class="preview-paragraph-14 preview-line 14" data_line_start="14" data_line_end="14" data_line="14,15" count_line="1">and so if we let <span class="math-inline ">$P_{0}(x)$</span> be the constant <span class="math-inline ">$f(a)$</span> </div>
@@ -1011,39 +1019,61 @@ P_{0}(x)=f(a)
 $$</span></div>
 
 <div class="preview-paragraph-18 preview-line 18 19" data_line_start="18" data_line_end="19" data_line="18,20" count_line="2">then <span class="math-inline ">$P_{0}(x)$</span> gives us an approximation of <span class="math-inline ">$f$</span> near <span class="math-inline ">$x=a$</span>.<br>
-  <figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/c1c328f5-0754-43ba-9533-c73055d3d2c0-02.jpg?height=588&amp;width=1094&amp;top_left_y=1942&amp;top_left_x=81" alt="" data-align="center"></figure></div>
+<br>
+<br>
+<br>
+
+<img src="constant_approx.png" alt="The graph of a smooth function f of x is poorly approximated using the function y equals f of a, however it is a start.">
+
+</div>
 
   <div class="preview-paragraph-21 preview-line 21" data_line_start="21" data_line_end="21" data_line="21,22" count_line="1">Note that <span class="math-inline ">$P_{0}(x)$</span> has the same value as <span class="math-inline ">$f(x)$</span> for <span class="math-inline ">$x=a$</span>.</div>
-
+  <br>
   <div class="preview-paragraph-23 preview-line 23" data_line_start="23" data_line_end="23" data_line="23,24" count_line="1">A better way to do the approximation is using linear <span class="math-inline ">$f(n)$</span>s .</div>
-
+  <br>
   <div class="preview-paragraph-25 preview-line 25" data_line_start="25" data_line_end="25" data_line="25,26" count_line="1">This gives us the tangent line approximation also called the linear approximation.</div>
-
+  <br>
   <div class="preview-paragraph-27 preview-line 27" data_line_start="27" data_line_end="27" data_line="27,28" count_line="1">Recall that if <span class="math-inline ">$f(x)$</span> is differentiable at <span class="math-inline ">$x=a$</span>, then for <span class="math-inline ">$x$</span> near a</div>
-
+  <br>
   <div class="preview-paragraph-28 preview-line 28 29 30" data_line_start="28" data_line_end="30" data_line="28,31" count_line="3"><span class="math-block ">$$\large
 f(x) \approx f(a)+f^{\prime}(a)(x-a) .
 $$</span>
 </div>
 
-<div class="preview-paragraph-31 preview-line 31" data_line_start="31" data_line_end="31" data_line="31,32" count_line="1"><figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/c1c328f5-0754-43ba-9533-c73055d3d2c0-03.jpg?height=706&amp;width=1607&amp;top_left_y=1366&amp;top_left_x=96" alt="" data-align="center"></figure></div>
+<br>
+
+<img src="linear_approx.png" alt="The graph f of x can be better approximated using a linear function here, which we denote as p subscript one of x">
+
+
+<br>
 
 <div class="preview-paragraph-33 preview-line 33" data_line_start="33" data_line_end="33" data_line="33,34" count_line="1">If we then let <span class="math-inline ">$P_{1}(x)=f(a)+f^{\prime}(a)(x-a)$</span>, then <span class="math-inline ">$P_{1}$</span> gives us an approx for <span class="math-inline ">$f$</span> near <span class="math-inline ">$x=a$</span>.</div>
 
+<br>
+
 <div class="preview-paragraph-35 preview-line 35" data_line_start="35" data_line_end="35" data_line="35,36" count_line="1">Note that <span class="math-inline ">$P_{1}(x)$</span> has the same value as <span class="math-inline ">$f(x)$</span> at <span class="math-inline ">$x=a$</span> and also the same slope of <span class="math-inline ">$f$</span> at <span class="math-inline ">$x=a$</span>.</div>
+
+<br>
+<hr>
+<br> 
 
 <div class="preview-paragraph-37 preview-line 37 38" data_line_start="37" data_line_end="38" data_line="37,39" count_line="2"> <h2 style="color:rgb(0,150,0)">Example: </h2>  Find the linear approx for
 
   <span class="math-inline ">$f(x)=\sin x$</span> near <span class="math-inline ">$x=0$</span>.</div>
-
+  <br>
   <div class="preview-paragraph-40 preview-line 40 41 42 43 44 45 46" data_line_start="40" data_line_end="46" data_line="40,47" count_line="7">Here <span class="math-inline ">$f(x)=\sin x, f(0)=\sin (0)=0$</span><br>
-
-    <span class="math-inline ">$f^{\prime}(x)=\cos x, \quad f^{\prime}(0)=\cos (0)=1$</span><br><br>
+  
+  <br>
+    
+  <span class="math-inline ">$f^{\prime}(x)=\cos x, \quad f^{\prime}(0)=\cos (0)=1$</span><br><br>
 and so <span class="math-inline ">$P_{1}(x)=0+x=x$</span> and
 
-<span class="math-inline ">$\sin x \approx x, \quad (x \quad$</span> is small)<br>
+<span class="math-inline ">$\sin x \approx x, (x $</span> is small)<br>
 
-<figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/c1c328f5-0754-43ba-9533-c73055d3d2c0-04.jpg?height=817&amp;width=1341&amp;top_left_y=1462&amp;top_left_x=155" alt="" data-align="center"></figure><br>
+<br>
+
+<img src="sine_taylor_approx_linear.png" alt="The graph of sine of x being approximated by the function y equals x, for small x the approximation is very good">
+
 
 e.g. <span class="math-inline ">$\quad P_{1}(2)=0.2$</span> which is close to <span class="math-inline ">$\sin (0.2)=0.1986 \dots$</span>.</div>
 
@@ -1053,39 +1083,50 @@ e.g. <span class="math-inline ">$\quad P_{1}(2)=0.2$</span> which is close to <s
 Quadratic Approximations</h2>
 
 <div class="preview-paragraph-50 preview-line 50" data_line_start="50" data_line_end="50" data_line="50,51" count_line="1">Since a linear approximation is clearly better (more accurate) than a constant approx., it is natural to guess that we could do even better if we approxmated <span class="math-inline ">$f(x)$</span> using quadratic polynomials</div>
+<br>
 
 <div class="preview-paragraph-52 preview-line 52" data_line_start="52" data_line_end="52" data_line="52,53" count_line="1">We choose our quadratic polynomial by extending the reasoning for the constant and linear approximations, namely we require that our quadratic have the same value, the same first denvative and the same second derivative as <span class="math-inline ">$f$</span> does at <span class="math-inline ">$x=a$</span>.</div>
+<br>
 
-<div class="preview-paragraph-54 preview-line 54" data_line_start="54" data_line_end="54" data_line="54,55" count_line="1">So suppose that <span class="math-inline ">$f$</span> is twiec differentiable at <span class="math-inline ">$x=a$</span> and let <span class="math-inline ">$P_{2}(x)$</span> be our quadratic approximation.</div>
+<div class="preview-paragraph-54 preview-line 54" data_line_start="54" data_line_end="54" data_line="54,55" count_line="1">So suppose that <span class="math-inline ">$f$</span> is twice differentiable at <span class="math-inline ">$x=a$</span> and let <span class="math-inline ">$P_{2}(x)$</span> be our quadratic approximation.</div>
+<br>
 
 <div class="preview-paragraph-56 preview-line 56" data_line_start="56" data_line_end="56" data_line="56,57" count_line="1">A useful trick here is instead of writing something like</div>
+<br>
 
 <div class="preview-paragraph-57 preview-line 57 58 59" data_line_start="57" data_line_end="59" data_line="57,60" count_line="3"><span class="math-block ">$$
 \large P_{2}(x)=C_{0}+C_{1} x+C_{2} x^{2}
 $$</span></div>
+<br>
 
 <div class="preview-paragraph-60 preview-line 60" data_line_start="60" data_line_end="60" data_line="60,61" count_line="1">(which is probably the first thing one might try), we instead take into account that we want an approximation near <span class="math-inline ">$x=a$</span> and write</div>
+<br>
 
 <div class="preview-paragraph-61 preview-line 61 62 63" data_line_start="61" data_line_end="63" data_line="61,64" count_line="3"><span class="math-block ">$$
-\large P_{2}(x)=C_{0}+C_{1}(x-a)+C_{2}(x-a)^{2} .
+\large P_{2}(x)=C_{0}+C_{1}(x-a)+C_{2}(x-a)^{2}
 $$</span></div>
+<br>
 
 <div class="preview-paragraph-65 preview-line 65" data_line_start="65" data_line_end="65" data_line="65,66" count_line="1">Note that we already did something like this for the linear approximation.</div>
+<br>
 
 <div class="preview-paragraph-67 preview-line 67" data_line_start="67" data_line_end="67" data_line="67,68" count_line="1">Then:</div>
+<br>
 
 <div class="preview-paragraph-68 preview-line 68 69 70 71 72 73" data_line_start="68" data_line_end="73" data_line="68,74" count_line="6"><span class="math-block ">$$
 
   \begin{aligned}
 
-\large P_{2}(x)=C_{0}+C_{1}(x-a)+C_{2}(x-a)^{2}, \\
+\large P_{2}(x)=C_{0}+C_{1}(x-a)+C_{2}(x-a)^{2} \\
 
 \large P_{2}(a)=C_{0}
 \end{aligned}
 
 $$</span></div>
+<br>
 
 <div class="preview-paragraph-74 preview-line 74" data_line_start="74" data_line_end="74" data_line="74,75" count_line="1">and so <span class="math-inline ">$P_{2}(a)=f(a) \Rightarrow C_{0}=f(a)$</span></div>
+<br>
 
 <div class="preview-paragraph-75 preview-line 75 76 77 78 79 80" data_line_start="75" data_line_end="80" data_line="75,81" count_line="6"><span class="math-block ">$$
 
@@ -1097,8 +1138,10 @@ $$</span></div>
 
   \end{aligned}
 $$</span></div>
+<br>
 
 <div class="preview-paragraph-81 preview-line 81" data_line_start="81" data_line_end="81" data_line="81,82" count_line="1">and so <span class="math-inline ">$P_{2}^{\prime}(a)=f^{\prime}(a) \Rightarrow C_{1}=f^{\prime}(a)$</span>.</div>
+<br>
 
 <div class="preview-paragraph-82 preview-line 82 83 84 85 86 87" data_line_start="82" data_line_end="87" data_line="82,88" count_line="6"><span class="math-block ">$$
 
@@ -1107,34 +1150,44 @@ $$</span></div>
 &amp; P_{2}^{\prime \prime}(a)=2 C_{2}
 \end{aligned}
 $$</span></div>
+<br>
 
 <div class="preview-paragraph-88 preview-line 88" data_line_start="88" data_line_end="88" data_line="88,89" count_line="1">and so <span class="math-inline ">$P_{2}^{\prime \prime}(a)=f^{\prime \prime}(a) \Rightarrow 2 C_{2}=f^{\prime \prime}(a), C_{2}=\frac{f^{\prime \prime}(a)}{2}$</span></div>
+<br>
 
 <div class="preview-paragraph-90 preview-line 90" data_line_start="90" data_line_end="90" data_line="90,91" count_line="1">Get</div>
+<br>
 
 <div class="preview-paragraph-91 preview-line 91 92 93" data_line_start="91" data_line_end="93" data_line="91,94" count_line="3"><span class="math-block ">$$
 
   P_{2}(x)=f(0)+f^{\prime}(0)(x-a)+\frac{f^{\prime \prime}(a)}{2}(x-a)^{2}
 $$</span></div>
+<br>
 
 <div class="preview-paragraph-94 preview-line 94" data_line_start="94" data_line_end="94" data_line="94,95" count_line="1">and so for <span class="math-inline ">$x$</span> near <span class="math-inline ">$a$</span>,</div>
+<br>
 
 <div class="preview-paragraph-95 preview-line 95 96 97" data_line_start="95" data_line_end="97" data_line="95,98" count_line="3"><span class="math-block ">$$
 f(x) \approx f(a)+f^{\prime}(a)(x-a)+\frac{f^{\prime \prime}(a)}{2}(x-a)^{2}
 $$</span></div>
+<br>
 
 <div class="preview-paragraph-99 preview-line 99" data_line_start="99" data_line_end="99" data_line="99,100" count_line="1">Note how the constant and linear terms are the same as for the constant and linear approximations. In this sense we can say the quadratic approximation 'contains' the constants and linear approximations.</div>
+<br>
+<hr>
+<br> 
 
 <div class="preview-paragraph-101 preview-line 101" data_line_start="101" data_line_end="101" data_line="101,102" count_line="1">
   <h2 style="color:rgb(0.0,150.0,0.0)">Example: </h2> Find the quadratic opproximation for <span class="math-inline ">$f(x)=\cos x$</span> near <span class="math-inline ">$x=0$</span>.</div>
-
+<br>
 <div class="preview-paragraph-103 preview-line 103" data_line_start="103" data_line_end="103" data_line="103,104" count_line="1">Here <span class="math-inline ">$f(x)=\cos x, f(0)=\cos (0)=1$</span> and so <span class="math-inline ">$C_{0}=f(0)=1$</span>.</div>
-
+<br> 
 <div class="preview-paragraph-104 preview-line 104 105 106" data_line_start="104" data_line_end="106" data_line="104,107" count_line="3"><span class="math-block ">$$
 f^{\prime}(x)=-\sin x, \quad f^{\prime}(0)=-\sin (0)=0
 $$</span></div>
-
+<br>
 <div class="preview-paragraph-107 preview-line 107" data_line_start="107" data_line_end="107" data_line="107,108" count_line="1">and so <span class="math-inline ">$C_{1}=f^{\prime}(0)=0$</span></div>
+<br>
 
 <div class="preview-paragraph-108 preview-line 108 109 110" data_line_start="108" data_line_end="110" data_line="108,111" count_line="3"><span class="math-block ">$$
 f^{\prime \prime}(x)=-\cos x, \quad f^{\prime \prime}(0)=-\cos (0)=-1
@@ -1148,8 +1201,14 @@ $$</span></div>
 \cos x \approx 1-\frac{x^{2}}{2}, \quad \text{( } x \text{ is small.) }
 $$</span></div>
 
-<div class="preview-paragraph-117 preview-line 117 118 119" data_line_start="117" data_line_end="119" data_line="117,120" count_line="3"><figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/c1c328f5-0754-43ba-9533-c73055d3d2c0-10.jpg?height=1090&amp;width=1885&amp;top_left_y=199&amp;top_left_x=195" alt="" data-align="center"></figure><br>
-e.g. <span class="math-inline ">$\quad P_{2}(0.4)=0.92$</span><br>
+<br>
+
+<div>
+
+</div>
+
+<img src="cosine_approx.png" alt="Cosine of x being approximated by the function 1 minus x squared times one half, a very good approximation for smaller values of x">
+
 which is much closer to the actual value of <span class="math-inline ">$\cos (0.4)=0.921 \ldots$</span> than <span class="math-inline ">$P_{0}(0.4)=P_{1}(0.4)=1$</span>.</div>
 
 <br>
@@ -1158,76 +1217,124 @@ which is much closer to the actual value of <span class="math-inline ">$\cos (0.
 
 <div class="preview-paragraph-121 preview-line 121 122" data_line_start="121" data_line_end="122" data_line="121,123" count_line="2"><h2 style="color: rgb(0,0,230);">Approximation Using Higher Degree Polynomials </h2> <br>
 Suppose <span class="math-inline ">$f(x)$</span> is differentiable <span class="math-inline ">$n$</span> times at <span class="math-inline ">$x=a$</span> and we try to approximate <span class="math-inline ">$f(x)$</span> near a with a polynomial of degree <span class="math-inline ">$n$</span>. Similarly to before we write this polynomial as</div>
-
+<br>
 <div class="preview-paragraph-123 preview-line 123 124 125" data_line_start="123" data_line_end="125" data_line="123,126" count_line="3"><span class="math-block ">$$
 \large P_{n}(x)=C_{0}+C_{1}(x-a)+C_{2}(x-a)^{2}+C_{3}(x-a)^{3}+\cdots+C_{n}(x-a)^{n} .
 $$</span></div>
+<br>
 
 <div class="preview-paragraph-127 preview-line 127" data_line_start="127" data_line_end="127" data_line="127,128" count_line="1">As before we want <span class="math-inline ">$P_{n}(a)=f(a)$</span>, and so setting <span class="math-inline ">$x=a$</span>, we get</div>
+<br>
 
 <div class="preview-paragraph-128 preview-line 128 129 130" data_line_start="128" data_line_end="130" data_line="128,131" count_line="3"><span class="math-block ">$$
 \large P_{n}(a)=C_{0}+0+0+\quad+0=f(a)
 $$</span></div>
 
+<br>
+
 <div class="preview-paragraph-132 preview-line 132" data_line_start="132" data_line_end="132" data_line="132,133" count_line="1">So <span class="math-inline ">$\quad C_{0}=f(a)$</span> (same as before).</div>
 
+<br>
+
 <div class="preview-paragraph-134 preview-line 134" data_line_start="134" data_line_end="134" data_line="134,135" count_line="1">Now differentiate with respect to x <span class="math-inline ">$x$</span> to get</div>
+
+<br>
 
 <div class="preview-paragraph-135 preview-line 135 136 137" data_line_start="135" data_line_end="137" data_line="135,138" count_line="3"><span class="math-block ">$$
 \large P_{n}^{\prime}(x)=0+c_{1}+2 c_{2}(x-a)+3 c_{3}(x-a)^{2}+\quad+n c_{n}(x-a)^{n-1}
 $$</span></div>
 
+<br>
+
 <div class="preview-paragraph-139 preview-line 139" data_line_start="139" data_line_end="139" data_line="139,140" count_line="1">Again, we want <span class="math-inline ">$P_{n}^{\prime}(a)=f^{\prime}(a)$</span> and so</div>
+
+<br>
 
 <div class="preview-paragraph-140 preview-line 140 141 142" data_line_start="140" data_line_end="142" data_line="140,143" count_line="3"><span class="math-block ">$$
 \large P_{n}^{\prime}(a)=C_{1}+0+\quad+0=f^{\prime}(a) .
 $$</span></div>
 
+<br>
+
 <div class="preview-paragraph-144 preview-line 144" data_line_start="144" data_line_end="144" data_line="144,145" count_line="1">Thus <span class="math-inline ">$C_{1}=f^{\prime}(a)$</span> (again, same as before).</div>
 
+<br>
+
 <div class="preview-paragraph-146 preview-line 146" data_line_start="146" data_line_end="146" data_line="146,147" count_line="1">Differentrating again, we get.</div>
+
+<br>
 
 <div class="preview-paragraph-147 preview-line 147 148 149" data_line_start="147" data_line_end="149" data_line="147,150" count_line="3"><span class="math-block ">$$
 \large P_{n}^{\prime \prime}(x)=2 C_{2}+3 \cdot 2 C_{3}(x-a)+\cdots+n(n-1) C_{n}(x-a)^{n-2}
 $$</span></div>
 
+<br>
+
 <div class="preview-paragraph-151 preview-line 151" data_line_start="151" data_line_end="151" data_line="151,152" count_line="1">We want <span class="math-inline ">$P_{n}^{\prime \prime}(a)=f^{\prime \prime}(a)$</span> and so</div>
+
+<br>
 
 <div class="preview-paragraph-152 preview-line 152 153 154" data_line_start="152" data_line_end="154" data_line="152,155" count_line="3"><span class="math-block ">$$
 \large P_{n}^{\prime \prime}(a)=2 c_{2}+0+\quad+0=f^{\prime \prime}(0) .
 $$</span></div>
 
+<br>
+
 <div class="preview-paragraph-156 preview-line 156 157" data_line_start="156" data_line_end="157" data_line="156,158" count_line="2">Thus <span class="math-inline ">$2 C_{2}=f^{\prime \prime}(0)$</span> ie <span class="math-inline ">$c_{2}=\frac{f^{\prime \prime}(a)}{2 \cdot 1}=\frac{f^{\prime \prime}(a)}{2!} \quad$</span> (again)</div>
 
+<br>
+
 <div class="preview-paragraph-159 preview-line 159" data_line_start="159" data_line_end="159" data_line="159,160" count_line="1">Now differentiate again to get</div>
+
+<br>
 
 <div class="preview-paragraph-160 preview-line 160 161 162" data_line_start="160" data_line_end="162" data_line="160,163" count_line="3"><span class="math-block ">$$
 \large P_{n}^{\prime \prime \prime}(x)=3 \cdot 2 C_{3}+\cdots+n(n-1)(n-2) C_{n}(x-a)^{n-3}
 $$</span></div>
 
+<br>
+
 <div class="preview-paragraph-164 preview-line 164" data_line_start="164" data_line_end="164" data_line="164,165" count_line="1">Similarly to above, we want <span class="math-inline ">$P_{n}^{\prime \prime \prime}(a)=f^{\prime \prime \prime}(a)$</span> and so</div>
+
+<br>
 
 <div class="preview-paragraph-165 preview-line 165 166 167" data_line_start="165" data_line_end="167" data_line="165,168" count_line="3"><span class="math-block ">$$
 \large P_{n}^{\prime \prime \prime}(a)=3 \cdot 2 c_{3}+0+\quad \text { to }=f^{\prime \prime \prime}(a) .
 $$</span></div>
 
+<br>
+
 <div class="preview-paragraph-169 preview-line 169 170" data_line_start="169" data_line_end="170" data_line="169,171" count_line="2">Thus <span class="math-inline ">$ 3 \cdot 2 c_{3}=f^{\prime \prime \prime}(a)$</span> or <span class="math-inline ">$\quad c_{3}=\frac{f^{\prime \prime \prime}(a)}{3 \cdot 2 \cdot 1}=\frac{f^{\prime \prime \prime}(a)}{3!}$</span></div>
 
+<br>
+
 <div class="preview-paragraph-172 preview-line 172" data_line_start="172" data_line_end="172" data_line="172,173" count_line="1">Continuing in this way, we would find that</div>
+
+<br>
 
 <div class="preview-paragraph-173 preview-line 173 174 175" data_line_start="173" data_line_end="175" data_line="173,176" count_line="3"><span class="math-block ">$$
 C_{4}=\frac{f^{(4)}(a)}{4 \cdot 3 \cdot 2 \cdot 1}=\frac{f^{(4)}(a)}{4!}
 $$</span></div>
 
+<br>
+
 <div class="preview-paragraph-176 preview-line 176" data_line_start="176" data_line_end="176" data_line="176,177" count_line="1">and so on up to</div>
+
+<br>
 
 <div class="preview-paragraph-177 preview-line 177 178 179" data_line_start="177" data_line_end="179" data_line="177,180" count_line="3"><span class="math-block ">$$
 C_{n}=\frac{f^{(n)}(a)}{n(n-1)(n-2)-2 \cdot 1}=\frac{f^{(n)}(a)}{n!}
 $$</span></div>
 
+<br>
+
 <div class="preview-paragraph-181 preview-line 181" data_line_start="181" data_line_end="181" data_line="181,182" count_line="1">To summarize:</div>
 
+<br>
+
 <div class="preview-paragraph-183 preview-line 183" data_line_start="183" data_line_end="183" data_line="183,184" count_line="1">If <span class="math-inline ">$f$</span> is <span class="math-inline ">$n$</span> times differentiable at <span class="math-inline ">$x=a$</span>, then for <span class="math-inline ">$x$</span> near a</div>
+
+<br>
 
 <div class="preview-paragraph-184 preview-line 184 185 186 187 188 189" data_line_start="184" data_line_end="189" data_line="184,190" count_line="6"><span class="math-block ">$$
 \begin{aligned}
@@ -1252,8 +1359,10 @@ $$</span></div>
 <br>
 
 <div class="preview-paragraph-200 preview-line 200" data_line_start="200" data_line_end="200" data_line="200,201" count_line="1"> <h2 style="color: rgb(0,150,0);" >Example: </h2>  Find <span class="math-inline ">$P_{7}(x)$</span> for <span class="math-inline ">$f(x)=\sin x$</span> about <span class="math-inline ">$x=0$</span>. Compare <span class="math-inline ">$P_{7}\left(\frac{\pi}{3}\right)$</span> with <span class="math-inline ">$\sin \left(\frac{\pi}{3}\right)$</span>.</div>
+<br>
 
 <div class="preview-paragraph-202 preview-line 202" data_line_start="202" data_line_end="202" data_line="202,203" count_line="1">Have</div>
+<br>
 
 <div class="preview-paragraph-203 preview-line 203 204 205 206 207 208 209 210 211 212 213 214" data_line_start="203" data_line_end="214" data_line="203,215" count_line="12"><span class="math-block ">$$
 \begin{array}{lll}
@@ -1267,8 +1376,10 @@ f^{(6)}(x)=-\sin x &amp; f^{(6)}(0)=0, &amp; c_{6}=\frac{0}{6!}=0 \\
 f^{(7)}(x)=-\cos x &amp; f^{(7)}(0)=-1, &amp; c_{7}=-\frac{1}{7!}
 \end{array}
 $$</span></div>
+<br>
 
 <div class="preview-paragraph-216 preview-line 216" data_line_start="216" data_line_end="216" data_line="216,217" count_line="1">Thus, for <span class="math-inline ">$x$</span> near 0</div>
+<br>
 
 <div class="preview-paragraph-217 preview-line 217 218 219 220 221 222 223" data_line_start="217" data_line_end="223" data_line="217,224" count_line="7"><span class="math-block ">$$
 \begin{aligned}
@@ -1277,14 +1388,19 @@ $$</span></div>
 \large = &amp; x-\frac{x^{3}}{3!}+\frac{x^{5}}{5!}
 \end{aligned}
 $$</span></div>
+<br>
 
 <div class="preview-paragraph-225 preview-line 225" data_line_start="225" data_line_end="225" data_line="225,226" count_line="1">At <span class="math-inline ">$\frac{\pi}{3}=1.0471976 \ldots$</span></div>
+<br>
 
 <div class="preview-paragraph-226 preview-line 226 227 228" data_line_start="226" data_line_end="228" data_line="226,229" count_line="3"><span class="math-block ">$$
 P_{7}\left(\frac{\pi}{3}\right)=0.8660213 \ldots
 $$</span></div>
+<br>
 
 <div class="preview-paragraph-229 preview-line 229" data_line_start="229" data_line_end="229" data_line="229,230" count_line="1">while</div>
+<br>
+
 
 <div class="preview-paragraph-230 preview-line 230 231 232" data_line_start="230" data_line_end="232" data_line="230,233" count_line="3"><span class="math-block ">$$
 \sin \left(\frac{\pi}{3}\right)=\frac{\sqrt{3}}{2}=0.8660254 \ldots
