@@ -254,7 +254,7 @@ mjx-status {
 }
 
 foreignObject[data-mjx-xml] {
-  font-family: initial;
+  font-family: sans-serif;
   line-height: normal;
   overflow: visible;
 }
@@ -544,7 +544,7 @@ div.svg-container,
   }
 }
 #preview-content code, #setText code {
-  font-family: Inconsolata;
+  font-family: sans-serif;
   font-size: inherit;
   display: initial;
   background: #f8f8fa;
@@ -554,7 +554,7 @@ div.svg-container,
   background-color: transparent;
 }
 #preview-content pre code, #setText pre code {
-  font-family: 'DM Mono', Inconsolata, monospace;
+  font-family: sans-serif;
   color: #333;
   font-size: 15px;
 }
@@ -776,7 +776,7 @@ ul.itemize > li,
   display: inline-block;
 }
 #preview {
-  font-family: 'CMU Serif', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
   font-size: 17px;
   visibility: visible;
   word-break: break-word;
@@ -786,10 +786,10 @@ ul.itemize > li,
   box-sizing: content-box;
 }
 #preview h1, #preview h2, #preview h3, #preview h4, #preview h5, #preview strong {
-  font-family: 'CMU Serif Bold', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
 }
 #preview i, #preview em {
-  font-family: 'CMU Serif Italic', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
 }
 .mmd-menu {
   max-width: 320px;
@@ -985,15 +985,20 @@ td .ClipboardButton .mmd-clipboard-icon {
   <div id="preview" class="preview scrollEditor">
     <div id="container-ruller" />
     <div id="preview-content">
-      <h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-0 preview-line 0" id="%24%5Coint-10.4%24-the-error-in-taylor-polynomial-approximations" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1">
-<span class="math-inline ">$\oint 10.4$</span> The Error in Taylor Polynomial <br>
- Approximations</h2>
-<div class="preview-paragraph-2 preview-line 2" data_line_start="2" data_line_end="2" data_line="2,3" count_line="1">Suppose we want to approximate the values of some for <span class="math-inline ">$f(x)$</span> near <span class="math-inline ">$x=$</span> a using the <span class="math-inline ">$n$</span>-th degree Taylor pulynomial <span class="math-inline ">$P_{n}(x)$</span>. In order to lenav whether we have a good approxmation we need to look at the error</div>
-<div class="preview-paragraph-3 preview-line 3 4 5" data_line_start="3" data_line_end="5" data_line="3,6" count_line="3"><span class="math-block ">$$
+      <h1 type="section" data-unnumbered="true" class="section-title preview-paragraph-0 preview-line 0" id="%24%5Coint-10.4%24-the-error-in-taylor-polynomial-approximations" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1" style="color: rgb(200,0,0);">
+<span class="math-inline "> $\S 10.4$</span> The Error in Taylor Polynomial <br>
+ Approximations</h1>
+<div class="preview-paragraph-2 preview-line 2" data_line_start="2" data_line_end="2" data_line="2,3" count_line="1">Suppose we want to approximate the values of some for <span class="math-inline ">$f(x)$</span> near <span class="math-inline ">$x=$</span> a using the <span class="math-inline ">$n$</span>-th degree Taylor polynomial <span class="math-inline ">$P_{n}(x)$</span>. In order to know whether we have a good approxmation we need to look at the <u>error</u></div>
+<div class="preview-paragraph-3 preview-line 3 4 5" data_line_start="3" data_line_end="5" data_line="3,6" count_line="3"><span class="math-block ">$$\large 
 E_{n}(x)=f(x)-P_{n}(x) .
 $$</span></div>
-<div class="preview-paragraph-7 preview-line 7" data_line_start="7" data_line_end="7" data_line="7,8" count_line="1">Of course we want the size of <span class="math-inline ">$E_{n}(x)$</span> to be small and we do this by finding an upper bound for |En|. The idea then u that if this upper bound is small, then En has to also be small.</div>
-<div class="preview-paragraph-9 preview-line 9 10" data_line_start="9" data_line_end="10" data_line="9,11" count_line="2">Finding an Error Bound<br>
+<div class="preview-paragraph-7 preview-line 7" data_line_start="7" data_line_end="7" data_line="7,8" count_line="1">Of course we want the size of <span class="math-inline ">$E_{n}(x)$</span> to be small and we do this by finding an upper bound for <span class="math-inline">$|E_n|$</span>. The idea then is that if this upper bound is small, then <span class="math-inline"> $|E_n|$ </span> has to also be small.</div>
+
+<br>
+<hr>
+<br>
+
+<div class="preview-paragraph-9 preview-line 9 10" data_line_start="9" data_line_end="10" data_line="9,11" count_line="2"> <h2 style="color: rgb(0,0,230);">Finding an Error Bound</h2> <br>
 For the sake of simplicity, assume for now that <span class="math-inline ">$a=0$</span> (the case <span class="math-inline ">$a \neq 0$</span> is very similar)</div>
 <div class="preview-paragraph-12 preview-line 12" data_line_start="12" data_line_end="12" data_line="12,13" count_line="1">Recall that we constructed <span class="math-inline ">$P_{n}(x)$</span> so that the first <span class="math-inline ">$n$</span> derivatives of <span class="math-inline ">$P_{n}$</span> at <span class="math-inline ">$x=0$</span> were the same as those of <span class="math-inline ">$f$</span>.</div>
 <div class="preview-paragraph-14 preview-line 14" data_line_start="14" data_line_end="14" data_line="14,15" count_line="1">Thus <span class="math-inline ">$E_{n}(0)=f(0)-P_{n}(0)=0$</span></div>
@@ -1010,105 +1015,120 @@ $$</span></div>
 <div class="preview-paragraph-26 preview-line 26 27 28" data_line_start="26" data_line_end="28" data_line="26,29" count_line="3"><span class="math-block ">$$
 E_{n}^{(n+1)}(x)=f^{(n+1)}(x) .
 $$</span></div>
-<div class="preview-paragraph-30 preview-line 30" data_line_start="30" data_line_end="30" data_line="30,31" count_line="1">Suppose now that we know <span class="math-inline ">$\left|f^{(n+1)}(x)\right| \leq M$</span> for some constant M and for some pange of non-negative values of <span class="math-inline ">$x$</span>, say for <span class="math-inline ">$0 \leqslant x \leqslant \delta$</span>. (case dor negative values is similar)</div>
-<div class="preview-paragraph-32 preview-line 32" data_line_start="32" data_line_end="32" data_line="32,33" count_line="1">Thus</div>
+<div class="preview-paragraph-30 preview-line 30" data_line_start="30" data_line_end="30" data_line="30,31" count_line="1">Suppose now that we <u>know</u> <span class="math-inline ">$\left|f^{(n+1)}(x)\right| \leq M$</span> for some constant <span class="math-inline">$M$</span> and for some range of non-negative values of <span class="math-inline ">$x$</span>, say for <span class="math-inline ">$0 \leq x \leq \delta$</span>. (case for negative values is similar)</div>
+<div class="preview-paragraph-32 preview-line 32" data_line_start="32" data_line_end="32" data_line="32,33" count_line="1">Thus:</div><br>
 <div class="preview-paragraph-33 preview-line 33 34 35" data_line_start="33" data_line_end="35" data_line="33,36" count_line="3"><span class="math-block ">$$
--M \leqslant f^{(n+1)}(x) \leqslant M \quad \text { for } \quad 0 \leqslant x \leqslant \delta
+\large -M \leq f^{(n+1)}(x) \leq M \quad \text { for } \quad 0 \leq x \leq \delta
+$$</span></div><br>
+
+<div class="preview-paragraph-37 preview-line 37" data_line_start="37" data_line_end="37" data_line="37,38" count_line="1">Since <span class="math-inline ">$E_{n}^{(n+1)}(x)=f^{(n+1)}(x)$</span>, we have:</div><br>
+<div class="preview-paragraph-38 preview-line 38 39 40" data_line_start="38" data_line_end="40" data_line="38,41" count_line="3"><span class="math-block ">$$\large
+-M \leq E_{n}^{(n+1)}(x) \leq M \text { for } 0 \leq x \leq \delta
+$$</span></div><br>
+
+<br>
+<div class="preview-paragraph-42 preview-line 42 43" data_line_start="42" data_line_end="43" data_line="42,44" count_line="2">The idea is then to go from a bound on the <span class="math-inline ">$(n+1)$</span>st derivative <span class="math-inline ">$E_{n}^{(n+1)}(x)$</span> to a bound on <span class="math-inline ">$E_{n}(x)$</span> by repeated integrations from 0 to <span class="math-inline ">$x$</span>.<br><br>
+Thus:</div>
+<div class="preview-paragraph-44 preview-line 44 45 46" data_line_start="44" data_line_end="46" data_line="44,47" count_line="3"><span class="math-block ">$$ \large
+-\int_{0}^{x} M d t \leq \int_{0}^{x} E_{n}^{(n+1)}(t) d t \leq \int_{0}^{x} M d t, \quad 0 \leq x \leq \delta
 $$</span></div>
-<div class="preview-paragraph-37 preview-line 37" data_line_start="37" data_line_end="37" data_line="37,38" count_line="1">Since <span class="math-inline ">$E_{n}^{(n+1)}(x)=f^{(n+1)}(x)$</span>, we have</div>
-<div class="preview-paragraph-38 preview-line 38 39 40" data_line_start="38" data_line_end="40" data_line="38,41" count_line="3"><span class="math-block ">$$
--M \leqslant E_{n}^{(n+1)}(x) \leqslant M \text { for } 0 \leqslant x \leqslant \delta
-$$</span></div>
-<div class="preview-paragraph-42 preview-line 42 43" data_line_start="42" data_line_end="43" data_line="42,44" count_line="2">The idea is then to go from a bound on the <span class="math-inline ">$(n+1)$</span> st denvative <span class="math-inline ">$E_{n}^{(n+1)}(x)$</span> to a bound on <span class="math-inline ">$E_{n}(x)$</span> by repeated integrations from 0 to <span class="math-inline ">$x$</span>.<br>
-Thus</div>
-<div class="preview-paragraph-44 preview-line 44 45 46" data_line_start="44" data_line_end="46" data_line="44,47" count_line="3"><span class="math-block ">$$
--\int_{0}^{x} M d t \leqslant \int_{0}^{x} E_{n}^{(n+1)}(t) d t \leqslant \int_{0}^{x} M d t, \quad 0 \leqslant x \leqslant \delta
-$$</span></div>
-<div class="preview-paragraph-48 preview-line 48" data_line_start="48" data_line_end="48" data_line="48,49" count_line="1">By the First Fundamental Theorem of Calculus, since <span class="math-inline ">$E_{n}^{(n)}(x)$</span> is an anted of <span class="math-inline ">$E_{n}^{(n+1)}(x)$</span>, this gives</div>
+<div class="preview-paragraph-48 preview-line 48" data_line_start="48" data_line_end="48" data_line="48,49" count_line="1">By the First Fundamental Theorem of Calculus, since <span class="math-inline ">$E_{n}^{(n)}(x)$</span> is an antiderivative of <span class="math-inline ">$E_{n}^{(n+1)}(x)$</span>, this gives</div>
 <div class="preview-paragraph-49 preview-line 49 50 51 52 53 54" data_line_start="49" data_line_end="54" data_line="49,55" count_line="6"><span class="math-block ">$$
 \begin{aligned}
-&amp; {[-M t]_{0}^{x} \leqslant\left[E_{n}^{(n)}(t)\right]_{0}^{x} \leqslant[M t]_{0}^{x}} \\
-&amp; -M x-0 \leqslant E_{n}^{(n)}(x)-E_{n}^{(n)}(0) \leqslant M x-0
+&amp; {[-M t]_{0}^{x} \leq\left[E_{n}^{(n)}(t)\right]_{0}^{x} \leq[M t]_{0}^{x}} \\
+&amp; -M x-0 \leq E_{n}^{(n)}(x)-E_{n}^{(n)}(0) \leq M x-0
 \end{aligned}
 $$</span></div>
 <div class="preview-paragraph-55 preview-line 55" data_line_start="55" data_line_end="55" data_line="55,56" count_line="1">and since <span class="math-inline ">$E_{n}^{(n)}(0)=f^{(n)}(0)-p_{n}^{(n)}(0)=0$</span>, we have</div>
 <div class="preview-paragraph-56 preview-line 56 57 58" data_line_start="56" data_line_end="58" data_line="56,59" count_line="3"><span class="math-block ">$$
--M_{x} \leqslant E_{n}^{(n)}(x) \leqslant M_{x}, \quad 0 \leqslant x \leqslant \delta
+-Mx \leq E_{n}^{(n)}(x) \leq Mx, \quad 0 \leq x \leq \delta
 $$</span></div>
-<div class="preview-paragraph-60 preview-line 60" data_line_start="60" data_line_end="60" data_line="60,61" count_line="1">Now integrabe again dram 0 to <span class="math-inline ">$x$</span></div>
+<div class="preview-paragraph-60 preview-line 60" data_line_start="60" data_line_end="60" data_line="60,61" count_line="1">Now integrate again from 0 to <span class="math-inline ">$x$</span></div>
 <div class="preview-paragraph-61 preview-line 61 62 63" data_line_start="61" data_line_end="63" data_line="61,64" count_line="3"><span class="math-block ">$$
-\int_{0}^{x}-M t d t \leqslant \int_{0}^{x} E_{n}^{(n)}(t) d t \leqslant \int_{0}^{x} M t d t
+\int_{0}^{x}-M t d t \leq \int_{0}^{x} E_{n}^{(n)}(t) d t \leq \int_{0}^{x} M t d t
 $$</span></div>
 <div class="preview-paragraph-64 preview-line 64" data_line_start="64" data_line_end="64" data_line="64,65" count_line="1">and by FTOC I again</div>
 <div class="preview-paragraph-65 preview-line 65 66 67" data_line_start="65" data_line_end="67" data_line="65,68" count_line="3"><span class="math-block ">$$
-\left[-\frac{M t^{2}}{2}\right]_{0}^{x} \leqslant\left[E_{n}^{(n-1)}(t)\right]_{0}^{x} \leqslant\left[\frac{M t^{2}}{2}\right]_{0}^{x}
+\left[-\frac{M t^{2}}{2}\right]_{0}^{x} \leq\left[E_{n}^{(n-1)}(t)\right]_{0}^{x} \leq\left[\frac{M t^{2}}{2}\right]_{0}^{x}
 $$</span></div>
 <div class="preview-paragraph-68 preview-line 68" data_line_start="68" data_line_end="68" data_line="68,69" count_line="1">and since <span class="math-inline ">$E_{n}^{(n-1)}(0)=f^{(n-1)}(0)-p_{n}^{(n-1)}(0)=0$</span>,</div>
 <div class="preview-paragraph-69 preview-line 69 70 71" data_line_start="69" data_line_end="71" data_line="69,72" count_line="3"><span class="math-block ">$$
--\frac{M x^{2}}{2} \leqslant E_{n}^{(n-1)}(x) \leqslant \frac{M x^{2}}{2}, 0 \leqslant x \leqslant \delta
+-\frac{M x^{2}}{2} \leq E_{n}^{(n-1)}(x) \leq \frac{M x^{2}}{2}, 0 \leq x \leq \delta
 $$</span></div>
-<div class="preview-paragraph-73 preview-line 73" data_line_start="73" data_line_end="73" data_line="73,74" count_line="1">If we keep going like this, we eventually undo all the deriratives and in the end we get</div>
+<div class="preview-paragraph-73 preview-line 73" data_line_start="73" data_line_end="73" data_line="73,74" count_line="1">If we keep going like this, we eventually undo all the derivatives and in the end we get:</div>
 <div class="preview-paragraph-74 preview-line 74 75 76" data_line_start="74" data_line_end="76" data_line="74,77" count_line="3"><span class="math-block ">$$
--\frac{1}{(n+1)!} M x^{n+1} \leqslant E_{n}(x) \leqslant \frac{1}{(n+1)!} M x^{n+1}, 0 \leqslant x \leqslant \delta .
+-\frac{1}{(n+1)!} M x^{n+1} \leq E_{n}(x) \leq \frac{1}{(n+1)!} M x^{n+1}, 0 \leq x \leq \delta .
 $$</span></div>
 <div class="preview-paragraph-78 preview-line 78" data_line_start="78" data_line_end="78" data_line="78,79" count_line="1">Thus</div>
 <div class="preview-paragraph-79 preview-line 79 80 81" data_line_start="79" data_line_end="81" data_line="79,82" count_line="3"><span class="math-block ">$$
-\left|E_{n}(x)\right|=\left|f(x)-P_{n}(x)\right| \leqslant \frac{1}{(n+1)!} M x^{n+1}, \quad 0 \leqslant x \leqslant \delta .
+\left|E_{n}(x)\right|=\left|f(x)-P_{n}(x)\right| \leq \frac{1}{(n+1)!} M x^{n+1}, \quad 0 \leq x \leq \delta .
 $$</span></div>
-<div class="preview-paragraph-83 preview-line 83" data_line_start="83" data_line_end="83" data_line="83,84" count_line="1">We then get.</div>
-<div class="preview-paragraph-85 preview-line 85 86" data_line_start="85" data_line_end="86" data_line="85,87" count_line="2">The Lagrange Error Bound for <span class="math-inline ">$P_{n}(x)$</span><br>
-Suppose <span class="math-inline ">$f$</span> and all its denivatives are cts. If <span class="math-inline ">$P_{n}(x)$</span> is the <span class="math-inline ">$n$</span>th Taylor polynomial for <span class="math-inline ">$f(x)$</span> about <span class="math-inline ">$x=a_{1}$</span> then</div>
+<div class="preview-paragraph-83 preview-line 83" data_line_start="83" data_line_end="83" data_line="83,84" count_line="1">We then get The Lagrange Error Bound for <span class="math-inline ">$P_{n}(x)$</span>.</div>
+
+<br>
+<hr>
+<br>
+
+<div class="preview-paragraph-85 preview-line 85 86" data_line_start="85" data_line_end="86" data_line="85,87" count_line="2"> <h2 style="color: rgb(0,0,230);">The Lagrange Error Bound for <span class="math-inline ">$P_{n}(x)$</span></h2> <br>
+Suppose <span class="math-inline ">$f$</span> and all its derivatives are continuous. If <span class="math-inline ">$P_{n}(x)$</span> is the <span class="math-inline ">$n$</span>th Taylor polynomial for <span class="math-inline ">$f(x)$</span> about <span class="math-inline ">$x=a$</span>, then:</div>
 <div class="preview-paragraph-87 preview-line 87 88 89" data_line_start="87" data_line_end="89" data_line="87,90" count_line="3"><span class="math-block ">$$
-\left|E_{n}(x)\right|=\left|f(x)-P_{n}(x)\right| \leqslant \frac{M}{(n+1)!}|x-a|^{n+1}
+\left|E_{n}(x)\right|=\left|f(x)-P_{n}(x)\right| \leq \frac{M}{(n+1)!}|x-a|^{n+1}
 $$</span></div>
-<div class="preview-paragraph-90 preview-line 90" data_line_start="90" data_line_end="90" data_line="90,91" count_line="1">where <span class="math-inline ">$\left|f^{(n+1)}(t)\right| \leqslant M$</span> on the interval between <span class="math-inline ">$a$</span> and <span class="math-inline ">$x$</span>.</div>
-<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-92 preview-line 92" id="using-the-lagrange-error-bound" data_line_start="92" data_line_end="92" data_line="92,93" count_line="1">
+<div class="preview-paragraph-90 preview-line 90" data_line_start="90" data_line_end="90" data_line="90,91" count_line="1">where <span class="math-inline ">$\left|f^{(n+1)}(t)\right| \leq M$</span> on the interval between <span class="math-inline ">$a$</span> and <span class="math-inline ">$x$</span>.</div>
+
+<br><hr><br>
+
+<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-92 preview-line 92" id="using-the-lagrange-error-bound" data_line_start="92" data_line_end="92" data_line="92,93" count_line="1" style="color: rgb(0,0,230);">
 Using the Lagrange Error Bound</h2>
-<div class="preview-paragraph-94 preview-line 94" data_line_start="94" data_line_end="94" data_line="94,95" count_line="1">Ex. Give a bound on <span class="math-inline ">$E_{4}$</span> when <span class="math-inline ">$e^{x}$</span> is approximated by <span class="math-inline ">$P_{4}(x)$</span> about <span class="math-inline ">$x=0$</span> on the interval <span class="math-inline ">$-.5 \leqslant x \leqslant .5$</span>.</div>
+<div class="preview-paragraph-94 preview-line 94" data_line_start="94" data_line_end="94" data_line="94,95" count_line="1"> <h2 style="color: rgb(0,150,0);">Example: </h2> Give a bound on <span class="math-inline ">$E_{4}$</span> when <span class="math-inline ">$e^{x}$</span> is approximated by <span class="math-inline ">$P_{4}(x)$</span> about <span class="math-inline ">$x=0$</span> on the interval <span class="math-inline ">$-.5 \leq x \leq .5$</span>.</div>
 <div class="preview-paragraph-96 preview-line 96" data_line_start="96" data_line_end="96" data_line="96,97" count_line="1">Let <span class="math-inline ">$f(x)=e^{x}$</span>.</div>
-<div class="preview-paragraph-98 preview-line 98" data_line_start="98" data_line_end="98" data_line="98,99" count_line="1">Then <span class="math-inline ">$f^{(s)}(x)=e^{x}$</span> and since <span class="math-inline ">$e^{x}$</span> is positive and increasing</div>
+<div class="preview-paragraph-98 preview-line 98" data_line_start="98" data_line_end="98" data_line="98,99" count_line="1">Then <span class="math-inline ">$f^{(5)}(x)=e^{x}$</span> and since <span class="math-inline ">$e^{x}$</span> is positive and increasing</div>
 <div class="preview-paragraph-99 preview-line 99 100 101" data_line_start="99" data_line_end="101" data_line="99,102" count_line="3"><span class="math-block ">$$
-\left|f^{(5)}(x)\right| \leqslant e^{0.5}=\sqrt{e}&lt;2, \quad-.5 \leqslant x \leqslant .5
+\left|f^{(5)}(x)\right| \leq e^{0.5}=\sqrt{e}&lt;2, \quad-.5 \leq x \leq .5
 $$</span></div>
 <div class="preview-paragraph-103 preview-line 103" data_line_start="103" data_line_end="103" data_line="103,104" count_line="1">Thus we can take <span class="math-inline ">$M=2$</span> which gives</div>
 <div class="preview-paragraph-104 preview-line 104 105 106" data_line_start="104" data_line_end="106" data_line="104,107" count_line="3"><span class="math-block ">$$
-\left|E_{4}\right|=\left|e^{x}-p_{4}(x)\right| \leqslant \frac{2}{5!}|x|^{5}, \quad-5 \leqslant x \leqslant 5 .
+\left|E_{4}\right|=\left|e^{x}-p_{4}(x)\right| \leq \frac{2}{5!}|x|^{5}, \quad-0.5 \leq x \leq 0.5 
 $$</span></div>
 <div class="preview-paragraph-108 preview-line 108" data_line_start="108" data_line_end="108" data_line="108,109" count_line="1">Thus, for <span class="math-inline ">$-.5 \leq x \leq .5$</span></div>
 <div class="preview-paragraph-109 preview-line 109 110 111" data_line_start="109" data_line_end="111" data_line="109,112" count_line="3"><span class="math-block ">$$
 e^{x} \approx 1+x+\frac{x^{2}}{2!}+\frac{x^{3}}{3!}+\frac{x^{4}}{4!}
 $$</span></div>
 <div class="preview-paragraph-112 preview-line 112" data_line_start="112" data_line_end="112" data_line="112,113" count_line="1">and the error is at most <span class="math-inline ">$\frac{2}{120}(.5)^{5}&lt;.0006$</span>.</div>
-<div class="preview-paragraph-114 preview-line 114 115 116" data_line_start="114" data_line_end="116" data_line="114,117" count_line="3">Of course, for smaller values of <span class="math-inline ">$x$</span>, we get smoller errars.<br>
-e.g <span class="math-inline ">$E(.2) \approx 2.75 \times 10^{-6}$</span><br>
-while <span class="math-inline ">$E(01) \approx 8.47 \times 10^{-8}$</span></div>
+<div class="preview-paragraph-114 preview-line 114 115 116" data_line_start="114" data_line_end="116" data_line="114,117" count_line="3">Of course, for smaller values of <span class="math-inline ">$x$</span>, we get smaller errors.<br><br>
+e.g <span class="math-inline ">$E(0.2) \approx 2.75 \times 10^{-6}$</span><br>
+while <span class="math-inline ">$E(0.1) \approx 8.47 \times 10^{-8}$</span></div>
 <div class="preview-paragraph-118 preview-line 118" data_line_start="118" data_line_end="118" data_line="118,119" count_line="1">One can check that</div>
 <div class="preview-paragraph-119 preview-line 119 120 121" data_line_start="119" data_line_end="121" data_line="119,122" count_line="3"><span class="math-block ">$$
 E(.2) / 32 \approx 8.62 \times 10^{-\infty} \approx E(.1)
 $$</span></div>
-<div class="preview-paragraph-123 preview-line 123" data_line_start="123" data_line_end="123" data_line="123,124" count_line="1">This is very much what we'd expect green our band</div>
+<div class="preview-paragraph-123 preview-line 123" data_line_start="123" data_line_end="123" data_line="123,124" count_line="1">This is very much what we'd expect given our bound:</div>
 <div class="preview-paragraph-124 preview-line 124 125 126" data_line_start="124" data_line_end="126" data_line="124,127" count_line="3"><span class="math-block ">$$
-\left|E_{4}(x)\right| \leqslant\left.\frac{1}{60} h x\right|^{5}
+\left|E_{4}(x)\right| \leq\frac{1}{60} |x|^{5}
 $$</span></div>
-<div class="preview-paragraph-127 preview-line 127" data_line_start="127" data_line_end="127" data_line="127,128" count_line="1">since decreasing the value of <span class="math-inline ">$x$</span> by a factor of 2 will decrease the walue of the bound by a factor of <span class="math-inline ">$2^{5}=32$</span>.</div>
-<div class="preview-paragraph-129 preview-line 129" data_line_start="129" data_line_end="129" data_line="129,130" count_line="1">Ex. Show that the Taylor series for <span class="math-inline ">$\cos x$</span> converges to <span class="math-inline ">$\cos x$</span> evergwhere on <span class="math-inline ">$\mathbb{R}$</span>.</div>
+<div class="preview-paragraph-127 preview-line 127" data_line_start="127" data_line_end="127" data_line="127,128" count_line="1">since decreasing the value of <span class="math-inline ">$x$</span> by a factor of 2 will decrease the value of the bound by a factor of <span class="math-inline ">$2^{5}=32$</span>.</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-129 preview-line 129" data_line_start="129" data_line_end="129" data_line="129,130" count_line="1"> <h2 style="color: rgb(0,150,0);">Example: </h2> Show that the Taylor series for <span class="math-inline ">$\cos x$</span> converges to <span class="math-inline ">$\cos x$</span> evergwhere on <span class="math-inline ">$\mathbb{R}$</span>.</div>
 <div class="preview-paragraph-131 preview-line 131" data_line_start="131" data_line_end="131" data_line="131,132" count_line="1">Letting <span class="math-inline ">$f(x)=\cos x$</span></div>
 <div class="preview-paragraph-132 preview-line 132 133 134 135 136 137 138" data_line_start="132" data_line_end="138" data_line="132,139" count_line="7"><span class="math-block ">$$
 f^{(n)}(x)=\left\{\begin{array}{l}
 \cos x \\
--\sin x, \text { depending on the } \\
--\cos x, \text { value of } n .
+-\sin x& \text { depending on the } \\
+-\cos x& \text { value of } n .\\
+\sin(x)
 \end{array}\right.
 $$</span></div>
-<div class="preview-paragraph-140 preview-line 140" data_line_start="140" data_line_end="140" data_line="140,141" count_line="1">Thus <span class="math-inline ">$\left|f^{(n+1)}(x)\right| \leqslant 1$</span> on <span class="math-inline ">$\mathbb{R}$</span> and using the Lagromage croor bound Ion any interval about <span class="math-inline ">$O$</span> containing <span class="math-inline ">$x$</span> ) with <span class="math-inline ">$M=1$</span>,</div>
+<div class="preview-paragraph-140 preview-line 140" data_line_start="140" data_line_end="140" data_line="140,141" count_line="1">Thus <span class="math-inline ">$\left|f^{(n+1)}(x)\right| \leq 1$</span> on <span class="math-inline ">$\mathbb{R}$</span> and using the Lagrange error bound on any interval about <span class="math-inline ">$0$</span> containing <span class="math-inline ">$x$</span> ) with <span class="math-inline ">$M=1$</span>,</div>
 <div class="preview-paragraph-141 preview-line 141 142 143" data_line_start="141" data_line_end="143" data_line="141,144" count_line="3"><span class="math-block ">$$
-\left|E_{n}(x)\right|=\left|\cos x-P_{n}(x)\right| \leqslant \frac{|x|^{n+1}}{(n+1)!}
+\left|E_{n}(x)\right|=\left|\cos x-P_{n}(x)\right| \leq \frac{|x|^{n+1}}{(n+1)!}
 $$</span></div>
-<div class="preview-paragraph-145 preview-line 145" data_line_start="145" data_line_end="145" data_line="145,146" count_line="1">One can show that for any fired <span class="math-inline ">$a&gt;0$</span></div>
+<div class="preview-paragraph-145 preview-line 145" data_line_start="145" data_line_end="145" data_line="145,146" count_line="1">One can show that for any fixed <span class="math-inline ">$a&gt;0$</span></div>
 <div class="preview-paragraph-146 preview-line 146 147 148" data_line_start="146" data_line_end="148" data_line="146,149" count_line="3"><span class="math-block ">$$
 \lim _{n \rightarrow \infty} \frac{a^{n}}{n!}=0
 $$</span></div>
-<div class="preview-paragraph-149 preview-line 149" data_line_start="149" data_line_end="149" data_line="149,150" count_line="1">and hence <span class="math-inline ">$E_{n}(x) \rightarrow 0$</span> as <span class="math-inline ">$n \rightarrow \infty$</span>. <span class="math-inline ">$\operatorname{Sin} \theta \quad x$</span> was an arbitrary real number, <span class="math-inline ">$P_{n}(x) \rightarrow \cos x$</span> as <span class="math-inline ">$n \rightarrow \infty$</span> everywhere on <span class="math-inline ">$\mathbb{R}$</span> as required.</div>
+<div class="preview-paragraph-149 preview-line 149" data_line_start="149" data_line_end="149" data_line="149,150" count_line="1">and hence <span class="math-inline ">$E_{n}(x) \rightarrow 0$</span> as <span class="math-inline ">$n \rightarrow \infty$</span>. Since <span class="math-inline"> $x$</span> was an arbitrary real number, <span class="math-inline ">$P_{n}(x) \rightarrow \cos x$</span> as <span class="math-inline ">$n \rightarrow \infty$</span> everywhere on <span class="math-inline ">$\mathbb{R}$</span> as required.</div>
 
     </div>
   </div>
