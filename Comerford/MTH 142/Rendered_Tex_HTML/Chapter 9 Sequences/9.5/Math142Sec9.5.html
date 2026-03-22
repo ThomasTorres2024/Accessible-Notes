@@ -256,7 +256,7 @@ mjx-status {
 }
 
 foreignObject[data-mjx-xml] {
-  font-family: initial;
+  font-family: sans-serif;
   line-height: normal;
   overflow: visible;
 }
@@ -670,7 +670,7 @@ mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
    }
 
     #preview-content code, #setText code {
-      font-family: Inconsolata;
+      font-family: sans-serif;
       font-size: inherit;
       display: initial;
       background: #f8f8fa;
@@ -680,7 +680,7 @@ mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
       background-color: transparent;
     }
     #preview-content pre code, #setText pre code {
-      font-family: 'DM Mono', Inconsolata, monospace;
+      font-family: sans-serif;
       color: #333;
       font-size: 15px;
     }
@@ -878,7 +878,7 @@ mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
   }
 
   #preview {
-    font-family: 'CMU Serif', 'Georgia', Helvetica, Arial, sans-serif;
+    font-family: sans-serif;
     font-size: 17px;
     visibility: visible;
     word-break: break-word;
@@ -889,11 +889,11 @@ mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
   }
 
   #preview h1, #preview h2, #preview h3, #preview h4, #preview h5, #preview strong {
-    font-family: 'CMU Serif Bold', 'Georgia', Helvetica, Arial, sans-serif;
+    font-family: sans-serif;
   }
 
   #preview  i, #preview  em {
-    font-family: 'CMU Serif Italic', 'Georgia', Helvetica, Arial, sans-serif;
+    font-family: sans-serif;
   }
 
   .mmd-menu {
@@ -1134,12 +1134,13 @@ td .ClipboardButton .mmd-clipboard-icon {
 \large \sum_{n=0}^{\infty} C_{n}(x-a)=C_{0}+C_{1}(x-a)+C_{2}(x-a)^{2}+\cdots
 $$</span></div>
 <br>
-<div class="preview-paragraph-7 preview-line 7" data_line_start="7" data_line_end="7" data_line="7,8" count_line="1">Can think of a power series as being like a polynomial of infinite degree.</div>
+<div class="preview-paragraph-7 preview-line 7" data_line_start="7" data_line_end="7" data_line="7,8" count_line="1">You can think of a power series as being like a polynomial of infinite degree.</div>
 <br>
 <div class="preview-paragraph-9 preview-line 9 10" data_line_start="9" data_line_end="10" data_line="9,11" count_line="2">Think of <span class="math-inline">a</span> as being constant and <span class="math-inline ">$x$</span> being allowed to vary.<br></div>
 <br>
-<div class="preview-paragraph-12 preview-line 12" data_line_start="12" data_line_end="12" data_line="12,13" count_line="1">Each different value of <span class="math-inline ">$x$</span> gives us a different series and the question is then which values of <span class="math-inline ">$x$</span> give us a convergent series and which values give us a dirergent series.</div>
-<br>
+<div class="preview-paragraph-12 preview-line 12" data_line_start="12" data_line_end="12" data_line="12,13" count_line="1">Each different value of <span class="math-inline ">$x$</span> gives us a different series and the question is then which values of <span class="math-inline ">$x$</span> give us a convergent series and which values give us a divergent series.</div>
+<br><hr><br>
+
 
 <div class="preview-paragraph-14 preview-line 14 15" data_line_start="14" data_line_end="15" data_line="14,16" count_line="2"> <h2 style="color: rgb(0,150,0);">Example: </h2> <br> <span class="math-block ">$$\ \sum_{n=0}^{\infty} \frac{(x-1)^{n}}{2^{n}}$$</span>.<br>
 If we rewrite this as <span class="math-block ">$$\sum_{n=0}^{\infty}\left(\frac{x-1}{2}\right)^{n}$$</span> <br> we see that each different value of <span class="math-inline ">$x$</span> gives us a different geometric series.</div>
@@ -1165,7 +1166,7 @@ $$</span></div>
 \end{aligned}
 $$</span></div>
 <br>
-<div class="preview-paragraph-37 preview-line 37" data_line_start="37" data_line_end="37" data_line="37,38" count_line="1">This example illustrates a general phenomenon about pover series, namely that if <span class="math-inline ">$x$</span> is within a certain distance either side of a, then the poner series <span class="math-inline ">$\large \sum_{n=0}^{\infty} c_{n}(x-a)^{n}$</span> converges. This distance is ralled the radius of convergence, <span class="math-inline ">$R$</span> of the power series.</div>
+<div class="preview-paragraph-37 preview-line 37" data_line_start="37" data_line_end="37" data_line="37,38" count_line="1">This example illustrates a general phenomenon about power series, namely that if <span class="math-inline ">$x$</span> is within a certain distance either side of a, then the power series <span class="math-inline ">$\large \sum_{n=0}^{\infty} c_{n}(x-a)^{n}$</span> converges. <br><br> This distance is called the <u style="color: rgb(200,0,0);">radius of convergence</u> , <span class="math-inline ">$R$</span> of the power series.</div>
 <br>
 
 <div class="preview-paragraph-39 preview-line 39" data_line_start="39" data_line_end="39" data_line="39,40" count_line="1">There are three possibilities which can occur.</div>
@@ -1186,51 +1187,17 @@ $$</span></div>
 <div class="preview-paragraph-45 preview-line 45" data_line_start="45" data_line_end="45" data_line="45,46" count_line="1">We need to check the convergence of the series at the two endpoints. <span class="math-inline ">$a-R$</span> &amp; <span class="math-inline ">$a+R$</span> separately.</div>
 <br>
 
-<div class="preview-paragraph-47 preview-line 47 48" data_line_start="47" data_line_end="48" data_line="47,49" count_line="2">The interval ( <span class="math-inline ">$a-R, a+R$</span> ) together with those endpts. (if any) at which we have convergence together give us the interval of convergence of the power series.<br>
+<div class="preview-paragraph-47 preview-line 47 48" data_line_start="47" data_line_end="48" data_line="47,49" count_line="2">The interval ( <span class="math-inline ">$a-R, a+R$</span> ) together with those endpts. (if any) at which we have convergence together give us the <u style="color: rgb(200,0,0);">interval of convergence</u> of the power series.<br>
 <br>
 
-<div>
-  <span class="math-block">
-
-  <script type="text/tikz">
-
-\begin{tikzpicture}[>=stealth, scale=2.8]
-
-% Number line
-\draw[<->, line width=0.5mm ] (-4,0) -- (4,0) node[right] {$x$};
-
-% Points
-\draw (-2,0.1) -- (-2,-0.1) node[below=6pt] {$\textbf{{a-R}}$};
-\draw (0,0.1) -- (0,-0.1) node[below=6pt] {$\textbf{{a}}$};
-\draw (2,0.1) -- (2,-0.1) node[below=6pt] {$\textbf{{a+R}}$};
-
-% Interval of convergence arrow
-\draw[<->, line width=0.5mm, red ] (-2,0.8) -- (2,0.8);
-
-
-\draw[<->, line width=0.5mm, blue ] (0,1.5) -- (2,1.5);
-
-\node at (0,1.1) {$\large \textbf{Interval of Convergence}$};
-\node at (1,1.7) {$\large \textbf{R}$};
-
-% Diverges labels
-\node[left] at (-3,0.5) {$\large\text{Series}  $};
-\node[left] at (-3,0.2) {$\large\text{Diverges}  $};
-
-\node[right] at (3,0.5) {$\large\text{Series}  $};
-\node[right] at (3,0.2) {$\large\text{Diverges}  $};
-
-\end{tikzpicture}
-
-  </script>
-
-  </span>
-</div>
+<img src="radius_of_convergence.png" alt="A red line above a point a, on the left of a is the point a minus R and on the right of a is the point a plus R."> 
 
 
 <br>
 <div class="preview-paragraph-50 preview-line 50" data_line_start="50" data_line_end="50" data_line="50,51" count_line="1">
   
+  <br><hr><br>
+
   <h2 style="color: rgb(0,150,0);"> Example: </h2>
   For the previous example</div>
 
@@ -1318,7 +1285,7 @@ $$</span></div>
 <div class="preview-paragraph-95 preview-line 95" data_line_start="95" data_line_end="95" data_line="95,96" count_line="1">and so there is always convergence at <span class="math-inline ">$x&lt;a$</span>.</div>
 <br>
 
-<div class="preview-paragraph-97 preview-line 97" data_line_start="97" data_line_end="97" data_line="97,98" count_line="1">Hence in this case, the radus of convergence <span class="math-inline ">$R=O=\left(\frac{1}{\infty}\right)$</span></div>
+<div class="preview-paragraph-97 preview-line 97" data_line_start="97" data_line_end="97" data_line="97,98" count_line="1">Hence in this case, the radius of convergence <span class="math-inline ">$R=0=\left(\frac{1}{\infty}\right)$</span></div>
 <br>
 
 <div class="preview-paragraph-99 preview-line 99" data_line_start="99" data_line_end="99" data_line="99,100" count_line="1">
@@ -1367,12 +1334,13 @@ $$</span></div>
 <br>
 <div class="preview-paragraph-122 preview-line 122" data_line_start="122" data_line_end="122" data_line="122,123" count_line="1">Hence in this case, the radius of convergence <span class="math-inline ">$R=\infty \quad\left(=\frac{1}{0}\right)$</span>.</div>
 <br>
+<br><hr><br>
 
 <div class="preview-paragraph-124 preview-line 124" data_line_start="124" data_line_end="124" data_line="124,125" count_line="1">
   <h2 style="color: rgb(0,0,230);">To Summarize: </h2>
 </div>
 <br>
-<div class="preview-paragraph-126 preview-line 126" data_line_start="126" data_line_end="126" data_line="126,127" count_line="1">Method for Computing Radius of Convergence</div>
+<div class="preview-paragraph-126 preview-line 126" data_line_start="126" data_line_end="126" data_line="126,127" count_line="1"> <u>Method for Computing Radius of Convergence</u> </div>
 <br>
 <div class="preview-paragraph-128 preview-line 128" data_line_start="128" data_line_end="128" data_line="128,129" count_line="1">To calculate the radius of convergence, <span class="math-inline ">$R$</span>, for the power series <span class="math-inline ">$\large \sum_{n=0}^{\infty} C_{n}(x-a)^{n}$</span>, use the ratio test with</div>
 <br>
@@ -1382,7 +1350,7 @@ $$</span></div>
 
 <br>
 <ol class="preview-paragraph-132 preview-line 132 133 134 135" data_line_start="132" data_line_end="135" data_line="132,136" count_line="4">
-  <li>If <span class="math-inline ">$ \large \lim _{n \rightarrow \infty} \frac{\left|a_{n+1}\right|}{\left|a_{n}\right|}=\infty$</span>, then <span class="math-inline ">$k=0$</span></li>
+  <li>If <span class="math-inline ">$ \large \lim _{n \rightarrow \infty} \frac{\left|a_{n+1}\right|}{\left|a_{n}\right|}=\infty$</span>, then <span class="math-inline ">$R=0$</span></li>
   <br>
   
   <li>If <span class="math-inline ">$\large \lim _{n \rightarrow \infty} \frac{\left|a_{n-1}\right|}{\left|a_{n}\right|}=k|x-a|$</span> with <span class="math-inline ">$0&lt;k&lt;\infty$</span>, then <span class="math-inline ">$R=\frac{1}{k}$</span> and <span class="math-inline ">$0&lt;R&lt;\infty$</span>.<br>
@@ -1399,6 +1367,9 @@ $$</span></div>
 <br>
 
 <div class="preview-paragraph-138 preview-line 138" data_line_start="138" data_line_end="138" data_line="138,139" count_line="1">
+
+  <br><hr><br>
+
   <h2 style="color: rgb(0,150,0);">Example: </h2>
   <span class="math-block ">$$\large \sum_{n=0}^{\infty} \frac{x^{n}}{n!}=1+x+\frac{x^{2}}{2!}+\frac{x^{3}}{3!}+\cdots+\frac{x^{n}}{n!}+\cdots$$</span></div>
 <br>
@@ -1428,6 +1399,9 @@ Well see in Chapter 10 that it converges to <span class="math-inline ">$e^{x}$</
 <br>
 
 <div class="preview-paragraph-158 preview-line 158" data_line_start="158" data_line_end="158" data_line="158,159" count_line="1">
+  
+  <br><hr><br>
+
   <h2 style="color: rgb(0,150,0);">Example: </h2>
   <span class="math-block ">$$ \large \sum_{n=0}^{\infty} n!x^{n}=1+x+2!x^{2}+3!x^{3}+\dots$$</span></div>
 <br>
@@ -1446,7 +1420,8 @@ $$</span></div>
 <br>
 
 <div class="preview-paragraph-170 preview-line 170" data_line_start="170" data_line_end="170" data_line="170,171" count_line="1">This gives <span class="math-inline ">$R=0$</span> and the series converges only at 0 and diverges everywhere else.</div>
-<br>
+
+<br><hr><br>
 
 <div class="preview-paragraph-172 preview-line 172" data_line_start="172" data_line_end="172" data_line="172,173" count_line="1"> <h2 style="color: rgb(0,150,0);">Example: </h2><br> <span class="math-block ">$$\large \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}(x-1)^{n}=(x-1)-\frac{(x-1)^{2}}{2}+\frac{(x-1)^{3}}{3} \cdots+\frac{(-1)^{n+1}}{n}(x-1)^{n}+\cdots$$</span></div>
 <br>
@@ -1466,7 +1441,7 @@ $$</span></div>
 $$</span></div>
 <br> 
 
-<div class="preview-paragraph-186 preview-line 186" data_line_start="186" data_line_end="186" data_line="186,187" count_line="1">Thus <span class="math-inline ">$k=1$</span> and so <span class="math-inline ">$k=1 / 1=1$</span>. The ratio test tells us that the series converges for <span class="math-inline ">$|x-1|&lt;1$</span> i.e. <span class="math-inline ">$0&lt;x&lt;2$</span> and diverges for <span class="math-inline ">$|x-1|&gt;1$</span> i.e. <span class="math-inline ">$x&lt;0$</span> or <span class="math-inline ">$x&gt;2$</span>.</div>
+<div class="preview-paragraph-186 preview-line 186" data_line_start="186" data_line_end="186" data_line="186,187" count_line="1">Thus <span class="math-inline ">$k=1$</span> and so <span class="math-inline ">$R=1 / 1=1$</span>. The ratio test tells us that the series converges for <span class="math-inline ">$|x-1|&lt;1$</span> i.e. <span class="math-inline ">$0&lt;x&lt;2$</span> and diverges for <span class="math-inline ">$|x-1|&gt;1$</span> i.e. <span class="math-inline ">$x&lt;0$</span> or <span class="math-inline ">$x&gt;2$</span>.</div>
 <br>
 
 <div class="preview-paragraph-188 preview-line 188" data_line_start="188" data_line_end="188" data_line="188,189" count_line="1">Note that the ratio test tells us nothing when <span class="math-inline ">$|x-1|=1$</span> ie when <span class="math-inline ">$x=0$</span> or <span class="math-inline ">$x=2$</span>.</div>
@@ -1479,7 +1454,7 @@ $$</span></div>
 <br>
 
 <div class="preview-paragraph-194 preview-line 194" data_line_start="194" data_line_end="194" data_line="194,195" count_line="1">One trick is to rewrite the series in such a way that all the <span class="math-inline ">$a_{n}$</span> 's are non-zero.</div>
-<br>
+<br><hr><br>
 
 <div class="preview-paragraph-196 preview-line 196 197 198" data_line_start="196" data_line_end="198" data_line="196,199" count_line="3">
   
@@ -1514,7 +1489,7 @@ $$</span></div>
 \large \begin{aligned}
 \lim _{n \rightarrow \infty} \frac{\left|a_{n+1}\right|}{\left|a_{n}\right|} &amp; =\lim _{n \rightarrow \infty} \frac{\left|\frac{(-1)^{n}}{(2 n+1)!} x^{2 n+1}\right|}{\left|\frac{(-1)^{n-1}}{(2 n-1)!} x^{2 n-1}\right|} \\
 &amp; =\lim _{n \rightarrow \infty}\left|\frac{(2 n-1)!}{(2 n+1)!} \frac{x^{2 n+1}}{x^{2 n-1}}\right| \\
-&amp; =\lim _{n \rightarrow \infty}\left|\frac{(2 n-1)(2 n-2) \cdots 2 \cdot x}{(2 n+1)(2 n)(2 n-1)(2 n-2) \cdots 2 \cdot 1} \cdot x^{2}\right| \\
+&amp; =\lim _{n \rightarrow \infty}\left|\frac{\cancel{(2 n-1)(2 n-2) \cdots 2 \cdot 1}}{(2 n+1)(2 n)\cancel{(2 n-1)(2 n-2) \cdots 2 \cdot 1}} \cdot x^{2}\right| \\
 &amp; =\left|x^{2}\right| \lim _{n \rightarrow \infty} \frac{1}{(2 n+1)(2 n-1)} \\
 &amp; =1 \cdot  x^{2}  \cdot 0 \\
 &amp; =0 .
@@ -1522,8 +1497,8 @@ $$</span></div>
 $$</span></div>
 <br>
 
-<div class="preview-paragraph-221 preview-line 221 222" data_line_start="221" data_line_end="222" data_line="221,223" count_line="2">Thus <span class="math-inline ">$\large \lim _{n \rightarrow \infty} \frac{\left|a_{n+1}\right|}{\left|a_{n}\right|}=0&lt;1$</span> for every <span class="math-inline ">$x$</span>.<br>
-The ratio test then guarantees that the seres converges for every <span class="math-inline ">$x$</span>. Thus the ratio of convergence is <span class="math-inline ">$\infty$</span> and the interval of convergence is <span class="math-inline ">$(-\infty, \infty)$</span> or <span class="math-inline ">$\mathbb{R}$</span> (i.e. all real numbers).</div>
+<div class="preview-paragraph-221 preview-line 221 222" data_line_start="221" data_line_end="222" data_line="221,223" count_line="2">Thus <span class="math-inline ">$\large \lim _{n \rightarrow \infty} \frac{\left|a_{n+1}\right|}{\left|a_{n}\right|}=0&lt;1$</span> for every <span class="math-inline ">$x$</span>.<br><br>
+The ratio test then guarantees that the series converges for every <span class="math-inline ">$x$</span>. Thus the ratio of convergence is <span class="math-inline ">$\infty$</span> and the interval of convergence is <span class="math-inline ">$(-\infty, \infty)$</span> or <span class="math-inline ">$\mathbb{R}$</span> (i.e. all real numbers).</div>
 <br>
 
 <hr>
@@ -1542,11 +1517,13 @@ The ratio test then guarantees that the seres converges for every <span class="m
 <br>
 
 <div class="preview-paragraph-230 preview-line 230" data_line_start="230" data_line_end="230" data_line="230,231" count_line="1">The answer depends on the series and we need to check the behaviour at the endpots separately.</div>
-<br>
+<br><hr><br>
 
 <div class="preview-paragraph-232 preview-line 232 233" data_line_start="232" data_line_end="233" data_line="232,234" count_line="2">
+  
+  
   <h2 style="color: rgb(0,150,0);">Example: </h2>
-  <span class="math-block ">$$\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}(x-1)^{n}=(x-1)-\frac{(x-1)^{2}}{2}+\frac{(x-1)^{3}}{3} \cdots \cdot$$</span><br>
+  <span class="math-block ">$$\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}(x-1)^{n}=(x-1)-\frac{(x-1)^{2}}{2}+\frac{(x-1)^{3}}{3}- \cdots \cdot$$</span><br>
 We already found the radius of convergence was 1 and so the series cenverges for <span class="math-inline ">$|x-1|&lt;1$</span> ie for <span class="math-inline ">$0&lt;x&lt;2$</span>.</div>
 <br>
 
@@ -1583,7 +1560,7 @@ $$</span></div>
 <br>
 <div class="preview-paragraph-256 preview-line 256" data_line_start="256" data_line_end="256" data_line="256,257" count_line="1">We shall see later that this series. converges to <span class="math-inline ">$\ln x$</span>.</div>
 
-<br>
+<br><hr><br>
 <div class="preview-paragraph-258 preview-line 258" data_line_start="258" data_line_end="258" data_line="258,259" count_line="1">
   <h2 style="color: rgb(0,150,0);">Example: </h2>
   Find the radius and interval of convergence of the series:</div>
