@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <title>10.4_The_Error_in_Taylor_Polynomial_Approximations</title>
+    <title>11.4 Separation of Variables</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.mathpix.com/fonts/cmu.css"/>
     <style>html,body {
@@ -254,7 +254,7 @@ mjx-status {
 }
 
 foreignObject[data-mjx-xml] {
-  font-family: sans-serif;
+  font-family: initial;
   line-height: normal;
   overflow: visible;
 }
@@ -544,7 +544,7 @@ div.svg-container,
   }
 }
 #preview-content code, #setText code {
-  font-family: sans-serif;
+  font-family: Inconsolata;
   font-size: inherit;
   display: initial;
   background: #f8f8fa;
@@ -554,7 +554,7 @@ div.svg-container,
   background-color: transparent;
 }
 #preview-content pre code, #setText pre code {
-  font-family: sans-serif;
+  font-family: 'DM Mono', Inconsolata, monospace;
   color: #333;
   font-size: 15px;
 }
@@ -776,7 +776,7 @@ ul.itemize > li,
   display: inline-block;
 }
 #preview {
-  font-family: sans-serif;
+  font-family: 'CMU Serif', 'Georgia', Helvetica, Arial, sans-serif;
   font-size: 17px;
   visibility: visible;
   word-break: break-word;
@@ -786,10 +786,10 @@ ul.itemize > li,
   box-sizing: content-box;
 }
 #preview h1, #preview h2, #preview h3, #preview h4, #preview h5, #preview strong {
-  font-family: sans-serif;
+  font-family: 'CMU Serif Bold', 'Georgia', Helvetica, Arial, sans-serif;
 }
 #preview i, #preview em {
-  font-family: sans-serif;
+  font-family: 'CMU Serif Italic', 'Georgia', Helvetica, Arial, sans-serif;
 }
 .mmd-menu {
   max-width: 320px;
@@ -985,152 +985,218 @@ td .ClipboardButton .mmd-clipboard-icon {
   <div id="preview" class="preview scrollEditor">
     <div id="container-ruller" />
     <div id="preview-content">
-      <h1 type="section" data-unnumbered="true" class="section-title preview-paragraph-0 preview-line 0" id="%24%5Coint-10.4%24-the-error-in-taylor-polynomial-approximations" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1" style="color: rgb(200,0,0);">
-<span class="math-inline "> $\S 10.4$</span> The Error in Taylor Polynomial <br>
- Approximations</h1>
-<div class="preview-paragraph-2 preview-line 2" data_line_start="2" data_line_end="2" data_line="2,3" count_line="1">Suppose we want to approximate the values of some for <span class="math-inline ">$f(x)$</span> near <span class="math-inline ">$x=$</span> a using the <span class="math-inline ">$n$</span>-th degree Taylor polynomial <span class="math-inline ">$P_{n}(x)$</span>. In order to know whether we have a good approxmation we need to look at the <u>error</u></div>
-<div class="preview-paragraph-3 preview-line 3 4 5" data_line_start="3" data_line_end="5" data_line="3,6" count_line="3"><span class="math-block ">$$\large 
-E_{n}(x)=f(x)-P_{n}(x) .
+      <h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-0 preview-line 0" id="%24%5Coint-11.4%24-separation-of-variables" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1">
+<span class="math-inline ">$\oint 11.4$</span> Separation of Variables</h2>
+<div class="preview-paragraph-2 preview-line 2" data_line_start="2" data_line_end="2" data_line="2,3" count_line="1">Recall that in <span class="math-inline ">$\delta 11.2$</span> we looked the DE</div>
+<div class="preview-paragraph-3 preview-line 3 4 5" data_line_start="3" data_line_end="5" data_line="3,6" count_line="3"><span class="math-block ">$$
+\frac{d y}{d x}=-\frac{x}{y}
 $$</span></div>
-<div class="preview-paragraph-7 preview-line 7" data_line_start="7" data_line_end="7" data_line="7,8" count_line="1">Of course we want the size of <span class="math-inline ">$E_{n}(x)$</span> to be small and we do this by finding an upper bound for <span class="math-inline">$|E_n|$</span>. The idea then is that if this upper bound is small, then <span class="math-inline"> $E_n$ </span> has to also be small.</div>
-
-<br>
-<hr>
-<br>
-
-<div class="preview-paragraph-9 preview-line 9 10" data_line_start="9" data_line_end="10" data_line="9,11" count_line="2"> <h2 style="color: rgb(0,0,230);">Finding an Error Bound</h2> <br>
-For the sake of simplicity, assume for now that <span class="math-inline ">$a=0$</span> (the case <span class="math-inline ">$a \neq 0$</span> is very similar)</div>
-<div class="preview-paragraph-12 preview-line 12" data_line_start="12" data_line_end="12" data_line="12,13" count_line="1">Recall that we constructed <span class="math-inline ">$P_{n}(x)$</span> so that the first <span class="math-inline ">$n$</span> derivatives of <span class="math-inline ">$P_{n}$</span> at <span class="math-inline ">$x=0$</span> were the same as those of <span class="math-inline ">$f$</span>.</div>
-<div class="preview-paragraph-14 preview-line 14" data_line_start="14" data_line_end="14" data_line="14,15" count_line="1">Thus:</div>
-<div class="preview-paragraph-15 preview-line 15 16 17 18 19 20" data_line_start="15" data_line_end="20" data_line="15,21" count_line="6"><span class="math-block ">$$
+<div class="preview-paragraph-6 preview-line 6" data_line_start="6" data_line_end="6" data_line="6,7" count_line="1">and guessed that the solas were circles of the form</div>
+<div class="preview-paragraph-7 preview-line 7 8 9" data_line_start="7" data_line_end="9" data_line="7,10" count_line="3"><span class="math-block ">$$
+x^{2}+y^{2}=C
+$$</span></div>
+<div class="preview-paragraph-11 preview-line 11" data_line_start="11" data_line_end="11" data_line="11,12" count_line="1">One can check that these are sulbs by differentration:</div>
+<div class="preview-paragraph-12 preview-line 12 13 14 15 16 17 18 19" data_line_start="12" data_line_end="19" data_line="12,20" count_line="8"><span class="math-block ">$$
+\begin{gathered}
+\frac{d}{d x}\left(x^{2}+y^{2}\right)=\frac{d}{d x}(C) \\
+2 x+2 y \frac{d y}{d x}=0 \\
+2 y \frac{d y}{d x}=-2 x \\
+\frac{d y}{d x}=-\frac{x}{y}
+\end{gathered}
+$$</span></div>
+<div class="preview-paragraph-21 preview-line 21" data_line_start="21" data_line_end="21" data_line="21,22" count_line="1">However, there is also a way to get the solns from the anginal eqn.</div>
+<div class="preview-paragraph-22 preview-line 22 23 24" data_line_start="22" data_line_end="24" data_line="22,25" count_line="3"><span class="math-block ">$$
+\frac{d y}{d x}=-\frac{x}{y}
+$$</span></div>
+<div class="preview-paragraph-25 preview-line 25" data_line_start="25" data_line_end="25" data_line="25,26" count_line="1">via an algebrare trick.</div>
+<div class="preview-paragraph-27 preview-line 27" data_line_start="27" data_line_end="27" data_line="27,28" count_line="1">Trick. Treat <span class="math-inline ">$\frac{d y}{d x}$</span> like a fraction and rearrange the eqn. so that everything involving <span class="math-inline ">$y$</span> is on the left and everything involving <span class="math-inline ">$x$</span> is on the right</div>
+<div class="preview-paragraph-28 preview-line 28 29 30 31 32 33" data_line_start="28" data_line_end="33" data_line="28,34" count_line="6"><span class="math-block ">$$
 \begin{aligned}
-&amp; E_{n}(0)=f(0)-P_{n}(0)=0\\
-&amp; E_{n}^{\prime}(0)=f^{\prime}(0)-P_{n}^{\prime}(0)=0 \\
-&amp; E_{n}^{\prime \prime}(0)=f^{\prime \prime}(0)-P_{n}^{\prime \prime}(0)=0
-\\ &amp; \quad \quad \quad \quad \quad \quad  \vdots
+&amp; d y=-\frac{x}{y} d x \\
+&amp; y d y=-x d x
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-21 preview-line 21 22 23" data_line_start="21" data_line_end="23" data_line="21,24" count_line="3"><span class="math-block ">$$
-E_{n}^{(n)}(0)=f^{(n)}(0)-p^{(n)}(0)=0
-$$</span></div>
-<div class="preview-paragraph-25 preview-line 25" data_line_start="25" data_line_end="25" data_line="25,26" count_line="1">If we now take one more derivative, then, since <span class="math-inline ">$P_{n}(x)$</span> is a polynomial of degree <span class="math-inline ">$n, P_{n}^{(n+1)}(x)=0$</span>, and so</div>
-<div class="preview-paragraph-26 preview-line 26 27 28" data_line_start="26" data_line_end="28" data_line="26,29" count_line="3"><span class="math-block ">$$
-E_{n}^{(n+1)}(x)=f^{(n+1)}(x) .
-$$</span></div>
-<div class="preview-paragraph-30 preview-line 30" data_line_start="30" data_line_end="30" data_line="30,31" count_line="1">Suppose now that we <u>know</u> <span class="math-inline ">$\left|f^{(n+1)}(x)\right| \leq M$</span> for some constant <span class="math-inline">$M$</span> and for some range of non-negative values of <span class="math-inline ">$x$</span>, say for <span class="math-inline ">$0 \leq x \leq \delta$</span>. (case for negative values is similar)</div>
-<div class="preview-paragraph-32 preview-line 32" data_line_start="32" data_line_end="32" data_line="32,33" count_line="1">Thus:</div><br>
-<div class="preview-paragraph-33 preview-line 33 34 35" data_line_start="33" data_line_end="35" data_line="33,36" count_line="3"><span class="math-block ">$$
-\large -M \leq f^{(n+1)}(x) \leq M  \quad \text { for }  0 \leq x \leq \delta
-$$</span></div><br>
-
-<div class="preview-paragraph-37 preview-line 37" data_line_start="37" data_line_end="37" data_line="37,38" count_line="1">Since <span class="math-inline ">$E_{n}^{(n+1)}(x)=f^{(n+1)}(x)$</span>, we have:</div><br>
-<div class="preview-paragraph-38 preview-line 38 39 40" data_line_start="38" data_line_end="40" data_line="38,41" count_line="3"><span class="math-block ">$$\large
--M \leq E_{n}^{(n+1)}(x) \leq M \quad \text { for } 0 \leq x \leq \delta
-$$</span></div><br>
-
-<br>
-<div class="preview-paragraph-42 preview-line 42 43" data_line_start="42" data_line_end="43" data_line="42,44" count_line="2">The idea is then to go from a bound on the <span class="math-inline ">$(n+1)$</span>st derivative <span class="math-inline ">$E_{n}^{(n+1)}(x)$</span> to a bound on <span class="math-inline ">$E_{n}(x)$</span> by repeated integrations from 0 to <span class="math-inline ">$x$</span>.<br><br>
-Thus:</div>
-<div class="preview-paragraph-44 preview-line 44 45 46" data_line_start="44" data_line_end="46" data_line="44,47" count_line="3"><span class="math-block ">$$ \large
--\int_{0}^{x} M d t \leq \int_{0}^{x} E_{n}^{(n+1)}(t) d t \leq \int_{0}^{x} M d t, \quad 0 \leq x \leq \delta
-$$</span></div>
-<div class="preview-paragraph-48 preview-line 48" data_line_start="48" data_line_end="48" data_line="48,49" count_line="1">By the First Fundamental Theorem of Calculus, since <span class="math-inline ">$E_{n}^{(n)}(x)$</span> is an antiderivative of <span class="math-inline ">$E_{n}^{(n+1)}(x)$</span>, this gives</div>
-<div class="preview-paragraph-49 preview-line 49 50 51 52 53 54" data_line_start="49" data_line_end="54" data_line="49,55" count_line="6"><span class="math-block ">$$
+<div class="preview-paragraph-35 preview-line 35" data_line_start="35" data_line_end="35" data_line="35,36" count_line="1">This trick is known as the separation of variables (for obvious reasons!).</div>
+<div class="preview-paragraph-37 preview-line 37" data_line_start="37" data_line_end="37" data_line="37,38" count_line="1">We now integrate both sides of the rearranged eqn</div>
+<div class="preview-paragraph-38 preview-line 38 39 40 41 42 43 44 45" data_line_start="38" data_line_end="45" data_line="38,46" count_line="8"><span class="math-block ">$$
 \begin{aligned}
-&amp; {[-M t]_{0}^{x} \leq\left[E_{n}^{(n)}(t)\right]_{0}^{x} \leq[M t]_{0}^{x}} \\
-&amp; -M x-0 \leq E_{n}^{(n)}(x)-E_{n}^{(n)}(0) \leq M x-0
+&amp; \int y d y=\int-x d x \\
+&amp; \frac{y^{2}}{2}=-\frac{x^{2}}{2}+k, \quad k \text { constant } \\
+&amp; y^{2}=-x^{2}+C \quad(C=2 k) \\
+&amp; x^{2}+y^{2}=C
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-55 preview-line 55" data_line_start="55" data_line_end="55" data_line="55,56" count_line="1">and since <span class="math-inline ">$E_{n}^{(n)}(0)=f^{(n)}(0)-p_{n}^{(n)}(0)=0$</span>, we have</div>
+<div class="preview-paragraph-46 preview-line 46" data_line_start="46" data_line_end="46" data_line="46,47" count_line="1">N.b. this trick doesn't always work one can't always reparate <span class="math-inline ">$x$</span> and <span class="math-inline ">$y$</span>. Neverthess, it is a very useful short cut when it does work.</div>
+<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-48 preview-line 48" id="exponential-growth-and-decay" data_line_start="48" data_line_end="48" data_line="48,49" count_line="1">
+Exponential Growth and Decay</h2>
+<div class="preview-paragraph-50 preview-line 50" data_line_start="50" data_line_end="50" data_line="50,51" count_line="1">Consider the DE</div>
+<div class="preview-paragraph-51 preview-line 51 52 53" data_line_start="51" data_line_end="53" data_line="51,54" count_line="3"><span class="math-block ">$$
+\frac{d y}{d x}=k y
+$$</span></div>
+<div class="preview-paragraph-55 preview-line 55" data_line_start="55" data_line_end="55" data_line="55,56" count_line="1">Separating the variables gives</div>
 <div class="preview-paragraph-56 preview-line 56 57 58" data_line_start="56" data_line_end="58" data_line="56,59" count_line="3"><span class="math-block ">$$
--Mx \leq E_{n}^{(n)}(x) \leq Mx, \quad 0 \leq x \leq \delta
+\frac{d y}{y}=k d x
 $$</span></div>
-<div class="preview-paragraph-60 preview-line 60" data_line_start="60" data_line_end="60" data_line="60,61" count_line="1">Now integrate again from 0 to <span class="math-inline ">$x$</span></div>
-<div class="preview-paragraph-61 preview-line 61 62 63" data_line_start="61" data_line_end="63" data_line="61,64" count_line="3"><span class="math-block ">$$
-\int_{0}^{x}-M t d t \leq \int_{0}^{x} E_{n}^{(n)}(t) d t \leq \int_{0}^{x} M t d t
+<div class="preview-paragraph-60 preview-line 60" data_line_start="60" data_line_end="60" data_line="60,61" count_line="1">We then integrate both sides</div>
+<div class="preview-paragraph-61 preview-line 61 62 63 64 65 66" data_line_start="61" data_line_end="66" data_line="61,67" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+&amp; \int \frac{d y}{y}=\int k d x \\
+&amp; \ln |y|=k x+c, \quad c \text { constant. }
+\end{aligned}
 $$</span></div>
-<div class="preview-paragraph-64 preview-line 64" data_line_start="64" data_line_end="64" data_line="64,65" count_line="1">and by FTOC I again</div>
-<div class="preview-paragraph-65 preview-line 65 66 67" data_line_start="65" data_line_end="67" data_line="65,68" count_line="3"><span class="math-block ">$$
-\left[-\frac{M t^{2}}{2}\right]_{0}^{x} \leq\left[E_{n}^{(n-1)}(t)\right]_{0}^{x} \leq\left[\frac{M t^{2}}{2}\right]_{0}^{x}
-$$</span></div>
-<div class="preview-paragraph-68 preview-line 68" data_line_start="68" data_line_end="68" data_line="68,69" count_line="1">and since <span class="math-inline ">$E_{n}^{(n-1)}(0)=f^{(n-1)}(0)-p_{n}^{(n-1)}(0)=0$</span>,</div>
+<div class="preview-paragraph-68 preview-line 68" data_line_start="68" data_line_end="68" data_line="68,69" count_line="1">Taking the exponentral of both sides</div>
 <div class="preview-paragraph-69 preview-line 69 70 71" data_line_start="69" data_line_end="71" data_line="69,72" count_line="3"><span class="math-block ">$$
--\frac{M x^{2}}{2} \leq E_{n}^{(n-1)}(x) \leq \frac{M x^{2}}{2}, 0 \leq x \leq \delta
+e^{\ln |y|}=e^{k x+c}
 $$</span></div>
-<div class="preview-paragraph-73 preview-line 73" data_line_start="73" data_line_end="73" data_line="73,74" count_line="1">If we keep going like this, we eventually undo all the derivatives and in the end we get:</div>
-<div class="preview-paragraph-74 preview-line 74 75 76" data_line_start="74" data_line_end="76" data_line="74,77" count_line="3"><span class="math-block ">$$
--\frac{1}{(n+1)!} M x^{n+1} \leq E_{n}(x) \leq \frac{1}{(n+1)!} M x^{n+1}, 0 \leq x \leq \delta .
+<div class="preview-paragraph-72 preview-line 72 73 74 75 76 77" data_line_start="72" data_line_end="77" data_line="72,78" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+&amp; |y|=e^{k x+c} \\
+&amp; |y|=e^{k x} \cdot e^{c}
+\end{aligned}
 $$</span></div>
-<div class="preview-paragraph-78 preview-line 78" data_line_start="78" data_line_end="78" data_line="78,79" count_line="1">Thus</div>
-<div class="preview-paragraph-79 preview-line 79 80 81" data_line_start="79" data_line_end="81" data_line="79,82" count_line="3"><span class="math-block ">$$
-\left|E_{n}(x)\right|=\left|f(x)-P_{n}(x)\right| \leq \frac{1}{(n+1)!} M x^{n+1}, \quad 0 \leq x \leq \delta .
+<div class="preview-paragraph-79 preview-line 79" data_line_start="79" data_line_end="79" data_line="79,80" count_line="1">So</div>
+<div class="preview-paragraph-80 preview-line 80 81 82" data_line_start="80" data_line_end="82" data_line="80,83" count_line="3"><span class="math-block ">$$
+y= \pm e^{c} e^{k x}
 $$</span></div>
-<div class="preview-paragraph-83 preview-line 83" data_line_start="83" data_line_end="83" data_line="83,84" count_line="1">We then get The Lagrange Error Bound for <span class="math-inline ">$P_{n}(x)$</span>.</div>
-
-<br>
-<hr>
-<br>
-
-<div class="preview-paragraph-85 preview-line 85 86" data_line_start="85" data_line_end="86" data_line="85,87" count_line="2"> <h2 style="color: rgb(0,0,230);">The Lagrange Error Bound for <span class="math-inline ">$P_{n}(x)$</span></h2> <br>
-Suppose <span class="math-inline ">$f$</span> and all its derivatives are continuous. If <span class="math-inline ">$P_{n}(x)$</span> is the <span class="math-inline ">$n$</span>th Taylor polynomial for <span class="math-inline ">$f(x)$</span> about <span class="math-inline ">$x=a$</span>, then:</div>
-<div class="preview-paragraph-87 preview-line 87 88 89" data_line_start="87" data_line_end="89" data_line="87,90" count_line="3"><span class="math-block ">$$
-\left|E_{n}(x)\right|=\left|f(x)-P_{n}(x)\right| \leq \frac{M}{(n+1)!}|x-a|^{n+1}
+<div class="preview-paragraph-83 preview-line 83" data_line_start="83" data_line_end="83" data_line="83,84" count_line="1">and if we let <span class="math-inline ">$A$</span> be the constant <span class="math-inline ">$\pm e^{c}$</span>, we get</div>
+<div class="preview-paragraph-84 preview-line 84 85 86" data_line_start="84" data_line_end="86" data_line="84,87" count_line="3"><span class="math-block ">$$
+y=A e^{k x} .
 $$</span></div>
-<div class="preview-paragraph-90 preview-line 90" data_line_start="90" data_line_end="90" data_line="90,91" count_line="1">where <span class="math-inline ">$\left|f^{(n+1)}(t)\right| \leq M$</span> on the interval between <span class="math-inline ">$a$</span> and <span class="math-inline ">$x$</span>.</div>
-
-<br><hr>
-
-<h1 type="section" data-unnumbered="true" class="section-title preview-paragraph-92 preview-line 92" id="using-the-lagrange-error-bound" data_line_start="92" data_line_end="92" data_line="92,93" count_line="1" style="color: rgb(0,0,230);">
-Using the Lagrange Error Bound</h1><br>
-<div class="preview-paragraph-94 preview-line 94" data_line_start="94" data_line_end="94" data_line="94,95" count_line="1"> <h2 style="color: rgb(0,150,0);">Example: </h2> Give a bound on <span class="math-inline ">$E_{4}$</span> when <span class="math-inline ">$e^{x}$</span> is approximated by <span class="math-inline ">$P_{4}(x)$</span> about <span class="math-inline ">$x=0$</span> on the interval <span class="math-inline ">$-.5 \leq x \leq .5$</span>.</div>
-<div class="preview-paragraph-96 preview-line 96" data_line_start="96" data_line_end="96" data_line="96,97" count_line="1">Let <span class="math-inline ">$f(x)=e^{x}$</span>.</div>
-<div class="preview-paragraph-98 preview-line 98" data_line_start="98" data_line_end="98" data_line="98,99" count_line="1">Then <span class="math-inline ">$f^{(5)}(x)=e^{x}$</span> and since <span class="math-inline ">$e^{x}$</span> is positive and increasing</div>
-<div class="preview-paragraph-99 preview-line 99 100 101" data_line_start="99" data_line_end="101" data_line="99,102" count_line="3"><span class="math-block ">$$
-\left|f^{(5)}(x)\right| \leq e^{0.5}=\sqrt{e}&lt;2, \quad-.5 \leq x \leq .5
+<div class="preview-paragraph-88 preview-line 88" data_line_start="88" data_line_end="88" data_line="88,89" count_line="1">If in addition, we want our solution to have a particular value <span class="math-inline ">$y_{0}$</span> at <span class="math-inline ">$x=0$</span>, we have, on setting <span class="math-inline ">$x=0$</span>,</div>
+<div class="preview-paragraph-89 preview-line 89 90 91 92 93 94" data_line_start="89" data_line_end="94" data_line="89,95" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+&amp; y_{0}=A e^{k 00} \\
+&amp; y_{0}=A \cdot 1
+\end{aligned}
 $$</span></div>
-<div class="preview-paragraph-103 preview-line 103" data_line_start="103" data_line_end="103" data_line="103,104" count_line="1">Thus we can take <span class="math-inline ">$M=2$</span> which gives</div>
-<div class="preview-paragraph-104 preview-line 104 105 106" data_line_start="104" data_line_end="106" data_line="104,107" count_line="3"><span class="math-block ">$$
-\left|E_{4}\right|=\left|e^{x}-p_{4}(x)\right| \leq \frac{2}{5!}|x|^{5}, \quad-0.5 \leq x \leq 0.5 
+<div class="preview-paragraph-96 preview-line 96" data_line_start="96" data_line_end="96" data_line="96,97" count_line="1">Thus <span class="math-inline ">$A=y_{0}$</span> and the sola of the IVP is</div>
+<div class="preview-paragraph-97 preview-line 97 98 99" data_line_start="97" data_line_end="99" data_line="97,100" count_line="3"><span class="math-block ">$$
+y=y_{0} e^{k x}
 $$</span></div>
-<div class="preview-paragraph-108 preview-line 108" data_line_start="108" data_line_end="108" data_line="108,109" count_line="1">Thus, for <span class="math-inline ">$-.5 \leq x \leq .5$</span></div>
-<div class="preview-paragraph-109 preview-line 109 110 111" data_line_start="109" data_line_end="111" data_line="109,112" count_line="3"><span class="math-block ">$$
-e^{x} \approx 1+x+\frac{x^{2}}{2!}+\frac{x^{3}}{3!}+\frac{x^{4}}{4!}
+<div class="preview-paragraph-101 preview-line 101 102" data_line_start="101" data_line_end="102" data_line="101,103" count_line="2">If <span class="math-inline ">$k&gt;0$</span>, the soln grass without bound as <span class="math-inline ">$x \rightarrow \infty$</span> and we have expenentral grouth<br>
+<figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/ef4761c6-5190-42b4-982d-c2598e187131-06.jpg?height=566&amp;width=836&amp;top_left_y=494&amp;top_left_x=158" alt="" data-align="center"></figure></div>
+<div class="preview-paragraph-104 preview-line 104 105" data_line_start="104" data_line_end="105" data_line="104,106" count_line="2">If <span class="math-inline ">$k&lt;0$</span>, the soln tends to 0 as <span class="math-inline ">$x \rightarrow \infty$</span> and we have exponential decay<br>
+<figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/ef4761c6-5190-42b4-982d-c2598e187131-06.jpg?height=551&amp;width=854&amp;top_left_y=1514&amp;top_left_x=125" alt="" data-align="center"></figure></div>
+<div class="preview-paragraph-107 preview-line 107" data_line_start="107" data_line_end="107" data_line="107,108" count_line="1">Finally, if <span class="math-inline ">$k=0$</span>, then our soln is just the constant fir</div>
+<div class="preview-paragraph-108 preview-line 108 109 110" data_line_start="108" data_line_end="110" data_line="108,111" count_line="3"><span class="math-block ">$$
+y=y_{0} .
 $$</span></div>
-<div class="preview-paragraph-112 preview-line 112" data_line_start="112" data_line_end="112" data_line="112,113" count_line="1">and the error is at most <span class="math-inline ">$\frac{2}{120}(.5)^{5}&lt;.0006$</span>.</div>
-<div class="preview-paragraph-114 preview-line 114 115 116" data_line_start="114" data_line_end="116" data_line="114,117" count_line="3">Of course, for smaller values of <span class="math-inline ">$x$</span>, we get smaller errors.<br><br>
-e.g <span class="math-inline ">$E(0.2) \approx 2.75 \times 10^{-6}$</span><br>
-while <span class="math-inline ">$E(0.1) \approx 8.47 \times 10^{-8}$</span></div>
-<div class="preview-paragraph-118 preview-line 118" data_line_start="118" data_line_end="118" data_line="118,119" count_line="1">One can check that</div>
-<div class="preview-paragraph-119 preview-line 119 120 121" data_line_start="119" data_line_end="121" data_line="119,122" count_line="3"><span class="math-block ">$$
-E(.2) / 32 \approx 8.62 \times 10^{-\infty} \approx E(.1)
+<div class="preview-paragraph-112 preview-line 112" data_line_start="112" data_line_end="112" data_line="112,113" count_line="1">Ex. For <span class="math-inline ">$k&gt;0$</span>, find solts of</div>
+<div class="preview-paragraph-113 preview-line 113 114 115" data_line_start="113" data_line_end="115" data_line="113,116" count_line="3"><span class="math-block ">$$
+\frac{d H}{d t}=-k(H-20)
 $$</span></div>
-<div class="preview-paragraph-123 preview-line 123" data_line_start="123" data_line_end="123" data_line="123,124" count_line="1">This is very much what we'd expect given our bound:</div>
-<div class="preview-paragraph-124 preview-line 124 125 126" data_line_start="124" data_line_end="126" data_line="124,127" count_line="3"><span class="math-block ">$$
-\left|E_{4}(x)\right| \leq\frac{1}{60} |x|^{5}
+<div class="preview-paragraph-117 preview-line 117" data_line_start="117" data_line_end="117" data_line="117,118" count_line="1">Separating variables gives</div>
+<div class="preview-paragraph-118 preview-line 118 119 120" data_line_start="118" data_line_end="120" data_line="118,121" count_line="3"><span class="math-block ">$$
+\frac{d H}{H-20}=-k d t
 $$</span></div>
-<div class="preview-paragraph-127 preview-line 127" data_line_start="127" data_line_end="127" data_line="127,128" count_line="1">since decreasing the value of <span class="math-inline ">$x$</span> by a factor of 2 will decrease the value of the bound by a factor of <span class="math-inline ">$2^{5}=32$</span>.</div>
-
-<br><hr><br>
-
-<div class="preview-paragraph-129 preview-line 129" data_line_start="129" data_line_end="129" data_line="129,130" count_line="1"> <h2 style="color: rgb(0,150,0);">Example: </h2> Show that the Taylor series for <span class="math-inline ">$\cos x$</span> converges to <span class="math-inline ">$\cos x$</span> evergwhere on <span class="math-inline ">$\mathbb{R}$</span>.</div>
-<div class="preview-paragraph-131 preview-line 131" data_line_start="131" data_line_end="131" data_line="131,132" count_line="1">Letting <span class="math-inline ">$f(x)=\cos x$</span></div>
-<div class="preview-paragraph-132 preview-line 132 133 134 135 136 137 138" data_line_start="132" data_line_end="138" data_line="132,139" count_line="7"><span class="math-block ">$$
-f^{(n)}(x)=\left\{\begin{array}{l}
-\cos x \\
--\sin x& \text { depending on the } \\
--\cos x& \text { value of } n .\\
-\sin(x)
-\end{array}\right.
+<div class="preview-paragraph-121 preview-line 121" data_line_start="121" data_line_end="121" data_line="121,122" count_line="1">and if we then integrate both sides, we get</div>
+<div class="preview-paragraph-122 preview-line 122 123 124 125 126 127 128 129 130" data_line_start="122" data_line_end="130" data_line="122,131" count_line="9"><span class="math-block ">$$
+\begin{aligned}
+&amp; \int \frac{d H}{H-20}=\int-k d t \\
+&amp; \ln |H-20|=-k t+C, \quad C \text { constant } \\
+&amp; e^{\ln |H-20|}=e^{-k t+C} \\
+&amp; |H-20|=e^{c} \cdot e^{-k t} \\
+&amp; H-20= \pm e^{c} \cdot e^{-k t}
+\end{aligned}
 $$</span></div>
-<div class="preview-paragraph-140 preview-line 140" data_line_start="140" data_line_end="140" data_line="140,141" count_line="1">Thus <span class="math-inline ">$\left|f^{(n+1)}(x)\right| \leq 1$</span> on <span class="math-inline ">$\mathbb{R}$</span> and using the Lagrange error bound (on any interval about <span class="math-inline ">$0$</span> containing <span class="math-inline ">$x$</span> ) with <span class="math-inline ">$M=1$</span>,</div>
-<div class="preview-paragraph-141 preview-line 141 142 143" data_line_start="141" data_line_end="143" data_line="141,144" count_line="3"><span class="math-block ">$$
-\left|E_{n}(x)\right|=\left|\cos x-P_{n}(x)\right| \leq \frac{|x|^{n+1}}{(n+1)!}
+<div class="preview-paragraph-131 preview-line 131 132 133 134 135 136" data_line_start="131" data_line_end="136" data_line="131,137" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+&amp; H-20=B e^{-k b} \quad \text { where } B= \pm e^{c} \\
+&amp; H=20+B e^{-k t}
+\end{aligned}
 $$</span></div>
-<div class="preview-paragraph-145 preview-line 145" data_line_start="145" data_line_end="145" data_line="145,146" count_line="1">One can show that for any fixed <span class="math-inline ">$a&gt;0$</span></div>
-<div class="preview-paragraph-146 preview-line 146 147 148" data_line_start="146" data_line_end="148" data_line="146,149" count_line="3"><span class="math-block ">$$
-\lim _{n \rightarrow \infty} \frac{a^{n}}{n!}=0
+<div class="preview-paragraph-138 preview-line 138 139" data_line_start="138" data_line_end="139" data_line="138,140" count_line="2">Solns look like<br>
+<figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/ef4761c6-5190-42b4-982d-c2598e187131-08.jpg?height=658&amp;width=1789&amp;top_left_y=842&amp;top_left_x=180" alt="" data-align="center"></figure></div>
+<div class="preview-paragraph-141 preview-line 141" data_line_start="141" data_line_end="141" data_line="141,142" count_line="1">An eqn of this type could be uard to model a situation where an object reaches thermal equilibrium (e.g. a beer left out in the garden when the temp. is <span class="math-inline ">$20^{\circ} \mathrm{C}$</span> ).</div>
+<div class="preview-paragraph-143 preview-line 143" data_line_start="143" data_line_end="143" data_line="143,144" count_line="1">Ex. <span class="math-inline ">$\quad \frac{d P}{d t}=2 P-2 P t, \quad P(0)=5$</span></div>
+<div class="preview-paragraph-144 preview-line 144 145 146" data_line_start="144" data_line_end="146" data_line="144,147" count_line="3"><span class="math-block ">$$
+=P(2-2 t)
 $$</span></div>
-<div class="preview-paragraph-149 preview-line 149" data_line_start="149" data_line_end="149" data_line="149,150" count_line="1">and hence <span class="math-inline ">$E_{n}(x) \rightarrow 0$</span> as <span class="math-inline ">$n \rightarrow \infty$</span>. Since <span class="math-inline"> $x$</span> was an arbitrary real number, <span class="math-inline ">$P_{n}(x) \rightarrow \cos x$</span> as <span class="math-inline ">$n \rightarrow \infty$</span> everywhere on <span class="math-inline ">$\mathbb{R}$</span> as required.</div>
+<div class="preview-paragraph-148 preview-line 148" data_line_start="148" data_line_end="148" data_line="148,149" count_line="1">Separating variables gives</div>
+<div class="preview-paragraph-149 preview-line 149 150 151" data_line_start="149" data_line_end="151" data_line="149,152" count_line="3"><span class="math-block ">$$
+\frac{d p}{p}=(2-2 t) d t
+$$</span></div>
+<div class="preview-paragraph-153 preview-line 153" data_line_start="153" data_line_end="153" data_line="153,154" count_line="1">Integrate.</div>
+<div class="preview-paragraph-154 preview-line 154 155 156 157 158 159 160 161 162" data_line_start="154" data_line_end="162" data_line="154,163" count_line="9"><span class="math-block ">$$
+\begin{aligned}
+\int \frac{d p}{p} &amp; =\int(2-2 t) d t \\
+\ln |p| &amp; =2 t-t^{2}+c, \quad c \text { constant. } \\
+|P| &amp; =e^{2 t-t^{2}+c} \\
+P &amp; = \pm e^{c} \cdot e^{2 t-t^{2}} \\
+P &amp; =A e^{2 t-t^{2}}
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-164 preview-line 164" data_line_start="164" data_line_end="164" data_line="164,165" count_line="1">Now use the <span class="math-inline ">$1 \mathrm{C} \quad P(0)=5$</span></div>
+<div class="preview-paragraph-165 preview-line 165 166 167 168 169 170" data_line_start="165" data_line_end="170" data_line="165,171" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+&amp; 5=A e^{2(c)-0^{2}} \\
+&amp; 5=A
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-172 preview-line 172" data_line_start="172" data_line_end="172" data_line="172,173" count_line="1">So <span class="math-inline ">$p=5 e^{2 t-t^{2}}$</span></div>
+<div class="preview-paragraph-173 preview-line 173 174 175" data_line_start="173" data_line_end="175" data_line="173,176" count_line="3"><span class="math-block ">$$
+=5 e^{1-(1-t)^{2}}
+$$</span></div>
+<div class="preview-paragraph-177 preview-line 177 178" data_line_start="177" data_line_end="178" data_line="177,179" count_line="2">Soln is a bell-shaped curre (similar to the normal distribution in statistics) with the peak at <span class="math-inline ">$t=1$</span>.<br>
+<figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/ef4761c6-5190-42b4-982d-c2598e187131-10.jpg?height=670&amp;width=1279&amp;top_left_y=1723&amp;top_left_x=261" alt="" data-align="center"></figure></div>
+<div class="preview-paragraph-180 preview-line 180 181" data_line_start="180" data_line_end="181" data_line="180,182" count_line="2">Ex <span class="math-inline ">$\quad \frac{d y}{d t}=y^{2}(1+t), \quad y(1)=2$</span>.<br>
+Separate the variables</div>
+<div class="preview-paragraph-182 preview-line 182 183 184" data_line_start="182" data_line_end="184" data_line="182,185" count_line="3"><span class="math-block ">$$
+\frac{d y}{y^{2}}=(1+t) d t
+$$</span></div>
+<div class="preview-paragraph-186 preview-line 186" data_line_start="186" data_line_end="186" data_line="186,187" count_line="1">Integrate</div>
+<div class="preview-paragraph-187 preview-line 187 188 189 190 191 192 193" data_line_start="187" data_line_end="193" data_line="187,194" count_line="7"><span class="math-block ">$$
+\begin{aligned}
+&amp; \int \frac{d y}{y^{2}}=\int(1+t) d t \\
+&amp; -\frac{1}{y}=t+\frac{t^{2}}{2}+c \\
+&amp; y=\frac{-1}{t+t^{2} / 2+c}
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-195 preview-line 195" data_line_start="195" data_line_end="195" data_line="195,196" count_line="1">Apply the IC to find C</div>
+<div class="preview-paragraph-196 preview-line 196 197 198" data_line_start="196" data_line_end="198" data_line="196,199" count_line="3"><span class="math-block ">$$
+y(1)=2 \quad \Rightarrow \quad 2=\frac{-1}{1+\frac{1}{2}+c}
+$$</span></div>
+<div class="preview-paragraph-199 preview-line 199 200 201 202 203 204" data_line_start="199" data_line_end="204" data_line="199,205" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+&amp; -\frac{1}{2}=\frac{3}{2}+C \\
+&amp; C=-2
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-206 preview-line 206" data_line_start="206" data_line_end="206" data_line="206,207" count_line="1">The sold to the IVP is then</div>
+<div class="preview-paragraph-207 preview-line 207 208 209 210 211 212 213" data_line_start="207" data_line_end="213" data_line="207,214" count_line="7"><span class="math-block ">$$
+\begin{aligned}
+y &amp; =\frac{1}{t+t^{2} / 2-2} \\
+&amp; =\frac{1}{2-t-t^{2} / 2} \\
+&amp; =\frac{2}{4-2 t-t^{2}}
+\end{aligned}
+$$</span></div>
+<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-215 preview-line 215" id="justification-for-separation-of-variables" data_line_start="215" data_line_end="215" data_line="215,216" count_line="1">
+Justification for Separation of Variables</h2>
+<div class="preview-paragraph-217 preview-line 217" data_line_start="217" data_line_end="217" data_line="217,218" count_line="1">Suppose we can unite our <span class="math-inline ">$D E$</span> in the form</div>
+<div class="preview-paragraph-218 preview-line 218 219 220" data_line_start="218" data_line_end="220" data_line="218,221" count_line="3"><span class="math-block ">$$
+\frac{d y}{d x}=g(x) f(y)
+$$</span></div>
+<div class="preview-paragraph-222 preview-line 222" data_line_start="222" data_line_end="222" data_line="222,223" count_line="1">Provided <span class="math-inline ">$f(y) \neq 0$</span>, we can define <span class="math-inline ">$h(y)=\frac{1}{f(y)}$</span> and rewrite the eqn as</div>
+<div class="preview-paragraph-223 preview-line 223 224 225" data_line_start="223" data_line_end="225" data_line="223,226" count_line="3"><span class="math-block ">$$
+\frac{d y}{d x}=\frac{g(x)}{h(y)}
+$$</span></div>
+<div class="preview-paragraph-227 preview-line 227" data_line_start="227" data_line_end="227" data_line="227,228" count_line="1">Now multiply both sides by <span class="math-inline ">$h(y)$</span></div>
+<div class="preview-paragraph-228 preview-line 228 229 230" data_line_start="228" data_line_end="230" data_line="228,231" count_line="3"><span class="math-block ">$$
+h(y) \frac{d y}{d x}=g(x)
+$$</span></div>
+<div class="preview-paragraph-232 preview-line 232" data_line_start="232" data_line_end="232" data_line="232,233" count_line="1">Next integrote both sides wrt <span class="math-inline ">$x$</span>.</div>
+<div class="preview-paragraph-233 preview-line 233 234 235" data_line_start="233" data_line_end="235" data_line="233,236" count_line="3"><span class="math-block ">$$
+\int h(y) d y d x=\int g(x) d x
+$$</span></div>
+<div class="preview-paragraph-237 preview-line 237" data_line_start="237" data_line_end="237" data_line="237,238" count_line="1">If we regard <span class="math-inline ">$y$</span> as a fa of <span class="math-inline ">$x$</span>, then for the left hand integral, we can treat <span class="math-inline ">$y$</span> as a substitution since</div>
+<div class="preview-paragraph-238 preview-line 238 239 240" data_line_start="238" data_line_end="240" data_line="238,241" count_line="3"><span class="math-block ">$$
+d y=y^{\prime}(x) d x=\frac{d y}{d x} \cdot d x .
+$$</span></div>
+<div class="preview-paragraph-242 preview-line 242" data_line_start="242" data_line_end="242" data_line="242,243" count_line="1">Using this we can then rewrite the eqn as</div>
+<div class="preview-paragraph-243 preview-line 243 244 245" data_line_start="243" data_line_end="245" data_line="243,246" count_line="3"><span class="math-block ">$$
+\int h(y) d y=\int g(x) d x
+$$</span></div>
+<div class="preview-paragraph-246 preview-line 246" data_line_start="246" data_line_end="246" data_line="246,247" count_line="1">which is the same as we would have got (much more quicklyb) from separation of variables.</div>
 
     </div>
   </div>

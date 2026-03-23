@@ -996,8 +996,8 @@ $$</span></div>
 <div class="preview-paragraph-8 preview-line 8 9 10" data_line_start="8" data_line_end="10" data_line="8,11" count_line="3">for <span class="math-inline ">$f$</span> about <span class="math-inline ">$x=a$</span>.<br>
 
 <br>
-In practice, even when we know they exist, finding all the denvatives <span class="math-inline ">$f^{(n)}(a)$</span> can be very tedious. Howerer, there are some shortunts which work in certain special cases.<br>
-We first list the Taylor series you should know and then describe the tricles you can use to get Taglar series for other gos from them.</div>
+In practice, even when we know they exist, finding all the derivatives <span class="math-inline ">$f^{(n)}(a)$</span> can be very tedious. Howerer, there are some shortunts which work in certain special cases.<br>
+We first list the Taylor series you should know and then describe the tricks you can use to get Taylor series for other functions from them.</div>
 
 <hr>
 
@@ -1008,7 +1008,7 @@ Taylor Series You Should Know</h2>
 
   <li><span class="math-block ">$$\large e^{x}=1+x+\frac{x^{2}}{2!}+\frac{x^{3}}{3!}+\ldots+\frac{x^{n}}{n!}+ \dots =\sum_{n=0}^{\infty} \frac{x^{n}}{n!}$$</span> valid for every <span class="math-inline ">$x$</span></li><br>
 
-  <li><span class="math-block ">$$\sin x=x-\frac{x^{3}}{3!}+\frac{x^{5}}{5!}-\frac{x^{7}}{7!}+\cdots+\frac{(-1)^{n-1} x^{2 n-1}}{(2 n-1)!}+=\sum_{n=1}^{\infty} \frac{(-1)^{n-1} x^{2 n-1}}{(2 n-1)!}$$</span> <br> valid for every <span class="math-inline ">$x$</span>.</li><br>
+  <li><span class="math-block ">$$\large \quad \sin(x)=x-\frac{x^{3}}{3!}+\frac{x^{5}}{5!}-\frac{x^{7}}{7!}+\cdots+\frac{(-1)^{n-1} x^{2 n-1}}{(2 n-1)!}+\cdots=\sum_{n=1}^{\infty} \frac{(-1)^{n-1} x^{2 n-1}}{(2 n-1)!}$$</span> <br> valid for every <span class="math-inline ">$x$</span>.</li><br>
 
 </ol>
 <br> 
@@ -1061,7 +1061,7 @@ $$</span></div>
 </ol>
 <div class="preview-paragraph-40 preview-line 40 41 42 43 44 45" data_line_start="40" data_line_end="45" data_line="40,46" count_line="6"><span class="math-block ">$$
 \begin{gathered}
-+\frac{p(p-1) \cdots(p-n+1) x^{n}+\cdots}{n!} \\
++\frac{p(p-1) \cdots(p-n+1) x^{n}}{n!} +\cdots \\
 =1+\sum_{n=1}^{\infty} \frac{p(p-1) \cdots(p-n+1) x^{n},}{n!} \quad \text { valid for }-1&lt;x&lt;1
 \end{gathered}
 $$</span></div>
@@ -1072,10 +1072,10 @@ $$</span></div>
 <div class="preview-paragraph-49 preview-line 49" data_line_start="49" data_line_end="49" data_line="49,50" count_line="1" > <h2 style="color: rgb(0,0,230);">Tricks for Obtaining New Taylor Series from Old </h2> </div>
 
 <ol class="preview-paragraph-50 preview-line 50 51 52 53 54" data_line_start="50" data_line_end="54" data_line="50,55" count_line="5">
-<li>Substitution (composition)</li>
-<li>Differentiation</li>
-<li>Integration</li>
-<li>Multiplication, Division, Composition etc.</li>
+<li> <strong>Substitution (composition)</strong> </li><br>
+<li> <strong>Differentiation</strong> </li><br>
+<li> <strong>Integration</strong></li><br>
+<li><strong>Multiplication, Division, Composition etc.</strong> </li><br>
 </ol>
 <div class="preview-paragraph-55 preview-line 55" data_line_start="55" data_line_end="55" data_line="55,56" count_line="1">With some of these tricks (e.g. 2, 3), we'll be able to find all of the Taylor coefficients at once. Otherwise, well only be able to find the first few coefficients, but still more easily than by differentiation.</div>
 
@@ -1087,8 +1087,8 @@ $$</span></div>
 &amp; f(x)=-2 x e^{-x^{2}} \\
 &amp; f^{\prime \prime}(x)=-2 e^{-x^{2}}+4 x^{2} e^{-x^{2}}
 \end{aligned}
-$$</span></div>
-<div class="preview-paragraph-66 preview-line 66 67" data_line_start="66" data_line_end="67" data_line="66,68" count_line="2">etc.<br>
+$$</span></div><br>
+<div class="preview-paragraph-66 preview-line 66 67" data_line_start="66" data_line_end="67" data_line="66,68" count_line="2">etc.<br><br>
 So although, we could find the Taylor coefficients by differentiating this would quickly get tedious.</div>
 <div class="preview-paragraph-69 preview-line 69" data_line_start="69" data_line_end="69" data_line="69,70" count_line="1">Howerer, if we recall that</div>
 <div class="preview-paragraph-70 preview-line 70 71 72" data_line_start="70" data_line_end="72" data_line="70,73" count_line="3"><span class="math-block ">$$\large
@@ -1140,12 +1140,12 @@ $$</span></div>
 &amp; \large  \sin \theta=\theta-\frac{\theta^{3}}{3!}+\frac{\theta^{5}}{5!}-\cdots+\frac{(-1)^{n-1} \theta^{2 n-1}}{(2 n-1)!}+ \dots
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-121 preview-line 121" data_line_start="121" data_line_end="121" data_line="121,122" count_line="1">Thas if we make the substitution <span class="math-inline ">$y=\sin \theta$</span> in the Taylor series for <span class="math-inline">$e^y$</span> about <span class="math-inline ">$y=0$</span>, we got</div>
+<div class="preview-paragraph-121 preview-line 121" data_line_start="121" data_line_end="121" data_line="121,122" count_line="1">Thas if we make the substitution <span class="math-inline ">$y=\sin \theta$</span> in the Taylor series for <span class="math-inline">$e^y$</span> about <span class="math-inline ">$y=0$</span>, we get:</div>
 
 <div class="preview-paragraph-122 preview-line 122 123 124 125 126 127 128 129" data_line_start="122" data_line_end="129" data_line="122,130" count_line="8"><span class="math-block ">$$
 \begin{aligned}
 e^{\sin \theta}= &amp; 1+\left(\theta-\frac{\theta^{3}}{3!}+\cdots\right)+\frac{\left(\theta-\frac{\theta^{3}}{3!}+ \cdots \right)^{2}}{2!} \\
-&amp; +\left(\theta-\frac{\theta^{3}}{3!}+\cdots \right)^{3}+ \\
+&amp; + \frac{\left(\theta-\frac{\theta^{3}}{3!}+\cdots \right)^{3}}{3!} + \dots \\
 = &amp; 1+\left(\theta-\frac{\theta^{3}}{3!}+\cdots\right)+\left(\frac{\theta^{2}}{2!}+\cdots\right) \\
 &amp; +\left(\frac{\theta^{3}}{3!}+\cdots\right)+
 \end{aligned}
@@ -1154,7 +1154,7 @@ $$</span></div>
 
 <br>
 
-<div class="preview-paragraph-131 preview-line 131 132 133 134" data_line_start="131" data_line_end="134" data_line="131,135" count_line="4">We then rearrange the series to group like powes of <span class="math-inline ">$\theta$</span> together (this is allowed).<br>
+<div class="preview-paragraph-131 preview-line 131 132 133 134" data_line_start="131" data_line_end="134" data_line="131,135" count_line="4">We then rearrange the series to group like powers of <span class="math-inline ">$\theta$</span> together (this is allowed).<br><br>
 <span class="math-inline ">$=1+\theta+\frac{\theta^{2}}{2!}+\left(-\frac{\theta^{3}}{3!}+\frac{\theta^{3}}{3!}\right)+ \cdots $</span><br>
 <span class="math-inline ">$=1+\theta+\frac{\theta^{2}}{2}!+0 \cdot \theta^{3}+ \cdots $</span><br>
 <br>
@@ -1194,7 +1194,7 @@ $$</span></div>
 <div class="preview-paragraph-165 preview-line 165 166 167 168 169 170" data_line_start="165" data_line_end="170" data_line="165,171" count_line="6"><span class="math-block ">$$
 \begin{aligned}
 \frac{1}{(1-x)^{2}} &amp; =1+2 x+3 x^{2}+4 x^{3}+ \cdots + nx^{n-1}+\cdots &amp; \\
-&amp; =\sum_{n=0}^{\infty}(n+1) x^{n} &amp;
+&amp; =\sum_{n=0}^{\infty}(n+1) x^{n} \quad : -1 < x < 1 ;
 \end{aligned}
 $$</span></div>
 
@@ -1209,10 +1209,11 @@ $$</span></div>
 \int \frac{d x}{1+x^{2}}=\arctan x+C
 $$</span></div><br>
 
-<div class="preview-paragraph-179 preview-line 179" data_line_start="179" data_line_end="179" data_line="179,180" count_line="1">We already found in an earlier example that</div>
+<div class="preview-paragraph-179 preview-line 179" data_line_start="179" data_line_end="179" data_line="179,180" count_line="1">We already found in an earlier example that:</div><br>
 <div class="preview-paragraph-180 preview-line 180 181 182" data_line_start="180" data_line_end="182" data_line="180,183" count_line="3"><span class="math-block ">$$
 \frac{1}{1+x^{2}}=1-x^{2}+x^{4}-x^{6}+\quad,-1&lt;x&lt;1 .
-$$</span></div>
+$$</span></div><br>
+
 <div class="preview-paragraph-184 preview-line 184" data_line_start="184" data_line_end="184" data_line="184,185" count_line="1">We then take the antiderivative of both sides, integrating the series on the right term by term (which is ok) to get:</div>
 
 <br>
@@ -1221,21 +1222,21 @@ $$</span></div>
 \begin{aligned}
 \arctan x &amp; =\int \frac{1}{1+x^{2}} d x \\
 &amp; \equiv \int\left(1-x^{2}+x^{4}-x^{6}+\cdots\right) d x \\
-&amp; =C+x-\frac{x^{3}}{3}+\frac{x^{5}}{5}-\frac{x^{7}}{7}+\cdots \quad,-1&lt;x&lt;1
+&amp; =c+x-\frac{x^{3}}{3}+\frac{x^{5}}{5}-\frac{x^{7}}{7}+\cdots \quad,-1&lt;x&lt;1
 \end{aligned}
 $$</span></div><br>
 
-<div class="preview-paragraph-193 preview-line 193" data_line_start="193" data_line_end="193" data_line="193,194" count_line="1">We now just need to find the right value of <span class="math-inline ">$C$</span>. We do this by setting <span class="math-inline ">$x=0$</span> and remembering that <span class="math-inline ">$\arctan(0)=0$</span> to get</div>
+<div class="preview-paragraph-193 preview-line 193" data_line_start="193" data_line_end="193" data_line="193,194" count_line="1">We now just need to find the right value of <span class="math-inline ">$c$</span>. We do this by setting <span class="math-inline ">$x=0$</span> and remembering that <span class="math-inline ">$\arctan(0)=0$</span> to get</div>
 <div class="preview-paragraph-194 preview-line 194 195 196 197 198 199" data_line_start="194" data_line_end="199" data_line="194,200" count_line="6"> <br> <span class="math-block ">$$
 \begin{aligned}
 &amp; 0=c+0 \\
 &amp; \Rightarrow \quad c=0
 \end{aligned} 
 $$</span></div><br>
-<div class="preview-paragraph-201 preview-line 201" data_line_start="201" data_line_end="201" data_line="201,202" count_line="1">Thus</div>
+<div class="preview-paragraph-201 preview-line 201" data_line_start="201" data_line_end="201" data_line="201,202" count_line="1">Thus:</div>
 <div class="preview-paragraph-202 preview-line 202 203 204 205 206 207" data_line_start="202" data_line_end="207" data_line="202,208" count_line="6"><span class="math-block ">$$
 \begin{aligned}
-\large \arctan x &amp; \large  =x-\frac{x^{3}}{3}+\frac{x^{5}}{5}-\frac{x^{7}}{7}+ \\
+\large \arctan x &amp; \large  =x-\frac{x^{3}}{3}+\frac{x^{5}}{5}-\frac{x^{7}}{7}+ \cdots \\
 &amp; \large  =\sum_{n=1}^{\infty}(-1)^{n-1} \frac{x^{2 n-1}}{2 n-1}, \text { valid for }-1&lt;x&lt;1 .
 \end{aligned}
 $$</span></div><br> 
@@ -1255,10 +1256,10 @@ $$</span></div>
 <div class="preview-paragraph-218 preview-line 218" data_line_start="218" data_line_end="218" data_line="218,219" count_line="1">In principle, we could use this to calculate an approximation to <span class="math-inline ">$\pi$</span> to any desired accuracy. In practice, this doesn't work so well as the series on the right hand side converges slowly and there are better methods.</div><br>
 <br><hr><br>
 
-<div class="preview-paragraph-220 preview-line 220 221 222 223 224" data_line_start="220" data_line_end="224" data_line="220,225" count_line="5"> <h2 style="color: rgb(0,150,0);">Example:</h2> By looking of their Taylor series, decide which of the following for is largest and which is smallest for <span class="math-inline ">$x$</span> near 0 .<br><br>
-a) <span class="math-inline ">$1+\sin \theta$</span>,<br>
-b) <span class="math-inline ">$e^{(0)}$</span>,<br>
-c) <span class="math-inline ">$\frac{1}{\sqrt{1-2 \theta}}$</span>.<br><br>
+<div class="preview-paragraph-220 preview-line 220 221 222 223 224" data_line_start="220" data_line_end="224" data_line="220,225" count_line="5"> <h2 style="color: rgb(0,150,0);">Example:</h2> By looking of their Taylor series, decide which of the following functions is largest and which is smallest for <span class="math-inline ">$x$</span> near 0 .<br><br>
+a) <span class="math-inline ">$1+\sin \theta$</span>,<br><br>
+b) <span class="math-inline ">$e^{(0)}$</span>,<br><br>
+c) <span class="math-inline ">$\frac{1}{\sqrt{1-2 \theta}}$</span>.<br><br><br>
 
 <b>a).</b> <span class="math-inline ">$\sin \theta$</span> has a Taylor expansion about 0</div><br>
 <div class="preview-paragraph-225 preview-line 225 226 227" data_line_start="225" data_line_end="227" data_line="225,228" count_line="3"><span class="math-block ">$$
@@ -1291,8 +1292,8 @@ $$</span></div> <br>
 <div class="preview-paragraph-250 preview-line 250" data_line_start="250" data_line_end="250" data_line="250,251" count_line="1">Thus if we substitute <span class="math-inline ">$y=-2 \theta$</span></div>
 <div class="preview-paragraph-251 preview-line 251 252 253 254 255 256" data_line_start="251" data_line_end="256" data_line="251,257" count_line="6"><span class="math-block ">$$
 \begin{aligned}
-\frac{1}{\sqrt{1-2 \theta}} &amp; =1-\frac{(-2 \theta)}{2}+\frac{3}{8}(-2 \theta)^{2}-\frac{5}{16}(-2 \theta)^{3}+ \\
-&amp; =1+\theta+\frac{3}{2} \theta^{2}+\frac{5}{2} \theta^{3}+\cdots,-\frac{1}{2}&lt;\theta&lt;\frac{1}{2}
+\frac{1}{\sqrt{1-2 \theta}} &amp; =1-\frac{(-2 \theta)}{2}+\frac{3}{8}(-2 \theta)^{2}-\frac{5}{16}(-2 \theta)^{3}+ \cdots \\
+&amp; =1+\theta+\frac{3}{2} \theta^{2}+\frac{5}{2} \theta^{3}+\cdots \quad , -\frac{1}{2}&lt;\theta&lt;\frac{1}{2}
 \end{aligned}
 $$</span></div>
 <br>
@@ -1365,7 +1366,7 @@ $$</span></div>
 \end{aligned}
 $$</span></div> <br> 
 
-<div class="preview-paragraph-322 preview-line 322" data_line_start="322" data_line_end="322" data_line="322,323" count_line="1">Note that this binomial expanson will converge since <span class="math-inline ">$\left|\frac{C}{R}\right| \ll 1$</span> (remember that the series expansion for <span class="math-inline ">$(1+x)^{p}$</span> is valid for <span class="math-inline ">$-1&lt;x&lt;1$</span> ).</div><br>
+<div class="preview-paragraph-322 preview-line 322" data_line_start="322" data_line_end="322" data_line="322,323" count_line="1">Note that this binomial expanson will converge since <span class="math-inline ">$\left|\frac{r}{R}\right| \ll 1$</span> (remember that the series expansion for <span class="math-inline ">$(1+x)^{p}$</span> is valid for <span class="math-inline ">$-1&lt;x&lt;1$</span> ).</div><br>
 <div class="preview-paragraph-324 preview-line 324" data_line_start="324" data_line_end="324" data_line="324,325" count_line="1">For <span class="math-inline ">$R$</span> very large, <span class="math-inline ">$\frac{r}{R}$</span> is very small and the leading term in the series will be large compared to the other terms (and also to their sum) and so: </div><br>
 <div class="preview-paragraph-325 preview-line 325 326 327" data_line_start="325" data_line_end="327" data_line="325,328" count_line="3"><span class="math-block ">$$\large
 E \approx \frac{Q}{R^{2}} \cdot \frac{2 r}{R}=\frac{2 Q_{r}}{R^{3}}

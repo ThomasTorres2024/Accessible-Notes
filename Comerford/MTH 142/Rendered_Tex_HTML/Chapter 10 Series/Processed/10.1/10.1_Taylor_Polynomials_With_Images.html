@@ -1009,10 +1009,10 @@ Approximating Functions Using Series</h1>
 <div class="preview-paragraph-10 preview-line 10" data_line_start="10" data_line_end="10" data_line="10,11" count_line="1">For example, if <span class="math-inline ">$f(x)$</span> is continuous (cts.) at <span class="math-inline ">$x=a$</span>, then for <span class="math-inline ">$x$</span> near <span class="math-inline ">$a$</span>,</div>
 
 <div class="preview-paragraph-11 preview-line 11 12 13" data_line_start="11" data_line_end="13" data_line="11,14" count_line="3"><span class="math-block ">$$\large
-f(x) \approx f(a) \approx(\text { is } f(x) \text { is close to } f(a))
+f(x) \approx f(a) \approx(\text { i.e. } f(x) \text { is close to } f(a))
 $$</span></div>
 
-<div class="preview-paragraph-14 preview-line 14" data_line_start="14" data_line_end="14" data_line="14,15" count_line="1">and so if we let <span class="math-inline ">$P_{0}(x)$</span> be the constant <span class="math-inline ">$f(a)$</span> </div>
+<div class="preview-paragraph-14 preview-line 14" data_line_start="14" data_line_end="14" data_line="14,15" count_line="1">and so if we let <span class="math-inline ">$P_{0}(x)$</span> be the <u style="color: rgb(0,0,230);">constant</u> <span class="math-inline ">$f(a)$</span> </div>
 
 <div class="preview-paragraph-15 preview-line 15 16 17" data_line_start="15" data_line_end="17" data_line="15,18" count_line="3"><span class="math-block ">$$
 P_{0}(x)=f(a)
@@ -1029,7 +1029,7 @@ $$</span></div>
 
   <div class="preview-paragraph-21 preview-line 21" data_line_start="21" data_line_end="21" data_line="21,22" count_line="1">Note that <span class="math-inline ">$P_{0}(x)$</span> has the same value as <span class="math-inline ">$f(x)$</span> for <span class="math-inline ">$x=a$</span>.</div>
   <br>
-  <div class="preview-paragraph-23 preview-line 23" data_line_start="23" data_line_end="23" data_line="23,24" count_line="1">A better way to do the approximation is using linear <span class="math-inline ">$f(n)$</span>s .</div>
+  <div class="preview-paragraph-23 preview-line 23" data_line_start="23" data_line_end="23" data_line="23,24" count_line="1">A better way to do the approximation is using linear functions.</div>
   <br>
   <div class="preview-paragraph-25 preview-line 25" data_line_start="25" data_line_end="25" data_line="25,26" count_line="1">This gives us the tangent line approximation also called the linear approximation.</div>
   <br>
@@ -1047,7 +1047,7 @@ $$</span>
 
 <br>
 
-<div class="preview-paragraph-33 preview-line 33" data_line_start="33" data_line_end="33" data_line="33,34" count_line="1">If we then let <span class="math-inline ">$P_{1}(x)=f(a)+f^{\prime}(a)(x-a)$</span>, then <span class="math-inline ">$P_{1}$</span> gives us an approx for <span class="math-inline ">$f$</span> near <span class="math-inline ">$x=a$</span>.</div>
+<div class="preview-paragraph-33 preview-line 33" data_line_start="33" data_line_end="33" data_line="33,34" count_line="1">If we then let <span class="math-inline ">$P_{1}(x)=f(a)+f^{\prime}(a)(x-a)$</span>, then <span class="math-inline ">$P_{1}$</span> gives us an approximation for <span class="math-inline ">$f$</span> near <span class="math-inline ">$x=a$</span>.</div>
 
 <br>
 
@@ -1057,7 +1057,7 @@ $$</span>
 <hr>
 <br> 
 
-<div class="preview-paragraph-37 preview-line 37 38" data_line_start="37" data_line_end="38" data_line="37,39" count_line="2"> <h2 style="color:rgb(0,150,0)">Example: </h2>  Find the linear approx for
+<div class="preview-paragraph-37 preview-line 37 38" data_line_start="37" data_line_end="38" data_line="37,39" count_line="2"> <h2 style="color:rgb(0,150,0)">Example: </h2>  Find the linear approximation for
 
   <span class="math-inline ">$f(x)=\sin x$</span> near <span class="math-inline ">$x=0$</span>.</div>
   <br>
@@ -1075,17 +1075,17 @@ and so <span class="math-inline ">$P_{1}(x)=0+x=x$</span> and
 <img src="sine_taylor_approx_linear.png" alt="The graph of sine of x being approximated by the function y equals x, for small x the approximation is very good">
 
 
-e.g. <span class="math-inline ">$\quad P_{1}(2)=0.2$</span> which is close to <span class="math-inline ">$\sin (0.2)=0.1986 \dots$</span>.</div>
+e.g. <span class="math-inline ">$\quad P_{1}(0.2)=0.2$</span> which is close to <span class="math-inline ">$\sin (0.2)=0.1986 \dots$</span></div>
 
 <hr>
 
 <h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-48 preview-line 48" id="quadratic-approximations" data_line_start="48" data_line_end="48" data_line="48,49" count_line="1" style="color: rgb(0,0,230);">
 Quadratic Approximations</h2>
 
-<div class="preview-paragraph-50 preview-line 50" data_line_start="50" data_line_end="50" data_line="50,51" count_line="1">Since a linear approximation is clearly better (more accurate) than a constant approx., it is natural to guess that we could do even better if we approxmated <span class="math-inline ">$f(x)$</span> using quadratic polynomials</div>
+<div class="preview-paragraph-50 preview-line 50" data_line_start="50" data_line_end="50" data_line="50,51" count_line="1">Since a linear approximation is clearly better (more accurate) than a constant approximation, it is natural to guess that we could do even better if we approxmated <span class="math-inline ">$f(x)$</span> using quadratic polynomials</div>
 <br>
 
-<div class="preview-paragraph-52 preview-line 52" data_line_start="52" data_line_end="52" data_line="52,53" count_line="1">We choose our quadratic polynomial by extending the reasoning for the constant and linear approximations, namely we require that our quadratic have the same value, the same first denvative and the same second derivative as <span class="math-inline ">$f$</span> does at <span class="math-inline ">$x=a$</span>.</div>
+<div class="preview-paragraph-52 preview-line 52" data_line_start="52" data_line_end="52" data_line="52,53" count_line="1">We choose our quadratic polynomial by extending the reasoning for the constant and linear approximations, namely we require that our quadratic have the same value, the same first derivative and the same second derivative as <span class="math-inline ">$f$</span> does at <span class="math-inline ">$x=a$</span>.</div>
 <br>
 
 <div class="preview-paragraph-54 preview-line 54" data_line_start="54" data_line_end="54" data_line="54,55" count_line="1">So suppose that <span class="math-inline ">$f$</span> is twice differentiable at <span class="math-inline ">$x=a$</span> and let <span class="math-inline ">$P_{2}(x)$</span> be our quadratic approximation.</div>
@@ -1227,7 +1227,7 @@ $$</span></div>
 <br>
 
 <div class="preview-paragraph-128 preview-line 128 129 130" data_line_start="128" data_line_end="130" data_line="128,131" count_line="3"><span class="math-block ">$$
-\large P_{n}(a)=C_{0}+0+0+\quad+0=f(a)
+\large P_{n}(a)=C_{0}+0+0+\dots+0=f(a)
 $$</span></div>
 
 <br>
@@ -1236,7 +1236,7 @@ $$</span></div>
 
 <br>
 
-<div class="preview-paragraph-134 preview-line 134" data_line_start="134" data_line_end="134" data_line="134,135" count_line="1">Now differentiate with respect to x <span class="math-inline ">$x$</span> to get</div>
+<div class="preview-paragraph-134 preview-line 134" data_line_start="134" data_line_end="134" data_line="134,135" count_line="1">Now differentiate with respect to <span class="math-inline ">$x$</span> to get</div>
 
 <br>
 
@@ -1251,7 +1251,7 @@ $$</span></div>
 <br>
 
 <div class="preview-paragraph-140 preview-line 140 141 142" data_line_start="140" data_line_end="142" data_line="140,143" count_line="3"><span class="math-block ">$$
-\large P_{n}^{\prime}(a)=C_{1}+0+\quad+0=f^{\prime}(a) .
+\large P_{n}^{\prime}(a)=C_{1}+0+\dots+0=f^{\prime}(a) .
 $$</span></div>
 
 <br>
@@ -1275,7 +1275,7 @@ $$</span></div>
 <br>
 
 <div class="preview-paragraph-152 preview-line 152 153 154" data_line_start="152" data_line_end="154" data_line="152,155" count_line="3"><span class="math-block ">$$
-\large P_{n}^{\prime \prime}(a)=2 c_{2}+0+\quad+0=f^{\prime \prime}(0) .
+\large P_{n}^{\prime \prime}(a)=2 c_{2}+0+\dots+0=f^{\prime \prime}(0) .
 $$</span></div>
 
 <br>
@@ -1299,7 +1299,7 @@ $$</span></div>
 <br>
 
 <div class="preview-paragraph-165 preview-line 165 166 167" data_line_start="165" data_line_end="167" data_line="165,168" count_line="3"><span class="math-block ">$$
-\large P_{n}^{\prime \prime \prime}(a)=3 \cdot 2 c_{3}+0+\quad \text { to }=f^{\prime \prime \prime}(a) .
+\large P_{n}^{\prime \prime \prime}(a)=3 \cdot 2 c_{3}+0+\dots+0=f^{\prime \prime \prime}(a) .
 $$</span></div>
 
 <br>
@@ -1327,8 +1327,10 @@ C_{n}=\frac{f^{(n)}(a)}{n(n-1)(n-2)-2 \cdot 1}=\frac{f^{(n)}(a)}{n!}
 $$</span></div>
 
 <br>
+<hr>
+<br>
 
-<div class="preview-paragraph-181 preview-line 181" data_line_start="181" data_line_end="181" data_line="181,182" count_line="1">To summarize:</div>
+<div class="preview-paragraph-181 preview-line 181" data_line_start="181" data_line_end="181" data_line="181,182" count_line="1"> <h2 style="color: rgb(0,0,230);">To summarize</h2> </div>
 
 <br>
 
@@ -1341,15 +1343,15 @@ $$</span></div>
 \large f(x) &amp; \approx P_{n}(x) \\
 \large &amp; =f(a)+f^{\prime}(a)(x-a)+\frac{f^{\prime \prime}(a)}{2!}(x-a)^{2}+\cdots+\frac{f^{(n)}(a)(x-a)^{n}}{n!}
 \end{aligned}
-$$</span></div>
+$$</span></div><br>
 
-<div class="preview-paragraph-190 preview-line 190" data_line_start="190" data_line_end="190" data_line="190,191" count_line="1"><span class="math-inline ">$P_{n}(x)$</span> is calted the Taylor polynomial of dogree <span class="math-inline ">$n$</span> about <span class="math-inline ">$x=a$</span>.</div>
+<div class="preview-paragraph-190 preview-line 190" data_line_start="190" data_line_end="190" data_line="190,191" count_line="1"><span class="math-inline ">$P_{n}(x)$</span> is calted the Taylor polynomial of degree <span class="math-inline ">$n$</span> about <span class="math-inline ">$x=a$</span>.</div>
 
-<div class="preview-paragraph-192 preview-line 192" data_line_start="192" data_line_end="192" data_line="192,193" count_line="1">Since <span class="math-inline ">$0!=1,1!=1$</span>, we can rewrite <span class="math-inline ">$P_{n}(x)$</span> as:</div>
+<div class="preview-paragraph-192 preview-line 192" data_line_start="192" data_line_end="192" data_line="192,193" count_line="1">Since <span class="math-inline ">$0!=1,1!=1$</span>, we can rewrite <span class="math-inline ">$P_{n}(x)$</span> as:</div><br>
 
 <div class="preview-paragraph-193 preview-line 193 194 195 196 197 198" data_line_start="193" data_line_end="198" data_line="193,199" count_line="6"><span class="math-block ">$$
 \begin{aligned}
-\large P_{n}(x) &amp; =\frac{f(a)}{0!}+\frac{f^{\prime}(a)}{1!}(x-a)+\frac{f^{\prime \prime}(a)}{2!}(x-a)^{2}+\frac{f^{(n)}(a)}{n!}(x-a)^{n} \\
+\large P_{n}(x) &amp; =\frac{f(a)}{0!}+\frac{f^{\prime}(a)}{1!}(x-a)+\frac{f^{\prime \prime}(a)}{2!}(x-a)^{2}+\dots+\frac{f^{(n)}(a)}{n!}(x-a)^{n} \\
 \large &amp; =\sum_{i=0}^{n} \frac{f^{(i)}(a)}{i!}(x-a)^{i}
 \end{aligned}
 $$</span></div>
@@ -1412,7 +1414,7 @@ $$</span></div>
 
 <div class="preview-paragraph-234 preview-line 234" data_line_start="234" data_line_end="234" data_line="234,235" count_line="1"> <h2 style="color: rgb(0,150,0);">Example:</h2> Find <span class="math-inline ">$P_{n}(x)$</span> for <span class="math-inline ">$f(x)=e^{x}$</span> about <span class="math-inline ">$x=0 \quad($</span> any <span class="math-inline ">$n)$</span>.</div>
 
-<div class="preview-paragraph-236 preview-line 236" data_line_start="236" data_line_end="236" data_line="236,237" count_line="1">Since <span class="math-inline ">$\quad \frac{d}{d x}(f(x))=\frac{d}{d x}\left(e^{x}\right)=e^{x}=f(x)$</span>, fer any <span class="math-inline ">$i$</span></div>
+<div class="preview-paragraph-236 preview-line 236" data_line_start="236" data_line_end="236" data_line="236,237" count_line="1">Since <span class="math-inline ">$\quad \frac{d}{d x}(f(x))=\frac{d}{d x}\left(e^{x}\right)=e^{x}=f(x)$</span>, for any <span class="math-inline ">$i$</span></div><br>
 
 <div class="preview-paragraph-237 preview-line 237 238 239" data_line_start="237" data_line_end="239" data_line="237,240" count_line="3"><span class="math-block ">$$
 f^{(i)}(0)=e^{0}=1
@@ -1435,7 +1437,7 @@ $$</span></div>
 <hr>
 <br>
 
-<div class="preview-paragraph-251 preview-line 251" data_line_start="251" data_line_end="251" data_line="251,252" count_line="1"><h2 style="color: rgb(0,150,0);" >Example: </h2> Find <span class="math-inline ">$P_{n}(x)$</span> for <span class="math-inline ">$f(x)=\frac{1}{1-x}$</span>, <span class="math-inline ">$x$</span> near 0 .</div>
+<div class="preview-paragraph-251 preview-line 251" data_line_start="251" data_line_end="251" data_line="251,252" count_line="1"><h2 style="color: rgb(0,150,0);" >Example: </h2> Find <span class="math-inline ">$P_{n}(x)$</span> for <span class="math-inline ">$f(x)=\frac{1}{1-x}$</span>, <span class="math-inline ">$x$</span> near 0.</div><br>
 
 <div class="preview-paragraph-252 preview-line 252 253 254 255 256 257 258 259 260 261 262" data_line_start="252" data_line_end="262" data_line="252,263" count_line="11"><span class="math-block ">$$
 \begin{aligned}
@@ -1447,7 +1449,7 @@ $$</span></div>
 \large f^{\prime \prime \prime}(x) &amp; =\frac{-6}{(1-x)^{4}}(-1) \\
 \large &amp; =\frac{6}{(1-x)^{4}}, f^{\prime \prime \prime}(0)=6, \text { so } C_{3}=\frac{6}{3!}=1
 \end{aligned}
-$$</span></div>
+$$</span></div><br>
 
 <div class="preview-paragraph-264 preview-line 264" data_line_start="264" data_line_end="264" data_line="264,265" count_line="1">Continuing in this way, we get <span class="math-inline ">$f^{(4)}(0)=24=4!$</span>, <span class="math-inline ">$f^{(5)}(0)=120=5!$</span> and so on up to <span class="math-inline ">$f^{(n)}(0)=n!$</span></div>
 
@@ -1460,13 +1462,13 @@ $$</span></div>
 <div class="preview-paragraph-270 preview-line 270" data_line_start="270" data_line_end="270" data_line="270,271" count_line="1">and so</div>
 
 <div class="preview-paragraph-271 preview-line 271 272 273" data_line_start="271" data_line_end="273" data_line="271,274" count_line="3"><span class="math-block ">$$
-  \large P_{n}(x)=1+x+x^{2}+x^{3}+\cdots
+  \large P_{n}(x)=1+x+x^{2}+x^{3}+\cdots+x^{n}
 $$</span></div>
 
 <div class="preview-paragraph-274 preview-line 274" data_line_start="274" data_line_end="274" data_line="274,275" count_line="1">and for <span class="math-inline ">$x$</span> small</div>
 
 <div class="preview-paragraph-275 preview-line 275 276 277" data_line_start="275" data_line_end="277" data_line="275,278" count_line="3"><span class="math-block ">$$
-\large \frac{1}{1-x} \approx 1+x+x^{2}+\quad+x^{n}
+\large \frac{1}{1-x} \approx 1+x+x^{2}+\cdots+x^{n}
 $$</span></div>
 
 <div class="preview-paragraph-279 preview-line 279" data_line_start="279" data_line_end="279" data_line="279,280" count_line="1">Note that this is pretty much what we'd expect given that for <span class="math-inline ">$-1&lt;x&lt;1$</span>, we have</div>
@@ -1479,7 +1481,7 @@ $$</span></div>
 <hr>
 <br>
 
-<div class="preview-paragraph-284 preview-line 284" data_line_start="284" data_line_end="284" data_line="284,285" count_line="1"><h2 style="color: rgb(0,150,0);" >Example: </h2> Find <span class="math-inline ">$P_{n}(x)$</span> for <span class="math-inline ">$f(x)=\ln x$</span> for <span class="math-inline ">$x$</span> near 1.</div>
+<div class="preview-paragraph-284 preview-line 284" data_line_start="284" data_line_end="284" data_line="284,285" count_line="1"><h2 style="color: rgb(0,150,0);" >Example: </h2> Find <span class="math-inline ">$P_{n}(x)$</span> for <span class="math-inline ">$f(x)=\ln x$</span> for <span class="math-inline ">$x$</span> near 1.</div><br>
 
 <div class="preview-paragraph-285 preview-line 285 286 287 288 289 290 291 292 293" data_line_start="285" data_line_end="293" data_line="285,294" count_line="9"><span class="math-block ">$$
 \begin{aligned}
@@ -1489,15 +1491,15 @@ $$</span></div>
 \large &amp; f^{\prime \prime \prime}(x)=\frac{2}{x^{3}}, \quad f^{\prime \prime \prime}(1) = 2 \Rightarrow \quad c_{3}=\frac{2}{3!}=\frac{1}{3}  \\
 \large &amp; f^{(4)}(x)=-\frac{6}{x^{4}}, \quad f^{(4)}(1)=-6 \quad \Rightarrow c_{4}=-\frac{6}{4!}=-\frac{1}{4}
 \end{aligned}
-$$</span></div>
+$$</span></div><br>
 
-<div class="preview-paragraph-295 preview-line 295" data_line_start="295" data_line_end="295" data_line="295,296" count_line="1">Continuing in this bray, we see that</div>
+<div class="preview-paragraph-295 preview-line 295" data_line_start="295" data_line_end="295" data_line="295,296" count_line="1">Continuing in this way, we see that</div>:
 
 <div class="preview-paragraph-296 preview-line 296 297 298 299 300 301 302 303 304" data_line_start="296" data_line_end="304" data_line="296,305" count_line="9"><span class="math-block ">$$
 \begin{aligned}
-\large &amp; f^{(i)}(1)=(-1)^{i-1} \cdot(i-1)!, \text { so } \\
+\large &amp; f^{(i)}(1)=(-1)^{i-1} \cdot(i-1)! \quad \text { so: } \\
 &amp; \begin{array}{c}
-\large C_{i}=\frac{f^{(i)}(1)}{i!}=\frac{(-1)^{i-1}(i-1)!}{i!}=\frac{(-1)^{i-1}(i-1)(i-2) \cdots 2 \cdot 1}{i(i-1)(i-2)} \cdots \frac{2 \cdot 1}{i} \\
+\large C_{i}=\frac{f^{(i)}(1)}{i!}=\frac{(-1)^{i-1}(i-1)!}{i!}=\frac{(-1)^{i-1}(i-1)(i-2) \cdots 2 \cdot 1}{i(i-1)(i-2) \cdots 2 \cdot 1}  \\
 \large =\frac{(-1)^{i-1}}{i}
 \end{array}
 \end{aligned}

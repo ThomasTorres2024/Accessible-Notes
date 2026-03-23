@@ -1012,7 +1012,7 @@ $$</span></div><br>
 
 <div class="preview-paragraph-21 preview-line 21" data_line_start="21" data_line_end="21" data_line="21,22" count_line="1"><span class="math-inline ">$F_{n}(x)$</span> is called the Fourier polynomial of degree <span class="math-inline ">$n$</span> (even though it isn't actually a polynomial) and the numbers <span class="math-inline ">$a_{k}, b_{k}$</span> are called the Fourier coefficients.</div><br>
 <div class="preview-paragraph-23 preview-line 23" data_line_start="23" data_line_end="23" data_line="23,24" count_line="1">Note that since all the for <span class="math-inline">$\cos(kx), \sin(kx)$</span> repeat every <span class="math-inline ">$2 \pi$</span>, so must the onginal function <span class="math-inline ">$f(x)$</span>.</div>
-<div class="preview-paragraph-25 preview-line 25" data_line_start="25" data_line_end="25" data_line="25,26" count_line="1">For such a function there is a formula for the Fourier coefficients which gives a good approximation to <span class="math-inline ">$f$</span>.</div>
+<div class="preview-paragraph-25 preview-line 25" data_line_start="25" data_line_end="25" data_line="25,26" count_line="1"> <br> For such a function there is a formula for the Fourier coefficients which gives a good approximation to <span class="math-inline ">$f$</span>.</div>
 
 <br><hr><br>
 
@@ -1024,7 +1024,7 @@ $$</span></div><br>
 &amp; b_{k}=\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin (k x) d x, \quad k&gt;0
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-36 preview-line 36" data_line_start="36" data_line_end="36" data_line="36,37" count_line="1">Note that <span class="math-inline ">$a_{0}$</span> is simply the average value of <span class="math-inline ">$f$</span> on <span class="math-inline ">$[-\pi, \pi]$</span>.</div>
+<div class="preview-paragraph-36 preview-line 36" data_line_start="36" data_line_end="36" data_line="36,37" count_line="1"> <br> Note that <span class="math-inline ">$a_{0}$</span> is simply the average value of <span class="math-inline ">$f$</span> on <span class="math-inline ">$[-\pi, \pi]$</span>.</div>
 
 <br><hr><br>
 
@@ -1058,7 +1058,7 @@ $$</span></div>
 <div class="preview-paragraph-63 preview-line 63 64 65" data_line_start="63" data_line_end="65" data_line="63,66" count_line="3"><span class="math-block ">$$
 =\frac{1}{\pi k}(1-\cos (k \pi))
 $$</span></div>
-<div class="preview-paragraph-67 preview-line 67 68" data_line_start="67" data_line_end="68" data_line="67,69" count_line="2">Now <span class="math-inline ">$\cos (k \pi)=\left\{\begin{aligned}-1 & &amp; k \text{ odd } \\ 1 & &amp; k \text{ even }\end{aligned}\right.$</span><br>
+<div class="preview-paragraph-67 preview-line 67 68" data_line_start="67" data_line_end="68" data_line="67,69" count_line="2"> <br> Now <span class="math-inline ">$\cos (k \pi)=\left\{\begin{aligned}-1 & &amp; k \text{ odd } \\ 1 & &amp; k \text{ even }\end{aligned}\right.$</span><br>
 and so</div>
 <div class="preview-paragraph-69 preview-line 69 70 71 72 73 74" data_line_start="69" data_line_end="74" data_line="69,75" count_line="6"><span class="math-block ">$$
 b_{k}=\left\{\begin{array}{cc}
@@ -1070,14 +1070,14 @@ $$</span></div>
 <div class="preview-paragraph-77 preview-line 77 78 79 80 81 82 83 84 85" data_line_start="77" data_line_end="85" data_line="77,86" count_line="9"><span class="math-block ">$$
 \begin{aligned}
 &amp; F_{1}(x)=\frac{1}{2}+\frac{2}{\pi} \sin x \\
-&amp; F_{2}(x)=\frac{1}{2}+\frac{2}{\pi} \sin x \\
+&amp; F_{2}(x)=\frac{1}{2}+\frac{2}{\pi} \sin x + (0\sin(2x)) \\
 &amp; F_{3}(x)=\frac{1}{2}+\frac{2}{\pi} \sin x+\frac{2}{3 \pi} \sin (3 x) \\
 &amp; F_{4}(x)=\frac{1}{2}+\frac{2}{\pi} \sin x+\frac{2}{3 \pi} \sin (3 x) \quad(+0 \sin (4 x)) \\
 &amp; F_{5}(x)=\frac{1}{2}+\frac{2}{\pi} \sin x+\frac{2}{3 \pi} \sin (3 x)+\frac{2}{5 \pi} \sin (5 x)
 \end{aligned}
 $$</span></div>
 <div class="preview-paragraph-86 preview-line 86" data_line_start="86" data_line_end="86" data_line="86,87" count_line="1">etc.</div>
-<div class="preview-paragraph-88 preview-line 88" data_line_start="88" data_line_end="88" data_line="88,89" count_line="1">Using Maple, we can see that the Fourier polynomials give better and better approxmations to the square wave.</div><br>
+<div class="preview-paragraph-88 preview-line 88" data_line_start="88" data_line_end="88" data_line="88,89" count_line="1"><br> Using Maple, we can see that the Fourier polynomials give better and better approxmations to the square wave.</div><br>
 <div class="preview-paragraph-90 preview-line 90" data_line_start="90" data_line_end="90" data_line="90,91" count_line="1">Note that as <span class="math-inline ">$n \rightarrow \infty$</span>, the approximation given by <span class="math-inline ">$F_{n}$</span> gets better everywhere (except for the points of discontinuity).</div>
 <br> <div class="preview-paragraph-92 preview-line 92" data_line_start="92" data_line_end="92" data_line="92,93" count_line="1">Note also that this is different to the situation with Taylor polynomials where the approximation is usually just on an interval (ie. locally).</div><br>
 <div class="preview-paragraph-94 preview-line 94" data_line_start="94" data_line_end="94" data_line="94,95" count_line="1">As <span class="math-inline ">$n \rightarrow \infty$</span>, the Fourier polynomials <span class="math-inline ">$F_{n}$</span> give us the Fourier Series for <span class="math-inline">$f$</span> </div>
@@ -1089,7 +1089,7 @@ a_{0} &amp; +a_{1} \cos x+a_{2} \cos (2 x)+a_{3} \cos (3 x)+\cdots \\
 \end{aligned}
 $$</span></div><br>
 <div class="preview-paragraph-103 preview-line 103" data_line_start="103" data_line_end="103" data_line="103,104" count_line="1">where <span class="math-inline ">$a_{k}$</span> and <span class="math-inline ">$b_{k}$</span> are the Fourier coefficients whose formulae were given earlier.</div>
-<div class="preview-paragraph-105 preview-line 105" data_line_start="105" data_line_end="105" data_line="105,106" count_line="1">If <span class="math-inline ">$f$</span> is differentiable, then this fourier series converges to <span class="math-inline ">$f(x)$</span> and we have</div><br>
+<div class="preview-paragraph-105 preview-line 105" data_line_start="105" data_line_end="105" data_line="105,106" count_line="1">If <span class="math-inline ">$f$</span> is differentiable, then this fourier series converges to <span class="math-inline ">$f(x)$</span> and we have:</div><br>
 <div class="preview-paragraph-106 preview-line 106 107 108 109 110 111" data_line_start="106" data_line_end="111" data_line="106,112" count_line="6"><span class="math-block ">$$
 \begin{aligned}
 f(x)=a_{0} &amp; +a_{1} \cos x+a_{2} \cos (2 x)+a_{3} \cos (3 x)+\cdots \\
@@ -1101,12 +1101,14 @@ $$</span></div><br>
 <div class="preview-paragraph-114 preview-line 114 115 116" data_line_start="114" data_line_end="116" data_line="114,117" count_line="3"><span class="math-block ">$$
 a_{1} \cos x+b_{1} \sin x
 $$</span></div>
-<div class="preview-paragraph-117 preview-line 117" data_line_start="117" data_line_end="117" data_line="117,118" count_line="1">of period <span class="math-inline ">$2 \pi$</span> is called the <u>fundamental harmonic</u> of <span class="math-inline ">$f$</span> while the term</div>
+<div class="preview-paragraph-117 preview-line 117" data_line_start="117" data_line_end="117" data_line="117,118" count_line="1"> <br> of period <span class="math-inline ">$2 \pi$</span> is called the <strong style="color: rgb(200,0,0);">fundamental harmonic</strong> of <span class="math-inline ">$f$</span> while the term <br><br> </div>
 <div class="preview-paragraph-118 preview-line 118 119 120" data_line_start="118" data_line_end="120" data_line="118,121" count_line="3"><span class="math-block ">$$
 a_{k} \cos (k x)+b_{k} \sin (k x)
 $$</span></div>
-<div class="preview-paragraph-121 preview-line 121 122" data_line_start="121" data_line_end="122" data_line="121,123" count_line="2">of perod <span class="math-inline ">$\frac{2 \pi}{k}$</span> is called the <span class="math-inline">$k$</span> harmonic of <span class="math-inline ">$f$</span>.<br>
-e.g In the last example, the fundamental harmonic was</div>
+<div class="preview-paragraph-121 preview-line 121 122" data_line_start="121" data_line_end="122" data_line="121,123" count_line="2"> <br> of period <span class="math-inline ">$\frac{2 \pi}{k}$</span> is called the <strong style="color: rgb(200,0,0);"> <span class="math-inline">$k$</span> harmonic of <span class="math-inline ">$f$</span> </strong>  .<br>
+
+<br> 
+  e.g In the last example, the fundamental harmonic was:</div>
 <div class="preview-paragraph-123 preview-line 123 124 125" data_line_start="123" data_line_end="125" data_line="123,126" count_line="3"><span class="math-block ">$$
 \frac{2}{\pi} \sin x
 $$</span></div>
@@ -1121,44 +1123,51 @@ $$</span></div>
 <br><hr>
 
 <h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-134 preview-line 134" id="energy-and-the-energy-theorem" data_line_start="134" data_line_end="134" data_line="134,135" count_line="1" style="color: rgb(0,0,230);">
-Energy and the Energy Theorem</h2>
-<div class="preview-paragraph-136 preview-line 136" data_line_start="136" data_line_end="136" data_line="136,137" count_line="1">We define the energy <span class="math-inline ">$E$</span> of a periodic so <span class="math-inline ">$f$</span> of period <span class="math-inline ">$2 \pi$</span> by</div>
-<div class="preview-paragraph-137 preview-line 137 138 139" data_line_start="137" data_line_end="139" data_line="137,140" count_line="3"><span class="math-block ">$$
+Energy and the Energy Theorem</h2><br> 
+
+<div class="preview-paragraph-136 preview-line 136" data_line_start="136" data_line_end="136" data_line="136,137" count_line="1">We define the energy <span class="math-inline ">$E$</span> of a periodic function <span class="math-inline ">$f$</span> of period <span class="math-inline ">$2 \pi$</span> by</div>
+<div class="preview-paragraph-137 preview-line 137 138 139" data_line_start="137" data_line_end="139" data_line="137,140" count_line="3"> <br> <span class="math-block ">$$
 E=\frac{1}{\pi} \int_{-\pi}^{\pi}(f(x))^{2} d x
 $$</span></div>
-<div class="preview-paragraph-141 preview-line 141" data_line_start="141" data_line_end="141" data_line="141,142" count_line="1">One can check that for the <span class="math-inline">$k$</span>th harmonic</div>
+<div class="preview-paragraph-141 preview-line 141" data_line_start="141" data_line_end="141" data_line="141,142" count_line="1"> <br> One can check that for the <span class="math-inline">$k$</span>th harmonic <br> </div>
 <div class="preview-paragraph-142 preview-line 142 143 144" data_line_start="142" data_line_end="144" data_line="142,145" count_line="3"><span class="math-block ">$$
 a_{k} \cos (k x)+b_{k} \sin (k x)
-$$</span></div>
-<div class="preview-paragraph-145 preview-line 145" data_line_start="145" data_line_end="145" data_line="145,146" count_line="1">the energy is given by</div>
+$$</span></div> <br>
+<div class="preview-paragraph-145 preview-line 145" data_line_start="145" data_line_end="145" data_line="145,146" count_line="1">  the energy is given by <br> </div>
 <div class="preview-paragraph-146 preview-line 146 147 148 149 150 151" data_line_start="146" data_line_end="151" data_line="146,152" count_line="6"><span class="math-block ">$$
 \begin{aligned}
 \frac{1}{\pi} \int_{-\pi}^{\pi}\left(a_{k} \cos (k x)+b_{k} \sin (k x)\right)^{2} d x &amp; =a_{k}^{2}+b_{k}^{2} \\
 &amp; =A_{k}^{2}
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-153 preview-line 153" data_line_start="153" data_line_end="153" data_line="153,154" count_line="1">Where <span class="math-inline ">$A_{k}=\sqrt{a_{k}^{2}+b_{k}^{2}}$</span> is called the amplitude of the <span class="math-inline ">$k$</span>-th harmonic.</div>
-<div class="preview-paragraph-155 preview-line 155" data_line_start="155" data_line_end="155" data_line="155,156" count_line="1">The energy of the constant term <span class="math-inline">$a_0$</span> in the Fourier series is given by</div>
+<div class="preview-paragraph-153 preview-line 153" data_line_start="153" data_line_end="153" data_line="153,154" count_line="1"> <br> Where <span class="math-inline ">$A_{k}=\sqrt{a_{k}^{2}+b_{k}^{2}}$</span> is called the <strong style="color: rgb(200,0,0);">amplitude</strong> of the <span class="math-inline ">$k$</span>-th harmonic.</div>
+<div class="preview-paragraph-155 preview-line 155" data_line_start="155" data_line_end="155" data_line="155,156" count_line="1">The energy of the constant term <span class="math-inline">$a_0$</span> in the Fourier series is given by: </div> <br> 
 <div class="preview-paragraph-156 preview-line 156 157 158" data_line_start="156" data_line_end="158" data_line="156,159" count_line="3"><span class="math-block ">$$
 E=\frac{1}{\pi} \int_{-\pi}^{\pi} a_{0}^{2} d x=2 a_{0}^{2}
-$$</span></div>
-<div class="preview-paragraph-159 preview-line 159" data_line_start="159" data_line_end="159" data_line="159,160" count_line="1">and so we define the amplitude <span class="math-inline">$A_0$</span> of the constant term by</div>
+$$</span></div> <br> 
+<div class="preview-paragraph-159 preview-line 159" data_line_start="159" data_line_end="159" data_line="159,160" count_line="1">and so we define the amplitude <span class="math-inline">$A_0$</span> of the constant term by</div> <br> 
 <div class="preview-paragraph-160 preview-line 160 161 162" data_line_start="160" data_line_end="162" data_line="160,163" count_line="3"><span class="math-block ">$$
 A_{0}=\sqrt{2 A_{0}^{2}}=\sqrt{2} \cdot a_{0} .
 $$</span></div>
-<div class="preview-paragraph-164 preview-line 164" data_line_start="164" data_line_end="164" data_line="164,165" count_line="1">The big result is then that for a for function which is periodic of period <span class="math-inline ">$2 \pi$</span></div>
+
+<br> 
+
+<div class="preview-paragraph-164 preview-line 164" data_line_start="164" data_line_end="164" data_line="164,165" count_line="1">The big result is then that for a for function which is periodic of period <span class="math-inline ">$2 \pi$</span></div> <br> 
 <div class="preview-paragraph-165 preview-line 165 166 167 168 169 170 171" data_line_start="165" data_line_end="171" data_line="165,172" count_line="7"><span class="math-block ">$$
 \begin{aligned}
 E=\frac{1}{\pi} \int_{-\pi}^{\pi}(f(x))^{2} d x= &amp; A_{0}^{2}+A_{1}^{2}+A_{2}^{2}+A_{3}^{2}+ \dots \\
 = &amp; 2 a_{1}^{2}+a_{1}^{2}+a_{2}^{2}+a_{3}^{2}+  \dots \\
 &amp; +b_{1}^{2}+b_{2}^{2}+b_{3}^{2}+  \dots
 \end{aligned}
-$$</span></div>
+$$</span></div> <br> 
 <div class="preview-paragraph-173 preview-line 173" data_line_start="173" data_line_end="173" data_line="173,174" count_line="1">This is the so-called energy theorem (also known as Parseval's identity).</div>
+
+<br> 
+
 <div class="preview-paragraph-175 preview-line 175 176" data_line_start="175" data_line_end="176" data_line="175,177" count_line="2">It can be thought of as an infinite-dimensional version of Pythagoras' theorem.<br>
 
 <br>
-  e.g. In the example with the square wave</div>
+  e.g. In the example with the square wave</div> <br> 
 <div class="preview-paragraph-177 preview-line 177 178 179 180 181 182 183 184 185 186" data_line_start="177" data_line_end="186" data_line="177,187" count_line="10"><span class="math-block ">$$
 \begin{aligned}
 &amp; E=\frac{1}{\pi} \int_{-\pi}^{\pi}(f(x))^{2} d x=\frac{1}{\pi} \int_{4}^{\pi} 1^{2} d x=1 \\
@@ -1169,6 +1178,8 @@ $$</span></div>
 \end{array}\right.
 \end{aligned}
 $$</span></div>
+<br> 
+
 <div class="preview-paragraph-188 preview-line 188" data_line_start="188" data_line_end="188" data_line="188,189" count_line="1">Thus <span class="math-inline ">$A_{0}^{2}=2 a_{0}^{2}=2\left(\frac{1}{2}\right)^{2}=\frac{1}{2}$</span>.</div>
 <div class="preview-paragraph-189 preview-line 189 190 191 192 193 194" data_line_start="189" data_line_end="194" data_line="189,195" count_line="6"><span class="math-block ">$$
 A_{k}^{2}=\left\{\begin{array}{cl}
@@ -1179,7 +1190,7 @@ $$</span></div>
 <div class="preview-paragraph-196 preview-line 196" data_line_start="196" data_line_end="196" data_line="196,197" count_line="1">Then</div>
 <div class="preview-paragraph-197 preview-line 197 198 199 200 201 202 203 204 205 206" data_line_start="197" data_line_end="206" data_line="197,207" count_line="10"><span class="math-block ">$$
 \begin{aligned}
-&amp; A_{0}^{2}+A_{1}^{2}+A_{2}^{2}+A_{3}^{2}+ \\
+&amp; A_{0}^{2}+A_{1}^{2}+A_{2}^{2}+A_{3}^{2}+ \cdots \\
 = &amp; \frac{1}{2}+\frac{4}{\pi^{2} 1^{2}}+0+\frac{4}{\pi^{2} \cdot 3^{2}}+\cdots \\
 = &amp; \frac{1}{2}+\frac{4}{\pi^{2}}\left(\frac{1}{1^{2}}+\frac{1}{3^{2}}+\frac{1}{5^{2}}+\cdots\right) \\
 = &amp; \frac{1}{2}+\frac{4}{\pi^{2}}\left(\frac{\pi^{2}}{8}\right) \\
@@ -1191,31 +1202,43 @@ $$</span></div>
 <br><hr><br>
 
 <div class="preview-paragraph-208 preview-line 208" data_line_start="208" data_line_end="208" data_line="208,209" count_line="1"> <h2 style="color: rgb(0,0,230);">Functions which Have Periods Other than <span class="math-inline ">$2 \pi$</span> </h2> </div>
-<div class="preview-paragraph-210 preview-line 210" data_line_start="210" data_line_end="210" data_line="210,211" count_line="1">Suppose <span class="math-inline ">$f(x)$</span> has period b.</div>
+<div class="preview-paragraph-210 preview-line 210" data_line_start="210" data_line_end="210" data_line="210,211" count_line="1">Suppose <span class="math-inline ">$f(x)$</span> has period <span class="math-inline">$b$</span>.</div><br>
 <div class="preview-paragraph-212 preview-line 212" data_line_start="212" data_line_end="212" data_line="212,213" count_line="1">If we let</div>
 <div class="preview-paragraph-213 preview-line 213 214 215" data_line_start="213" data_line_end="215" data_line="213,216" count_line="3"><span class="math-block ">$$
 x=\frac{b t}{2 \pi},
 $$</span></div>
+
+<br>
+
 <div class="preview-paragraph-216 preview-line 216" data_line_start="216" data_line_end="216" data_line="216,217" count_line="1">then as <span class="math-inline ">$x$</span> ranges over the interval <span class="math-inline ">$[-b / 2, b / 2]$</span>, <span class="math-inline ">$t$</span> will range over the interval <span class="math-inline ">$[-\pi, \pi]$</span>.</div>
 <div class="preview-paragraph-218 preview-line 218" data_line_start="218" data_line_end="218" data_line="218,219" count_line="1">Now set</div>
 <div class="preview-paragraph-219 preview-line 219 220 221" data_line_start="219" data_line_end="221" data_line="219,222" count_line="3"><span class="math-block ">$$
 g(t)=f\left(\frac{b t}{2 \pi}\right)=f(x) .
 $$</span></div>
-<div class="preview-paragraph-222 preview-line 222" data_line_start="222" data_line_end="222" data_line="222,223" count_line="1"><span class="math-inline ">$g$</span> is then periodic of period <span class="math-inline ">$2 \pi$</span> and we can find the Fourier series for <span class="math-inline ">$g$</span> in the usual way.</div>
+
+<br>
+
+<div class="preview-paragraph-222 preview-line 222" data_line_start="222" data_line_end="222" data_line="222,223" count_line="1"><span class="math-inline ">$g$</span> is then periodic of period <span class="math-inline ">$2 \pi$</span> and we can find the Fourier series for <span class="math-inline ">$g$</span> in the usual way.</div><br>
 <div class="preview-paragraph-223 preview-line 223 224 225 226 227 228" data_line_start="223" data_line_end="228" data_line="223,229" count_line="6"><span class="math-block ">$$
 \begin{aligned}
 g(t)=a_{0} &amp; +a_{1} \cos t+a_{2} \cos (2 t)+a_{3} \cos (3 t)+\cdots \\
 &amp; +b_{1} \sin t+b_{2} \sin (2 t)+b_{3} \sin (3 t)+\cdots
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-230 preview-line 230" data_line_start="230" data_line_end="230" data_line="230,231" count_line="1">Thus, <span class="math-inline ">$\sin \theta \quad t=\frac{2 \pi x}{b}$</span></div>
+
+<br> <br> 
+
+<div class="preview-paragraph-230 preview-line 230" data_line_start="230" data_line_end="230" data_line="230,231" count_line="1">Thus, since <span class="math-inline">$t=\frac{2 \pi x}{b}$</span> : </div> <br>
 <div class="preview-paragraph-231 preview-line 231 232 233 234 235 236" data_line_start="231" data_line_end="236" data_line="231,237" count_line="6"><span class="math-block ">$$
 \begin{aligned}
 f(x)=g(t)=a_{0} &amp; +a_{1} \cos \left(\frac{2 \pi x}{b}\right)+a_{2} \cos \left(\frac{4 \pi x}{b}\right)+a_{3} \cos \left(\frac{6 \pi x}{b}\right)+\cdots \\
 &amp; +b_{1} \sin \left(\frac{2 \pi x}{b}\right)+b_{2} \sin \left(\frac{4 \pi x}{b}\right)+b_{3} \sin \left(\frac{6 \pi x}{b}\right)+\cdots
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-238 preview-line 238 239" data_line_start="238" data_line_end="239" data_line="238,240" count_line="2">What about the Fourier coefficients?<br>
+
+<br>
+
+<div class="preview-paragraph-238 preview-line 238 239" data_line_start="238" data_line_end="239" data_line="238,240" count_line="2">What about the Fourier coefficients?<br><br>
 Well:</div><br>
 
 <div class="preview-paragraph-240 preview-line 240 241 242 243 244 245" data_line_start="240" data_line_end="245" data_line="240,246" count_line="6"><span class="math-block ">$$
@@ -1224,9 +1247,12 @@ a_{0}=\frac{1}{2 \pi} \int_{-\pi}^{\pi} g(t) d t &amp; =\frac{1}{2 \pi} \int_{-b
 &amp; =\frac{1}{b} \int_{-b / 2}^{b / 2} f(x) d x
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-246 preview-line 246 247" data_line_start="246" data_line_end="247" data_line="246,248" count_line="2">as <span class="math-inline ">$g(t)=f(x)$</span> and <span class="math-inline ">$t=\frac{2 \pi x}{b}$</span><br>
-so <span class="math-inline ">$dt=\frac{2 \pi}{b} d x$</span>.</div>
-<div class="preview-paragraph-249 preview-line 249" data_line_start="249" data_line_end="249" data_line="249,250" count_line="1">For <span class="math-inline ">$l \geq 1$</span></div>
+
+<br>
+
+<div class="preview-paragraph-246 preview-line 246 247" data_line_start="246" data_line_end="247" data_line="246,248" count_line="2">as <span class="math-inline ">$g(t)=f(x)$</span> and <span class="math-inline ">$t=\frac{2 \pi x}{b}$</span><br><br>
+so <span class="math-inline ">$dt=\frac{2 \pi}{b} d x$</span>.</div><br>
+<div class="preview-paragraph-249 preview-line 249" data_line_start="249" data_line_end="249" data_line="249,250" count_line="1">For <span class="math-inline ">$k \geq 1$</span></div>
 <div class="preview-paragraph-250 preview-line 250 251 252 253 254 255 256" data_line_start="250" data_line_end="256" data_line="250,257" count_line="7"><span class="math-block ">$$
 \begin{aligned}
 a_{k} &amp; =\frac{1}{\pi} \int_{-\pi}^{\pi} g(t) \cos (k t) d t \\
@@ -1234,12 +1260,21 @@ a_{k} &amp; =\frac{1}{\pi} \int_{-\pi}^{\pi} g(t) \cos (k t) d t \\
 &amp; =\frac{2}{b} \int_{-b / 2}^{b / 2} f(x) \cos \left(\frac{2 \pi k x}{b}\right) d x \quad \quad dt=\frac{2 \pi}{b}dx
 \end{aligned}
 $$</span></div>
+
+<br>
+
 <div class="preview-paragraph-258 preview-line 258" data_line_start="258" data_line_end="258" data_line="258,259" count_line="1">Similarly, for <span class="math-inline ">$k \geq 1$</span>.</div>
 <div class="preview-paragraph-259 preview-line 259 260 261" data_line_start="259" data_line_end="261" data_line="259,262" count_line="3"><span class="math-block ">$$
 b_{k}=\frac{2}{b} \int_{-b / 2}^{b / 2} f(x) \sin \left(\frac{2 \pi k x}{b}\right) d x
 $$</span></div>
-<div class="preview-paragraph-263 preview-line 263" data_line_start="263" data_line_end="263" data_line="263,264" count_line="1">To summarize.</div>
-<div class="preview-paragraph-265 preview-line 265" data_line_start="265" data_line_end="265" data_line="265,266" count_line="1">If <span class="math-inline ">$f$</span> is periodic of period b, then the Fourier series for <span class="math-inline ">$f$</span> on <span class="math-inline ">$[-b / 2, b / 2]$</span> is given by</div>
+
+<br>
+<hr>
+<br>
+
+
+<div class="preview-paragraph-263 preview-line 263" data_line_start="263" data_line_end="263" data_line="263,264" count_line="1"> <h2 style="color: rgb(0,0,230);"> To summarize.  </h2> </div>
+<div class="preview-paragraph-265 preview-line 265" data_line_start="265" data_line_end="265" data_line="265,266" count_line="1">If <span class="math-inline ">$f$</span> is periodic of period b, then the Fourier series for <span class="math-inline ">$f$</span> on <span class="math-inline ">$[-b / 2, b / 2]$</span> is given by</div><br>
 <div class="preview-paragraph-266 preview-line 266 267 268" data_line_start="266" data_line_end="268" data_line="266,269" count_line="3"><span class="math-block ">$$
 f(x)=a_{0}+\sum_{k=1}^{\infty}\left(a_{k} \cos \left(\frac{2 \pi k x}{b}\right)+b_{k} \sin \left(\frac{2 \pi k x}{b}\right)\right)
 $$</span></div>
@@ -1258,8 +1293,11 @@ $$</span></div>
 <br><hr><br>
 
 <div class="preview-paragraph-281 preview-line 281" data_line_start="281" data_line_end="281" data_line="281,282" count_line="1"> <h2 style="color: rgb(0,150,0);">Example: </h2> <span class="math-inline ">$f(x)=x^{2}$</span> on <span class="math-inline ">$[-1,1]$</span></div>
+
+<br>
+
 <div class="preview-paragraph-283 preview-line 283" data_line_start="283" data_line_end="283" data_line="283,284" count_line="1">Here <span class="math-inline ">$b=2, \quad b / 2=1$</span> and</div>
-<div class="preview-paragraph-284 preview-line 284 285 286" data_line_start="284" data_line_end="286" data_line="284,287" count_line="3"><span class="math-block ">$$
+<div class="preview-paragraph-284 preview-line 284 285 286" data_line_start="284" data_line_end="286" data_line="284,287" count_line="3"> <br> <span class="math-block ">$$
 a_{0}=\frac{1}{2} \int_{-1}^{1} x^{2} d x=\frac{1}{2}\left[\frac{x^{3}}{3}\right]_{-1}^{1}=\frac{1}{2}\left(\frac{1}{3}-\left(-\frac{1}{3}\right)\right)=\frac{1}{3} .
 $$</span></div>
 <div class="preview-paragraph-288 preview-line 288" data_line_start="288" data_line_end="288" data_line="288,289" count_line="1">For <span class="math-inline ">$k \geq 1$</span></div>
@@ -1274,8 +1312,8 @@ d u &amp; =2 x d x, v=\frac{\sin (\pi k x)}{\pi k}
 \end{aligned} \\ \\
 &amp; =\left[ \frac{x^{2} \sin (\pi k x)}{\pi k}  \right]_{-1}^{1}-\frac{2}{\pi k} \int_{-1}^{1} x \sin (\pi k x) d x \\ \\
 &amp; \text { by parts again } \\
-&amp; u=x, d v=\sin (a k x) d x \\
-&amp; d u=c n, \quad v=-\cos \frac{(d h)}{d t} \\ \\
+&amp; u=x, d v=\sin (\pi k x) d x \\
+&amp; d u=dx, \quad v= \frac{-\cos(\pi kx)}{\pi k} \\ \\
 &amp; =\left[\frac{x^{2} \sin (\pi k x)}{\pi k}\right]_{-1}^{1}-\frac{2}{\pi k}\left\{\left[\frac{-x \cos (\pi k x)}{\pi k}\right]_{-1}^{1}-\int_{-1}^{1}-\frac{(\cos (\pi k) x}{\pi k} d x\right\}
 \end{aligned}
 $$</span></div>
@@ -1284,11 +1322,11 @@ $$</span></div>
 &amp; =\left[\frac{x^{2} \sin (\pi k x)}{\pi k}\right]_{-1}^{1}-\frac{2}{\pi k}\left\{\left[\frac{-x \cos (\pi k x)}{\pi k}\right]_{-1}^{1}+\int_{-1}^{1} \frac{\cos (\pi k x)}{\pi k} d x\right\} \\
 &amp; =\left[x^{2} \frac{\sin (\pi k x)}{\pi k}\right]_{-1}^{1}-\frac{2}{\pi k}\left\{\left[-x \frac{\cos (\pi k x)}{\pi k}\right]_{-1}^{1}+\left[\frac{\sin (\pi k x)}{\pi^{2} k^{2}}\right]_{-1}^{1}\right\} \\
 &amp; =1^{2} \frac{\sin (\pi k)}{\pi k}-(-1)^{2} \frac{\sin (-\pi k)}{\pi k} \\
-&amp; -\frac{2}{\pi k}\left\{ \frac{-1 \cos (\pi k)}{\pi k} -\left(-(1) \frac{\cos (-\pi k)}{\pi k}\right)+\frac{\sin (\pi k)}{\pi^2 k^2}-\sin \frac{(-\pi k)}{\pi^{2} k^{2}}\right\}
+&amp; =\frac{2}{\pi k}\left\{ \frac{-1 \cos (\pi k)}{\pi k} -\left(-(1) \frac{\cos (-\pi k)}{\pi k}\right)+\frac{\sin (\pi k)}{\pi^2 k^2}-\sin \frac{(-\pi k)}{\pi^{2} k^{2}}\right\}
 \end{aligned}
-$$</span></div>
-<div class="preview-paragraph-314 preview-line 314 315" data_line_start="314" data_line_end="315" data_line="314,316" count_line="2">Now <span class="math-inline ">$\quad \sin (\pi k)=\sin (-\pi k)=0$</span><br>
-Whice <span class="math-inline ">$\quad \cos (\pi k)=\cos (-\pi k)=(-1)^{k}$</span> and so we get</div>
+$$</span></div><br>
+<div class="preview-paragraph-314 preview-line 314 315" data_line_start="314" data_line_end="315" data_line="314,316" count_line="2">Now <span class="math-inline ">$\quad \sin (\pi k)=\sin (-\pi k)=0$</span><br> <br>
+While <span class="math-inline ">$\quad \cos (\pi k)=\cos (-\pi k)=(-1)^{k}$</span> and so we get:</div><br>
 <div class="preview-paragraph-316 preview-line 316 317 318 319 320 321 322" data_line_start="316" data_line_end="322" data_line="316,323" count_line="7"><span class="math-block ">$$
 \begin{aligned}
 a_{k} &amp; =0-0 \\
@@ -1304,18 +1342,24 @@ $$</span></div><br>
 <div class="preview-paragraph-329 preview-line 329" data_line_start="329" data_line_end="329" data_line="329,330" count_line="1">We could integrate this by parts as before, but it is much simpler to observe that as the integrand is an <b>odd</b> function and we are integrating over an interval which is symmetric about <span class="math-inline ">$0$</span>, we must have:</div><br>
 <div class="preview-paragraph-330 preview-line 330 331 332" data_line_start="330" data_line_end="332" data_line="330,333" count_line="3"><span class="math-block ">$$
 b_{n}=0 .
-$$</span></div>
-<div class="preview-paragraph-334 preview-line 334" data_line_start="334" data_line_end="334" data_line="334,335" count_line="1">Thus we have</div>
+$$</span></div><br>
+<div class="preview-paragraph-334 preview-line 334" data_line_start="334" data_line_end="334" data_line="334,335" count_line="1">Thus we have:</div><br>
 <div class="preview-paragraph-335 preview-line 335 336 337" data_line_start="335" data_line_end="337" data_line="335,338" count_line="3"><span class="math-block ">$$
 x^{2}=\frac{1}{3}+\frac{4}{\pi^{2}} \sum_{k=1}^{\infty} \frac{(-1)^{k}}{k^{2}} \cos (\pi k x), \quad-1 \leq x \leq 1
-$$</span></div>
-<div class="preview-paragraph-339 preview-line 339" data_line_start="339" data_line_end="339" data_line="339,340" count_line="1">Note that in this example which was an even function, there ware no sine tems in the Fourier series while for the last example (the square wave), there were no cosine terms.</div><br>
-<div class="preview-paragraph-341 preview-line 341" data_line_start="341" data_line_end="341" data_line="341,342" count_line="1">This is an example of the following general feature</div>
+$$</span></div><br>
+<div class="preview-paragraph-339 preview-line 339" data_line_start="339" data_line_end="339" data_line="339,340" count_line="1">Note that in this example which was an even function, there ware no sine tems in the Fourier series while for the last example (the square wave), there were no cosine terms.</div><br><br>
+<div class="preview-paragraph-341 preview-line 341" data_line_start="341" data_line_end="341" data_line="341,342" count_line="1">This is an example of the following general feature:</div> <br>
 <ul class="preview-paragraph-342 preview-line 342 343 344" data_line_start="342" data_line_end="344" data_line="342,345" count_line="3">
 <li>The Fourier series on <span class="math-inline ">$[-b / 2, b / 2]$</span> for a function which is <u>even</u> contains no sine terms.</li>
+<br>
 <li>The Fourier series on <span class="math-inline ">$\left[-\frac{b}{2}, \frac{b}{2}\right]$</span> for a function which is either <u>odd</u> or a vertically shifted odd on contains no cosine tems.</li>
 </ul>
-<div class="preview-paragraph-345 preview-line 345" data_line_start="345" data_line_end="345" data_line="345,346" count_line="1">Finally, some entertainment!</div>
+
+<br><hr><br>
+<h2 style="color: rgb(0,0,230);"> The Basel Problem </h2>
+
+<div class="preview-paragraph-345 preview-line 345" data_line_start="345" data_line_end="345" data_line="345,346" count_line="1">Finally, some entertainment!</div> <br>
+
 <div class="preview-paragraph-347 preview-line 347" data_line_start="347" data_line_end="347" data_line="347,348" count_line="1">If we let <span class="math-inline ">$x=1$</span> in</div>
 <div class="preview-paragraph-348 preview-line 348 349 350" data_line_start="348" data_line_end="350" data_line="348,351" count_line="3"><span class="math-block ">$$
 x^{2}=\frac{1}{3}+\frac{4}{\pi^{2}} \sum_{k=1}^{\infty} \frac{(-1)^{k}}{k^{2}} \cos (\pi k x)
@@ -1342,9 +1386,12 @@ $$</span></div>
 <div class="preview-paragraph-372 preview-line 372 373 374" data_line_start="372" data_line_end="374" data_line="372,375" count_line="3"><span class="math-block ">$$
 \sum_{k=1}^{\infty} \frac{1}{h^{2}}=\frac{2}{3} \cdot \frac{\pi^{2}}{4}=\frac{\pi^{2}}{6}
 $$</span></div>
-<div class="preview-paragraph-376 preview-line 376" data_line_start="376" data_line_end="376" data_line="376,377" count_line="1">So using Fourier series we have proved that</div>
+
+<br>
+
+<div class="preview-paragraph-376 preview-line 376" data_line_start="376" data_line_end="376" data_line="376,377" count_line="1">So using Fourier series we have proved that:</div><br>
 <div class="preview-paragraph-377 preview-line 377 378 379" data_line_start="377" data_line_end="379" data_line="377,380" count_line="3"><span class="math-block ">$$
-\sum_{n=1}^{\infty} \frac{1}{n^{2}}=\frac{\pi^{2}}{6} \quad \large !
+\sum_{n=1}^{\infty} \frac{1}{n^{2}}=\frac{\pi^{2}}{6} \quad 
 $$</span></div>
 
     </div>
