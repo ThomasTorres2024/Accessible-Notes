@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Math 142 — Section 7.1 (Integration by Substitution)</title>
+  <title> Math 142 — Section 7.1 (Integration by Substitution)</title>
   <style>
-    body { max-width: 900px; margin: 40px auto; padding: 0 16px; font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
-    h1, h2 { line-height: 1.2; }
+    body { max-width: 900px; margin: 40px auto; padding: 0 16px; font: 16px/1.5 system-ui, -apple-system; font-family: sans-serif }
+    h1, h2 { line-height: 1.2; font-family: sans-serif }
     .box { border: 1px solid #333; padding: 10px 12px; display: inline-block; }
   </style>
 
@@ -22,7 +22,7 @@
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
 </head>
 <body>
-  <h1>§ 7.1 &nbsp; Integration by Substitution</h1>
+  <h1 style="color: rgb(200,0,0);"> § 7.1 &nbsp; Integration by Substitution</h1>
 
   <p>Consider the following indefinite integral:</p>
 
@@ -52,6 +52,7 @@
     More generally, if \(f\) and \(g\) are functions and \(f\) has an antiderivative \(F\), then by the chain rule,
   </p>
 
+
   $$\frac{d}{dx}\bigl(F(g(x))\bigr)
     = F'\bigl(g(x)\bigr)\,g'(x)
     = f\bigl(g(x)\bigr)\,g'(x), \qquad \text{since } F' = f.$$ 
@@ -69,7 +70,12 @@
 
   <p>For example, in the last example, \(g(x)=x^3\).</p>
 
-  <h2>Examples</h2>
+  <br>
+  <hr>
+  <br> 
+
+
+  <h2 style="color: rgb(0,150,0);">Examples</h2>
   <ol type="a">
     <li>
       $$\int 2e^{2x}\,dx = e^{2x}+C,\qquad g(x)=2x.$$
@@ -82,7 +88,9 @@
     </li>
   </ol>
 
-  <h2>When the pattern isn’t perfect</h2>
+  <br><hr><br> 
+
+  <h2 style="color: rgb(0,0,230);">When the pattern isn’t perfect</h2>
   <p>Consider</p>
   $$\int x^2\cos\bigl(x^3\bigr)\,dx.$$
 
