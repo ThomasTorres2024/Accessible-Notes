@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Math451Sec3.4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.mathpix.com/fonts/cmu.css"/>
+    <style>html,body {
+  width: 100%;
+  height: 100%;
+}
+*, *::before,*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  color: #1E2029;
+  font-size: 14px;
+  line-height: normal;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 500;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+ol, ul, dl {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+ol ol, ul ul, ol ul, ul ol {
+  margin-bottom: 0;
+}
+dt {
+  font-weight: 500;
+}
+dd {
+  margin-bottom: 0.5em;
+  margin-left: 0;
+}
+blockquote {
+  margin: 0 0 1em;
+}
+dfn {
+  font-style: italic;
+}
+b, strong {
+  font-weight: bolder;
+}
+small {
+  font-size: 80%;
+}
+sub, sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+a {
+  color: #0B93ff;
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+a:hover {
+  color: #33aaff;
+}
+a:active {
+  color: #0070d9;
+}
+a:active, a:hover {
+  text-decoration: none;
+  outline: 0;
+}
+a[disabled] {
+  color: rgba(0, 0, 0, 0.25);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+pre, code, kbd, samp {
+  font-size: 1em;
+}
+pre {
+  margin-top: 0;
+  margin-bottom: 1em;
+  overflow: auto;
+}
+figure {
+  margin: 0 0 1em;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+table {
+  border-collapse: collapse;
+}
+caption {
+  padding-top: 0.75em;
+  padding-bottom: 0.3em;
+  color: rgba(0, 0, 0, 0.45);
+  text-align: left;
+  caption-side: bottom;
+}
+th {
+  text-align: inherit;
+}
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+  stroke-width: 3;
+}
+#setText > div {
+  justify-content: inherit;
+  margin-top: 0;
+  margin-bottom: 1em;
+  
+  
+}
+#setText div:last-child {
+  margin-bottom: 0 !important;
+}
+#setText > br, #preview-content br {
+  line-height: 1.2;
+}
+#preview-content > div {
+  margin-top: 0;
+  margin-bottom: 1em;
+  
+}
+.proof > div,
+#preview-content .proof > div, #setText .proof > div,
+.theorem > div,
+#preview-content .theorem > div, #setText .theorem > div {
+  margin-top: 1rem;
+}
+mjx-container {
+  text-indent: 0;
+  overflow-y: hidden;
+  overflow-x: auto;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  
+}
+.math-inline mjx-container {
+  display: inline-block !important;
+  page-break-inside: avoid;
+  max-width: 100%;
+  padding: 0;
+  line-height: 0;
+}
+.math-inline[data-overflow="visible"] mjx-container {
+  overflow: visible;
+}
+.math-inline mjx-container mjx-assistive-mml {
+  max-width: 100%;
+}
+.math-block {
+  align-items: center;
+  page-break-after: auto;
+  page-break-inside: avoid;
+  margin: 0;
+  display: block;
+}
+.math-inline {
+  display: inline-flex;
+  max-width: 100%;
+}
+.math-block[data-width="full"] {
+  overflow-x: auto;
+  display: flex;
+}
+.math-block[data-width="full"] mjx-container[jax=SVG][display=true] {
+  display: flex;
+  flex: 1 1;
+  justify-content: center;
+}
+svg .math-inline {
+  display: initial;
+  max-width: initial;
+}
+svg .math-inline mjx-container {
+  max-width: initial;
+}
+svg mjx-container {
+  overflow: visible;
+  padding: 0;
+}
+svg .math-block[data-width="full"] {
+  overflow: visible;
+}
+.math-block, .math-inline {
+  --mmd-highlight-color: rgba(0, 147, 255, 0.25);
+  --mmd-highlight-text-color: #1e2029;
+}
+.math-block[data-highlight-color] mjx-container[jax="SVG"] > svg {
+  background-color: var(--mmd-highlight-color);
+}
+.math-block[data-highlight-text-color] mjx-container[jax="SVG"] > svg {
+  color: var(--mmd-highlight-text-color);
+}
+.math-inline[data-highlight-color] mjx-container[jax="SVG"] {
+  background-color: var(--mmd-highlight-color);
+}
+.math-inline[data-highlight-text-color] mjx-container[jax="SVG"] {
+  color: var(--mmd-highlight-text-color);
+}
+.math-block p {
+  flex-shrink: 1;
+}
+.math-block mjx-container {
+  margin: 0 !important;
+}
+.math-error {
+  background-color: yellow;
+  color: red;
+}
+#preview-content img, #setText img {
+  max-width: 100%;
+}
+#preview-content blockquote, #setText blockquote {
+  page-break-inside: avoid;
+  color: #666;
+  margin: 0 0 1em 0;
+  padding-left: 3em;
+  border-left: .5em solid #eee;
+}
+#preview-content pre, #setText pre {
+  border: none;
+  padding: 0;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background: #f8f8fa;
+}
+#preview-content pre code, #setText pre code {
+  padding: 1rem;
+  display: block;
+  overflow-x: auto;
+  line-height: 24px;
+}
+#preview-content table, #setText table {
+  display: table;
+  overflow: auto;
+  max-width: 100%;
+  border-collapse: collapse;
+  page-break-inside: avoid;
+  margin-bottom: 1em;
+}
+#preview-content table th, #setText table th {
+  text-align: center;
+  font-weight: bold;
+}
+#preview-content table td, #setText table td,
+#preview-content table th, #setText table th {
+  border: 1px solid #dfe2e5;
+  padding: 6px 13px;
+}
+#preview-content table tr, #setText table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+#preview-content table tr:nth-child(2n), #setText table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+.main-title,
+#preview-content .main-title, #setText .main-title {
+  text-align: center;
+  line-height: 1.2;
+  margin: 0 auto 1em auto;
+}
+.author,
+#preview-content .author, #setText .author {
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.author p,
+#preview-content .author p, #setText .author p {
+  min-width: 30%;
+  max-width: 50%;
+  padding: 0 7px;
+}
+.author > p > span,
+#preview-content .author > p > span, #setText .author > p > span {
+  display: block;
+  text-align: center;
+}
+.section-title,
+#preview-content .section-title, #setText .section-title {
+  margin-top: 1.5em;
+}
+.abstract,
+#preview-content .abstract, #setText .abstract {
+  text-align: justify;
+  margin-bottom: 1em;
+}
+.abstract p,
+#preview-content .abstract p, #setText .abstract p {
+  margin-bottom: 0;
+}
+#preview-content sup, #setText sup {
+  top: -.5em;
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+.text-url,
+#preview-content .text-url, #setText .text-url {
+  color: #0B93ff;
+  cursor: text;
+  pointer-events: none;
+}
+.text-url a:hover,
+#preview-content .text-url a:hover, #setText .text-url a:hover {
+  color: #0B93ff;
+}
+mark,
+#preview-content mark, #setText mark {
+  background-color: #feffe6;
+}
+span[data-underline-type] mark,
+#preview-content span[data-underline-type] mark,
+#setText span[data-underline-type] mark {
+  background: inherit;
+  background-color: #feffe6;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+*[data-has-dotfill] {
+  position: relative;
+  overflow: hidden;
+}
+*[data-has-dotfill] .dotfill::after {
+  position: absolute;
+  padding-left: .25ch;
+  content: " . . . . . . . . . . . . . . . . . . . "
+      ". . . . . . . . . . . . . . . . . . . . . . . "
+      ". . . . . . . . . . . . . . . . . . . . . . . "
+      ". . . . . . . . . . . . . . . . . . . . . . . "
+      ". . . . . . . . . . . . . . . . . . . . . . . "
+      ". . . . . . . . . . . . . . . . . . . . . . . "
+      ". . . . . . . . . . . . . . . . . . . . . . . ";
+  text-align: right;
+}
+.smiles,
+#preview-content .smiles, #setText .smiles {
+  text-align: center;
+}
+div.svg-container,
+#preview-content > div.svg-container,
+#setText > div.svg-container {
+  display: flex;
+  justify-content: center;
+}
+@media print {
+  #preview {
+    font-size: 10pt !important;
+  }
+  .math-block svg, .math-inline svg {
+    shape-rendering: crispEdges;
+    margin-top: 1px;
+  }
+  #preview-content img, #setText img {
+    display: block;
+  }
+  #preview-content .figure_img img, #setText .figure_img img {
+    display: inline;
+  }
+  #preview-content h1, #preview-content h2, #preview-content h3,
+  #preview-content h4, #preview-content h5, #preview-content h6,
+  #setText h1, #setText h2, #setText h3,
+  #setText h4, #setText h5, #setText h6 {
+    page-break-inside: avoid;
+    position: relative;
+    border: 2px solid transparent;
+  }
+  #preview-content h1::after, #preview-content h2::after, #preview-content h3::after,
+  #preview-content h4::after, #preview-content h5::after, #preview-content h6::after,
+  #setText h1::after, #setText h2::after, #setText h3::after,
+  #setText h4::after, #setText h5::after, #setText h6::after {
+    content: "";
+    display: block;
+    height: 100px;
+    margin-bottom: -100px;
+    position: relative;
+  }
+}
+#preview-content code, #setText code {
+  font-family: Inconsolata;
+  font-size: inherit;
+  display: initial;
+  background: #f8f8fa;
+}
+#preview-content .mmd-highlight code, #setText .mmd-highlight code,
+#preview-content pre.mmd-highlight code, #setText pre.mmd-highlight code {
+  background-color: transparent;
+}
+#preview-content pre code, #setText pre code {
+  font-family: 'DM Mono', Inconsolata, monospace;
+  color: #333;
+  font-size: 15px;
+}
+.hljs-comment, .hljs-quote,
+#preview-content .hljs-comment, #setText .hljs-comment,
+#preview-content .hljs-quote, #setText .hljs-quote {
+  color: #998;
+  font-style: italic;
+}
+.hljs-command,
+#preview-content .hljs-command, #setText .hljs-command {
+  color: #005cc5;
+}
+.hljs-keyword, .hljs-selector-tag, .hljs-subst,
+#preview-content .hljs-keyword, #setText .hljs-keyword,
+#preview-content .hljs-selector-tag, #setText .hljs-selector-tag,
+#preview-content .hljs-subst, #setText .hljs-subst {
+  color: #d73a49;
+  font-weight: bold;
+}
+.hljs-number, .hljs-literal, .hljs-variable,
+.hljs-template-variable, .hljs-tag .hljs-attr,
+#preview-content .hljs-number, #setText .hljs-number,
+#preview-content .hljs-literal, #setText .hljs-literal,
+#preview-content .hljs-variable, #setText .hljs-variable,
+#preview-content .hljs-template-variable, #setText .hljs-template-variable,
+#preview-content .hljs-tag .hljs-attr, #setText .hljs-tag .hljs-attr {
+  color: #005cc5;
+}
+.hljs-string, .hljs-doctag,
+#preview-content .hljs-string, #setText .hljs-string,
+#preview-content .hljs-doctag, #setText .hljs-doctag {
+  color: #24292e;
+}
+.hljs-title, .hljs-section, .hljs-selector-id,
+#preview-content .hljs-title, #setText .hljs-title,
+#preview-content .hljs-section, #setText .hljs-section,
+#preview-content .hljs-selector-id, #setText .hljs-selector-id {
+  color: #6f42c1;
+  font-weight: bold;
+}
+.hljs-subst,
+#preview-content .hljs-subst, #setText .hljs-subst {
+  font-weight: normal;
+}
+.hljs-type, .hljs-class .hljs-title,
+#preview-content .hljs-type, #setText .hljs-type,
+#preview-content .hljs-class .hljs-title, #setText .hljs-class .hljs-title {
+  color: #458;
+  font-weight: bold;
+}
+.hljs-tag, .hljs-name, .hljs-attribute,
+#preview-content .hljs-tag, #setText .hljs-tag,
+#preview-content .hljs-name, #setText .hljs-name,
+#preview-content .hljs-attribute, #setText .hljs-attribute {
+  color: #000080;
+  font-weight: normal;
+}
+.hljs-regexp, .hljs-link,
+#preview-content .hljs-regexp, #setText .hljs-regexp,
+#preview-content .hljs-link, #setText .hljs-link {
+  color: #009926;
+}
+.hljs-symbol, .hljs-bullet,
+#preview-content .hljs-symbol, #setText .hljs-symbol,
+#preview-content .hljs-bullet, #setText .hljs-bullet {
+  color: #990073;
+}
+.hljs-built_in, .hljs-builtin-name,
+#preview-content .hljs-built_in, #setText .hljs-built_in,
+#preview-content .hljs-builtin-name, #setText .hljs-builtin-name {
+  color: #24292e;
+}
+.hljs-meta,
+#preview-content .hljs-meta, #setText .hljs-meta {
+  color: #999;
+  font-weight: bold;
+}
+.hljs-meta-keyword,
+#preview-content .hljs-meta-keyword, #setText .hljs-meta-keyword {
+  color: #d73a49;
+}
+.hljs-meta-string,
+#preview-content .hljs-meta-string, #setText .hljs-meta-string {
+  color: #032f62;
+}
+.hljs-deletion,
+#preview-content .hljs-deletion, #setText .hljs-deletion {
+  background: #fdd;
+}
+.hljs-addition,
+#preview-content .hljs-addition, #setText .hljs-addition {
+  background: #dfd;
+}
+.hljs-emphasis,
+#preview-content .hljs-emphasis, #setText .hljs-emphasis {
+  font-style: italic;
+}
+.hljs-strong,
+#preview-content .hljs-strong, #setText .hljs-strong {
+  font-weight: bold;
+}
+.table_tabular,
+#preview-content .table_tabular, #setText .table_tabular {
+  overflow-x: auto;
+  padding: 0 2px 0.5em 2px;
+}
+.tabular,
+#preview-content .tabular, #setText .tabular {
+  display: inline-table !important;
+  width: auto;
+  table-layout: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0 0 1em;
+  font-size: inherit;
+  height: fit-content;
+}
+.tabular th,
+#preview-content .tabular th, #setText .tabular th {
+  border: none !important;
+  padding: 6px 13px;
+  background-color: transparent;
+  font-weight: bold;
+}
+.tabular tr,
+#preview-content .tabular tr, #setText .tabular tr {
+  border-top: none !important;
+  border-bottom: none !important;
+  background-color: transparent;
+}
+.tabular td,
+#preview-content .tabular td, #setText .tabular td {
+  border-style: none !important;
+  background-color: #fff;
+  border-color: #000 !important;
+  word-break: keep-all;
+  padding: 0.1em 0.5em !important;
+}
+.tabular td > p,
+#preview-content .tabular td > p, #setText .tabular td > p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.tabular td._empty,
+#preview-content .tabular td._empty, #setText .tabular td._empty {
+  height: 1.3em;
+}
+.tabular td .f,
+#preview-content .tabular td .f, #setText .tabular td .f {
+  opacity: 0;
+}
+#preview-content .sub-table table, #setText .sub-table table {
+  margin-bottom: 0;
+}
+html[data-theme="dark"] .tabular tr,
+html[data-theme="dark"] #preview-content .tabular tr, html[data-theme="dark"] #setText .tabular tr,
+html[data-theme="dark"] .tabular td,
+html[data-theme="dark"] #preview-content .tabular td, html[data-theme="dark"] #setText .tabular td {
+  background-color: #202226;
+  border-color: #fff !important;
+}
+.figure_img,
+#preview-content .figure_img, #setText .figure_img {
+  margin-bottom: 0.5em;
+  overflow-x: auto;
+}
+div.figure_img img,
+#preview-content div.figure_img img, #setText div.figure_img img {
+  display: inline;
+  margin: 0;
+}
+ol.enumerate, ul.itemize,
+#preview-content ol.enumerate, #setText ol.enumerate,
+#preview-content ul.itemize, #setText ul.itemize {
+  padding-inline-start: 40px;
+  margin: 0 0 1em 0;
+}
+li > ol.enumerate, li > ul.itemize,
+#preview-content li > ol.enumerate, #setText li > ol.enumerate,
+#preview-content li > ul.itemize, #setText li > ul.itemize {
+  margin: 0;
+}
+ul.itemize > li,
+#preview-content ul.itemize > li, #setText ul.itemize > li {
+  position: relative;
+  min-height: 1.4em;
+  margin-bottom: 0;
+}
+.enumerate > .li_enumerate,
+#preview-content .enumerate > .li_enumerate, #setText .enumerate > .li_enumerate {
+  margin-bottom: 0;
+}
+.itemize > li > span.li_level, .li_enumerate.not_number > span.li_level,
+#preview-content .itemize > li > span.li_level, #setText .itemize > li > span.li_level,
+#preview-content .li_enumerate.not_number > span.li_level, #setText .li_enumerate.not_number > span.li_level {
+  position: absolute;
+  right: 100%;
+  white-space: nowrap;
+  width: max-content;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.li_enumerate.not_number,
+#preview-content .li_enumerate.not_number, #setText .li_enumerate.not_number {
+  position: relative;
+  display: inline-block;
+  list-style-type: none;
+  min-height: 1.4em;
+}
+.itemize > li > span.li_level .math-inline,
+.enumerate > li > span.li_level .math-inline,
+#preview-content .itemize > li > span.li_level .math-inline,
+#setText .itemize > li > span.li_level .math-inline,
+#preview-content .enumerate > li > span.li_level .math-inline,
+#setText .enumerate > li > span.li_level .math-inline {
+  display: inline-block;
+}
+#preview {
+  font-family: 'CMU Serif', 'Georgia', Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  visibility: visible;
+  word-break: break-word;
+  padding: 2.5em;
+  max-width: 800px;
+  margin: auto;
+  box-sizing: content-box;
+}
+#preview h1, #preview h2, #preview h3, #preview h4, #preview h5, #preview strong {
+  font-family: 'CMU Serif Bold', 'Georgia', Helvetica, Arial, sans-serif;
+}
+#preview i, #preview em {
+  font-family: 'CMU Serif Italic', 'Georgia', Helvetica, Arial, sans-serif;
+}
+.mmd-menu {
+  max-width: 320px;
+  position: absolute;
+  background-color: white;
+  color: black;
+  width: auto;
+  padding: 5px 0;
+  border: 1px solid #E5E6EB;
+  margin: 0;
+  cursor: default;
+  font: menu;
+  text-align: left;
+  text-indent: 0;
+  text-transform: none;
+  line-height: normal;
+  letter-spacing: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  float: none;
+  z-index: 201;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  box-shadow: 0 10px 20px #808080;
+  -webkit-box-shadow: 0 10px 20px #808080;
+  -moz-box-shadow: 0 10px 20px #808080;
+  -khtml-box-shadow: 0 10px 20px #808080;
+}
+.mmd-menu:focus { outline: none; }
+.mmd-menu.mmd-menu-sm {
+  max-width: 100vw;
+  padding-bottom: 34px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -khtml-border-radius: 0;
+}
+.mmd-menu-item-icon {
+  color: #1E2029;
+  margin-left: auto;
+  align-items: center;
+  display: none;
+  flex-shrink: 0;
+}
+.mmd-menu-item {
+  padding: 8px 1.25rem;
+  display: flex;
+  background: transparent;
+  height: 52px;
+  max-height: 52px;
+}
+.mmd-menu-item:focus { outline: none; }
+.mmd-menu-item.active {
+  background-color: #e1e0e5;
+}
+.mmd-menu-item.active .mmd-menu-item-icon {
+  display: flex;
+}
+.mmd-menu-item-container {
+  overflow: hidden;
+}
+.mmd-menu-item-title {
+  color: #1E2029;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 20px;
+}
+.mmd-menu-item-value {
+  color: #7d829c;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 16px;
+}
+html[data-theme="dark"] .mmd-menu-item-title {
+  color: #ebefe7;
+}
+html[data-theme="dark"] .mmd-menu-item.active .mmd-menu-item-title {
+  color: #1E2029;
+}
+html[data-theme="dark"] .mmd-menu {
+  background-color: #33363a;
+}
+.mmd-context-menu-overlay {
+  background: rgba(0, 0, 0, 0.56);
+}
+.ClipboardButton {
+  padding: 0;
+  margin: 0.5rem;
+  display: inline-block;
+  cursor: pointer;
+  color: rgb(36, 41, 47);
+  background: rgb(246, 248, 250);
+  border-radius: 6px;
+  border: 1px solid rgba(31, 35, 40, 0.15);
+  box-shadow: rgba(31, 35, 40, 0.04) 0 1px 0 0, rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
+  position: relative;
+}
+.ClipboardButton:hover {
+  background-color: rgb(243, 244, 246);
+  border-color: rgba(31, 35, 40, 0.15);
+  transition-duration: .1s;
+}
+td .mmd-clipboard-copy-container {
+  line-height: 0;
+}
+td .ClipboardButton {
+  margin: 1px;
+  line-height: 0;
+}
+td .ClipboardButton .mmd-clipboard-icon {
+  margin: 1px !important;
+  transform: scale(0.6);
+}
+.mmd-clipboard-icon {
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+.mmd-clipboard-copy-icon {
+  color: rgb(101, 109, 118);
+}
+.mmd-clipboard-check-icon {
+  color: rgb(26, 127, 55);
+}
+.mmd-tooltipped-no-delay:hover::before,
+.mmd-tooltipped-no-delay:hover::after {
+  animation-delay: 0s;
+}
+.mmd-tooltipped:hover::before,
+.mmd-tooltipped:hover::after {
+  display: inline-block;
+  text-decoration: none;
+  animation-name: tooltip-appear;
+  animation-duration: .1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-delay: .4s;
+}
+.mmd-tooltipped-w::before {
+  top: 50%;
+  bottom: 50%;
+  left: -7px;
+  margin-top: -6px;
+  border-left-color: rgb(36, 41, 47);
+}
+.mmd-tooltipped::before {
+  position: absolute;
+  z-index: 1000001;
+  display: none;
+  width: 0;
+  height: 0;
+  color: rgb(36, 41, 47);
+  pointer-events: none;
+  content: "";
+  border: 6px solid transparent;
+  opacity: 0;
+}
+.mmd-tooltipped-w::after {
+  right: 100%;
+  bottom: 50%;
+  margin-right: 6px;
+  transform: translateY(50%);
+}
+.mmd-tooltipped::after {
+  position: absolute;
+  z-index: 1000000;
+  display: none;
+  padding: 0.5em 0.75em;
+  font: normal normal 11px/1.5 'CMU Serif', 'Georgia', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: break-word;
+  white-space: pre;
+  pointer-events: none;
+  content: attr(aria-label);
+  background: rgb(36, 41, 47);
+  border-radius: 6px;
+  opacity: 0;
+}</style>
+</head>
+<body>
+  <div id="preview" class="preview scrollEditor">
+    <div id="container-ruller" />
+    <div id="preview-content">
+      <h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-0 preview-line 0" id="s3.4-probability-density-functions" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1">
+S3.4 Probability Density Functions</h2>
+<div class="preview-paragraph-2 preview-line 2" data_line_start="2" data_line_end="2" data_line="2,3" count_line="1">The defus of probability density fus for continuous rovis is similar to that for discrete rovis, except for a couple of 'surprises'!</div>
+<div class="preview-paragraph-4 preview-line 4" data_line_start="4" data_line_end="4" data_line="4,5" count_line="1">Defo 3.4 A fn <span class="math-inline ">$f: \mathbb{R} \rightarrow \mathbb{R}$</span> is called a probability density function of the continuous random variable <span class="math-inline ">$X$</span> iff</div>
+<div class="preview-paragraph-5 preview-line 5 6 7" data_line_start="5" data_line_end="7" data_line="5,8" count_line="3"><span class="math-block ">$$
+P([a, b])=\int_{a}^{b} f(x) d x
+$$</span></div>
+<div class="preview-paragraph-9 preview-line 9 10" data_line_start="9" data_line_end="10" data_line="9,11" count_line="2">Often calted densities or oust PDFis.<br>
+Note that <span class="math-inline ">$f(c)$</span> does not give <span class="math-inline ">$P(X=c)$</span> as it does in the discrete case.</div>
+<div class="preview-paragraph-12 preview-line 12" data_line_start="12" data_line_end="12" data_line="12,13" count_line="1">Fer cts rovi's we always have</div>
+<div class="preview-paragraph-13 preview-line 13 14 15" data_line_start="13" data_line_end="15" data_line="13,16" count_line="3"><span class="math-block ">$$
+P(X=c)=0 \quad \text { for any } c \in \mathbb{R} \text {. }
+$$</span></div>
+<div class="preview-paragraph-16 preview-line 16" data_line_start="16" data_line_end="16" data_line="16,17" count_line="1">(e.g. the highwray example).</div>
+<div class="preview-paragraph-18 preview-line 18" data_line_start="18" data_line_end="18" data_line="18,19" count_line="1">Because of this, we can change 'same' of the values of <span class="math-inline ">$f(x)$</span> and still have a PDF for <span class="math-inline ">$X$</span>. Hence, the PDF of <span class="math-inline ">$X$</span> is not uniquely defined las it is in the discrete case).</div>
+<div class="preview-paragraph-20 preview-line 20" data_line_start="20" data_line_end="20" data_line="20,21" count_line="1">Similarly, it doesn't matter from the point of viour of probability whether or not we include the endpts of an interval.</div>
+<div class="preview-paragraph-22 preview-line 22" data_line_start="22" data_line_end="22" data_line="22,23" count_line="1">Thm 3.4 If <span class="math-inline ">$x$</span> is a cto r.v. and <span class="math-inline ">$a, b \in \mathbb{R}$</span>, then</div>
+<div class="preview-paragraph-23 preview-line 23 24 25" data_line_start="23" data_line_end="25" data_line="23,26" count_line="3"><span class="math-block ">$$
+P([a, b])=P([a, b))=P((a, b])=P((a, b)) .
+$$</span></div>
+<div class="preview-paragraph-27 preview-line 27" data_line_start="27" data_line_end="27" data_line="27,28" count_line="1">We also have an anologice of Thm 3.1 from the last sectim.</div>
+<div class="preview-paragraph-29 preview-line 29" data_line_start="29" data_line_end="29" data_line="29,30" count_line="1">Thm 3.5 A fo <span class="math-inline ">$f$</span> can serve as the PDF of a cts rov. <span class="math-inline ">$x$</span> if its values, <span class="math-inline ">$f(x)$</span>, satisfy</div>
+<ol class="preview-paragraph-30 preview-line 30 31 32" data_line_start="30" data_line_end="32" data_line="30,33" count_line="3">
+<li><span class="math-inline ">$f(x) \geqslant 0,-\infty&lt;x&lt;\infty$</span></li>
+<li><span class="math-inline ">$\int_{-\infty}^{\infty} f(x) d x=1$</span>.</li>
+</ol>
+<div class="preview-paragraph-33 preview-line 33" data_line_start="33" data_line_end="33" data_line="33,34" count_line="1">Ex. If <span class="math-inline ">$x$</span> has the density</div>
+<div class="preview-paragraph-34 preview-line 34 35 36 37 38 39" data_line_start="34" data_line_end="39" data_line="34,40" count_line="6"><span class="math-block ">$$
+f(x)=\left\{\begin{array}{l}
+k e^{-3 x}, x&gt;0 \\
+0, x \leq 0
+\end{array},\right.
+$$</span></div>
+<div class="preview-paragraph-40 preview-line 40" data_line_start="40" data_line_end="40" data_line="40,41" count_line="1">find <span class="math-inline ">$k$</span> and <span class="math-inline ">$P([0.5,1])$</span>.</div>
+<div class="preview-paragraph-42 preview-line 42" data_line_start="42" data_line_end="42" data_line="42,43" count_line="1">Suln. By Thm 3.5, must have</div>
+<div class="preview-paragraph-43 preview-line 43 44 45" data_line_start="43" data_line_end="45" data_line="43,46" count_line="3"><span class="math-block ">$$
+\int_{-\infty}^{\infty} f(x) d x=1 .
+$$</span></div>
+<div class="preview-paragraph-47 preview-line 47" data_line_start="47" data_line_end="47" data_line="47,48" count_line="1">Now <span class="math-inline ">$\int_{-\infty}^{\infty} f(x) d x=\int_{0}^{\infty} k e^{-3 x} d x$</span></div>
+<div class="preview-paragraph-48 preview-line 48 49 50 51 52 53 54" data_line_start="48" data_line_end="54" data_line="48,55" count_line="7"><span class="math-block ">$$
+\begin{aligned}
+&amp; =\lim _{t \rightarrow \infty} \int_{0}^{t} k e^{-3 x} d x \\
+&amp; =k \lim _{t \rightarrow \infty} \int_{0}^{t} e^{-3 x} d x \\
+&amp; =k \lim _{t \rightarrow \infty}\left[\frac{e^{-3 x}}{-3}\right]_{0}^{t}
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-55 preview-line 55 56 57 58 59 60 61" data_line_start="55" data_line_end="61" data_line="55,62" count_line="7"><span class="math-block ">$$
+\begin{aligned}
+&amp; =k \lim _{t \rightarrow \infty}\left[\frac{e^{-3 t}}{-3}-\left(\frac{-e^{0}}{3}\right)\right] \\
+&amp; =k \lim _{t \rightarrow \infty}\left(\frac{1}{3}-\frac{e^{-3 t}}{3}\right) \\
+&amp; =\frac{k}{3} .
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-63 preview-line 63" data_line_start="63" data_line_end="63" data_line="63,64" count_line="1">Hence in order to have <span class="math-inline ">$\int_{-\infty}^{\infty} f(x) d x=1$</span>, we need</div>
+<div class="preview-paragraph-64 preview-line 64 65 66 67 68 69" data_line_start="64" data_line_end="69" data_line="64,70" count_line="6"><span class="math-block ">$$
+\begin{array}{ll} 
+&amp; \frac{k}{3}=1 \\
+l &amp; k=3 .
+\end{array}
+$$</span></div>
+<div class="preview-paragraph-71 preview-line 71" data_line_start="71" data_line_end="71" data_line="71,72" count_line="1">We then get</div>
+<div class="preview-paragraph-72 preview-line 72 73 74 75 76 77" data_line_start="72" data_line_end="77" data_line="72,78" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+P([0.5,1]) &amp; =\int_{0.5}^{1} 3 e^{-3 x} d x=\left[-e^{-3 x}\right]_{0.5}^{1} \\
+&amp; =-e^{-3}+e^{-0.5} \approx 0.173 .
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-79 preview-line 79" data_line_start="79" data_line_end="79" data_line="79,80" count_line="1">Actually, the r.v. in this example connet assume negather ralues, but we extencled its PDF so all of <span class="math-inline ">$\mathbb{R}$</span>.</div>
+<div class="preview-paragraph-81 preview-line 81" data_line_start="81" data_line_end="81" data_line="81,82" count_line="1">As in the discrete cave, we are often interested in <span class="math-inline ">$P(X \leqslant x)$</span>.</div>
+<div class="preview-paragraph-83 preview-line 83" data_line_start="83" data_line_end="83" data_line="83,84" count_line="1">Defe 3.5 If <span class="math-inline ">$x$</span> is a cto rov. and the value of a PDF for <span class="math-inline ">$x$</span> at <span class="math-inline ">$t$</span> is <span class="math-inline ">$f(t)$</span>, then the <span class="math-inline ">$f_{0}$</span> given by</div>
+<div class="preview-paragraph-84 preview-line 84 85 86" data_line_start="84" data_line_end="86" data_line="84,87" count_line="3"><span class="math-block ">$$
+F(x)=P(X \leqslant x)=\int_{-\infty}^{x} f(t) d t, \quad-\infty&lt;t&lt;\infty
+$$</span></div>
+<div class="preview-paragraph-87 preview-line 87" data_line_start="87" data_line_end="87" data_line="87,88" count_line="1">is called the cumulative distribution function (CDF) of <span class="math-inline ">$X$</span>.</div>
+<div class="preview-paragraph-89 preview-line 89 90" data_line_start="89" data_line_end="90" data_line="89,91" count_line="2">Note that although <span class="math-inline ">$f(t)$</span> is not uniquely defined, <span class="math-inline ">$F(x)$</span> is as <span class="math-inline ">$P(x \leq x)$</span> is uniquely defined!<br>
+As with the discrete care we can say that</div>
+<div class="preview-paragraph-91 preview-line 91 92 93 94 95 96" data_line_start="91" data_line_end="96" data_line="91,97" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+&amp; \lim _{x \rightarrow-\infty} F(x)=0, \lim _{x \rightarrow \infty} F(x)=1 \quad \text { and } \\
+&amp; a, b \in \mathbb{R}, a&lt;b \Rightarrow F(a) \leqslant F(b)
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-97 preview-line 97" data_line_start="97" data_line_end="97" data_line="97,98" count_line="1">(Almort) Formally, a continuous randam variable is are whose CDF is continuous.</div>
+<div class="preview-paragraph-99 preview-line 99" data_line_start="99" data_line_end="99" data_line="99,100" count_line="1">Also have</div>
+<div class="preview-paragraph-101 preview-line 101" data_line_start="101" data_line_end="101" data_line="101,102" count_line="1">Thm 3.6 If <span class="math-inline ">$f(x), F(x)$</span> are a pof and the CDF for a to r.v. <span class="math-inline ">$X$</span>, then</div>
+<div class="preview-paragraph-102 preview-line 102 103 104" data_line_start="102" data_line_end="104" data_line="102,105" count_line="3"><span class="math-block ">$$
+P([0, b])=F(b)-F(a), \quad a, b \in \mathbb{R}, \quad a \leqslant b
+$$</span></div>
+<div class="preview-paragraph-105 preview-line 105" data_line_start="105" data_line_end="105" data_line="105,106" count_line="1">and</div>
+<div class="preview-paragraph-106 preview-line 106 107 108" data_line_start="106" data_line_end="108" data_line="106,109" count_line="3"><span class="math-block ">$$
+f(x)=\frac{d F(x)}{d x}
+$$</span></div>
+<div class="preview-paragraph-110 preview-line 110" data_line_start="110" data_line_end="110" data_line="110,111" count_line="1">Wher this cleviratire expes.</div>
+<div class="preview-paragraph-112 preview-line 112 113" data_line_start="112" data_line_end="113" data_line="112,114" count_line="2">PF. (Not fully rigorus)<br>
+Far first part</div>
+<div class="preview-paragraph-114 preview-line 114 115 116" data_line_start="114" data_line_end="116" data_line="114,117" count_line="3"><span class="math-block ">$$
+(-\infty, b]=(-\infty, a) \cup[a, b] \quad \text { (dijoint) }
+$$</span></div>
+<div class="preview-paragraph-118 preview-line 118" data_line_start="118" data_line_end="118" data_line="118,119" count_line="1">So</div>
+<div class="preview-paragraph-119 preview-line 119 120 121 122 123 124" data_line_start="119" data_line_end="124" data_line="119,125" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+P((-\infty, b]) &amp; =P((-\infty, a))+P([a, b]) \\
+&amp; =P((-\infty, a])+P([a, b]) \text { by Thm } 3.4
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-125 preview-line 125 126" data_line_start="125" data_line_end="126" data_line="125,127" count_line="2">u <span class="math-inline ">$\quad F(b)=F(a)+P([a, b])$</span>, so<br>
+<span class="math-inline ">$P([a, b])=F(b)-F(a)$</span> as desired.</div>
+<div class="preview-paragraph-128 preview-line 128 129" data_line_start="128" data_line_end="129" data_line="128,130" count_line="2">For second part, assume <span class="math-inline ">$f$</span> is cts at <span class="math-inline ">$x$</span>.<br>
+⇒ If <span class="math-inline ">$t$</span> is near <span class="math-inline ">$x$</span>, then <span class="math-inline ">$F(t) \approx f(x)$</span>.</div>
+<div class="preview-paragraph-131 preview-line 131" data_line_start="131" data_line_end="131" data_line="131,132" count_line="1">Now suppose th is <span class="math-inline ">$\underset{(\neq 0)}{\text { small }}$</span> (tre or-ve).</div>
+<div class="preview-paragraph-132 preview-line 132 133 134 135 136 137 138 139" data_line_start="132" data_line_end="139" data_line="132,140" count_line="8"><span class="math-block ">$$
+\begin{aligned}
+\frac{F(x+h)-F(x)}{h} &amp; =\frac{1}{h}\left(\int_{-\infty}^{x+h} f(t) d t-\int_{-\infty}^{x} f(t) d t\right) \\
+&amp; =\frac{1}{h} \int_{x}^{x+h} f(t) d t \\
+&amp; \approx \frac{1}{h} h f(x) \\
+&amp; =f(x) .
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-141 preview-line 141 142 143" data_line_start="141" data_line_end="143" data_line="141,144" count_line="3">Hence if <span class="math-inline ">$f$</span> is ch. at <span class="math-inline ">$x$</span>,<br>
+<span class="math-inline ">$\lim _{h \rightarrow 0} \frac{F(x+h)-F(x)}{h}$</span> exists (e) <span class="math-inline ">$F$</span> is differentiable at <span class="math-inline ">$x$</span> )<br>
+and</div>
+<div class="preview-paragraph-144 preview-line 144 145 146" data_line_start="144" data_line_end="146" data_line="144,147" count_line="3"><span class="math-block ">$$
+\frac{d F(x)}{d x}=f(x) .
+$$</span></div>
+<div class="preview-paragraph-148 preview-line 148" data_line_start="148" data_line_end="148" data_line="148,149" count_line="1">Ex. Find the CDF of the row. <span class="math-inline ">$x$</span> of the last example and ux it to revaluate <span class="math-inline ">$P([0,5,1])$</span>.</div>
+<div class="preview-paragraph-150 preview-line 150" data_line_start="150" data_line_end="150" data_line="150,151" count_line="1">Suln. For <span class="math-inline ">$x&gt;0$</span></div>
+<div class="preview-paragraph-151 preview-line 151 152 153" data_line_start="151" data_line_end="153" data_line="151,154" count_line="3"><span class="math-block ">$$
+F(x)=\int_{-\infty}^{x} f(t) d t=\int_{0}^{x} 3 e^{-3 t} d t=\left[-e^{-3 t}\right]_{0}^{x}=1-e^{-3 x}
+$$</span></div>
+<div class="preview-paragraph-154 preview-line 154" data_line_start="154" data_line_end="154" data_line="154,155" count_line="1">and since <span class="math-inline ">$F(x)=0$</span> for <span class="math-inline ">$x \leqslant 0$</span>, we can write</div>
+<div class="preview-paragraph-155 preview-line 155 156 157" data_line_start="155" data_line_end="157" data_line="155,158" count_line="3"><span class="math-block ">$$
+F(x)= \begin{cases}0, &amp; x \leqslant 0 \\ 1-e^{-3 x}, &amp; x&gt;0\end{cases}
+$$</span></div>
+<div class="preview-paragraph-159 preview-line 159" data_line_start="159" data_line_end="159" data_line="159,160" count_line="1">By Thm 3.9, <span class="math-inline ">$\quad P([0.5,1])=F(1)-F(0.5)$</span></div>
+<div class="preview-paragraph-160 preview-line 160 161 162 163 164 165 166" data_line_start="160" data_line_end="166" data_line="160,167" count_line="7"><span class="math-block ">$$
+\begin{aligned}
+&amp; =\left(1-e^{-3}\right)-\left(1-e^{-1.5}\right) \\
+= &amp; e^{-1.5}-e^{-3} \\
+= &amp; 0.173
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-167 preview-line 167" data_line_start="167" data_line_end="167" data_line="167,168" count_line="1">(some conswer as before).</div>
+<div class="preview-paragraph-169 preview-line 169" data_line_start="169" data_line_end="169" data_line="169,170" count_line="1">Ex. Find a PDF for the r.w. whose CDF is</div>
+<div class="preview-paragraph-170 preview-line 170 171 172 173 174 175 176" data_line_start="170" data_line_end="176" data_line="170,177" count_line="7"><span class="math-block ">$$
+F(x)=\left\{\begin{array}{lc}
+0, &amp; x \leqslant 0 \\
+x, &amp; 0&lt;x&lt;1 \\
+1, &amp; x \geqslant 1
+\end{array}\right.
+$$</span></div>
+<div class="preview-paragraph-177 preview-line 177" data_line_start="177" data_line_end="177" data_line="177,178" count_line="1"><figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/5b2eda30-6c37-4f4b-9446-bbb9534962f4-09.jpg?height=510&amp;width=658&amp;top_left_y=265&amp;top_left_x=1331" alt="" data-align="center"></figure></div>
+<div class="preview-paragraph-179 preview-line 179 180" data_line_start="179" data_line_end="180" data_line="179,181" count_line="2">Saln. <span class="math-inline ">$F$</span> is diff everywhere except at 0,1 .<br>
+By Thm 3.9, we have</div>
+<div class="preview-paragraph-181 preview-line 181 182 183" data_line_start="181" data_line_end="183" data_line="181,184" count_line="3"><span class="math-block ">$$
+f(x)= \begin{cases}0, &amp; x&lt;0 \\ 1, &amp; 0&lt;x&lt;1 \\ 0, &amp; x&gt;1\end{cases}
+$$</span></div>
+<div class="preview-paragraph-185 preview-line 185 186 187" data_line_start="185" data_line_end="187" data_line="185,188" count_line="3">Still need to define <span class="math-inline ">$f$</span> at 0,1. Hewerer, as we saw earler, the particular values of <span class="math-inline ">$f$</span> at 0,1 will not affect the probs of events.<br>
+So set <span class="math-inline ">$f(0)=f(1)=1$</span>.<br>
+<figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/5b2eda30-6c37-4f4b-9446-bbb9534962f4-09.jpg?height=699&amp;width=986&amp;top_left_y=2021&amp;top_left_x=162" alt="" data-align="center"></figure></div>
+<div class="preview-paragraph-189 preview-line 189 190 191" data_line_start="189" data_line_end="191" data_line="189,192" count_line="3">Also have rivis which are neither discrete nor cts.<br>
+o.g. Consrder a r.v. with CDF<br>
+<figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/5b2eda30-6c37-4f4b-9446-bbb9534962f4-10.jpg?height=661&amp;width=1034&amp;top_left_y=693&amp;top_left_x=287" alt="" data-align="center"></figure></div>
+<div class="preview-paragraph-193 preview-line 193" data_line_start="193" data_line_end="193" data_line="193,194" count_line="1">This r.v. takes on uncountably many ralues so it is not disurete.</div>
+<div class="preview-paragraph-195 preview-line 195" data_line_start="195" data_line_end="195" data_line="195,196" count_line="1">Hewerer, <span class="math-inline ">$P\left(\left\{\frac{1}{2}\right\}\right)=\frac{1}{2}&gt;0$</span>, so it is not co eitter (prob of <span class="math-inline ">$f / \frac{1}{2}$</span> ) is the height of the jump in the CDF at <span class="math-inline ">$\frac{1}{2}$</span> ).</div>
+<div class="preview-paragraph-197 preview-line 197" data_line_start="197" data_line_end="197" data_line="197,198" count_line="1">In our course, we sholl limit our selves to roves which are discrete or cts with the CDFls of the cts. rov's being precouns differentiable (u differentiable on all of <span class="math-inline ">$\mathbb{R}$</span> exupt (possibly) at finitely many values),</div>
+
+    </div>
+  </div>
+  <script>
+(() => {
+  window.MathpixRenderConfig = {"width":1200,"outMath":{"output_format":"svg","include_svg":true,"include_asciimath":true,"include_latex":true,"include_mathml":true,"include_mathml_word":true,"include_tsv":true,"include_table_markdown":true,"include_smiles":true},"accessibility":{"assistive_mml":true,"include_speech":false}};
+  const autoScript = document.createElement('script');
+  autoScript.src = "https://cdn.jsdelivr.net/npm/mathpix-markdown-it@2.0.37/es5/browser/auto-render.js";
+  autoScript.onload = () => {
+    console.log("[Mathpix] auto-render loaded");
+  };
+  autoScript.onerror = () => {
+    console.error("[Mathpix] Failed to load auto-render script:", autoScript.src);
+  };
+  document.head.append(autoScript);
+})();
+</script>
+    <script>
+(() => {
+  const ctxScript = document.createElement('script');
+  ctxScript.src = "https://cdn.jsdelivr.net/npm/mathpix-markdown-it@2.0.37/es5/context-menu.js";
+  ctxScript.onload = () => {
+    const init = () => {
+      window.addListenerContextMenuEvents?.();
+    };
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init, { once: true });
+    } else {
+      init();
+    }
+    if (!window.__mathpixContextMenuKeyHandlerInstalled) {
+      window.__mathpixContextMenuKeyHandlerInstalled = true;
+      document.addEventListener("keydown", (e) => {
+        if (e.key !== "ArrowUp" && e.key !== "ArrowDown") return;
+        const el = document.querySelector(".mmd-menu");
+        if (el) e.preventDefault();
+      });
+    }
+  };
+  ctxScript.onerror = () => {
+    console.error("[Mathpix] Failed to load context-menu script:", ctxScript.src);
+  };
+  document.head.appendChild(ctxScript);
+})();
+</script>
+</body>
+</html>
