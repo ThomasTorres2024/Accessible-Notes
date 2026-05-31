@@ -254,7 +254,7 @@ mjx-status {
 }
 
 foreignObject[data-mjx-xml] {
-  font-family: initial;
+  font-family: sans-serif;
   line-height: normal;
   overflow: visible;
 }
@@ -544,7 +544,7 @@ div.svg-container,
   }
 }
 #preview-content code, #setText code {
-  font-family: Inconsolata;
+  font-family: Insans-serifconsolata;
   font-size: inherit;
   display: initial;
   background: #f8f8fa;
@@ -554,7 +554,7 @@ div.svg-container,
   background-color: transparent;
 }
 #preview-content pre code, #setText pre code {
-  font-family: 'DM Mono', Inconsolata, monospace;
+  font-family: sans-serif;
   color: #333;
   font-size: 15px;
 }
@@ -776,7 +776,7 @@ ul.itemize > li,
   display: inline-block;
 }
 #preview {
-  font-family: 'CMU Serif', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
   font-size: 17px;
   visibility: visible;
   word-break: break-word;
@@ -786,10 +786,10 @@ ul.itemize > li,
   box-sizing: content-box;
 }
 #preview h1, #preview h2, #preview h3, #preview h4, #preview h5, #preview strong {
-  font-family: 'CMU Serif Bold', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
 }
 #preview i, #preview em {
-  font-family: 'CMU Serif Italic', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
 }
 .mmd-menu {
   max-width: 320px;
@@ -985,10 +985,14 @@ td .ClipboardButton .mmd-clipboard-icon {
   <div id="preview" class="preview scrollEditor">
     <div id="container-ruller" />
     <div id="preview-content">
-      <h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-0 preview-line 0" id="%24%5Cdelta-3.2%24-probability-distributions" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1">
-<span class="math-inline ">$\delta 3.2$</span> Probability Distributions</h2>
-<div class="preview-paragraph-2 preview-line 2 3" data_line_start="2" data_line_end="3" data_line="2,4" count_line="2">In the previus examples, we saw har the prob. measure on the sample space determined the prob. with which the rovr assumed different values.<br>
-ey. He example with the two dice.</div>
+      <h1 type="section" data-unnumbered="true" class="section-title preview-paragraph-0 preview-line 0" id="%24%5Cdelta-3.2%24-probability-distributions" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1" style="color: rgb(200,0,0);">
+<span class="math-inline ">$\S 3.2$</span> Probability Distributions</h1>
+
+
+<div class="preview-paragraph-2 preview-line 2 3" data_line_start="2" data_line_end="3" data_line="2,4" count_line="2">In the previous examples, we saw how the probability measure on the sample space determined the probability with which the random variable assumed different values.<br><br>
+
+
+  e.g.  He example with the two dice:</div>
 <div class="table_tabular preview-paragraph-5 preview-line 5 6 7 8 9 10 11 12 13 14 15 16 17 18" style="text-align: center" data_line_start="5" data_line_end="18" data_line="5,19" count_line="14">
 <div class="inline-tabular"><table class="tabular">
 <tbody>
@@ -1045,18 +1049,34 @@ ey. He example with the two dice.</div>
 </div></div>
 <div class="preview-paragraph-20 preview-line 20" data_line_start="20" data_line_end="20" data_line="20,21" count_line="1">One can easily check that the function</div>
 <div class="preview-paragraph-21 preview-line 21 22 23" data_line_start="21" data_line_end="23" data_line="21,24" count_line="3"><span class="math-block ">$$
-f(x)=\frac{6-|x-7|}{36}, x=2,3, \ldots, 12
+f(x)=\frac{6-|x-7|}{36} : \quad x=2,3, \ldots, 12
 $$</span></div>
 <div class="preview-paragraph-24 preview-line 24" data_line_start="24" data_line_end="24" data_line="24,25" count_line="1">gives the correct probabilities.</div>
-<div class="preview-paragraph-26 preview-line 26" data_line_start="26" data_line_end="26" data_line="26,27" count_line="1">Defn 3.2 If <span class="math-inline ">$x$</span> is a discrete rovo, the for given by <span class="math-inline ">$f(x)=P(X=x)$</span> for each <span class="math-inline ">$x$</span> within the range of <span class="math-inline ">$X$</span> is called the probability distribution function. (POF) of <span class="math-inline ">$X$</span>,</div>
-<div class="preview-paragraph-28 preview-line 28 29" data_line_start="28" data_line_end="29" data_line="28,30" count_line="2">From the postulates of prob., we get<br>
-Thm 3.1 A fo fican serve as the prob. distr. of 0 discrete <span class="math-inline ">$r_{0} v_{0}$</span> iff its values <span class="math-inline ">$f(x)$</span> satisfy</div>
+
+<br>
+<hr>
+<br>
+
+<div class="preview-paragraph-26 preview-line 26" data_line_start="26" data_line_end="26" data_line="26,27" count_line="1"> <h2 style="color: rgb(0,0,230);">Definition 3.2</h2> If <span class="math-inline ">$x$</span> is a discrete random variable, the function given by <span class="math-inline ">$f(x)=P(X=x)$</span> for each <span class="math-inline ">$x$</span> within the range of <span class="math-inline ">$X$</span> is called the <u>probability distribution function</u>. (PDF) of <span class="math-inline ">$X$</span>,</div>
+
+
+<div class="preview-paragraph-28 preview-line 28 29" data_line_start="28" data_line_end="29" data_line="28,30" count_line="2">From the postulates of probability, we get<br>
+<br>
+
+  <h2 style="color: rgb(0,0,230);">Theorem 3.1) </h2> A function <div class="math-inline">$f$</div> can serve as the probability distribution of 0 discrete random variables iff its values <span class="math-inline ">$f(x)$</span> satisfy</div>
 <ol class="preview-paragraph-30 preview-line 30 31 32" data_line_start="30" data_line_end="32" data_line="30,33" count_line="3">
-<li><span class="math-inline ">$f(x) \geqslant 0$</span> for each <span class="math-inline ">$x$</span> within the domain of <span class="math-inline ">$f_{j}$</span></li>
-<li><span class="math-inline ">$\sum_{x \in \operatorname{dan}(f)} f(x)=1$</span>.</li>
+<li><span class="math-inline ">$f(x) \geq 0$</span> for each <span class="math-inline ">$x$</span> within the domain of <span class="math-inline ">$f$</span></li>
+<br>
+<li><span class="math-inline ">$\sum_{x \in \operatorname{dom}(f)} f(x)=1$</span>.</li>
 </ol>
-<div class="preview-paragraph-33 preview-line 33" data_line_start="33" data_line_end="33" data_line="33,34" count_line="1">Ex. Find a femula for the prob. distr of the total no. of heads obtained in 4 tosses of a balanced coin.</div>
-<div class="preview-paragraph-35 preview-line 35" data_line_start="35" data_line_end="35" data_line="35,36" count_line="1">From prev. ex,</div>
+
+<br>
+<br>
+<hr>
+<br>
+
+<div class="preview-paragraph-33 preview-line 33" data_line_start="33" data_line_end="33" data_line="33,34" count_line="1"> <h2 style="color: rgb(0,150,0);">Example: </h2> Find a formula for the probability distribution of the total number of heads obtained in 4 tosses of a balanced coin.</div>
+<div class="preview-paragraph-35 preview-line 35" data_line_start="35" data_line_end="35" data_line="35,36" count_line="1">From previous example</div>
 <div class="preview-paragraph-36 preview-line 36 37 38 39 40 41 42 43 44" data_line_start="36" data_line_end="44" data_line="36,45" count_line="9"><span class="math-block ">$$
 \begin{aligned}
 &amp; P(x=0)=\frac{1}{16} \\
@@ -1066,20 +1086,25 @@ Thm 3.1 A fo fican serve as the prob. distr. of 0 discrete <span class="math-inl
 &amp; P(x=4)=\frac{1}{16}
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-46 preview-line 46 47" data_line_start="46" data_line_end="47" data_line="46,48" count_line="2">Nots, <span class="math-inline ">$\binom{4}{0}=1,\binom{4}{1}=4,\binom{4}{2}=6,\binom{4}{3}=4,\binom{4}{4}=1$</span>,<br>
+<div class="preview-paragraph-46 preview-line 46 47" data_line_start="46" data_line_end="47" data_line="46,48" count_line="2">Note that: <span class="math-inline ">$\binom{4}{0}=1,\binom{4}{1}=4,\binom{4}{2}=6,\binom{4}{3}=4,\binom{4}{4}=1$</span>,<br>
 so</div>
 <div class="preview-paragraph-48 preview-line 48 49 50" data_line_start="48" data_line_end="50" data_line="48,51" count_line="3"><span class="math-block ">$$
-f(x)=\frac{\binom{4}{x}}{16}, \quad x=0,4
+f(x)=\frac{\binom{4}{x}}{16}, \quad x=0, \cdots,  4
 $$</span></div>
 <div class="preview-paragraph-51 preview-line 51" data_line_start="51" data_line_end="51" data_line="51,52" count_line="1">will do.</div>
-<div class="preview-paragraph-53 preview-line 53" data_line_start="53" data_line_end="53" data_line="53,54" count_line="1">Ex. Can the fr</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-53 preview-line 53" data_line_start="53" data_line_end="53" data_line="53,54" count_line="1"><h2 style="color: rgb(0,150,0);">Example: </h2> Can the function</div>
 <div class="preview-paragraph-54 preview-line 54 55 56" data_line_start="54" data_line_end="56" data_line="54,57" count_line="3"><span class="math-block ">$$
 f(x)=\frac{x+2}{25}, x=1,2, \ldots, 5
 $$</span></div>
-<div class="preview-paragraph-57 preview-line 57 58 59 60" data_line_start="57" data_line_end="60" data_line="57,61" count_line="4">be the prob. dist. for of a discrete r.v.?<br>
-Sun. Easy-to see that for <span class="math-inline ">$\geqslant 0$</span> for <span class="math-inline ">$x=1,-5$</span>,<br>
-So the first requirement of Thm?'t is met.<br>
-For the seend requirement</div>
+<div class="preview-paragraph-57 preview-line 57 58 59 60" data_line_start="57" data_line_end="60" data_line="57,61" count_line="4">be the probability distribution function of a discrete random variable?<br>
+
+<br>
+<u>Solution.</u>  Easy-to see that for <span class="math-inline ">$f(x)\geq 0$</span> for <span class="math-inline ">$x=1,\dots,5$</span><br><br>
+So the first requirement of theorem 3.1 is met.<br><br>
+For the second requirement:</div>
 <div class="preview-paragraph-61 preview-line 61 62 63 64 65 66 67" data_line_start="61" data_line_end="67" data_line="61,68" count_line="7"><span class="math-block ">$$
 \begin{aligned}
 &amp; f(1)+f(2)+f(3)+f(4)+f(5) \\
@@ -1087,26 +1112,51 @@ For the seend requirement</div>
 = &amp; 1
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-68 preview-line 68 69" data_line_start="68" data_line_end="69" data_line="68,70" count_line="2">so this requirement. is also met.<br>
-Thus by. Thm 3.1, <span class="math-inline ">$f$</span> could be the prob. distr on of o discrete rov.</div>
-<div class="preview-paragraph-71 preview-line 71 72" data_line_start="71" data_line_end="72" data_line="71,73" count_line="2">Prob. distr. Jos are often represented as graphs. e.g. for the coin tassing example<br>
-<figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/1b6a5ce9-5a6f-43df-b938-cf57a75868a4-05.jpg?height=739&amp;width=1842&amp;top_left_y=346&amp;top_left_x=129" alt="" data-align="center"></figure></div>
-<div class="preview-paragraph-74 preview-line 74" data_line_start="74" data_line_end="74" data_line="74,75" count_line="1">The book disusses other ways, but fer discrete rovi's this sort of preture is the best.</div>
-<div class="preview-paragraph-76 preview-line 76 77" data_line_start="76" data_line_end="77" data_line="76,78" count_line="2">Often we wish to concentrate on the probabilities of the events <span class="math-inline ">$\{x \leqslant x\}$</span> which leads to the follaing defn.<br>
-Defn. 3.3 If <span class="math-inline ">$x$</span> is a discrete rov., the th given by</div>
+<div class="preview-paragraph-68 preview-line 68 69" data_line_start="68" data_line_end="69" data_line="68,70" count_line="2">so this requirement is also met.<br>
+Thus by theorem 3.1, <span class="math-inline ">$f$</span> could be the probability distribution function of a discrete random variable.</div>
+<div class="preview-paragraph-71 preview-line 71 72" data_line_start="71" data_line_end="72" data_line="71,73" count_line="2">Probability distribution functions are often represented as graphs. e.g. for the coin tassing example<br>
+
+<figure style="text-align: center"><img src="../Images/Chapter3/3.2_Probability_Distributions/pdf_example.png" alt="" data-align="center"></figure></div>
+
+<div class="preview-paragraph-74 preview-line 74" data_line_start="74" data_line_end="74" data_line="74,75" count_line="1">The book discusses other ways, but for discrete random variables, this sort of picture is the best.</div>
+
+<br>
+
+<div class="preview-paragraph-76 preview-line 76 77" data_line_start="76" data_line_end="77" data_line="76,78" count_line="2">Often we wish to concentrate on the probabilities of the events <span class="math-inline ">$\{X \leq x\}$</span> which leads to the following definition.<br><br>
+<h2 style="color: rgb(0,0,230);">Definition 3.3) </h2> If <span class="math-inline ">$x$</span> is a discrete random variable, the function given by</div>
 <div class="preview-paragraph-78 preview-line 78 79 80" data_line_start="78" data_line_end="80" data_line="78,81" count_line="3"><span class="math-block ">$$
-F(x)=P(X \leqslant x)=\sum_{t \leqslant x} f(t), \quad-\infty&lt;x&lt;\infty
+F(x)=P(X \leq x)=\sum_{t \leq x} f(t), \quad-\infty&lt;x&lt;\infty
 $$</span></div>
-<div class="preview-paragraph-82 preview-line 82" data_line_start="82" data_line_end="82" data_line="82,83" count_line="1">Where <span class="math-inline ">$f(t)$</span> is the prob distor. fa of <span class="math-inline ">$x$</span>, is called the cumulation distribution fo (CDF) of <span class="math-inline ">$X$</span>.</div>
-<div class="preview-paragraph-84 preview-line 84 85" data_line_start="84" data_line_end="85" data_line="84,86" count_line="2">We immedrately find.<br>
-Theorem 3.2 The values <span class="math-inline ">$F$</span> hil of the CDF of a discrete rav. <span class="math-inline ">$x$</span> satisfy the conclitions</div>
+<div class="preview-paragraph-82 preview-line 82" data_line_start="82" data_line_end="82" data_line="82,83" count_line="1">Where <span class="math-inline ">$f(t)$</span> is the probability distribution function of <span class="math-inline ">$x$</span>, is called the cummulation distribution function (CDF) of <span class="math-inline ">$X$</span>.</div>
+<div class="preview-paragraph-84 preview-line 84 85" data_line_start="84" data_line_end="85" data_line="84,86" count_line="2">We immedrately find the following result:<br><br>
+
+<br>
+<hr><br>
+
+<h2 style="color: rgb(0,0,230);">Theorem 3.2.) </h2> The values <span class="math-inline ">$F(x)$</span> of the CDF of a discrete random variable <span class="math-inline ">$x$</span> satisfy the following conditions:</div><br>
 <ol class="preview-paragraph-86 preview-line 86 87" data_line_start="86" data_line_end="87" data_line="86,88" count_line="2">
-<li><span class="math-inline ">$\lim _{x \rightarrow-\infty} F(x)=0, \quad \lim _{x \rightarrow \infty} F(x)=1$</span>;</li>
-</ol>
-<div class="preview-paragraph-88 preview-line 88" data_line_start="88" data_line_end="88" data_line="88,89" count_line="1">2 . if <span class="math-inline ">$a&lt;b$</span>, then <span class="math-inline ">$F(a) \leqslant F(b)$</span> for any real nos. <span class="math-inline ">$a, b$</span>.</div>
-<div class="preview-paragraph-90 preview-line 90 91" data_line_start="90" data_line_end="91" data_line="90,92" count_line="2">Ex. Balanced coin tossed 4 times (ugain).<br>
-Had <span class="math-inline ">$f(0)=\frac{1}{16}, f(1)=\frac{4}{16}, f(2)=\frac{6}{16}, f(3)=\frac{4}{16}, f(4)=\frac{1}{16}$</span></div>
-<div class="preview-paragraph-93 preview-line 93" data_line_start="93" data_line_end="93" data_line="93,94" count_line="1">Then</div>
+
+
+<li>
+  <span class="math-inline ">$\lim _{x \rightarrow-\infty} F(x)=0, \quad \lim _{x \rightarrow \infty} F(x)=1$</span>;
+</li>
+<br>
+
+<li><div class="preview-paragraph-88 preview-line 88" data_line_start="88" data_line_end="88" data_line="88,89" count_line="1"> If <span class="math-inline ">$a&lt;b$</span>, then <span class="math-inline ">$F(a) \leq F(b)$</span> for any real numbers <span class="math-inline ">$a, b$</span>.</div>
+</li>
+
+<br>
+<hr>
+<br>
+<br>
+
+<div class="preview-paragraph-90 preview-line 90 91" data_line_start="90" data_line_end="91" data_line="90,92" count_line="2"> <h2 style="color: rgb(0,150,0);">Example: </h2> Balanced coin tossed 4 times (again).<br>
+<br>
+
+  Had <span class="math-inline ">$f(0)=\frac{1}{16}, f(1)=\frac{4}{16}, f(2)=\frac{6}{16}, f(3)=\frac{4}{16}, f(4)=\frac{1}{16}$</span></div>
+<br>
+  <div class="preview-paragraph-93 preview-line 93" data_line_start="93" data_line_end="93" data_line="93,94" count_line="1">Then</div>
+
 <div class="preview-paragraph-94 preview-line 94 95 96 97 98 99 100 101 102" data_line_start="94" data_line_end="102" data_line="94,103" count_line="9"><span class="math-block ">$$
 \begin{aligned}
 &amp; F(0)=f(0)=\frac{1}{16} \\
@@ -1116,11 +1166,20 @@ Had <span class="math-inline ">$f(0)=\frac{1}{16}, f(1)=\frac{4}{16}, f(2)=\frac
 &amp; F(4)=f(0)+f(1)+f(2)+f(3)+f(4)=1 .
 \end{aligned}
 $$</span></div>
+
+<br>
+
 <div class="preview-paragraph-104 preview-line 104" data_line_start="104" data_line_end="104" data_line="104,105" count_line="1">Thus, the CDF is given by</div>
 <div class="preview-paragraph-105 preview-line 105 106 107" data_line_start="105" data_line_end="107" data_line="105,108" count_line="3"><span class="math-block ">$$
-F(x)= \begin{cases}0, &amp; x&lt;0 \\ \frac{1}{16}, &amp; 0 \leqslant x&lt;1 \\ \frac{5}{16}, &amp; 1 \leqslant x&lt;2 \\ \frac{11}{16}, &amp; 2 \leqslant x&lt;3 \\ \frac{15}{16}, &amp; 3 \leqslant x&lt;4 \\ 1, &amp; x \geqslant 4\end{cases}
+F(x)= \begin{cases}0, &amp; x&lt;0 \\ \frac{1}{16}, &amp; 0 \leq x&lt;1 \\ \frac{5}{16}, &amp; 1 \leq x&lt;2 \\ \frac{11}{16}, &amp; 2 \leq x&lt;3 \\ \frac{15}{16}, &amp; 3 \leq x&lt;4 \\ 1, &amp; x \geq 4\end{cases}
 $$</span></div>
-<div class="preview-paragraph-109 preview-line 109" data_line_start="109" data_line_end="109" data_line="109,110" count_line="1">Ex. Find the CDF of the rove for the socks example (5 Br, 3 Ger, chouse 2 without repl., <span class="math-inline ">$W=$</span> # braw choren).</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-109 preview-line 109" data_line_start="109" data_line_end="109" data_line="109,110" count_line="1"> <h2 style="color: rgb(0,150,0);">Example: </h2> Find the CDF of the random variable for the socks example (5 brown, 3 Green, choose 2 without replacement, <span class="math-inline ">$W=$</span> number of brown chosen).</div>
+
+<br>
+
 <div class="preview-paragraph-111 preview-line 111" data_line_start="111" data_line_end="111" data_line="111,112" count_line="1">From the table</div>
 <div class="preview-paragraph-112 preview-line 112 113 114 115 116 117 118" data_line_start="112" data_line_end="118" data_line="112,119" count_line="7"><span class="math-block ">$$
 \begin{aligned}
@@ -1137,35 +1196,59 @@ $$</span></div>
 &amp; F(2)=f(0)+f(1)+f(2)=1 .
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-129 preview-line 129 130" data_line_start="129" data_line_end="130" data_line="129,131" count_line="2">Graph of <span class="math-inline ">$F$</span> looks like Fur)<br>
-<figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/1b6a5ce9-5a6f-43df-b938-cf57a75868a4-08.jpg?height=527&amp;width=971&amp;top_left_y=2220&amp;top_left_x=103" alt="" data-align="center"></figure></div>
-<div class="preview-paragraph-132 preview-line 132" data_line_start="132" data_line_end="132" data_line="132,133" count_line="1">Note that it is cts from the oight (but ast the left) which is a general teature of CDF's.</div>
+<div class="preview-paragraph-129 preview-line 129 130" data_line_start="129" data_line_end="130" data_line="129,131" count_line="2">Graph of <span class="math-inline ">$F$</span> looks like:<br>
+
+<figure style="text-align: center"><img src="../Images/Chapter3/3.2_Probability_Distributions/cdf_example.png" alt="" data-align="center"></figure></div>
+
+<div class="preview-paragraph-132 preview-line 132" data_line_start="132" data_line_end="132" data_line="132,133" count_line="1">Note that it is continuous from the right (but not the left) which is a general teature of CDF's.</div>
 <div class="preview-paragraph-134 preview-line 134" data_line_start="134" data_line_end="134" data_line="134,135" count_line="1">Can also go the other way and get the PDF from the CDF.</div>
-<div class="preview-paragraph-136 preview-line 136" data_line_start="136" data_line_end="136" data_line="136,137" count_line="1">Theorem 3.3 If the range of a r.v. consists of the values <span class="math-inline ">$x_{i}&lt;x_{2}&lt;\infty&lt;x_{n}$</span>, then</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-136 preview-line 136" data_line_start="136" data_line_end="136" data_line="136,137" count_line="1"> <h2 style="color: rgb(0,0,230);">Theorem 3.3:</h2>  If the range of a random variable consists of the values <span class="math-inline ">$x_{1}&lt;x_{2}&lt;\cdots &lt;x_{n}$</span>, then:</div>
+
+<br>
+
 <div class="preview-paragraph-137 preview-line 137 138 139 140 141 142" data_line_start="137" data_line_end="142" data_line="137,143" count_line="6"><span class="math-block ">$$
 \begin{aligned}
 &amp; f\left(x_{1}\right)=F\left(x_{1}\right) \text { and } \\
-&amp; f\left(x_{1}\right)=F\left(x_{1}\right)-F\left(x_{i-1}\right), \quad i=2, \ldots, n
+&amp; f\left(x_{i}\right)=F\left(x_{i}\right)-F\left(x_{i-1}\right), \quad i=2, \ldots, n
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-144 preview-line 144" data_line_start="144" data_line_end="144" data_line="144,145" count_line="1">Ex. If the CDF of a r.v. <span class="math-inline ">$X$</span> is gren by</div>
+
+<br>
+<hr>
+<br>
+
+<div class="preview-paragraph-144 preview-line 144" data_line_start="144" data_line_end="144" data_line="144,145" count_line="1"> <h2 style="color: rgb(0,150,0);">Example: </h2>  If the CDF of a random variable <span class="math-inline ">$X$</span> is given by:</div>
+<br>
 <div class="preview-paragraph-145 preview-line 145 146 147" data_line_start="145" data_line_end="147" data_line="145,148" count_line="3"><span class="math-block ">$$
-F(x)= \begin{cases}0, &amp; x&lt;2 \\ 1 / 30, &amp; 2 \leq x&lt;3 \\ \frac{3}{36}, &amp; 3 \leq x&lt;4 \\ \frac{6}{36}, &amp; 4 \leq x&lt;5 \\ \frac{10}{36}, &amp; 5 \leq x&lt;6, \quad \text { find the pof of } \\ \frac{15}{36}, &amp; 6 \leq x&lt;7 \text { fins f. } \\ \frac{21}{36}, &amp; 7 \leq x&lt;8 \\ \frac{26}{36}, &amp; 8 \leq x&lt;9 \\ \frac{30}{36}, &amp; 9 \leq x&lt;10 \\ \frac{33}{36}, &amp; 10 \leq x&lt;11 \\ \frac{35}{36}, &amp; 11 \leq x&lt;12 \\ 1, &amp; 12 \leq x\end{cases}
+F(x)= \begin{cases}0, &amp; x&lt;2 \\ 1 / 30, &amp; 2 \leq x&lt;3 \\ \frac{3}{36}, &amp; 3 \leq x&lt;4 \\ \frac{6}{36}, &amp; 4 \leq x&lt;5 \\ \frac{10}{36}, &amp; 5 \leq x&lt;6, \quad \text { find the PDF of this RV} \\ \frac{15}{36}, &amp; 6 \leq x&lt;7  \\ \frac{21}{36}, &amp; 7 \leq x&lt;8 \\ \frac{26}{36}, &amp; 8 \leq x&lt;9 \\ \frac{30}{36}, &amp; 9 \leq x&lt;10 \\ \frac{33}{36}, &amp; 10 \leq x&lt;11 \\ \frac{35}{36}, &amp; 11 \leq x&lt;12 \\ 1, &amp; 12 \leq x\end{cases}
 $$</span></div>
-<div class="preview-paragraph-149 preview-line 149" data_line_start="149" data_line_end="149" data_line="149,150" count_line="1">Soln, By Thm 3.3</div>
+
+<br>
+
+<div class="preview-paragraph-149 preview-line 149" data_line_start="149" data_line_end="149" data_line="149,150" count_line="1">Solution, by theorem 3.3</div>
 <div class="preview-paragraph-150 preview-line 150 151 152 153 154 155 156 157" data_line_start="150" data_line_end="157" data_line="150,158" count_line="8"><span class="math-block ">$$
 \begin{aligned}
 f(2)= &amp; \frac{1}{36}, f(3)=\frac{3}{36}-\frac{1}{36}=\frac{2}{36} \\
 f(4)= &amp; \frac{6}{36}-\frac{3}{36}=\frac{3}{36}, f(5)=\frac{10}{36}-\frac{6}{36}=\frac{4}{36} \\
-&amp; \\
+&amp; \quad \quad \quad \quad \quad \quad  \vdots  \\
 f(12)= &amp; 1-\frac{35}{36}=\frac{1}{36}
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-159 preview-line 159" data_line_start="159" data_line_end="159" data_line="159,160" count_line="1">Recognix this as the pdf of to r.V. Which wos the sum of the numbers on He faces of the red and grean dre from earlier.</div>
-<div class="preview-paragraph-161 preview-line 161 162 163" data_line_start="161" data_line_end="163" data_line="161,164" count_line="3">Baseally<br>
+
+<br>
+
+<div class="preview-paragraph-159 preview-line 159" data_line_start="159" data_line_end="159" data_line="159,160" count_line="1">Recognize this as the PDF of the random variable which was the sum of the numbers on the faces of the red and green die from earlier.</div>
+<br>
+
+<div class="preview-paragraph-161 preview-line 161 162 163" data_line_start="161" data_line_end="163" data_line="161,164" count_line="3">Basically: <br>
 <span class="math-inline ">$P D F \longrightarrow C D F$</span> is integration<br>
 <span class="math-inline ">$C D F \rightarrow P D F$</span> is differentiation.</div>
-<div class="preview-paragraph-165 preview-line 165" data_line_start="165" data_line_end="165" data_line="165,166" count_line="1">More about this later!</div>
+
+<br>
+<div class="preview-paragraph-165 preview-line 165" data_line_start="165" data_line_end="165" data_line="165,166" count_line="1"> <u>More about this later!</u> </div>
 
     </div>
   </div>
