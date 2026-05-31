@@ -254,7 +254,7 @@ mjx-status {
 }
 
 foreignObject[data-mjx-xml] {
-  font-family: initial;
+  font-family: sans-serif;
   line-height: normal;
   overflow: visible;
 }
@@ -544,7 +544,7 @@ div.svg-container,
   }
 }
 #preview-content code, #setText code {
-  font-family: Inconsolata;
+  font-family: sans-serif;
   font-size: inherit;
   display: initial;
   background: #f8f8fa;
@@ -554,7 +554,7 @@ div.svg-container,
   background-color: transparent;
 }
 #preview-content pre code, #setText pre code {
-  font-family: 'DM Mono', Inconsolata, monospace;
+  font-family: sans-serif;
   color: #333;
   font-size: 15px;
 }
@@ -776,7 +776,7 @@ ul.itemize > li,
   display: inline-block;
 }
 #preview {
-  font-family: 'CMU Serif', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
   font-size: 17px;
   visibility: visible;
   word-break: break-word;
@@ -786,10 +786,10 @@ ul.itemize > li,
   box-sizing: content-box;
 }
 #preview h1, #preview h2, #preview h3, #preview h4, #preview h5, #preview strong {
-  font-family: 'CMU Serif Bold', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
 }
 #preview i, #preview em {
-  font-family: 'CMU Serif Italic', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
 }
 .mmd-menu {
   max-width: 320px;
@@ -985,32 +985,46 @@ td .ClipboardButton .mmd-clipboard-icon {
   <div id="preview" class="preview scrollEditor">
     <div id="container-ruller" />
     <div id="preview-content">
-      <h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-0 preview-line 0" id="%24%5Coint-3.3%24-continuous-randem-variables" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1">
-<span class="math-inline ">$\oint 3.3$</span> Continuous Randem Variables</h2>
-<div class="preview-paragraph-2 preview-line 2 3 4 5 6 7" data_line_start="2" data_line_end="7" data_line="2,8" count_line="6">Many of the quantities one wants to measure vary continuously e.g. the time of day, the height of a randemly chosen URI student. Hence we reed continuous randan variables which can take on a whole range (interval), of values (a formal defn will be given later).<br>
-Ex3.8 Accilents on a 200 km long stretch of freeway.<br>
-Assume accidents are equally likely at all places on the frearay.<br>
-Suppose there is an accident.<br>
-The probi the accident occurred in the first 100 km of freeway is <span class="math-inline ">$\frac{1}{2}$</span>.<br>
-The prob the accident occurred between 100 km and 150 hm is <span class="math-inline ">$\frac{1}{4}$</span>.</div>
-<div class="preview-paragraph-9 preview-line 9 10 11" data_line_start="9" data_line_end="11" data_line="9,12" count_line="3">Our sample space, is) of course, the interval <span class="math-inline ">$[0,200]$</span> and we will say the prob. the accident occurred in a stretch of freway dikm in length is <span class="math-inline ">$\frac{d}{200}$</span>.<br>
-Q. Does this lead to a consistent way to assign probability which satisfie the 3 postulates of probability?<br>
+      <h1 type="section" data-unnumbered="true" class="section-title preview-paragraph-0 preview-line 0" id="%24%5Coint-3.3%24-continuous-random-variables" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1" style="color:rgb(200,0,0)">
+<span class="math-inline ">$\S 3.3$</span> Continuous Random Variables</h1>
+
+<br><hr><br>
+
+<div class="preview-paragraph-2 preview-line 2 3 4 5 6 7" data_line_start="2" data_line_end="7" data_line="2,8" count_line="6">Many of the quantities one wants to measure vary continuously e.g. the time of day, the height of a randomly chosen URI student. Hence we need continuous random variables which can take on a whole range (interval), of values (a formal definition will be given later).<br>
+<br>
+
+
+<hr>
+<br>
+
+<h2 style="color: rgb(0,150,0);">Example 3.8 </h2> Accidents on a 200 km long stretch of freeway.<br>
+Assume accidents are equally likely at all places on the freeway.<br>
+Suppose there is an accident.<br><br>
+
+The probability the accident occurred in the first 100 km of freeway is <span class="math-inline ">$\frac{1}{2}$</span>.<br>
+The probability the accident occurred between 100 km and 150 hm is <span class="math-inline ">$\frac{1}{4}$</span>.</div>
+<div class="preview-paragraph-9 preview-line 9 10 11" data_line_start="9" data_line_end="11" data_line="9,12" count_line="3">Our sample space, is of course, the interval <span class="math-inline ">$[0,200]$</span> and we will say the prob. the accident occurred in a stretch of freeway d kilometers in length is <span class="math-inline ">$\frac{d}{200}$</span>.<br><br>
+Q. Does this lead to a consistent way to assign probability which satisfies the 3 postulates of probability?<br>
 A. Yes, but technical (measure theory).</div>
+
+<br>
+
 <div class="preview-paragraph-13 preview-line 13 14 15" data_line_start="13" data_line_end="15" data_line="13,16" count_line="3">We can check some things, havever.<br>
 For <span class="math-inline ">$P 2, \quad P(S)=P([0,200])=\frac{200}{200}=1$</span>.<br>
-For <span class="math-inline ">$P 3$</span>, if <span class="math-inline ">$I_{1}, I_{2}, I_{3}, \ldots$</span> is a countable collection of pairuse chipioint interval of length <span class="math-inline ">$d_{1}, d_{2}, d_{3}, \ldots$</span>, we can define</div>
+For <span class="math-inline ">$P 3$</span>, if <span class="math-inline ">$I_{1}, I_{2}, I_{3}, \ldots$</span> is a countable collection of pairwise disjoint intervals of length <span class="math-inline ">$d_{1}, d_{2}, d_{3}, \ldots$</span>, we can define</div>
 <div class="preview-paragraph-16 preview-line 16 17 18" data_line_start="16" data_line_end="18" data_line="16,19" count_line="3"><span class="math-block ">$$
-P^{\prime}\left(U_{i} I_{i}\right)=\sum_{i} \frac{d_{i}}{200}
+P\left(U_{i} I_{i}\right)=\sum_{i} \frac{d_{i}}{200}
 $$</span></div>
-<div class="preview-paragraph-19 preview-line 19" data_line_start="19" data_line_end="19" data_line="19,20" count_line="1">and this will wark.</div>
-<div class="preview-paragraph-21 preview-line 21" data_line_start="21" data_line_end="21" data_line="21,22" count_line="1">Finally P1 is obvious for intervals and by our extension to countable collections of parivise dispoints intervals.</div>
-<div class="preview-paragraph-23 preview-line 23" data_line_start="23" data_line_end="23" data_line="23,24" count_line="1">Note: The prob. that the accident occurred on a very shart stretch of freeway is very lar.</div>
+<div class="preview-paragraph-19 preview-line 19" data_line_start="19" data_line_end="19" data_line="19,20" count_line="1">and this will work.</div>
+<div class="preview-paragraph-21 preview-line 21" data_line_start="21" data_line_end="21" data_line="21,22" count_line="1">Finally P1 is obvious for intervals and by our extension to countable collections of pairwise disjoints intervals.</div>
+<div class="preview-paragraph-23 preview-line 23" data_line_start="23" data_line_end="23" data_line="23,24" count_line="1"> <u>Note:</u>  The prob. that the accident occurred on a very shart stretch of freeway is very low.</div>
 <div class="preview-paragraph-24 preview-line 24 25 26" data_line_start="24" data_line_end="26" data_line="24,27" count_line="3"><span class="math-block ">$$
-\operatorname{crg} \quad P([100,100.1])=0.0005 \quad(=.05 \%)
+\text{e.g.} \quad P([100,100.1])=0.0005 \quad(=.05 \%)
 $$</span></div>
 <div class="preview-paragraph-27 preview-line 27" data_line_start="27" data_line_end="27" data_line="27,28" count_line="1">and if we take smalter and smaller intervals, we see that <span class="math-inline ">$P(\{100\})=0$</span> and incleed <span class="math-inline ">$P(\{x\})=0$</span>. for any <span class="math-inline ">$0 \leqslant x \leqslant 200$</span>.</div>
-<div class="preview-paragraph-29 preview-line 29 30" data_line_start="29" data_line_end="30" data_line="29,31" count_line="2">THIS IS NOT A CONTRADICTION!<br>
-There are 'a lot' of points in [0,200] (ie uncountably many).</div>
+<div class="preview-paragraph-29 preview-line 29 30" data_line_start="29" data_line_end="30" data_line="29,31" count_line="2"> <b style="color: rgb(200,0,0);">THIS IS NOT A CONTRADICTION!</b> <br><br>
+
+There are 'a lot' of points in <div class="math-inline">$[0,200]$</div> (ie uncountably many).</div>
 
     </div>
   </div>
