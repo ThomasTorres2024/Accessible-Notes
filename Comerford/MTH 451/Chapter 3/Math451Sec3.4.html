@@ -254,7 +254,7 @@ mjx-status {
 }
 
 foreignObject[data-mjx-xml] {
-  font-family: initial;
+  font-family: sans-serif;
   line-height: normal;
   overflow: visible;
 }
@@ -544,7 +544,7 @@ div.svg-container,
   }
 }
 #preview-content code, #setText code {
-  font-family: Inconsolata;
+  font-family: sans-serif;
   font-size: inherit;
   display: initial;
   background: #f8f8fa;
@@ -554,7 +554,7 @@ div.svg-container,
   background-color: transparent;
 }
 #preview-content pre code, #setText pre code {
-  font-family: 'DM Mono', Inconsolata, monospace;
+  font-family: sans-serif;
   color: #333;
   font-size: 15px;
 }
@@ -776,7 +776,7 @@ ul.itemize > li,
   display: inline-block;
 }
 #preview {
-  font-family: 'CMU Serif', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif ;
   font-size: 17px;
   visibility: visible;
   word-break: break-word;
@@ -786,10 +786,10 @@ ul.itemize > li,
   box-sizing: content-box;
 }
 #preview h1, #preview h2, #preview h3, #preview h4, #preview h5, #preview strong {
-  font-family: 'CMU Serif Bold', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
 }
 #preview i, #preview em {
-  font-family: 'CMU Serif Italic', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
 }
 .mmd-menu {
   max-width: 320px;
@@ -985,41 +985,54 @@ td .ClipboardButton .mmd-clipboard-icon {
   <div id="preview" class="preview scrollEditor">
     <div id="container-ruller" />
     <div id="preview-content">
-      <h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-0 preview-line 0" id="s3.4-probability-density-functions" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1">
-S3.4 Probability Density Functions</h2>
-<div class="preview-paragraph-2 preview-line 2" data_line_start="2" data_line_end="2" data_line="2,3" count_line="1">The defus of probability density fus for continuous rovis is similar to that for discrete rovis, except for a couple of 'surprises'!</div>
-<div class="preview-paragraph-4 preview-line 4" data_line_start="4" data_line_end="4" data_line="4,5" count_line="1">Defo 3.4 A fn <span class="math-inline ">$f: \mathbb{R} \rightarrow \mathbb{R}$</span> is called a probability density function of the continuous random variable <span class="math-inline ">$X$</span> iff</div>
+      <h1 type="section" data-unnumbered="true" class="section-title preview-paragraph-0 preview-line 0" id="s3.4-probability-density-functions" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1" style="color: rgb(200,0,0);">
+<span class="math-inline">$\S$</span>  Probability Density Functions</h1>
+<div class="preview-paragraph-2 preview-line 2" data_line_start="2" data_line_end="2" data_line="2,3" count_line="1">The definition of probability density function for continuous random variables is similar to that for discrete random variables, except for a couple of 'surprises'!</div>
+
+
+<br><hr><br>
+
+<div class="preview-paragraph-4 preview-line 4" data_line_start="4" data_line_end="4" data_line="4,5" count_line="1"><h2 style="color: rgb(0,0,230);">Definition). 3.4</h2>  A function <span class="math-inline ">$f: \mathbb{R} \rightarrow \mathbb{R}$</span> is called a probability density function of the continuous random variable <span class="math-inline ">$X$</span> if and only if</div>
 <div class="preview-paragraph-5 preview-line 5 6 7" data_line_start="5" data_line_end="7" data_line="5,8" count_line="3"><span class="math-block ">$$
 P([a, b])=\int_{a}^{b} f(x) d x
 $$</span></div>
-<div class="preview-paragraph-9 preview-line 9 10" data_line_start="9" data_line_end="10" data_line="9,11" count_line="2">Often calted densities or oust PDFis.<br>
+<div class="preview-paragraph-9 preview-line 9 10" data_line_start="9" data_line_end="10" data_line="9,11" count_line="2">Often called <u>densities</u> or just PDFs.<br>
 Note that <span class="math-inline ">$f(c)$</span> does not give <span class="math-inline ">$P(X=c)$</span> as it does in the discrete case.</div>
-<div class="preview-paragraph-12 preview-line 12" data_line_start="12" data_line_end="12" data_line="12,13" count_line="1">Fer cts rovi's we always have</div>
+<div class="preview-paragraph-12 preview-line 12" data_line_start="12" data_line_end="12" data_line="12,13" count_line="1">For continuous random variables we always have</div>
 <div class="preview-paragraph-13 preview-line 13 14 15" data_line_start="13" data_line_end="15" data_line="13,16" count_line="3"><span class="math-block ">$$
 P(X=c)=0 \quad \text { for any } c \in \mathbb{R} \text {. }
 $$</span></div>
-<div class="preview-paragraph-16 preview-line 16" data_line_start="16" data_line_end="16" data_line="16,17" count_line="1">(e.g. the highwray example).</div>
-<div class="preview-paragraph-18 preview-line 18" data_line_start="18" data_line_end="18" data_line="18,19" count_line="1">Because of this, we can change 'same' of the values of <span class="math-inline ">$f(x)$</span> and still have a PDF for <span class="math-inline ">$X$</span>. Hence, the PDF of <span class="math-inline ">$X$</span> is not uniquely defined las it is in the discrete case).</div>
-<div class="preview-paragraph-20 preview-line 20" data_line_start="20" data_line_end="20" data_line="20,21" count_line="1">Similarly, it doesn't matter from the point of viour of probability whether or not we include the endpts of an interval.</div>
-<div class="preview-paragraph-22 preview-line 22" data_line_start="22" data_line_end="22" data_line="22,23" count_line="1">Thm 3.4 If <span class="math-inline ">$x$</span> is a cto r.v. and <span class="math-inline ">$a, b \in \mathbb{R}$</span>, then</div>
+<div class="preview-paragraph-16 preview-line 16" data_line_start="16" data_line_end="16" data_line="16,17" count_line="1">(e.g. the highway example).</div>
+<div class="preview-paragraph-18 preview-line 18" data_line_start="18" data_line_end="18" data_line="18,19" count_line="1">Because of this, we can change 'same' of the values of <span class="math-inline ">$f(x)$</span> and still have a PDF for <span class="math-inline ">$X$</span>. Hence, the PDF of <span class="math-inline ">$X$</span> is <b>not uniquely defined</b> as it is in the discrete case).</div>
+<div class="preview-paragraph-20 preview-line 20" data_line_start="20" data_line_end="20" data_line="20,21" count_line="1">Similarly, it doesn't matter from the point of view of probability whether or not we include the endpts of an interval.</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-22 preview-line 22" data_line_start="22" data_line_end="22" data_line="22,23" count_line="1"> <h2 style="color: rgb(0,0,230);">Theorem 3.4)</h2>  If <span class="math-inline ">$x$</span> is a continuous random variable and <span class="math-inline ">$a, b \in \mathbb{R}$</span>, then</div>
 <div class="preview-paragraph-23 preview-line 23 24 25" data_line_start="23" data_line_end="25" data_line="23,26" count_line="3"><span class="math-block ">$$
 P([a, b])=P([a, b))=P((a, b])=P((a, b)) .
 $$</span></div>
-<div class="preview-paragraph-27 preview-line 27" data_line_start="27" data_line_end="27" data_line="27,28" count_line="1">We also have an anologice of Thm 3.1 from the last sectim.</div>
-<div class="preview-paragraph-29 preview-line 29" data_line_start="29" data_line_end="29" data_line="29,30" count_line="1">Thm 3.5 A fo <span class="math-inline ">$f$</span> can serve as the PDF of a cts rov. <span class="math-inline ">$x$</span> if its values, <span class="math-inline ">$f(x)$</span>, satisfy</div>
+<div class="preview-paragraph-27 preview-line 27" data_line_start="27" data_line_end="27" data_line="27,28" count_line="1">We also have an analogue of Theorem 3.1 from the last section:</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-29 preview-line 29" data_line_start="29" data_line_end="29" data_line="29,30" count_line="1"> <h2 style="color: rgb(0,0,230);">Theorem 3.5)</h2> A function <span class="math-inline ">$f$</span> can serve as the PDF of a continuous random variable <span class="math-inline ">$x$</span> if its values, <span class="math-inline ">$f(x)$</span>, satisfy:</div>
 <ol class="preview-paragraph-30 preview-line 30 31 32" data_line_start="30" data_line_end="32" data_line="30,33" count_line="3">
 <li><span class="math-inline ">$f(x) \geqslant 0,-\infty&lt;x&lt;\infty$</span></li>
 <li><span class="math-inline ">$\int_{-\infty}^{\infty} f(x) d x=1$</span>.</li>
 </ol>
-<div class="preview-paragraph-33 preview-line 33" data_line_start="33" data_line_end="33" data_line="33,34" count_line="1">Ex. If <span class="math-inline ">$x$</span> has the density</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-33 preview-line 33" data_line_start="33" data_line_end="33" data_line="33,34" count_line="1"> <h2 style="color: rgb(0,150,0);">Example.) </h2> <br> If <span class="math-inline ">$x$</span> has the density</div>
 <div class="preview-paragraph-34 preview-line 34 35 36 37 38 39" data_line_start="34" data_line_end="39" data_line="34,40" count_line="6"><span class="math-block ">$$
 f(x)=\left\{\begin{array}{l}
 k e^{-3 x}, x&gt;0 \\
 0, x \leq 0
-\end{array},\right.
+\end{array}\right.
 $$</span></div>
 <div class="preview-paragraph-40 preview-line 40" data_line_start="40" data_line_end="40" data_line="40,41" count_line="1">find <span class="math-inline ">$k$</span> and <span class="math-inline ">$P([0.5,1])$</span>.</div>
-<div class="preview-paragraph-42 preview-line 42" data_line_start="42" data_line_end="42" data_line="42,43" count_line="1">Suln. By Thm 3.5, must have</div>
+<div class="preview-paragraph-42 preview-line 42" data_line_start="42" data_line_end="42" data_line="42,43" count_line="1"> <h3 style="color: rgb(200,0,0);">Solution</h3>  By Theorem 3.5, we must have that</div>
 <div class="preview-paragraph-43 preview-line 43 44 45" data_line_start="43" data_line_end="45" data_line="43,46" count_line="3"><span class="math-block ">$$
 \int_{-\infty}^{\infty} f(x) d x=1 .
 $$</span></div>
@@ -1042,7 +1055,7 @@ $$</span></div>
 <div class="preview-paragraph-64 preview-line 64 65 66 67 68 69" data_line_start="64" data_line_end="69" data_line="64,70" count_line="6"><span class="math-block ">$$
 \begin{array}{ll} 
 &amp; \frac{k}{3}=1 \\
-l &amp; k=3 .
+&amp; k=3 .
 \end{array}
 $$</span></div>
 <div class="preview-paragraph-71 preview-line 71" data_line_start="71" data_line_end="71" data_line="71,72" count_line="1">We then get</div>
@@ -1052,49 +1065,55 @@ P([0.5,1]) &amp; =\int_{0.5}^{1} 3 e^{-3 x} d x=\left[-e^{-3 x}\right]_{0.5}^{1}
 &amp; =-e^{-3}+e^{-0.5} \approx 0.173 .
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-79 preview-line 79" data_line_start="79" data_line_end="79" data_line="79,80" count_line="1">Actually, the r.v. in this example connet assume negather ralues, but we extencled its PDF so all of <span class="math-inline ">$\mathbb{R}$</span>.</div>
-<div class="preview-paragraph-81 preview-line 81" data_line_start="81" data_line_end="81" data_line="81,82" count_line="1">As in the discrete cave, we are often interested in <span class="math-inline ">$P(X \leqslant x)$</span>.</div>
-<div class="preview-paragraph-83 preview-line 83" data_line_start="83" data_line_end="83" data_line="83,84" count_line="1">Defe 3.5 If <span class="math-inline ">$x$</span> is a cto rov. and the value of a PDF for <span class="math-inline ">$x$</span> at <span class="math-inline ">$t$</span> is <span class="math-inline ">$f(t)$</span>, then the <span class="math-inline ">$f_{0}$</span> given by</div>
+<div class="preview-paragraph-79 preview-line 79" data_line_start="79" data_line_end="79" data_line="79,80" count_line="1">Actually, the random variable in this example cannot assume negative values, but we extended its PDF to all of <span class="math-inline ">$\mathbb{R}$</span>.</div>
+<div class="preview-paragraph-81 preview-line 81" data_line_start="81" data_line_end="81" data_line="81,82" count_line="1">As in the discrete case, we are often interested in <span class="math-inline ">$P(X \leq x)$</span>.</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-83 preview-line 83" data_line_start="83" data_line_end="83" data_line="83,84" count_line="1"> <h2 style="color: rgb(0,0,230);">Definition 3.5)</h2>  If <span class="math-inline ">$x$</span> is a continuous random variable and the value of a PDF for <span class="math-inline ">$x$</span> at <span class="math-inline ">$t$</span> is <span class="math-inline ">$f(t)$</span>, then the <span class="math-inline ">$f$</span> is given by</div>
 <div class="preview-paragraph-84 preview-line 84 85 86" data_line_start="84" data_line_end="86" data_line="84,87" count_line="3"><span class="math-block ">$$
-F(x)=P(X \leqslant x)=\int_{-\infty}^{x} f(t) d t, \quad-\infty&lt;t&lt;\infty
+F(x)=P(X \leq x)=\int_{-\infty}^{x} f(t) d t, \quad-\infty&lt;t&lt;\infty
 $$</span></div>
-<div class="preview-paragraph-87 preview-line 87" data_line_start="87" data_line_end="87" data_line="87,88" count_line="1">is called the cumulative distribution function (CDF) of <span class="math-inline ">$X$</span>.</div>
+<div class="preview-paragraph-87 preview-line 87" data_line_start="87" data_line_end="87" data_line="87,88" count_line="1">is called the <u style="color: rgb(200,0,0);">cumulative distribution function (CDF)</u> of <span class="math-inline ">$X$</span>.</div>
 <div class="preview-paragraph-89 preview-line 89 90" data_line_start="89" data_line_end="90" data_line="89,91" count_line="2">Note that although <span class="math-inline ">$f(t)$</span> is not uniquely defined, <span class="math-inline ">$F(x)$</span> is as <span class="math-inline ">$P(x \leq x)$</span> is uniquely defined!<br>
-As with the discrete care we can say that</div>
+As with the discrete case we can say that</div>
 <div class="preview-paragraph-91 preview-line 91 92 93 94 95 96" data_line_start="91" data_line_end="96" data_line="91,97" count_line="6"><span class="math-block ">$$
 \begin{aligned}
 &amp; \lim _{x \rightarrow-\infty} F(x)=0, \lim _{x \rightarrow \infty} F(x)=1 \quad \text { and } \\
-&amp; a, b \in \mathbb{R}, a&lt;b \Rightarrow F(a) \leqslant F(b)
+&amp; a, b \in \mathbb{R}, a&lt;b \Rightarrow F(a) \leq F(b)
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-97 preview-line 97" data_line_start="97" data_line_end="97" data_line="97,98" count_line="1">(Almort) Formally, a continuous randam variable is are whose CDF is continuous.</div>
-<div class="preview-paragraph-99 preview-line 99" data_line_start="99" data_line_end="99" data_line="99,100" count_line="1">Also have</div>
-<div class="preview-paragraph-101 preview-line 101" data_line_start="101" data_line_end="101" data_line="101,102" count_line="1">Thm 3.6 If <span class="math-inline ">$f(x), F(x)$</span> are a pof and the CDF for a to r.v. <span class="math-inline ">$X$</span>, then</div>
+<div class="preview-paragraph-97 preview-line 97" data_line_start="97" data_line_end="97" data_line="97,98" count_line="1">(Almost) Formally, a continuous random variable is one whose CDF is continuous.</div>
+<div class="preview-paragraph-99 preview-line 99" data_line_start="99" data_line_end="99" data_line="99,100" count_line="1">We also have the following:</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-101 preview-line 101" data_line_start="101" data_line_end="101" data_line="101,102" count_line="1"> <h2 style="color: rgb(0,0,230);">Theorem 3.6)</h2> If <span class="math-inline ">$f(x), F(x)$</span> are a PDF and the CDF for a continous random variable <span class="math-inline ">$X$</span>, then</div>
 <div class="preview-paragraph-102 preview-line 102 103 104" data_line_start="102" data_line_end="104" data_line="102,105" count_line="3"><span class="math-block ">$$
-P([0, b])=F(b)-F(a), \quad a, b \in \mathbb{R}, \quad a \leqslant b
+P([0, b])=F(b)-F(a), \quad a, b \in \mathbb{R}, \quad a \leq b
 $$</span></div>
 <div class="preview-paragraph-105 preview-line 105" data_line_start="105" data_line_end="105" data_line="105,106" count_line="1">and</div>
 <div class="preview-paragraph-106 preview-line 106 107 108" data_line_start="106" data_line_end="108" data_line="106,109" count_line="3"><span class="math-block ">$$
 f(x)=\frac{d F(x)}{d x}
 $$</span></div>
-<div class="preview-paragraph-110 preview-line 110" data_line_start="110" data_line_end="110" data_line="110,111" count_line="1">Wher this cleviratire expes.</div>
-<div class="preview-paragraph-112 preview-line 112 113" data_line_start="112" data_line_end="113" data_line="112,114" count_line="2">PF. (Not fully rigorus)<br>
-Far first part</div>
+<div class="preview-paragraph-110 preview-line 110" data_line_start="110" data_line_end="110" data_line="110,111" count_line="1">Where this derivative exists.</div>
+<div class="preview-paragraph-112 preview-line 112 113" data_line_start="112" data_line_end="113" data_line="112,114" count_line="2"> <span class="math-inline">$Proof.)$</span>  (Not fully rigorus)<br>
+For the first part</div>
 <div class="preview-paragraph-114 preview-line 114 115 116" data_line_start="114" data_line_end="116" data_line="114,117" count_line="3"><span class="math-block ">$$
-(-\infty, b]=(-\infty, a) \cup[a, b] \quad \text { (dijoint) }
+(-\infty, b]=(-\infty, a) \cup[a, b] \quad \text { (disjoint) }
 $$</span></div>
 <div class="preview-paragraph-118 preview-line 118" data_line_start="118" data_line_end="118" data_line="118,119" count_line="1">So</div>
 <div class="preview-paragraph-119 preview-line 119 120 121 122 123 124" data_line_start="119" data_line_end="124" data_line="119,125" count_line="6"><span class="math-block ">$$
 \begin{aligned}
 P((-\infty, b]) &amp; =P((-\infty, a))+P([a, b]) \\
-&amp; =P((-\infty, a])+P([a, b]) \text { by Thm } 3.4
+&amp; =P((-\infty, a])+P([a, b]) \text { by Theorem } 3.4
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-125 preview-line 125 126" data_line_start="125" data_line_end="126" data_line="125,127" count_line="2">u <span class="math-inline ">$\quad F(b)=F(a)+P([a, b])$</span>, so<br>
+<div class="preview-paragraph-125 preview-line 125 126" data_line_start="125" data_line_end="126" data_line="125,127" count_line="2">i.e. <span class="math-inline ">$\quad F(b)=F(a)+P([a, b])$</span>, so<br>
 <span class="math-inline ">$P([a, b])=F(b)-F(a)$</span> as desired.</div>
-<div class="preview-paragraph-128 preview-line 128 129" data_line_start="128" data_line_end="129" data_line="128,130" count_line="2">For second part, assume <span class="math-inline ">$f$</span> is cts at <span class="math-inline ">$x$</span>.<br>
+<div class="preview-paragraph-128 preview-line 128 129" data_line_start="128" data_line_end="129" data_line="128,130" count_line="2">For the second part, assume <span class="math-inline ">$f$</span> is continuous at <span class="math-inline ">$x$</span>.<br>
 ⇒ If <span class="math-inline ">$t$</span> is near <span class="math-inline ">$x$</span>, then <span class="math-inline ">$F(t) \approx f(x)$</span>.</div>
-<div class="preview-paragraph-131 preview-line 131" data_line_start="131" data_line_end="131" data_line="131,132" count_line="1">Now suppose th is <span class="math-inline ">$\underset{(\neq 0)}{\text { small }}$</span> (tre or-ve).</div>
+<div class="preview-paragraph-131 preview-line 131" data_line_start="131" data_line_end="131" data_line="131,132" count_line="1">Now suppose <span class="math-inline">$h$</span> is <span class="math-inline ">$\underset{(\neq 0)}{\text { small }}$</span> (tve or-ve).</div>
 <div class="preview-paragraph-132 preview-line 132 133 134 135 136 137 138 139" data_line_start="132" data_line_end="139" data_line="132,140" count_line="8"><span class="math-block ">$$
 \begin{aligned}
 \frac{F(x+h)-F(x)}{h} &amp; =\frac{1}{h}\left(\int_{-\infty}^{x+h} f(t) d t-\int_{-\infty}^{x} f(t) d t\right) \\
@@ -1103,22 +1122,25 @@ $$</span></div>
 &amp; =f(x) .
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-141 preview-line 141 142 143" data_line_start="141" data_line_end="143" data_line="141,144" count_line="3">Hence if <span class="math-inline ">$f$</span> is ch. at <span class="math-inline ">$x$</span>,<br>
-<span class="math-inline ">$\lim _{h \rightarrow 0} \frac{F(x+h)-F(x)}{h}$</span> exists (e) <span class="math-inline ">$F$</span> is differentiable at <span class="math-inline ">$x$</span> )<br>
+<div class="preview-paragraph-141 preview-line 141 142 143" data_line_start="141" data_line_end="143" data_line="141,144" count_line="3">Hence if <span class="math-inline ">$f$</span> is continuous at <span class="math-inline ">$x$</span>,<br>
+<span class="math-block ">$$\lim _{h \rightarrow 0} \frac{F(x+h)-F(x)}{h}$$</span> exists (ie <span class="math-inline ">$F$</span> is differentiable at <span class="math-inline ">$x$</span> )<br>
 and</div>
 <div class="preview-paragraph-144 preview-line 144 145 146" data_line_start="144" data_line_end="146" data_line="144,147" count_line="3"><span class="math-block ">$$
 \frac{d F(x)}{d x}=f(x) .
 $$</span></div>
-<div class="preview-paragraph-148 preview-line 148" data_line_start="148" data_line_end="148" data_line="148,149" count_line="1">Ex. Find the CDF of the row. <span class="math-inline ">$x$</span> of the last example and ux it to revaluate <span class="math-inline ">$P([0,5,1])$</span>.</div>
-<div class="preview-paragraph-150 preview-line 150" data_line_start="150" data_line_end="150" data_line="150,151" count_line="1">Suln. For <span class="math-inline ">$x&gt;0$</span></div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-148 preview-line 148" data_line_start="148" data_line_end="148" data_line="148,149" count_line="1"> <h2 style="color: rgb(0,150,0);">Example.)</h2> Find the CDF of the random variable <span class="math-inline ">$X$</span> of the last example and use it to revaluate <span class="math-inline ">$P([0.5,1])$</span>.</div>
+<div class="preview-paragraph-150 preview-line 150" data_line_start="150" data_line_end="150" data_line="150,151" count_line="1"> <u style="color: rgb(200,0,0);">Solution.)</u>  For <span class="math-inline ">$x&gt;0$</span></div>
 <div class="preview-paragraph-151 preview-line 151 152 153" data_line_start="151" data_line_end="153" data_line="151,154" count_line="3"><span class="math-block ">$$
 F(x)=\int_{-\infty}^{x} f(t) d t=\int_{0}^{x} 3 e^{-3 t} d t=\left[-e^{-3 t}\right]_{0}^{x}=1-e^{-3 x}
 $$</span></div>
-<div class="preview-paragraph-154 preview-line 154" data_line_start="154" data_line_end="154" data_line="154,155" count_line="1">and since <span class="math-inline ">$F(x)=0$</span> for <span class="math-inline ">$x \leqslant 0$</span>, we can write</div>
+<div class="preview-paragraph-154 preview-line 154" data_line_start="154" data_line_end="154" data_line="154,155" count_line="1">and since <span class="math-inline ">$F(x)=0$</span> for <span class="math-inline ">$x \leq 0$</span>, we can write</div>
 <div class="preview-paragraph-155 preview-line 155 156 157" data_line_start="155" data_line_end="157" data_line="155,158" count_line="3"><span class="math-block ">$$
-F(x)= \begin{cases}0, &amp; x \leqslant 0 \\ 1-e^{-3 x}, &amp; x&gt;0\end{cases}
+F(x)= \begin{cases}0, &amp; x \leq 0 \\ 1-e^{-3 x}, &amp; x&gt;0\end{cases}
 $$</span></div>
-<div class="preview-paragraph-159 preview-line 159" data_line_start="159" data_line_end="159" data_line="159,160" count_line="1">By Thm 3.9, <span class="math-inline ">$\quad P([0.5,1])=F(1)-F(0.5)$</span></div>
+<div class="preview-paragraph-159 preview-line 159" data_line_start="159" data_line_end="159" data_line="159,160" count_line="1">By Theorem 3.9, <span class="math-inline ">$\quad P([0.5,1])=F(1)-F(0.5)$</span></div>
 <div class="preview-paragraph-160 preview-line 160 161 162 163 164 165 166" data_line_start="160" data_line_end="166" data_line="160,167" count_line="7"><span class="math-block ">$$
 \begin{aligned}
 &amp; =\left(1-e^{-3}\right)-\left(1-e^{-1.5}\right) \\
@@ -1127,29 +1149,41 @@ $$</span></div>
 \end{aligned}
 $$</span></div>
 <div class="preview-paragraph-167 preview-line 167" data_line_start="167" data_line_end="167" data_line="167,168" count_line="1">(some conswer as before).</div>
-<div class="preview-paragraph-169 preview-line 169" data_line_start="169" data_line_end="169" data_line="169,170" count_line="1">Ex. Find a PDF for the r.w. whose CDF is</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-169 preview-line 169" data_line_start="169" data_line_end="169" data_line="169,170" count_line="1"> <h2 style="color: rgb(0,150,0);">Example.) </h2> Find a PDF for the random variable whose CDF is</div>
 <div class="preview-paragraph-170 preview-line 170 171 172 173 174 175 176" data_line_start="170" data_line_end="176" data_line="170,177" count_line="7"><span class="math-block ">$$
 F(x)=\left\{\begin{array}{lc}
-0, &amp; x \leqslant 0 \\
+0, &amp; x \leq 0 \\
 x, &amp; 0&lt;x&lt;1 \\
 1, &amp; x \geqslant 1
 \end{array}\right.
 $$</span></div>
-<div class="preview-paragraph-177 preview-line 177" data_line_start="177" data_line_end="177" data_line="177,178" count_line="1"><figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/5b2eda30-6c37-4f4b-9446-bbb9534962f4-09.jpg?height=510&amp;width=658&amp;top_left_y=265&amp;top_left_x=1331" alt="" data-align="center"></figure></div>
-<div class="preview-paragraph-179 preview-line 179 180" data_line_start="179" data_line_end="180" data_line="179,181" count_line="2">Saln. <span class="math-inline ">$F$</span> is diff everywhere except at 0,1 .<br>
-By Thm 3.9, we have</div>
+
+<img src="../Images/Chapter3/3.4_Probability_Density_Functions/cdf_example_1.png">
+
+<div class="preview-paragraph-179 preview-line 179 180" data_line_start="179" data_line_end="180" data_line="179,181" count_line="2"> <b style="color: rgb(200,0,0);">Solution).</b>  <span class="math-inline ">$F$</span> is differentiable everywhere except at 0,1 .<br>
+By Theorem 3.9, we have</div>
 <div class="preview-paragraph-181 preview-line 181 182 183" data_line_start="181" data_line_end="183" data_line="181,184" count_line="3"><span class="math-block ">$$
 f(x)= \begin{cases}0, &amp; x&lt;0 \\ 1, &amp; 0&lt;x&lt;1 \\ 0, &amp; x&gt;1\end{cases}
 $$</span></div>
-<div class="preview-paragraph-185 preview-line 185 186 187" data_line_start="185" data_line_end="187" data_line="185,188" count_line="3">Still need to define <span class="math-inline ">$f$</span> at 0,1. Hewerer, as we saw earler, the particular values of <span class="math-inline ">$f$</span> at 0,1 will not affect the probs of events.<br>
+<div class="preview-paragraph-185 preview-line 185 186 187" data_line_start="185" data_line_end="187" data_line="185,188" count_line="3">Still need to define <span class="math-inline ">$f$</span> at 0,1. However, as we saw earler, the particular values of <span class="math-inline ">$f$</span> at 0,1 will not affect the probabilities of events.<br>
 So set <span class="math-inline ">$f(0)=f(1)=1$</span>.<br>
-<figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/5b2eda30-6c37-4f4b-9446-bbb9534962f4-09.jpg?height=699&amp;width=986&amp;top_left_y=2021&amp;top_left_x=162" alt="" data-align="center"></figure></div>
-<div class="preview-paragraph-189 preview-line 189 190 191" data_line_start="189" data_line_end="191" data_line="189,192" count_line="3">Also have rivis which are neither discrete nor cts.<br>
-o.g. Consrder a r.v. with CDF<br>
-<figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/5b2eda30-6c37-4f4b-9446-bbb9534962f4-10.jpg?height=661&amp;width=1034&amp;top_left_y=693&amp;top_left_x=287" alt="" data-align="center"></figure></div>
-<div class="preview-paragraph-193 preview-line 193" data_line_start="193" data_line_end="193" data_line="193,194" count_line="1">This r.v. takes on uncountably many ralues so it is not disurete.</div>
-<div class="preview-paragraph-195 preview-line 195" data_line_start="195" data_line_end="195" data_line="195,196" count_line="1">Hewerer, <span class="math-inline ">$P\left(\left\{\frac{1}{2}\right\}\right)=\frac{1}{2}&gt;0$</span>, so it is not co eitter (prob of <span class="math-inline ">$f / \frac{1}{2}$</span> ) is the height of the jump in the CDF at <span class="math-inline ">$\frac{1}{2}$</span> ).</div>
-<div class="preview-paragraph-197 preview-line 197" data_line_start="197" data_line_end="197" data_line="197,198" count_line="1">In our course, we sholl limit our selves to roves which are discrete or cts with the CDFls of the cts. rov's being precouns differentiable (u differentiable on all of <span class="math-inline ">$\mathbb{R}$</span> exupt (possibly) at finitely many values),</div>
+
+<img src="../Images/Chapter3/3.4_Probability_Density_Functions/pdf_of_cdf_example.png">
+
+<div class="preview-paragraph-189 preview-line 189 190 191" data_line_start="189" data_line_end="191" data_line="189,192" count_line="3">We also have random variables which are neither discrete nor continuous.<br>
+e.g. Consider a random variable with the CDF<br>
+
+<img src="../Images/Chapter3/3.4_Probability_Density_Functions/cdf_example_2.png">
+
+<div class="preview-paragraph-193 preview-line 193" data_line_start="193" data_line_end="193" data_line="193,194" count_line="1">This random variable takes on uncountably many values so it is not discrete.</div>
+<div class="preview-paragraph-195 preview-line 195" data_line_start="195" data_line_end="195" data_line="195,196" count_line="1">However, <span class="math-inline ">$P\left(\left\{\frac{1}{2}\right\}\right)=\frac{1}{2}&gt;0$</span>, so it is not continuous either (prob of <span class="math-inline ">$\{ \frac{1}{2} \} $ </span> ) is the height of the jump in the CDF at <span class="math-inline ">$\frac{1}{2}$</span> ).</div>
++
+<br>
+
+<div class="preview-paragraph-197 preview-line 197" data_line_start="197" data_line_end="197" data_line="197,198" count_line="1">In our course, we shall limit ourselves to random variables which are discrete or continuous with the CDFs of the continuous random variables's being piecewise differentiable (i.e. differentiable on all of <span class="math-inline ">$\mathbb{R}$</span> except (possibly) at finitely many values),</div>
 
     </div>
   </div>
