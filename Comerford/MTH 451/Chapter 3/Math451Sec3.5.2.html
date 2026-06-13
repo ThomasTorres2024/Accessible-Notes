@@ -254,7 +254,7 @@ mjx-status {
 }
 
 foreignObject[data-mjx-xml] {
-  font-family: initial;
+  font-family: sans-serif;
   line-height: normal;
   overflow: visible;
 }
@@ -544,7 +544,7 @@ div.svg-container,
   }
 }
 #preview-content code, #setText code {
-  font-family: Inconsolata;
+  font-family: sans-serif;
   font-size: inherit;
   display: initial;
   background: #f8f8fa;
@@ -554,7 +554,7 @@ div.svg-container,
   background-color: transparent;
 }
 #preview-content pre code, #setText pre code {
-  font-family: 'DM Mono', Inconsolata, monospace;
+  font-family: sans-serif;
   color: #333;
   font-size: 15px;
 }
@@ -776,7 +776,7 @@ ul.itemize > li,
   display: inline-block;
 }
 #preview {
-  font-family: 'CMU Serif', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
   font-size: 17px;
   visibility: visible;
   word-break: break-word;
@@ -786,10 +786,10 @@ ul.itemize > li,
   box-sizing: content-box;
 }
 #preview h1, #preview h2, #preview h3, #preview h4, #preview h5, #preview strong {
-  font-family: 'CMU Serif Bold', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
 }
 #preview i, #preview em {
-  font-family: 'CMU Serif Italic', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
 }
 .mmd-menu {
   max-width: 320px;
@@ -985,26 +985,37 @@ td .ClipboardButton .mmd-clipboard-icon {
   <div id="preview" class="preview scrollEditor">
     <div id="container-ruller" />
     <div id="preview-content">
-      <div class="preview-paragraph-0 preview-line 0" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1">We may also consiter the cave of two cts rivis.</div>
-<div class="preview-paragraph-2 preview-line 2" data_line_start="2" data_line_end="2" data_line="2,3" count_line="1">Defn. A branale of with values <span class="math-inline ">$f(x, y)$</span> defined on <span class="math-inline ">$\mathbb{T}^{2}$</span> is called a joint probability density function of the car. rovib <span class="math-inline ">$X$</span> and <span class="math-inline ">$Y$</span> iff</div>
+
+      <h1 type="section" data-unnumbered="true" class="section-title preview-paragraph-0 preview-line 0" id="%C2%A73.5-multivariate-distributions" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1" style="color: rgb(200,0,0);"> <span class="math-inline">$\S$</span>
+3.5.2 Multivariate Distributions</h1>
+
+      <div class="preview-paragraph-0 preview-line 0" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1">We may also consiter the cave of two continuous random variables</div>
+
+      <div class="preview-paragraph-2 preview-line 2" data_line_start="2" data_line_end="2" data_line="2,3" count_line="1"> <h2 style="color: rgb(0,0,230);">Definition).</h2><br>  A bivariate function with two values <span class="math-inline ">$f(x, y)$</span> defined on <span class="math-inline ">$\mathbb{R}^{2}$</span> is called a <b>joint probability density function</b> of the continuous random variables <span class="math-inline ">$X$</span> and <span class="math-inline ">$Y$</span> if and only if</div>
 <div class="preview-paragraph-3 preview-line 3 4 5" data_line_start="3" data_line_end="5" data_line="3,6" count_line="3"><span class="math-block ">$$
 P((x, y) \in A)=\iint_{A} f(x, y) d x d y
 $$</span></div>
-<div class="preview-paragraph-6 preview-line 6" data_line_start="6" data_line_end="6" data_line="6,7" count_line="1">for any region <span class="math-inline ">$A$</span> in the <span class="math-inline ">$x y$</span>-plane. Analagas to Thm 3.5 for one cho A.V., we have</div>
-<div class="preview-paragraph-8 preview-line 8" data_line_start="8" data_line_end="8" data_line="8,9" count_line="1">Theorem 3.8 A bivariate for can serve as a joint pdf of a pain of cto. N.v.'s <span class="math-inline ">$X, Y$</span> if its values <span class="math-inline ">$f(x, y)$</span> satisfy</div>
+<div class="preview-paragraph-6 preview-line 6" data_line_start="6" data_line_end="6" data_line="6,7" count_line="1">for any region <span class="math-inline ">$A$</span> in the <span class="math-inline ">$x y$</span>-plane. Analogous to Theorem 3.5.1 for one continuous random variable, we have</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-8 preview-line 8" data_line_start="8" data_line_end="8" data_line="8,9" count_line="1"> <h2 style="color: rgb(0,0,230);"> Theorem 3.8 </h2>  A bivariate function can serve as a joint PDF a pair of continuous random variables <span class="math-inline ">$X, Y$</span> if its values <span class="math-inline ">$f(x, y)$</span> satisfy</div>
 <ol class="preview-paragraph-9 preview-line 9 10 11" data_line_start="9" data_line_end="11" data_line="9,12" count_line="3">
-<li><span class="math-inline ">$f(x, y) \geqslant 0,-\infty&lt;x, y&lt;\infty$</span></li>
+<li><span class="math-inline ">$f(x, y) \geq 0,-\infty&lt;x, y&lt;\infty$</span></li>
 <li><span class="math-inline ">$\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} f(x, y) d x d y=1$</span>.</li>
 </ol>
-<div class="preview-paragraph-12 preview-line 12" data_line_start="12" data_line_end="12" data_line="12,13" count_line="1">Ex. Given the joint pdf</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-12 preview-line 12" data_line_start="12" data_line_end="12" data_line="12,13" count_line="1"> <h2 style="color: rgb(0,150,0);">Example).</h2>  Given the joint PDF</div>
 <div class="preview-paragraph-13 preview-line 13 14 15" data_line_start="13" data_line_end="15" data_line="13,16" count_line="3"><span class="math-block ">$$
 f(x, y)= \begin{cases}\frac{3}{5} x(y+x), &amp; 0&lt;x&lt;1,0&lt;y&lt;2 \\ 0, &amp; \text { elsewhere }\end{cases}
 $$</span></div>
-<div class="preview-paragraph-16 preview-line 16" data_line_start="16" data_line_end="16" data_line="16,17" count_line="1">of two rivis <span class="math-inline ">$X, Y$</span>, find <span class="math-inline ">$P((x, y) \in A)$</span> where <span class="math-inline ">$A$</span> is the region</div>
+<div class="preview-paragraph-16 preview-line 16" data_line_start="16" data_line_end="16" data_line="16,17" count_line="1">of two random variables <span class="math-inline ">$X, Y$</span>, find <span class="math-inline ">$P((x, y) \in A)$</span> where <span class="math-inline ">$A$</span> is the region</div>
 <div class="preview-paragraph-17 preview-line 17 18 19" data_line_start="17" data_line_end="19" data_line="17,20" count_line="3"><span class="math-block ">$$
 A=\left\{(x, y): 0&lt;x&lt;\frac{1}{2}, 1&lt;y&lt;2\right\} .
 $$</span></div>
-<div class="preview-paragraph-20 preview-line 20" data_line_start="20" data_line_end="20" data_line="20,21" count_line="1">S. 1 n.</div>
+<div class="preview-paragraph-20 preview-line 20" data_line_start="20" data_line_end="20" data_line="20,21" count_line="1"> <h3 style="color: rgb(200,0,0);">Solution).</h3> </div>
 <div class="preview-paragraph-21 preview-line 21 22 23 24 25 26 27 28" data_line_start="21" data_line_end="28" data_line="21,29" count_line="8"><span class="math-block ">$$
 \begin{gathered}
 P((x, y) \in A)=P\left(0&lt;x&lt;\frac{1}{2}, 1&lt;y&lt;2\right) \\
@@ -1013,109 +1024,127 @@ P((x, y) \in A)=P\left(0&lt;x&lt;\frac{1}{2}, 1&lt;y&lt;2\right) \\
 =\int_{1}^{2}\left(\frac{3 y}{40}+\frac{1}{40}\right) d y=\left[\frac{3 y^{2}}{80}+\frac{y}{40}\right]_{1}^{2}=\frac{11}{80}
 \end{gathered}
 $$</span></div>
-<div class="preview-paragraph-30 preview-line 30" data_line_start="30" data_line_end="30" data_line="30,31" count_line="1">We can also define a joint CDF for two cb. rivis.</div>
-<div class="preview-paragraph-32 preview-line 32" data_line_start="32" data_line_end="32" data_line="32,33" count_line="1">Defn. If <span class="math-inline ">$X, Y$</span> are ctor. rovi's, the for given by</div>
+<div class="preview-paragraph-30 preview-line 30" data_line_start="30" data_line_end="30" data_line="30,31" count_line="1">We can also define a joint CDF for two continuous random variables</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-32 preview-line 32" data_line_start="32" data_line_end="32" data_line="32,33" count_line="1"> <h2 style="color: rgb(0,150,0);">Definition).</h2>  If <span class="math-inline ">$X, Y$</span> are continuous random variables, the function given by</div>
 <div class="preview-paragraph-33 preview-line 33 34 35" data_line_start="33" data_line_end="35" data_line="33,36" count_line="3"><span class="math-block ">$$
-F(x, y)=P(X \leqslant x, Y \leqslant y)=\int_{-\infty}^{y} \int_{-\infty}^{x} f(s, t) d s d t
+
+\begin{align}
+
+F(x, y)=P(X \leq x, Y \leq y)=\int_{-\infty}^{y} \int_{-\infty}^{x} f(s, t) d s d t\\
+-\infty &lt; x,y &lt; \infty
+
+\end{align}
 $$</span></div>
-<div class="preview-paragraph-37 preview-line 37" data_line_start="37" data_line_end="37" data_line="37,38" count_line="1">Where <span class="math-inline ">$f(x, y)$</span> is the value of a joint <span class="math-inline ">$p d f$</span> of <span class="math-inline ">$X, Y$</span> is called the joint cumulative distribution function of <span class="math-inline ">$X$</span> and <span class="math-inline ">$Y$</span>.</div>
-<div class="preview-paragraph-39 preview-line 39 40 41 42 43" data_line_start="39" data_line_end="43" data_line="39,44" count_line="5">Similarly to the unrariate care.<br>
-Thm If <span class="math-inline ">$F(x, y)$</span> is the value of the joint <span class="math-inline ">$C D F$</span> of two ots rivis <span class="math-inline ">$X \&amp; Y$</span> at <span class="math-inline ">$(x, y)$</span>, then<br>
-a) <span class="math-inline ">$\lim _{x \rightarrow-\infty} F(x, y)=0$</span>,<br>
-b) <span class="math-inline ">$\lim _{\substack{x \rightarrow \infty \\ y \rightarrow \infty}} F(x, y)=1$</span><br>
-c) if <span class="math-inline ">$a&lt;b$</span> and <span class="math-inline ">$c&lt;d$</span>, then <span class="math-inline ">$F(a, c) \leqslant F(b, d)$</span>.</div>
-<div class="preview-paragraph-45 preview-line 45" data_line_start="45" data_line_end="45" data_line="45,46" count_line="1">Similarly to <span class="math-inline ">$f(x)=\frac{d F(x)}{d x}$</span> for one cts. <span class="math-inline ">$n \cdot v_{1}$</span> fer two cts rovis we have</div>
+<div class="preview-paragraph-37 preview-line 37" data_line_start="37" data_line_end="37" data_line="37,38" count_line="1">Where <span class="math-inline ">$f(x, y)$</span> is the value of a joint PDF of <span class="math-inline ">$X, Y$</span> is called the <b>joint cumulative distribution function</b> of <span class="math-inline ">$X$</span> and <span class="math-inline ">$Y$</span>.</div>
+<div class="preview-paragraph-39 preview-line 39 40 41 42 43" data_line_start="39" data_line_end="43" data_line="39,44" count_line="5">Similarly to the univariate case:<br><br>
+
+  <br><hr><br>
+
+<h2 style="color: rgb(0,0,230);">Theorem 3.5.2 </h2> If <span class="math-inline ">$F(x, y)$</span> is the value of the joint CDF of two continuous random variables <span class="math-inline ">$X \&amp; Y$</span> at <span class="math-inline ">$(x, y)$</span>, then<br>
+<br>
+   <span class="math-block ">$$ a) \lim_{\substack{x\to -\infty\\ y\to -\infty}}
+ F(x, y)=0 \quad \quad  b) \lim_{\substack{x\to \infty\\ y\to \infty}}
+ F(x, y)=1$$</span><br>
+<span class="math-block ">$$c). \text{ if } a&lt;b  \text{ and } c&lt;d \text{ then } F(a, c) \leq F(b, d)$$</span> <br> </div>
+
+
+<div class="preview-paragraph-45 preview-line 45" data_line_start="45" data_line_end="45" data_line="45,46" count_line="1">Similarly to <span class="math-inline ">$f(x)=\frac{d F(x)}{d x}$</span> for one continuous random variable, for two continuous random variables we have</div>
 <div class="preview-paragraph-46 preview-line 46 47 48" data_line_start="46" data_line_end="48" data_line="46,49" count_line="3"><span class="math-block ">$$
 f(x, y)=\frac{\partial^{2} F(x, y)}{\partial x \partial y}
 $$</span></div>
+
+<br>
+
 <div class="preview-paragraph-50 preview-line 50 51" data_line_start="50" data_line_end="51" data_line="50,52" count_line="2">Whenever these partial derivatives exist.<br>
-So as befere</div>
+So as before</div>
 <div class="preview-paragraph-52 preview-line 52 53 54" data_line_start="52" data_line_end="54" data_line="52,55" count_line="3"><span class="math-block ">$$
 \text { Joint CDF } \xrightarrow{\frac{\partial^{2}}{\partial x \partial y}} \text { Joint pdf. }
 $$</span></div>
-<div class="preview-paragraph-56 preview-line 56" data_line_start="56" data_line_end="56" data_line="56,57" count_line="1">As in <span class="math-inline ">$\delta 3.4$</span>, we let <span class="math-inline ">$f(x, y)=0$</span> whenever the above relationship doesn't hold.</div>
-<div class="preview-paragraph-58 preview-line 58" data_line_start="58" data_line_end="58" data_line="58,59" count_line="1">Ex. If the joint put of <span class="math-inline ">$x \&amp; y$</span> is given by</div>
+<div class="preview-paragraph-56 preview-line 56" data_line_start="56" data_line_end="56" data_line="56,57" count_line="1">As in <span class="math-inline ">$\S 3.4$</span>, we let <span class="math-inline ">$f(x, y)=0$</span> whenever the above relationship doesn't hold.</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-58 preview-line 58" data_line_start="58" data_line_end="58" data_line="58,59" count_line="1"> <h2 style="color: rgb(0,150,0);">Example).</h2>  If the joint PDF of <span class="math-inline ">$x \&amp; y$</span> is given by</div>
 <div class="preview-paragraph-59 preview-line 59 60 61" data_line_start="59" data_line_end="61" data_line="59,62" count_line="3"><span class="math-block ">$$
 f(x, y)= \begin{cases}x+y, &amp; 0&lt;x, y&lt;1 \\ 0, &amp; \text { elsewhere }\end{cases}
 $$</span></div>
-<div class="preview-paragraph-62 preview-line 62 63 64" data_line_start="62" data_line_end="64" data_line="62,65" count_line="3">find the joint CDF of these two s.v.'s.<br>
-Suln. If either <span class="math-inline ">$x&lt;0$</span> or <span class="math-inline ">$y&lt;0$</span>, then <span class="math-inline ">$F(x, y)=0$</span>.<br>
-e-g. If <span class="math-inline ">$x&lt;0$</span></div>
+<div class="preview-paragraph-62 preview-line 62 63 64" data_line_start="62" data_line_end="64" data_line="62,65" count_line="3">find the joint CDF of these two random variables's.<br><br>
+<h3 style="color:rgb(200,0,0)"> Solution). </h3> If either <span class="math-inline ">$x&lt;0$</span> or <span class="math-inline ">$y&lt;0$</span>, then <span class="math-inline ">$F(x, y)=0$</span>.<br> <br>
+e.g. If <span class="math-inline ">$x&lt;0$</span></div>
 <div class="preview-paragraph-65 preview-line 65 66 67 68 69 70 71" data_line_start="65" data_line_end="71" data_line="65,72" count_line="7"><span class="math-block ">$$
 \begin{aligned}
-F h, y) &amp; =\int_{-\infty}^{y} \int_{-\infty}^{x} f(s, t) d s d t \\
+F (x, y) &amp; =\int_{-\infty}^{y} \int_{-\infty}^{x} f(s, t) d s d t \\
 &amp; =\int_{-\infty}^{y} 0 d t \quad \text { as } \quad f(s, t)=0 \text { as } \\
-&amp; =0
+&amp; =0 \quad  \quad \quad \quad \quad \quad \quad \quad s \leq x &lt; 0
 \end{aligned}
 $$</span></div>
 <div class="preview-paragraph-72 preview-line 72" data_line_start="72" data_line_end="72" data_line="72,73" count_line="1">(Region 0 )</div>
 <div class="preview-paragraph-74 preview-line 74 75" data_line_start="74" data_line_end="75" data_line="74,76" count_line="2">If <span class="math-inline ">$0&lt;x&lt;1,0&lt;y&lt;1$</span> (Region I),<br>
 <span class="math-inline ">$F(x, y)=\int_{0}^{y} \int_{0}^{x}(s+t) d s d t=\frac{1}{2} x y(x+y)$</span>.</div>
-<div class="preview-paragraph-77 preview-line 77 78 79 80 81 82" data_line_start="77" data_line_end="82" data_line="77,83" count_line="6">If <span class="math-inline ">$1&lt;x, \quad 0&lt;y&lt;1 \quad($</span> Regran II ),<br>
-<span class="math-inline ">$F(x, y)=\int_{0}^{y} \int_{0}^{1}(s+t) d s d t=\frac{1}{2} y(y+1)$</span><br>
-If <span class="math-inline ">$0&lt;x&lt;1,1&lt;y \quad$</span> (Regran III),<br>
+<div class="preview-paragraph-77 preview-line 77 78 79 80 81 82" data_line_start="77" data_line_end="82" data_line="77,83" count_line="6">If <span class="math-inline ">$1&lt;x, \quad 0&lt;y&lt;1 \quad($</span> Region II ),<br>
+
+
+  <span class="math-inline ">$F(x, y)=\int_{0}^{y} \int_{0}^{1}(s+t) d s d t=\frac{1}{2} y(y+1)$</span><br>
+
+<br>
+  If <span class="math-inline ">$0&lt;x&lt;1,1&lt;y \quad$</span> (Region III),<br>
 <span class="math-inline ">$F(x, y)=\int_{0}^{1} \int_{0}^{x}(s+t) d s d t=\frac{1}{2} x(x+1)$</span><br>
-If <span class="math-inline ">$|&lt;x|&lt;,y \quad$</span> (Region IV),<br>
+
+<br>
+
+If <span class="math-inline ">$1&lt;x , 1&lt;y \quad$</span> (Region IV),<br>
 <span class="math-inline ">$F(x, y)=\int_{0}^{1} \int_{0}^{1}(s+t) d s d t=1$</span>.</div>
-<div class="table_tabular preview-paragraph-84 preview-line 84 85 86 87 88 89 90" style="text-align: center" data_line_start="84" data_line_end="90" data_line="84,91" count_line="7">
-<div class="inline-tabular"><table class="tabular">
-<tbody>
-<tr style="border-top: none !important; border-bottom: none !important;">
-<td style="text-align: left; border-left: none !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; " class="_empty"></td>
-<td style="text-align: center; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; "><span class="math-inline ">$F(x, y)=\frac{1}{2} x(x+1)$</span></td>
-<td style="text-align: center; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; "><span class="math-inline ">$F(x, y)=1$</span></td>
-</tr>
-<tr style="border-top: none !important; border-bottom: none !important;">
-<td style="text-align: left; border-left: none !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; ">0</td>
-<td style="text-align: center; border-right-style: solid !important; border-right-width: 1px !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; "><span class="math-inline ">$I$</span></td>
-<td style="text-align: center; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; ">IV</td>
-</tr>
-<tr style="border-top: none !important; border-bottom: none !important;">
-<td style="text-align: left; border-left: none !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; "><span class="math-inline ">$F(x, y)=0$</span></td>
-<td style="text-align: center; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; "><span class="math-inline ">$F(x, y)=\frac{1}{2} x y(x+y)$</span></td>
-<td style="text-align: center; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; "><span class="math-inline ">$F(x, y)=\frac{1}{2} y(y+1)$</span></td>
-</tr>
-<tr style="border-top: none !important; border-bottom: none !important;">
-<td style="text-align: left; border-left: none !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; ">0</td>
-<td style="text-align: center; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; " class="_empty"></td>
-<td style="text-align: center; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; " class="_empty"></td>
-</tr>
-<tr style="border-top: none !important; border-bottom: none !important;">
-<td style="text-align: left; border-left: none !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; "><span class="math-inline ">$F(x, y)=0$</span></td>
-<td style="text-align: center; border-right-style: solid !important; border-right-width: 1px !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; "><span class="math-inline ">$F(x, y)=0$</span></td>
-<td style="text-align: center; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; ">1</td>
-</tr>
-</tbody>
-</table>
-</div></div>
+
+
+<img src="../Images/Chapter3/3.5_Joint_Continuous_Functions/quadrant_diagram.png"> 
+
+</div>
 <div class="preview-paragraph-92 preview-line 92" data_line_start="92" data_line_end="92" data_line="92,93" count_line="1">So</div>
 <div class="preview-paragraph-93 preview-line 93 94 95" data_line_start="93" data_line_end="95" data_line="93,96" count_line="3"><span class="math-block ">$$
-F(x, y)= \begin{cases}0, &amp; x \leqslant 0, y \leqslant 0 \\ \frac{1}{2} x y(x+y), &amp; 0&lt;x&lt;1,0&lt;y&lt;1 \\ \frac{1}{2} y(y+1), &amp; 1&lt;x, 0&lt;y&lt;1 \\ \frac{1}{2} x(x+1), &amp; 0&lt;x&lt;1,1&lt;y \\ 1, &amp; 1 \leqslant x, 1 \leqslant y .\end{cases}
+F(x, y)= \begin{cases}0, &amp; x \leq 0, y \leq 0 \\ \frac{1}{2} x y(x+y), &amp; 0&lt;x&lt;1,0&lt;y&lt;1 \\ \frac{1}{2} y(y+1), &amp; 1&lt;x, 0&lt;y&lt;1 \\ \frac{1}{2} x(x+1), &amp; 0&lt;x&lt;1,1&lt;y \\ 1, &amp; 1 \leq x, 1 \leq y .\end{cases}
 $$</span></div>
-<div class="preview-paragraph-96 preview-line 96" data_line_start="96" data_line_end="96" data_line="96,97" count_line="1">N.b. Since <span class="math-inline ">$F$</span> is cto- everywhere, it doesn't matter just which regian we say the boundary lines (e-g. <span class="math-inline ">$x=1$</span> ) belong to.</div>
-<div class="preview-paragraph-98 preview-line 98" data_line_start="98" data_line_end="98" data_line="98,99" count_line="1">Ex. Find the joint pdf of the two rivis <span class="math-inline ">$X$</span> and <span class="math-inline ">$Y$</span> whose joint CDF is given by</div>
+<div class="preview-paragraph-96 preview-line 96" data_line_start="96" data_line_end="96" data_line="96,97" count_line="1">N.b. Since <span class="math-inline ">$F$</span> is continuous everywhere, it doesn't matter just which region we say the boundary lines (e-g. <span class="math-inline ">$x=1$</span> ) belong to.</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-98 preview-line 98" data_line_start="98" data_line_end="98" data_line="98,99" count_line="1"> <h2 style="color:rgb(0,150,0)">Example).</h2>  Find the joint PDF of the two random variables <span class="math-inline ">$X$</span> and <span class="math-inline ">$Y$</span> whose joint CDF is given by</div>
+
 <div class="preview-paragraph-99 preview-line 99 100 101" data_line_start="99" data_line_end="101" data_line="99,102" count_line="3"><span class="math-block ">$$
 F(x, y)= \begin{cases}\left(1-e^{-x}\right)\left(1-e^{-y}\right), x, y&gt;0 \\ 0 &amp; \text { otherwise }\end{cases}
 $$</span></div>
-<div class="preview-paragraph-103 preview-line 103" data_line_start="103" data_line_end="103" data_line="103,104" count_line="1">Also use the joint pdf to find</div>
+<div class="preview-paragraph-103 preview-line 103" data_line_start="103" data_line_end="103" data_line="103,104" count_line="1">Also use the joint PDF to find</div>
 <div class="preview-paragraph-104 preview-line 104 105 106" data_line_start="104" data_line_end="106" data_line="104,107" count_line="3"><span class="math-block ">$$
 P(1&lt;x&lt;3,1&lt;y&lt;2) .
 $$</span></div>
-<div class="preview-paragraph-108 preview-line 108 109" data_line_start="108" data_line_end="109" data_line="108,110" count_line="2">Sun?<br>
+<div class="preview-paragraph-108 preview-line 108 109" data_line_start="108" data_line_end="109" data_line="108,110" count_line="2"> <h3 style="color:rgb(200,0,0)"> Solution </h2> <br>
 Partial differentration gives</div>
 <div class="preview-paragraph-110 preview-line 110 111 112" data_line_start="110" data_line_end="112" data_line="110,113" count_line="3"><span class="math-block ">$$
 \frac{\partial^{2} F}{\partial x \partial y}=e^{-(x+y)} \text { if } x, y&gt;0
 $$</span></div>
 <div class="preview-paragraph-113 preview-line 113 114 115 116" data_line_start="113" data_line_end="116" data_line="113,117" count_line="4">and <span class="math-inline ">$\frac{\partial^{2} F}{\partial x \partial y}=0$</span> if <span class="math-inline ">$x&lt;0$</span> or <span class="math-inline ">$y&lt;0$</span>.<br>
-We can then set <span class="math-inline ">$f(x, y)=0$</span> on the remaining pots ( <span class="math-inline ">$x=0$</span> or <span class="math-inline ">$y=0$</span> ) to get<br>
-e.y. For <span class="math-inline ">$P(1&lt;X&lt;3,1&lt;Y&lt;2)$</span>, the preture looks like.<br>
+We can then set <span class="math-inline ">$f(x, y)=0$</span> on the remaining points ( <span class="math-inline ">$x=0$</span> or <span class="math-inline ">$y=0$</span> ) to get<br>
+e.g. For <span class="math-inline ">$P(1&lt;X&lt;3,1&lt;Y&lt;2)$</span>, the picture looks like: <br>
 <figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/4524e07c-9f91-4400-b0d6-dd06744fa025-09.jpg?height=1094&amp;width=1181&amp;top_left_y=445&amp;top_left_x=324" alt="" data-align="center"></figure></div>
-<div class="preview-paragraph-118 preview-line 118 119" data_line_start="118" data_line_end="119" data_line="118,120" count_line="2">All the defas in this section can be generalized to the muldivanate case Where we have <span class="math-inline ">$n$</span> rovi's<br>
-The joint pdt of <span class="math-inline ">$n$</span> discrete rivis is given by</div>
+
+
+<div class="preview-paragraph-118 preview-line 118 119" data_line_start="118" data_line_end="119" data_line="118,120" count_line="2">All the definitions in this section can be generalized to the multivariate case where we have <span class="math-inline ">$n$</span> random variables<br><br>
+The joint PDF of <span class="math-inline ">$n$</span> discrete random variables is given by</div>
+
+<br>
+
 <div class="preview-paragraph-120 preview-line 120 121 122" data_line_start="120" data_line_end="122" data_line="120,123" count_line="3"><span class="math-block ">$$
 f\left(x_{1}, x_{2}, \ldots, x_{n}\right)=P\left(X_{1}=x_{1}, x_{2}=x_{2}, \ldots, X_{n}=x_{n}\right)
 $$</span></div>
-<div class="preview-paragraph-123 preview-line 123" data_line_start="123" data_line_end="123" data_line="123,124" count_line="1">for each <span class="math-inline ">$n$</span>-tuple <span class="math-inline ">$\left(x_{1}, \ldots, x_{n}\right)$</span> within the range of the rivis.</div>
+
+<br>
+
+<div class="preview-paragraph-123 preview-line 123" data_line_start="123" data_line_end="123" data_line="123,124" count_line="1">for each <span class="math-inline ">$n$</span>-tuple <span class="math-inline ">$\left(x_{1}, \ldots, x_{n}\right)$</span> within the range of the random variables</div>
+
+<br>
+
 <div class="preview-paragraph-124 preview-line 124 125 126" data_line_start="124" data_line_end="126" data_line="124,127" count_line="3"><span class="math-block ">$$
 f(x, y)= \begin{cases}e^{-(x+y)}, &amp; x&gt;0, y&gt;0 \\ 0 &amp; \text { othernise. }\end{cases}
 $$</span></div>
@@ -1128,13 +1157,25 @@ P(1&lt;x&lt;3,1&lt;y&lt;2) &amp; \\
 &amp; \approx 0.074
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-138 preview-line 138" data_line_start="138" data_line_end="138" data_line="138,139" count_line="1">In terms of multivariable calculus, we can think of they) as a surface and probubility conesponds to finding the volume under the surface on a certain region</div>
+<div class="preview-paragraph-138 preview-line 138" data_line_start="138" data_line_end="138" data_line="138,139" count_line="1">In terms of multivariable calculus, we can think of <class span="math-inline">f(x,y)</class> as a surface and probability corresponds to finding the volume under the surface on a certain region</div>
+
+<br>
+
 <div class="preview-paragraph-140 preview-line 140" data_line_start="140" data_line_end="140" data_line="140,141" count_line="1">The joint CDF is given by</div>
+
+<br>
+
 <div class="preview-paragraph-141 preview-line 141 142 143" data_line_start="141" data_line_end="143" data_line="141,144" count_line="3"><span class="math-block ">$$
 F\left(x_{1}, x_{2}, \ldots, x_{n}\right)=P\left(x_{1} \leq x_{1}, x_{2} \leq x_{2}, \ldots, x_{n} \leq x_{n}\right)
 $$</span></div>
+
+<br>
+
 <div class="preview-paragraph-144 preview-line 144" data_line_start="144" data_line_end="144" data_line="144,145" count_line="1">for <span class="math-inline ">$-\infty&lt;x_{1}, \ldots, x_{n}&lt;\infty$</span>.</div>
-<div class="preview-paragraph-146 preview-line 146" data_line_start="146" data_line_end="146" data_line="146,147" count_line="1">Ex. If the joint pdf of 3 discrete rivis is given by</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-146 preview-line 146" data_line_start="146" data_line_end="146" data_line="146,147" count_line="1"> <h2 style="color:rgb(0,150,0)">Example).</h2>  If the joint PDF of 3 discrete random variables is given by</div>
 <div class="preview-paragraph-147 preview-line 147 148 149 150 151 152 153" data_line_start="147" data_line_end="153" data_line="147,154" count_line="7"><span class="math-block ">$$
 f(x, y, z)=\frac{(x+y) z}{63}, \begin{aligned}
 &amp; x=1,2 \\
@@ -1143,20 +1184,29 @@ f(x, y, z)=\frac{(x+y) z}{63}, \begin{aligned}
 \end{aligned},
 $$</span></div>
 <div class="preview-paragraph-154 preview-line 154 155" data_line_start="154" data_line_end="155" data_line="154,156" count_line="2">find <span class="math-inline ">$P(x=2, y+z \leq 3)$</span>.<br>
-Suln.</div>
+
+  <br>
+
+  <h3 style="color:rgb(200,0,0)"> Solution). </h3>.</div>
 <div class="preview-paragraph-156 preview-line 156 157 158 159 160 161 162" data_line_start="156" data_line_end="162" data_line="156,163" count_line="7"><span class="math-block ">$$
 \begin{aligned}
-P(x=2, x+z &amp; \leqslant 3)=f(2,1,1)+f(2,1,2)+f(2,2,1) \\
+P(x=2, x+z &amp; \leq 3)=f(2,1,1)+f(2,1,2)+f(2,2,1) \\
 &amp; =\frac{3}{63}+\frac{6}{63}+\frac{4}{63} \\
 &amp; =\frac{13}{63}
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-164 preview-line 164" data_line_start="164" data_line_end="164" data_line="164,165" count_line="1">In the cto case, probs. are again obtained by integrating a pdf and</div>
+
+<br>
+
+<div class="preview-paragraph-164 preview-line 164" data_line_start="164" data_line_end="164" data_line="164,165" count_line="1">In the continuous case, prbaibilities are again obtained by integrating a pdf and</div>
 <div class="preview-paragraph-165 preview-line 165 166 167" data_line_start="165" data_line_end="167" data_line="165,168" count_line="3"><span class="math-block ">$$
 P\left(\left(X_{1}, \ldots, X_{n}\right) \in A\right)=\iint \cdots-\int f\left(x_{1}, \ldots, x_{n}\right) d x_{1} \ldots d x_{n}
 $$</span></div>
-<div class="preview-paragraph-168 preview-line 168 169" data_line_start="168" data_line_end="169" data_line="168,170" count_line="2">for any regan <span class="math-inline ">$A \subset \mathbb{R}^{n}$</span>.<br>
+<div class="preview-paragraph-168 preview-line 168 169" data_line_start="168" data_line_end="169" data_line="168,170" count_line="2">for any region <span class="math-inline ">$A \subset \mathbb{R}^{n}$</span>.<br><br>
 The joint CDF is given by</div>
+<br>
+
+
 <div class="preview-paragraph-170 preview-line 170 171 172 173 174 175 176" data_line_start="170" data_line_end="176" data_line="170,177" count_line="7"><span class="math-block ">$$
 \begin{aligned}
 F\left(x_{1}, \ldots, x_{n}\right) &amp; =P\left(x_{1} \leq x_{1}, \ldots, x_{n} \leq x_{n}\right) \\
@@ -1164,23 +1214,41 @@ F\left(x_{1}, \ldots, x_{n}\right) &amp; =P\left(x_{1} \leq x_{1}, \ldots, x_{n}
 &amp; -\infty&lt;x_{1, \ldots}, x_{n}&lt;\infty
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-178 preview-line 178" data_line_start="178" data_line_end="178" data_line="178,179" count_line="1">Also partial diff gres.</div>
+
+<br>
+
+<div class="preview-paragraph-178 preview-line 178" data_line_start="178" data_line_end="178" data_line="178,179" count_line="1">Also partial differentiation givesL</div>
+
+<br>
+
 <div class="preview-paragraph-179 preview-line 179 180 181" data_line_start="179" data_line_end="181" data_line="179,182" count_line="3"><span class="math-block ">$$
 f\left(x_{1}, \ldots, x_{n}\right)=\frac{\partial^{n}}{\partial x_{1} \partial x_{2} \ldots \partial x_{n}} F\left(x_{1}, x_{2}, x_{n}\right)
 $$</span></div>
-<div class="preview-paragraph-182 preview-line 182" data_line_start="182" data_line_end="182" data_line="182,183" count_line="1">whenever these partial denvatives exist.</div>
-<div class="preview-paragraph-184 preview-line 184" data_line_start="184" data_line_end="184" data_line="184,185" count_line="1">Ex. If the trivaniate prob. density of <span class="math-inline ">$x_{1}, x_{2}, x_{3}$</span> is given by</div>
+
+<br>
+
+<div class="preview-paragraph-182 preview-line 182" data_line_start="182" data_line_end="182" data_line="182,183" count_line="1">whenever these partial derivatives exist.</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-184 preview-line 184" data_line_start="184" data_line_end="184" data_line="184,185" count_line="1"> <h2 style="color: rgb(0,150,0);">Example).</h2> If the trivariate probabiility density of <span class="math-inline ">$x_{1}, x_{2}, x_{3}$</span> is given by</div>
+
+<br>
+
 <div class="preview-paragraph-185 preview-line 185 186 187 188 189 190" data_line_start="185" data_line_end="190" data_line="185,191" count_line="6"><span class="math-block ">$$
 f\left(x_{1}, x_{2}, x_{3}\right)=\left\{\begin{array}{l}
 \left(x_{1}+x_{2}\right) e^{-x_{3}}, \quad 0&lt;x_{1}&lt;1,0&lt;x_{2}&lt;1,0&lt;x_{3} \\
-0 \quad \text { othermax }
+0 \quad \text { otherwise }
 \end{array}\right.
 $$</span></div>
 <div class="preview-paragraph-191 preview-line 191" data_line_start="191" data_line_end="191" data_line="191,192" count_line="1">find <span class="math-inline ">$P\left(\left(x_{1}, x_{2}, x_{3}\right) \in A\right.$</span>. Where</div>
 <div class="preview-paragraph-192 preview-line 192 193 194" data_line_start="192" data_line_end="194" data_line="192,195" count_line="3"><span class="math-block ">$$
 A=\left\{\left(x_{1}, x_{2}, x_{3}\right) ; 0&lt;x_{1}&lt;\frac{1}{2}, \frac{1}{2}&lt;x_{2}&lt;1, x_{3}&lt;1\right\}
 $$</span></div>
-<div class="preview-paragraph-196 preview-line 196" data_line_start="196" data_line_end="196" data_line="196,197" count_line="1">Sull.</div>
+
+<br>
+
+<div class="preview-paragraph-196 preview-line 196" data_line_start="196" data_line_end="196" data_line="196,197" count_line="1"> <h3 style="color: rgb(200,0,0);">Solution).</h3> </div>
 <div class="preview-paragraph-197 preview-line 197 198 199 200 201 202 203 204" data_line_start="197" data_line_end="204" data_line="197,205" count_line="8"><span class="math-block ">$$
 \begin{gathered}
 P\left(\left(x_{1}, x_{2}, x_{3}\right) \in A\right)=P\left(0&lt;x_{1}&lt;\frac{1}{2}, \frac{1}{2}&lt;x_{2}&lt;1, x_{3}&lt;1\right) \\
@@ -1189,6 +1257,8 @@ P\left(\left(x_{1}, x_{2}, x_{3}\right) \in A\right)=P\left(0&lt;x_{1}&lt;\frac{
 =\int_{0}^{1} \frac{1}{4} e^{-x_{3}} d x_{3}=\frac{1}{4}\left(1-e^{-1}\right) \approx 0.158
 \end{gathered}
 $$</span></div>
+
+<br><br><br><br><br><br>
 
     </div>
   </div>
