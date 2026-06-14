@@ -985,50 +985,66 @@ td .ClipboardButton .mmd-clipboard-icon {
   <div id="preview" class="preview scrollEditor">
     <div id="container-ruller" />
     <div id="preview-content">
-      <h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-0 preview-line 0" id="sz.-7-conditional-distributions" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1">
-Sz. 7 Conditional Distributions</h2>
-<div class="preview-paragraph-2 preview-line 2" data_line_start="2" data_line_end="2" data_line="2,3" count_line="1">In ch2, defined the conditianal prob. of an event <span class="math-inline ">$A$</span>, given an crent <span class="math-inline ">$B$</span>, as</div>
+      <h1 type="section" data-unnumbered="true" class="section-title preview-paragraph-0 preview-line 0" id="sz.-7-conditional-distributions" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1" style="color:rgb(200,0,0)">
+<span class="math-inline">$\S$</span> 3.7 Conditional Distributions</h1>
+<div class="preview-paragraph-2 preview-line 2" data_line_start="2" data_line_end="2" data_line="2,3" count_line="1">In chapter 2, we defined the conditianal probability of an event <span class="math-inline ">$A$</span>, given an event <span class="math-inline ">$B$</span>, as</div>
 <div class="preview-paragraph-3 preview-line 3 4 5" data_line_start="3" data_line_end="5" data_line="3,6" count_line="3"><span class="math-block ">$$
 P(A \mid B)=\frac{P(A \cap B)}{P(B)}
 $$</span></div>
-<div class="preview-paragraph-6 preview-line 6 7" data_line_start="6" data_line_end="7" data_line="6,8" count_line="2">provided <span class="math-inline ">$\quad P(B) \neq 0$</span>.<br>
-Suppose now <span class="math-inline ">$X$</span> &amp; <span class="math-inline ">$Y$</span> are discrete rivis with joint density <span class="math-inline ">$f(x, y)$</span> &amp; marginals <span class="math-inline ">$g(x), h(y)$</span> rose. and let <span class="math-inline ">$A=\{X=x\}, B=\{Y=y\}$</span>. Then</div>
+<div class="preview-paragraph-6 preview-line 6 7" data_line_start="6" data_line_end="7" data_line="6,8" count_line="2"> <br> provided <span class="math-inline ">$\quad P(B) \neq 0$</span>.<br>
+
+<br>
+  Suppose now <span class="math-inline ">$X$</span> &amp; <span class="math-inline ">$Y$</span> are discrete random variables with joint density <span class="math-inline ">$f(x, y)$</span> &amp; marginals <span class="math-inline ">$g(x), h(y)$</span> respectively and let <span class="math-inline ">$A=\{X=x\}, B=\{Y=y\}$</span>. Then
+
+<br>
+</div>
 <div class="preview-paragraph-8 preview-line 8 9 10 11 12 13" data_line_start="8" data_line_end="13" data_line="8,14" count_line="6"><span class="math-block ">$$
 \begin{aligned}
-P(X=x \mid Y=y) &amp; =\frac{P(X=x, Y=y)}{P(Y=y)} \\
+P(X=x \mid Y=y) &amp; =\frac{P(X=x, Y=y)}{P(Y=y)} \\ \\
 &amp; =\frac{f(x, y)}{h(y)}
 \end{aligned}
 $$</span></div>
 <div class="preview-paragraph-14 preview-line 14" data_line_start="14" data_line_end="14" data_line="14,15" count_line="1">provided <span class="math-inline ">$h(y)=P(Y=y) \neq 0$</span>.</div>
-<div class="preview-paragraph-16 preview-line 16" data_line_start="16" data_line_end="16" data_line="16,17" count_line="1">If we call this cond prob. <span class="math-inline ">$f(x \mid y)$</span> (to indicate that <span class="math-inline ">$x$</span> is a variable <span class="math-inline ">$\&amp; y$</span> is fired), we get the defn.</div>
-<div class="preview-paragraph-18 preview-line 18" data_line_start="18" data_line_end="18" data_line="18,19" count_line="1">Defn. Let <span class="math-inline ">$X, Y$</span> be diacete rivis with joint PDF <span class="math-inline ">$f(x, y)$</span> and let <span class="math-inline ">$g(x), h(y)$</span> be the marginal PDFI of <span class="math-inline ">$X, Y$</span> (respe).</div>
-<div class="preview-paragraph-20 preview-line 20" data_line_start="20" data_line_end="20" data_line="20,21" count_line="1">The for.</div>
+<div class="preview-paragraph-16 preview-line 16" data_line_start="16" data_line_end="16" data_line="16,17" count_line="1">If we call this cond prob. <span class="math-inline ">$f(x \mid y)$</span> (to indicate that <span class="math-inline ">$x$</span> is a variable <span class="math-inline ">$\&amp; y$</span> is fixed), we get the definition.</div>
+<div class="preview-paragraph-18 preview-line 18" data_line_start="18" data_line_end="18" data_line="18,19" count_line="1"> <br><hr><br>  <h3 style="color:rgb(0,0,230)">Definition).</h3>  Let <span class="math-inline ">$X, Y$</span> be discrete random variables with joint PDF <span class="math-inline ">$f(x, y)$</span> and let <span class="math-inline ">$g(x), h(y)$</span> be the marginal PDFs of <span class="math-inline ">$X, Y$</span> (respectively).</div>
+<div class="preview-paragraph-20 preview-line 20" data_line_start="20" data_line_end="20" data_line="20,21" count_line="1">The function:</div>
 <div class="preview-paragraph-21 preview-line 21 22 23" data_line_start="21" data_line_end="23" data_line="21,24" count_line="3"><span class="math-block ">$$
 f(x \mid y)=\frac{f(x, y)}{h(y)}, \quad h(y) \neq 0
 $$</span></div>
-<div class="preview-paragraph-24 preview-line 24" data_line_start="24" data_line_end="24" data_line="24,25" count_line="1">for each <span class="math-inline ">$x$</span> within the range of <span class="math-inline ">$X$</span> is called the conditional distribution of <span class="math-inline ">$X$</span> given <span class="math-inline ">$Y=y$</span>. Similarly the fn.</div>
+
+
+
+<div class="preview-paragraph-24 preview-line 24" data_line_start="24" data_line_end="24" data_line="24,25" count_line="1">for each <span class="math-inline ">$x$</span> within the range of <span class="math-inline ">$X$</span> is called the <b>conditional distribution</b> of <span class="math-inline ">$X$</span> given <span class="math-inline ">$Y=y$</span>. Similarly the function</div>
+
+<br>
+
 <div class="preview-paragraph-25 preview-line 25 26 27" data_line_start="25" data_line_end="27" data_line="25,28" count_line="3"><span class="math-block ">$$
 w(y \mid x)=\frac{f(x, y)}{g(x)}, \quad g(x) \neq 0
 $$</span></div>
-<div class="preview-paragraph-28 preview-line 28" data_line_start="28" data_line_end="28" data_line="28,29" count_line="1">for each <span class="math-inline ">$y$</span> within the range of <span class="math-inline ">$Y$</span> is called the conditional distribution of <span class="math-inline ">$Y$</span> given <span class="math-inline ">$x=x$</span></div>
-<div class="preview-paragraph-30 preview-line 30" data_line_start="30" data_line_end="30" data_line="30,31" count_line="1">Pretures</div>
-<div class="preview-paragraph-31 preview-line 31 32 33 34 35 36" data_line_start="31" data_line_end="36" data_line="31,37" count_line="6"><span class="math-block ">$$
-\begin{aligned}
-&amp; f(x \mid y) \quad y \overbrace{\ldots \ldots}^{\ldots \ldots \ldots} x=h(y) \\
-&amp; w(y \mid x)
-\end{aligned}
-$$</span></div>
-<div class="preview-paragraph-38 preview-line 38" data_line_start="38" data_line_end="38" data_line="38,39" count_line="1">Note <span class="math-inline ">$f(x \mid y) \geqslant 0$</span> and</div>
+<div class="preview-paragraph-28 preview-line 28" data_line_start="28" data_line_end="28" data_line="28,29" count_line="1">for each <span class="math-inline ">$y$</span> within the range of <span class="math-inline ">$Y$</span> is called the <b>conditional distribution</b> of <span class="math-inline ">$Y$</span> given <span class="math-inline ">$X=x$</span></div>
+<div class="preview-paragraph-30 preview-line 30" data_line_start="30" data_line_end="30" data_line="30,31" count_line="1"><b style="color:rgb(200,0,0)">Pictures: </b></div>
+
+<img src="../Images/Chapter3/3.7_Conditional_Distributions/con_1.png">
+<img src="../Images/Chapter3/3.7_Conditional_Distributions/con_2.png" style="max-width: 80%;
+  height: auto;
+  display: block;">
+
+<div class="preview-paragraph-38 preview-line 38" data_line_start="38" data_line_end="38" data_line="38,39" count_line="1">Note <span class="math-inline ">$f(x \mid y) \geq 0$</span> and</div>
 <div class="preview-paragraph-39 preview-line 39 40 41" data_line_start="39" data_line_end="41" data_line="39,42" count_line="3"><span class="math-block ">$$
 \sum_{x} f(x \mid y)=\sum_{x} \frac{f(x, y)}{h(y)}=\frac{1}{h(y)} \sum_{x} f(x, y)=\frac{h(y)}{h(y)}=1
 $$</span></div>
-<div class="preview-paragraph-43 preview-line 43" data_line_start="43" data_line_end="43" data_line="43,44" count_line="1">Similarly <span class="math-inline ">$w(y B x) \geq 0$</span> and</div>
+<div class="preview-paragraph-43 preview-line 43" data_line_start="43" data_line_end="43" data_line="43,44" count_line="1">Similarly <span class="math-inline ">$w(y | x) \geq 0$</span> and</div>
 <div class="preview-paragraph-44 preview-line 44 45 46" data_line_start="44" data_line_end="46" data_line="44,47" count_line="3"><span class="math-block ">$$
 \sum_{y} w(y \mid x)=\sum_{y} \frac{f(x, y)}{g(x)}=\frac{1}{g(x)} \sum_{y} f(x, y)=\frac{g(x)}{g(x)}=1 .
 $$</span></div>
-<div class="preview-paragraph-48 preview-line 48" data_line_start="48" data_line_end="48" data_line="48,49" count_line="1">Thus <span class="math-inline ">$f(x \mid y)$</span> and <span class="math-inline ">$g(y \mid x)$</span> can both serve as the POF's of discrete r.v.'s by Thm 3.1. (p.74)</div>
-<div class="preview-paragraph-50 preview-line 50 51" data_line_start="50" data_line_end="51" data_line="50,52" count_line="2">Ex, The tablets again!<br>
-<figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/530aaa4a-06f3-46ec-bc0a-b4ff32a72c37-04.jpg?height=1055&amp;width=1036&amp;top_left_y=730&amp;top_left_x=232" alt="" data-align="center"></figure></div>
+<div class="preview-paragraph-48 preview-line 48" data_line_start="48" data_line_end="48" data_line="48,49" count_line="1">Thus <span class="math-inline ">$f(x \mid y)$</span> and <span class="math-inline ">$g(y \mid x)$</span> can both serve as the PDF's of discrete random variables by Theorem 3.1. (p.74)</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-50 preview-line 50 51" data_line_start="50" data_line_end="51" data_line="50,52" count_line="2"> <h2 style="color:rgb(0,150,0)"> Example). </h2> The tablets again!<br>
+
+<img src="../Images/Chapter3/3.7_Conditional_Distributions/marg_dist_table.png">  
+
 <div class="preview-paragraph-52 preview-line 52 53 54 55 56 57 58" data_line_start="52" data_line_end="58" data_line="52,59" count_line="7"><span class="math-block ">$$
 \begin{aligned}
 &amp; f(0 \mid 1)=\frac{f(0,1)}{h(1)}=\frac{\frac{2}{9}}{\frac{7}{18}}=\frac{4}{7} \\
@@ -1036,56 +1052,95 @@ $$</span></div>
 &amp; f(2 \mid 1)=\frac{f(2,1)}{h(1)}=\frac{0}{\frac{7}{18}}=0
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-60 preview-line 60 61 62 63 64 65" data_line_start="60" data_line_end="65" data_line="60,66" count_line="6">Nots. <span class="math-inline ">$\quad f(0 \mid 1)+f(1 \mid 1)+f(2 \mid 1)=1$</span><br>
-as we saw earlier.<br>
-<span class="math-inline ">$w(0 \mid 0)=\frac{f(0,0)}{g(0)}=\frac{\frac{1}{6}}{5 / 12}=\frac{2}{5}$</span><br>
-<span class="math-inline ">$W(1 \mid 0)=\frac{f(0,1)}{g(0)}=\frac{\frac{2}{9}}{\frac{5}{12}}=\frac{8}{15}$</span><br>
-<span class="math-inline ">$w(2 \mid 0)=\frac{f(0,2)}{g(0)}=\frac{\frac{1}{36}}{\frac{5}{12}}=\frac{1}{15}$</span><br>
+<div class="preview-paragraph-60 preview-line 60 61 62 63 64 65" data_line_start="60" data_line_end="65" data_line="60,66" count_line="6"> <h3 style="color:rgb(0,0,230)">Note).</h3> <span class="math-inline ">$\quad f(0 \mid 1)+f(1 \mid 1)+f(2 \mid 1)=1$</span><br>
+as we saw earlier.<br><br>
+
+<span class="math-block">
+$$\begin{align}
+
+w(0 \mid 0)=\frac{f(0,0)}{g(0)}=\frac{\frac{1}{6}}{5 / 12}=\frac{2}{5}\\
+w(1 \mid 0)=\frac{f(0,1)}{g(0)}=\frac{\frac{2}{9}}{\frac{5}{12}}=\frac{8}{15} \\
+w(2 \mid 0)=\frac{f(0,2)}{g(0)}=\frac{\frac{1}{36}}{\frac{5}{12}}=\frac{1}{15}
+
+\end{align}$$
+</span>
+
 and</div>
 <div class="preview-paragraph-66 preview-line 66 67 68" data_line_start="66" data_line_end="68" data_line="66,69" count_line="3"><span class="math-block ">$$
 w(0 \mid 0)+w(1 \mid 0)+w(2 \mid 0)=1
 $$</span></div>
 <div class="preview-paragraph-69 preview-line 69" data_line_start="69" data_line_end="69" data_line="69,70" count_line="1">as we'd expect.</div>
-<div class="preview-paragraph-71 preview-line 71" data_line_start="71" data_line_end="71" data_line="71,72" count_line="1">For cts. rivis we have.</div>
-<div class="preview-paragraph-73 preview-line 73" data_line_start="73" data_line_end="73" data_line="73,74" count_line="1">Defn. If <span class="math-inline ">$f(x, y)$</span> is the value of a joint PDF of the cts.rovi's <span class="math-inline ">$X, Y$</span> at <span class="math-inline ">$F, y$</span> ) and <span class="math-inline ">$h(g)$</span> is the value of the marginal density of <span class="math-inline ">$Y$</span> at <span class="math-inline ">$y$</span>, the for given by</div>
+<div class="preview-paragraph-71 preview-line 71" data_line_start="71" data_line_end="71" data_line="71,72" count_line="1">For continuous random variables we have.</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-73 preview-line 73" data_line_start="73" data_line_end="73" data_line="73,74" count_line="1"><h3 style="color:rgb(0,0,230)">Definition).</h3> If <span class="math-inline ">$f(x, y)$</span> is the value of a joint PDF of the continuous random variables <span class="math-inline ">$X, Y$</span> at <span class="math-inline ">$(x,y)$</span> and <span class="math-inline ">$h(y)$</span> is the value of the marginal density of <span class="math-inline ">$Y$</span> at <span class="math-inline ">$y$</span>, the function given by</div>
+
+<br>
+
 <div class="preview-paragraph-74 preview-line 74 75 76" data_line_start="74" data_line_end="76" data_line="74,77" count_line="3"><span class="math-block ">$$
 f(x \mid y)=\frac{f(x, y)}{h(y)}, \quad h(y) \neq 0,-\infty&lt;x&lt;\infty
 $$</span></div>
-<div class="preview-paragraph-77 preview-line 77" data_line_start="77" data_line_end="77" data_line="77,78" count_line="1">is called the conditional density of <span class="math-inline ">$x$</span> given <span class="math-inline ">$Y=y$</span>, Correspondingly, if <span class="math-inline ">$g(x)$</span> is the value of the marginal density of <span class="math-inline ">$X$</span> at <span class="math-inline ">$x$</span>, the gn given by</div>
+
+<br>
+
+<div class="preview-paragraph-77 preview-line 77" data_line_start="77" data_line_end="77" data_line="77,78" count_line="1">is called the <b>conditional density</b> of <span class="math-inline ">$x$</span> given <span class="math-inline ">$Y=y$</span>, Correspondingly, if <span class="math-inline ">$g(x)$</span> is the value of the marginal density of <span class="math-inline ">$X$</span> at <span class="math-inline ">$x$</span>, the function given by</div>
+
+<br>
+
 <div class="preview-paragraph-78 preview-line 78 79 80" data_line_start="78" data_line_end="80" data_line="78,81" count_line="3"><span class="math-block ">$$
-v|y| x)=\frac{f(x, y)}{g(x)}, \quad g(x) \neq 0, \quad-\infty&lt;y&lt;\infty
+v(y| x)=\frac{f(x, y)}{g(x)}, \quad g(x) \neq 0, \quad-\infty&lt;y&lt;\infty
 $$</span></div>
-<div class="preview-paragraph-81 preview-line 81" data_line_start="81" data_line_end="81" data_line="81,82" count_line="1">is called the conditional density of <span class="math-inline ">$Y$</span> given <span class="math-inline ">$X=x_{\text {. }}$</span></div>
-<div class="preview-paragraph-83 preview-line 83" data_line_start="83" data_line_end="83" data_line="83,84" count_line="1">Note <span class="math-inline ">$f(x \mid y) \geqslant 0$</span> and</div>
+
+<br>
+
+<div class="preview-paragraph-81 preview-line 81" data_line_start="81" data_line_end="81" data_line="81,82" count_line="1">is called the <b>conditional density</b> of <span class="math-inline ">$Y$</span> given <span class="math-inline ">$X=x_{\text {. }}$</span></div>
+
+<br>
+
+<div class="preview-paragraph-83 preview-line 83" data_line_start="83" data_line_end="83" data_line="83,84" count_line="1">Note <span class="math-inline ">$f(x \mid y) \geq 0$</span> and</div>
 <div class="preview-paragraph-84 preview-line 84 85 86 87 88 89" data_line_start="84" data_line_end="89" data_line="84,90" count_line="6"><span class="math-block ">$$
 \begin{aligned}
 \int_{-\infty}^{\infty} f(x \mid y) d x=\int_{-\infty}^{\infty} \frac{f(x, y)}{h(y)} d x &amp; =\frac{1}{h(y)} \int_{-\infty}^{\infty} f(x, y) d x \\
 &amp; =\frac{h(y)}{h(y)}=1
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-91 preview-line 91" data_line_start="91" data_line_end="91" data_line="91,92" count_line="1">Also <span class="math-inline ">$w(y \mid x) \geqslant 0$</span> and</div>
+
+<br>
+
+<div class="preview-paragraph-91 preview-line 91" data_line_start="91" data_line_end="91" data_line="91,92" count_line="1">Also <span class="math-inline ">$w(y \mid x) \geq 0$</span> and</div>
 <div class="preview-paragraph-92 preview-line 92 93 94 95 96 97" data_line_start="92" data_line_end="97" data_line="92,98" count_line="6"><span class="math-block ">$$
 \begin{aligned}
 \int_{-\infty}^{\infty} w(y \mid x) d y=\int_{-\infty}^{\infty} \frac{f(y, y)}{g(x)} d y &amp; =\frac{1}{g(x)} \int_{-\infty}^{\infty} f(x, y) d y \\
 &amp; =\frac{g(x)}{g(x)}=1
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-99 preview-line 99" data_line_start="99" data_line_end="99" data_line="99,100" count_line="1">Thus (provided <span class="math-inline ">$h(y) \neq 0, g(x) \neq 0), f(x \mid y)$</span> and <span class="math-inline ">$g(y \mid x)$</span> can serve as the PDFS of cts rovis by Thm 3.5 (p.86).</div>
-<div class="preview-paragraph-101 preview-line 101" data_line_start="101" data_line_end="101" data_line="101,102" count_line="1">Ex. For the density we had earlier</div>
+
+<br>
+
+<div class="preview-paragraph-99 preview-line 99" data_line_start="99" data_line_end="99" data_line="99,100" count_line="1">Thus (provided <span class="math-inline ">$h(y) \neq 0, g(x) \neq 0), f(x \mid y)$</span> and <span class="math-inline ">$g(y \mid x)$</span> can serve as the PDFS of continuous random variables by Theorem 3.5 (p.86).</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-101 preview-line 101" data_line_start="101" data_line_end="101" data_line="101,102" count_line="1"> <br> <h2 style="color:rgb(0,150,0)"> Example). </h2> For the density we had earlier</div>
 <div class="preview-paragraph-102 preview-line 102 103 104 105 106 107" data_line_start="102" data_line_end="107" data_line="102,108" count_line="6"><span class="math-block ">$$
 f(x, y)=\left\{\begin{array}{l}
 \frac{2}{3}(x+2 y), \quad 0&lt;x, y&lt;1 \\
 0 \quad \text { elsewhere }
 \end{array}\right.
 $$</span></div>
-<div class="preview-paragraph-108 preview-line 108" data_line_start="108" data_line_end="108" data_line="108,109" count_line="1">find the conditional density of <span class="math-inline ">$X$</span> given <span class="math-inline ">$Y=y$</span> and uxe it to evaluate <span class="math-inline ">$P\left(\left.X \leq \frac{1}{2} \right\rvert\, Y=\frac{1}{2}\right)$</span>.</div>
-<div class="preview-paragraph-110 preview-line 110" data_line_start="110" data_line_end="110" data_line="110,111" count_line="1">Soln. Recall we had the marginal pof for <span class="math-inline ">$y$</span></div>
+<div class="preview-paragraph-108 preview-line 108" data_line_start="108" data_line_end="108" data_line="108,109" count_line="1">
+   the conditional density of <span class="math-inline ">$X$</span> given <span class="math-inline ">$Y=y$</span> and use it to evaluate <span class="math-inline ">$P\left(\left.X \leq \frac{1}{2} \right\rvert\, Y=\frac{1}{2}\right)$</span>.</div>
+<div class="preview-paragraph-110 preview-line 110" data_line_start="110" data_line_end="110" data_line="110,111" count_line="1"> <br> <h3 style="color:rgb(200,0,0)">Solution).</h3> Recall we had the marginal PDF for <span class="math-inline ">$y$</span></div> <br>
 <div class="preview-paragraph-111 preview-line 111 112 113 114 115 116" data_line_start="111" data_line_end="116" data_line="111,117" count_line="6"><span class="math-block ">$$
 h(y)=\left\{\begin{array}{l}
 \frac{1}{3}(1+4 y), \quad 0&lt;y&lt;1 \\
 0 \quad \text { elsewhere. }
 \end{array}\right.
 $$</span></div>
+
+<br>
+
 <div class="preview-paragraph-118 preview-line 118" data_line_start="118" data_line_end="118" data_line="118,119" count_line="1">Then for <span class="math-inline ">$0&lt;q&lt;1$</span> and <span class="math-inline ">$0&lt;x&lt;1$</span></div>
 <div class="preview-paragraph-119 preview-line 119 120 121 122 123 124" data_line_start="119" data_line_end="124" data_line="119,125" count_line="6"><span class="math-block ">$$
 \begin{aligned}
@@ -1093,7 +1148,7 @@ f(x \mid y)=\frac{f(x, y)}{n(y)} &amp; =\frac{\frac{2}{3}(x+2 y)}{\frac{1}{3}(1+
 &amp; =\frac{2 x+4 y}{1+4 y}
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-125 preview-line 125" data_line_start="125" data_line_end="125" data_line="125,126" count_line="1">with <span class="math-inline ">$f(x \mid y)=0$</span> elsewhere <span class="math-inline ">$(-\infty&lt;x \leqslant 1,1 \leqslant x&lt;\infty)$</span>. (No into for <span class="math-inline ">$-\infty&lt;y \leq 1,1 \leq y&lt;\infty$</span> ).</div>
+<div class="preview-paragraph-125 preview-line 125" data_line_start="125" data_line_end="125" data_line="125,126" count_line="1">with <span class="math-inline ">$f(x \mid y)=0$</span> elsewhere <span class="math-inline ">$(-\infty&lt;x \leq 1,1 \leq x&lt;\infty)$</span>. (No into for <span class="math-inline ">$-\infty&lt;y \leq 1,1 \leq y&lt;\infty$</span> ).</div>
 <div class="preview-paragraph-127 preview-line 127" data_line_start="127" data_line_end="127" data_line="127,128" count_line="1">Then</div>
 <div class="preview-paragraph-128 preview-line 128 129 130 131 132 133" data_line_start="128" data_line_end="133" data_line="128,134" count_line="6"><span class="math-block ">$$
 \begin{aligned}
@@ -1105,38 +1160,46 @@ $$</span></div>
 <div class="preview-paragraph-135 preview-line 135 136 137" data_line_start="135" data_line_end="137" data_line="135,138" count_line="3"><span class="math-block ">$$
 P\left(\left.X \leq \frac{1}{2} \right\rvert\, Y=\frac{1}{2}\right)=\int_{0}^{\frac{1}{2}} \frac{2 x+2}{3} d x=\frac{5}{12} .
 $$</span></div>
-<div class="preview-paragraph-139 preview-line 139" data_line_start="139" data_line_end="139" data_line="139,140" count_line="1">Ex. Given the joint PDF</div>
+<div class="preview-paragraph-139 preview-line 139" data_line_start="139" data_line_end="139" data_line="139,140" count_line="1"> <br><hr><br> <h2 style="color:rgb(0,150,0)">Example).</h2> <br> Given the joint PDF</div>
 <div class="preview-paragraph-140 preview-line 140 141 142 143 144 145" data_line_start="140" data_line_end="145" data_line="140,146" count_line="6"><span class="math-block ">$$
 f(x, y)=\left\{\begin{array}{cl}
 4 x y, &amp; 0&lt;x, y&lt;1 \\
 0 &amp; \text { elsiwhere }
 \end{array}\right.
 $$</span></div>
-<div class="preview-paragraph-146 preview-line 146" data_line_start="146" data_line_end="146" data_line="146,147" count_line="1">find the marginal densities of <span class="math-inline ">$X$</span> and <span class="math-inline ">$Y$</span> and the conditional density of <span class="math-inline ">$X$</span> given <span class="math-inline ">$Y=y$</span>.</div>
-<div class="preview-paragraph-148 preview-line 148" data_line_start="148" data_line_end="148" data_line="148,149" count_line="1">Soln. For <span class="math-inline ">$0&lt;x&lt;1$</span>,</div>
+<div class="preview-paragraph-146 preview-line 146" data_line_start="146" data_line_end="146" data_line="146,147" count_line="1"> <br> find the marginal densities of <span class="math-inline ">$X$</span> and <span class="math-inline ">$Y$</span> and the conditional density of <span class="math-inline ">$X$</span> given <span class="math-inline ">$Y=y$</span>.</div>
+<div class="preview-paragraph-148 preview-line 148" data_line_start="148" data_line_end="148" data_line="148,149" count_line="1"> <h3 style="color:rgb(200,0,0)">Solution).</h3> For <span class="math-inline ">$0&lt;x&lt;1$</span>,</div>
 <div class="preview-paragraph-149 preview-line 149 150 151" data_line_start="149" data_line_end="151" data_line="149,152" count_line="3"><span class="math-block ">$$
 g(x)=\int_{-\infty}^{\infty} f(x, y) d y=\int_{0}^{1} 4 x y d y=\left[2 x y^{2}\right]_{0}^{1}=2 x
 $$</span></div>
-<div class="preview-paragraph-152 preview-line 152 153" data_line_start="152" data_line_end="153" data_line="152,154" count_line="2">while <span class="math-inline ">$g(x)=0$</span> elsewhere.<br>
+<div class="preview-paragraph-152 preview-line 152 153" data_line_start="152" data_line_end="153" data_line="152,154" count_line="2">while <span class="math-inline ">$g(x)=0$</span> elsewhere.<br><br>
 For <span class="math-inline ">$0&lt;y&lt;1$</span></div>
 <div class="preview-paragraph-154 preview-line 154 155 156" data_line_start="154" data_line_end="156" data_line="154,157" count_line="3"><span class="math-block ">$$
 h(y)=\int_{-\infty}^{\infty} f(x, y) d x=\int_{0}^{1} 4 x y d x=\left[2 x^{2} y\right]_{0}^{1}=2 y
 $$</span></div>
-<div class="preview-paragraph-157 preview-line 157 158" data_line_start="157" data_line_end="158" data_line="157,159" count_line="2">while <span class="math-inline ">$h(y)=0$</span> elsewhere.<br>
+<div class="preview-paragraph-157 preview-line 157 158" data_line_start="157" data_line_end="158" data_line="157,159" count_line="2">while <span class="math-inline ">$h(y)=0$</span> elsewhere.<br><br>
 Thus, if <span class="math-inline ">$0&lt;x&lt;1 \quad(0&lt;y&lt;1)$</span></div>
 <div class="preview-paragraph-159 preview-line 159 160 161" data_line_start="159" data_line_end="161" data_line="159,162" count_line="3"><span class="math-block ">$$
 f(x \mid y)=\frac{f(x, y)}{h(y)}=\frac{4 x y}{2 y}=2 x
 $$</span></div>
 <div class="preview-paragraph-162 preview-line 162" data_line_start="162" data_line_end="162" data_line="162,163" count_line="1">with <span class="math-inline ">$f(x \mid y)=0$</span> elsewhere (in <span class="math-inline ">$x$</span> ).</div>
-<div class="preview-paragraph-164 preview-line 164 165" data_line_start="164" data_line_end="165" data_line="164,166" count_line="2">For more than 2 rovo's the situation can be a bit more complicated.<br>
-E.g. if <span class="math-inline ">$f\left(x_{1}, x_{2}, x_{3}, x_{4}\right)$</span> is the joint PDF of the four discrete rivis <span class="math-inline ">$X_{1}, X_{2}, X_{3}, X_{4}$</span>,</div>
+<div class="preview-paragraph-164 preview-line 164 165" data_line_start="164" data_line_end="165" data_line="164,166" count_line="2">For more than 2 random varialbes the situation can be a bit more complicated.<br>
+<br> E.g. if <span class="math-inline ">$f\left(x_{1}, x_{2}, x_{3}, x_{4}\right)$</span> is the joint PDF of the four discrete random variables <span class="math-inline ">$X_{1}, X_{2}, X_{3}, X_{4}$</span>,</div>
+
+<br>
+
 <div class="preview-paragraph-166 preview-line 166 167 168 169 170 171" data_line_start="166" data_line_end="171" data_line="166,172" count_line="6"><span class="math-block ">$$
 \begin{aligned}
 p\left(x_{3} \mid x_{1}, x_{2}, x_{4}\right)= &amp; \frac{f\left(x_{1}, x_{2}, x_{3}, x_{4}\right)}{g\left(x_{1}, x_{2}, x_{4}\right)}, \\
-&amp; \left.g\left(x_{1}, x_{2}, x_{4}\right) 0=\sum_{x_{3}} f x_{1}, x_{2}, x_{3}, x_{4}\right) \neq 0
+&amp; \left.g (x_{1}, x_{2}, x_{4}\right) =\sum_{x_{3}} f(x_{1}, x_{2}, x_{3}, x_{4} ) \neq 0
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-172 preview-line 172" data_line_start="172" data_line_end="172" data_line="172,173" count_line="1">gives the cond. distr. of <span class="math-inline ">$x_{3}$</span> at <span class="math-inline ">$x_{3}$</span> given <span class="math-inline ">$X_{1}=x_{1}, X_{2}=x_{2}, X_{4}=x_{4}$</span>.</div>
+
+<br>
+
+<div class="preview-paragraph-172 preview-line 172" data_line_start="172" data_line_end="172" data_line="172,173" count_line="1">gives the conditional distribution of <span class="math-inline ">$x_{3}$</span> at <span class="math-inline ">$x_{3}$</span> given <span class="math-inline ">$X_{1}=x_{1}, X_{2}=x_{2}, X_{4}=x_{4}$</span>.</div>
+<br>
+
 <div class="preview-paragraph-173 preview-line 173 174 175 176 177 178" data_line_start="173" data_line_end="178" data_line="173,179" count_line="6"><span class="math-block ">$$
 \begin{aligned}
 q\left(x_{2}, x_{4} \mid x_{1}, x_{3}\right)= &amp; \frac{f\left(x_{1}, x_{2}, x_{3}, x_{4}\right)}{m\left(x_{1}, x_{3}\right)} \\
@@ -1147,42 +1210,55 @@ $$</span></div>
 <div class="preview-paragraph-180 preview-line 180 181 182 183 184 185" data_line_start="180" data_line_end="185" data_line="180,186" count_line="6"><span class="math-block ">$$
 \begin{aligned}
 r\left(x_{2}, x_{3}, x_{4}, x_{1}\right) &amp; =\frac{f\left(x_{1}, x_{2}, x_{3}, x_{4}\right)}{b\left(x_{1}\right)} \\
-\left.b_{1}, x_{1}\right) &amp; =\sum_{x_{2}, x_{3}, x_{4}} f\left(x_{1}, x_{2}, x_{3}, x_{4}\right) \neq 0
+\left.b_{1}(x_{1}\right) &amp; =\sum_{x_{2}, x_{3}, x_{4}} f\left(x_{1}, x_{2}, x_{3}, x_{4}\right) \neq 0
 \end{aligned}
 $$</span></div>
 <div class="preview-paragraph-186 preview-line 186" data_line_start="186" data_line_end="186" data_line="186,187" count_line="1">gives the joint conditional PDF of <span class="math-inline ">$x_{2}, x_{3}, x_{4}$</span> at <span class="math-inline ">$\left(x_{2}, x_{3}, x_{4}\right)$</span> given <span class="math-inline ">$x_{1}=x_{1}$</span>.</div>
-<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-188 preview-line 188" id="rule-of-thumb" data_line_start="188" data_line_end="188" data_line="188,189" count_line="1">
+
+<br><hr>
+
+<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-188 preview-line 188" id="rule-of-thumb" data_line_start="188" data_line_end="188" data_line="188,189" count_line="1" style="color:rgb(200,0,0)">
 RULE OF THUMB</h2>
-<div class="preview-paragraph-190 preview-line 190" data_line_start="190" data_line_end="190" data_line="190,191" count_line="1">The factor one needs to dwille the joint density (e.q. <span class="math-inline ">$f\left(x_{1}, x_{2}, x_{3}, x_{4}\right)$</span> ) is the sum of the point PDF over all thase variables over when one is NOT conditieming.</div>
-<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-192 preview-line 192" id="independence" data_line_start="192" data_line_end="192" data_line="192,193" count_line="1">
+<div class="preview-paragraph-190 preview-line 190" data_line_start="190" data_line_end="190" data_line="190,191" count_line="1">The factor one needs to divide the joint density (e.g. <span class="math-inline ">$f\left(x_{1}, x_{2}, x_{3}, x_{4}\right)$</span> ) is the sum of the joint PDF over all thase variables over when one is NOT conditioning.</div>
+<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-192 preview-line 192" id="independence" data_line_start="192" data_line_end="192" data_line="192,193" count_line="1" style="color:rgb(200,0,0)">
 Independence</h2>
-<div class="preview-paragraph-194 preview-line 194" data_line_start="194" data_line_end="194" data_line="194,195" count_line="1">Recall that in the last example, we found <span class="math-inline ">$f(x \mid y)=2 x$</span> - does not depend on <span class="math-inline ">$y$</span> While in the example before that</div>
+<div class="preview-paragraph-194 preview-line 194" data_line_start="194" data_line_end="194" data_line="194,195" count_line="1">Recall that in the last example, we found <span class="math-inline ">$f(x \mid y)=2 x$</span> - does not depend on <span class="math-inline ">$y$</span>, while in the example before that</div>
 <div class="preview-paragraph-195 preview-line 195 196 197" data_line_start="195" data_line_end="197" data_line="195,198" count_line="3"><span class="math-block ">$$
 f(x \mid y)=\frac{2 x+4 y}{1+4 y}-\text { depends on } y
 $$</span></div>
-<div class="preview-paragraph-199 preview-line 199" data_line_start="199" data_line_end="199" data_line="199,200" count_line="1">Suppose <span class="math-inline ">$f(x \mid y)$</span> does not depend on <span class="math-inline ">$y$</span>. Write <span class="math-inline ">$f(x \mid y)=k(x)$</span>.</div>
-<div class="preview-paragraph-201 preview-line 201" data_line_start="201" data_line_end="201" data_line="201,202" count_line="1">Then (in the discrete care), recalting the margmal PDF <span class="math-inline ">$g(x)=\sum_{y} f(x, y)$</span>, we get</div>
+<div class="preview-paragraph-199 preview-line 199" data_line_start="199" data_line_end="199" data_line="199,200" count_line="1"> <br> Suppose <span class="math-inline ">$f(x \mid y)$</span> does not depend on <span class="math-inline ">$y$</span>. Write <span class="math-inline ">$f(x \mid y)=k(x)$</span>.</div>
+<div class="preview-paragraph-201 preview-line 201" data_line_start="201" data_line_end="201" data_line="201,202" count_line="1"> <br> Then (in the discrete case), recalling the marginal PDF <span class="math-inline ">$g(x)=\sum_{y} f(x, y)$</span>, we get <br> </div>
 <div class="preview-paragraph-202 preview-line 202 203 204 205 206 207 208" data_line_start="202" data_line_end="208" data_line="202,209" count_line="7"><span class="math-block ">$$
 \begin{aligned}
-g(x)=\sum_{y} f(x, y) &amp; =\sum_{y} f(x)(y) h(y) \\
+g(x)=\sum_{y} f(x, y) &amp; =\sum_{y} f(x|y) h(y) \\
 &amp; =\sum_{y} k(x) h(y) \\
-&amp; =k(x) \sum_{y} h(y)=k(x) \cdot I=h(x) \text { is aPDF! }
+&amp; =k(x) \sum_{y} h(y)=k(x) \cdot 1=h(x) \text { is a PDF! }
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-210 preview-line 210 211" data_line_start="210" data_line_end="211" data_line="210,212" count_line="2">Thus <span class="math-inline ">$k(x)=p(x \mid y)=g(x)$</span><br>
-and so</div>
-<div class="preview-paragraph-212 preview-line 212 213 214" data_line_start="212" data_line_end="214" data_line="212,215" count_line="3"><span class="math-block ">$$
+<div class="preview-paragraph-210 preview-line 210 211" data_line_start="210" data_line_end="211" data_line="210,212" count_line="2">Thus <span class="math-inline ">$k(x)=p(x \mid y)=g(x)$</span>, and so</div>
+<div class="preview-paragraph-212 preview-line 212 213 214" data_line_start="212" data_line_end="214" data_line="212,215" count_line="3"><span class="math-block "> <br> $$ 
 f(x, y)=f(x \mid y) h(y)=g h(h)(y) \quad(h(y) \neq 0) .
 $$</span></div>
-<div class="preview-paragraph-216 preview-line 216 217" data_line_start="216" data_line_end="217" data_line="216,218" count_line="2">This mativates the following defin.<br>
-Defn. If <span class="math-inline ">$f\left(x_{1}, x_{2}, \ldots, x_{n}\right)$</span> is the point PDF of the <span class="math-inline ">$n$</span> discrete rivis <span class="math-inline ">$x_{1}, x_{2}, \ldots, x_{n}$</span> at <span class="math-inline ">$\left.h_{1}, \ldots, x_{n}\right)$</span>, and <span class="math-inline ">$f_{i}\left(x_{i}\right)$</span> is the value of the marginal distribution of <span class="math-inline ">$x_{i}$</span> at <span class="math-inline ">$x_{i}$</span> for <span class="math-inline ">$1 \leqslant i \leqslant n$</span>, then the <span class="math-inline ">$n$</span> rivis are independents iff</div>
+<div class="preview-paragraph-216 preview-line 216 217" data_line_start="216" data_line_end="217" data_line="216,218" count_line="2">This motivates the following definition.<br>
+
+<br><hr><br>
+
+<h3 style="color:rgb(0,0,230)">Definition).</h3> If <span class="math-inline ">$f\left(x_{1}, x_{2}, \ldots, x_{n}\right)$</span> is the joint PDF of the <span class="math-inline ">$n$</span> discrete random variables <span class="math-inline ">$x_{1}, x_{2}, \ldots, x_{n}$</span> at <span class="math-inline ">$\left(x_{1}, \ldots, x_{n}\right)$</span>, and <span class="math-inline ">$f_{i}\left(x_{i}\right)$</span> is the value of the marginal distribution of <span class="math-inline ">$x_{i}$</span> at <span class="math-inline ">$x_{i}$</span> for <span class="math-inline ">$1 \leq i \leq n$</span>, then the <span class="math-inline ">$n$</span> random variables are independents iff</div>
+
+<br> 
+
 <div class="preview-paragraph-218 preview-line 218 219 220" data_line_start="218" data_line_end="220" data_line="218,221" count_line="3"><span class="math-block ">$$
 f\left(x_{1}, x_{2}, \ldots, x_{n}\right)=f_{1}\left(x_{1}\right) \cdot f_{2}\left(x_{2}\right) \cdots \cdot f_{n}\left(x_{n}\right)
 $$</span></div>
-<div class="preview-paragraph-221 preview-line 221 222" data_line_start="221" data_line_end="222" data_line="221,223" count_line="2">for all <span class="math-inline ">$x_{1}, x_{2}, \ldots, x_{n}$</span> within their range.<br>
-Note: A similar defo holds for ats. rivits.</div>
-<div class="preview-paragraph-224 preview-line 224" data_line_start="224" data_line_end="224" data_line="224,225" count_line="1">Let's see how this relates to the indendence we are familion with <span class="math-inline ">$(P(A \cap B)=P(A) P(B))$</span> for the simplest care of two discrete rurls.</div>
-<div class="preview-paragraph-226 preview-line 226" data_line_start="226" data_line_end="226" data_line="226,227" count_line="1">Basie idea is that for two r.v.s, events associated with each of them <span class="math-inline ">$(\{x \in C\},\{y \in D))$</span> should be independent in the usual sense.</div>
+
+
+<div class="preview-paragraph-221 preview-line 221 222" data_line_start="221" data_line_end="222" data_line="221,223" count_line="2"> <br> for all  <span class="math-inline ">$x_{1}, x_{2}, \ldots, x_{n}$</span> within their range.<br> <br>
+Note: A similar definition holds for continuous random variables.</div>
+
+<br>
+
+<div class="preview-paragraph-224 preview-line 224" data_line_start="224" data_line_end="224" data_line="224,225" count_line="1">Let's see how this relates to the indendence we are familiar with <span class="math-inline ">$(P(A \cap B)=P(A) P(B))$</span> for the simplest case of two discrete random variables.</div>
+<div class="preview-paragraph-226 preview-line 226" data_line_start="226" data_line_end="226" data_line="226,227" count_line="1"><br> Basic idea is that for two random variables, events associated with each of them <span class="math-inline ">$(\{x \in C\},\{y \in D))$</span> should be independent in the usual sense.</div>
 <div class="preview-paragraph-228 preview-line 228 229" data_line_start="228" data_line_end="229" data_line="228,230" count_line="2">If <span class="math-inline ">$x_{1}, x_{2}$</span> are ind. so that <span class="math-inline ">$f(x, y)=g h, h(y)$</span>.<br>
 Then</div>
 <div class="preview-paragraph-230 preview-line 230 231 232 233 234 235" data_line_start="230" data_line_end="235" data_line="230,236" count_line="6"><span class="math-block ">$$
@@ -1197,19 +1273,19 @@ $$</span></div>
 P(\{X=x\} \cap\{Y=y\})=P(X=x) \cdot P(Y=y) . \tag{*}
 \end{equation*}
 $$</span></div>
-<div class="preview-paragraph-243 preview-line 243" data_line_start="243" data_line_end="243" data_line="243,244" count_line="1">This argument is reversible and if we were to take ( <span class="math-inline ">$\forall$</span> instead as our defa of independence, we would again find that <span class="math-inline ">$f(b), y)=g h(y) h(y)$</span> and so we would recover the carlier defn. of indupendence for dwo dascreta revit.</div>
-<div class="preview-paragraph-245 preview-line 245" data_line_start="245" data_line_end="245" data_line="245,246" count_line="1">Ex. For <span class="math-inline ">$n$</span> independent flips of a coin, let <span class="math-inline ">$X_{i}$</span> be the nor of heads <span class="math-inline ">$(0$</span> on 1<span class="math-inline ">$)$</span> obtained in the ith flip fer <span class="math-inline ">$1 \leqslant i \leqslant n$</span>. Find the joint PDF of <span class="math-inline ">$x_{1}, \ldots, x_{n}$</span>.</div>
+<div class="preview-paragraph-243 preview-line 243" data_line_start="243" data_line_end="243" data_line="243,244" count_line="1">This argument is reversible and if we were to take ( <span class="math-inline ">$\forall$</span> instead as our defa of independence, we would again find that <span class="math-inline ">$f(b), y)=g h(y) h(y)$</span> and so we would recover the carlier definition . of indupendence for dwo dascreta revit.</div>
+<div class="preview-paragraph-245 preview-line 245" data_line_start="245" data_line_end="245" data_line="245,246" count_line="1">Ex. For <span class="math-inline ">$n$</span> independent flips of a coin, let <span class="math-inline ">$X_{i}$</span> be the nor of heads <span class="math-inline ">$(0$</span> on 1<span class="math-inline ">$)$</span> obtained in the ith flip fer <span class="math-inline ">$1 \leq i \leq n$</span>. Find the joint PDF of <span class="math-inline ">$x_{1}, \ldots, x_{n}$</span>.</div>
 <div class="preview-paragraph-247 preview-line 247 248" data_line_start="247" data_line_end="248" data_line="247,249" count_line="2">Soln<br>
 Each <span class="math-inline ">$x_{i}$</span> has preb dashe <span class="math-inline ">$f_{i}$</span> bril wath</div>
 <div class="preview-paragraph-249 preview-line 249 250 251" data_line_start="249" data_line_end="251" data_line="249,252" count_line="3"><span class="math-block ">$$
 f_{i}\left(x_{i}\right)= \begin{cases}\frac{1}{2}, &amp; x_{i}=0,1 \\ 0 &amp; \text { otherwise }\end{cases}
 $$</span></div>
-<div class="preview-paragraph-253 preview-line 253 254" data_line_start="253" data_line_end="254" data_line="253,255" count_line="2">Since these rovs are rind. He point PDF is <span class="math-inline ">$f\left(x_{1}, \ldots, x_{n}\right)=f_{1}\left(x_{1}\right) f_{2}\left(x_{2}\right) \cdots f_{n}\left(x_{n}\right)$</span><br>
+<div class="preview-paragraph-253 preview-line 253 254" data_line_start="253" data_line_end="254" data_line="253,255" count_line="2">Since these rovs are rind. He joint PDF is <span class="math-inline ">$f\left(x_{1}, \ldots, x_{n}\right)=f_{1}\left(x_{1}\right) f_{2}\left(x_{2}\right) \cdots f_{n}\left(x_{n}\right)$</span><br>
 so that</div>
 <div class="preview-paragraph-255 preview-line 255 256 257" data_line_start="255" data_line_end="257" data_line="255,258" count_line="3"><span class="math-block ">$$
 f\left(x_{1,2} x_{n}\right)= \begin{cases}\frac{1}{2^{n}}, &amp; x_{1}=0 \text { or } 1 \\ 0 &amp; \text { freeach } \\ 0 &amp; \text { othemise }\end{cases}
 $$</span></div>
-<div class="preview-paragraph-259 preview-line 259" data_line_start="259" data_line_end="259" data_line="259,260" count_line="1">Ex. Given the independent rivis <span class="math-inline ">$X_{1}, X_{2}, X_{3}$</span> with PDFS</div>
+<div class="preview-paragraph-259 preview-line 259" data_line_start="259" data_line_end="259" data_line="259,260" count_line="1">Ex. Given the independent random variables <span class="math-inline ">$X_{1}, X_{2}, X_{3}$</span> with PDFS</div>
 <div class="preview-paragraph-260 preview-line 260 261 262 263 264 265 266 267 268 269" data_line_start="260" data_line_end="269" data_line="260,270" count_line="10"><span class="math-block ">$$
 \begin{aligned}
 &amp; f_{1}\left(x_{1}\right)= \begin{cases}e^{-x_{1}}, &amp; x_{1}&gt;0 \\
@@ -1220,7 +1296,7 @@ $$</span></div>
 0 &amp; \text { elsiwhere }\end{cases}
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-270 preview-line 270" data_line_start="270" data_line_end="270" data_line="270,271" count_line="1">find the joint <span class="math-inline ">$P D F$</span> and ux it to get</div>
+<div class="preview-paragraph-270 preview-line 270" data_line_start="270" data_line_end="270" data_line="270,271" count_line="1">  find the joint <span class="math-inline ">$P D F$</span> and ux it to get</div>
 <div class="preview-paragraph-271 preview-line 271 272 273" data_line_start="271" data_line_end="273" data_line="271,274" count_line="3"><span class="math-block ">$$
 P\left(x_{1}+x_{2} \leq 1, x_{3}&gt;1\right)
 $$</span></div>
@@ -1235,7 +1311,7 @@ $$</span></div>
 \end{aligned}
 $$</span></div>
 <div class="preview-paragraph-286 preview-line 286 287 288 289 290 291 292 293" data_line_start="286" data_line_end="293" data_line="286,294" count_line="8">Then<br>
-<span class="math-inline ">$P\left(x_{1}+x_{2} \leqslant 1, x_{3}&gt;1\right)$</span><br>
+<span class="math-inline ">$P\left(x_{1}+x_{2} \leq 1, x_{3}&gt;1\right)$</span><br>
 <span class="math-inline ">$=\int_{1}^{\infty} \int_{-\infty}^{\infty} \int_{-\infty}^{1-x_{2}} f\left(x_{1}, x_{2}, x_{3}\right) d x_{1} d x_{2} d x_{3}$</span><br>
 <figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/530aaa4a-06f3-46ec-bc0a-b4ff32a72c37-18.jpg?height=687&amp;width=669&amp;top_left_y=166&amp;top_left_x=1416" alt="" data-align="center"></figure><br>
 <span class="math-inline ">$=\int_{1}^{\infty} \int_{0}^{\infty} \int_{0}^{1-x_{2}} f\left(x_{1}, x_{2}, x_{3}\right) d x_{1} d x_{2} d x_{3}$</span><br>
@@ -1268,7 +1344,7 @@ A. No, e.g. <span class="math-inline ">$P(X=2, Y=2)=0$</span>, but</div>
 P(x=2) \cdot P(y=2)=\frac{1}{12} \times \frac{1}{36}=\frac{1}{432}
 $$</span></div>
 <div class="preview-paragraph-321 preview-line 321" data_line_start="321" data_line_end="321" data_line="321,322" count_line="1">FACT If the set of values where the joint PDF is non-zero is not a 'rectangle' (u. a cortesian product of a set of <span class="math-inline ">$x$</span>-values and a set of <span class="math-inline ">$y$</span>-values), then <span class="math-inline ">$X$</span> and <span class="math-inline ">$Y$</span> are not inclep.</div>
-<div class="preview-paragraph-323 preview-line 323" data_line_start="323" data_line_end="323" data_line="323,324" count_line="1">True for both discrete and cts rovis. Similar conclusions hold for the joint PDF of any number of rovis.</div>
+<div class="preview-paragraph-323 preview-line 323" data_line_start="323" data_line_end="323" data_line="323,324" count_line="1">True for both discrete and continuousrandom variables. Similar conclusions hold for the joint PDF of any number of random variables.</div>
 <div class="preview-paragraph-325 preview-line 325 326" data_line_start="325" data_line_end="326" data_line="325,327" count_line="2">Eg. (Discrete case).<br>
 <figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/530aaa4a-06f3-46ec-bc0a-b4ff32a72c37-22.jpg?height=625&amp;width=664&amp;top_left_y=1625&amp;top_left_x=164" alt="" data-align="center"></figure></div>
 <div class="preview-paragraph-328 preview-line 328 329" data_line_start="328" data_line_end="329" data_line="328,330" count_line="2">Definitely not independent<br>
