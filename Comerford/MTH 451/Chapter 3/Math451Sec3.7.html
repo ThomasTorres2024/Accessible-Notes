@@ -1183,8 +1183,8 @@ Thus, if <span class="math-inline ">$0&lt;x&lt;1 \quad(0&lt;y&lt;1)$</span></div
 f(x \mid y)=\frac{f(x, y)}{h(y)}=\frac{4 x y}{2 y}=2 x
 $$</span></div>
 <div class="preview-paragraph-162 preview-line 162" data_line_start="162" data_line_end="162" data_line="162,163" count_line="1">with <span class="math-inline ">$f(x \mid y)=0$</span> elsewhere (in <span class="math-inline ">$x$</span> ).</div>
-<div class="preview-paragraph-164 preview-line 164 165" data_line_start="164" data_line_end="165" data_line="164,166" count_line="2">For more than 2 random varialbes the situation can be a bit more complicated.<br>
-<br> E.g. if <span class="math-inline ">$f\left(x_{1}, x_{2}, x_{3}, x_{4}\right)$</span> is the joint PDF of the four discrete random variables <span class="math-inline ">$X_{1}, X_{2}, X_{3}, X_{4}$</span>,</div>
+<div class="preview-paragraph-164 preview-line 164 165" data_line_start="164" data_line_end="165" data_line="164,166" count_line="2">For more than 2 random varialbes the situation can be a bit more complicated.<br> <br> <br>
+<br> <br> E.g. if <span class="math-inline ">$f\left(x_{1}, x_{2}, x_{3}, x_{4}\right)$</span> is the joint PDF of the four discrete random variables <span class="math-inline ">$X_{1}, X_{2}, X_{3}, X_{4}$</span>,</div>
 
 <br>
 
@@ -1253,39 +1253,50 @@ $$</span></div>
 
 
 <div class="preview-paragraph-221 preview-line 221 222" data_line_start="221" data_line_end="222" data_line="221,223" count_line="2"> <br> for all  <span class="math-inline ">$x_{1}, x_{2}, \ldots, x_{n}$</span> within their range.<br> <br>
-Note: A similar definition holds for continuous random variables.</div>
+<h3 style="color:rgb(200,0,0)">Note:</h3> A similar definition holds for continuous random variables.</div>
 
 <br>
 
 <div class="preview-paragraph-224 preview-line 224" data_line_start="224" data_line_end="224" data_line="224,225" count_line="1">Let's see how this relates to the indendence we are familiar with <span class="math-inline ">$(P(A \cap B)=P(A) P(B))$</span> for the simplest case of two discrete random variables.</div>
 <div class="preview-paragraph-226 preview-line 226" data_line_start="226" data_line_end="226" data_line="226,227" count_line="1"><br> Basic idea is that for two random variables, events associated with each of them <span class="math-inline ">$(\{x \in C\},\{y \in D))$</span> should be independent in the usual sense.</div>
 <div class="preview-paragraph-228 preview-line 228 229" data_line_start="228" data_line_end="229" data_line="228,230" count_line="2">If <span class="math-inline ">$x_{1}, x_{2}$</span> are ind. so that <span class="math-inline ">$f(x, y)=g h, h(y)$</span>.<br>
-Then</div>
+<br> Then</div>
 <div class="preview-paragraph-230 preview-line 230 231 232 233 234 235" data_line_start="230" data_line_end="235" data_line="230,236" count_line="6"><span class="math-block ">$$
 \begin{aligned}
 P(X=x, Y=y) &amp; =f(x, y)=g(x) h(y) \\
 &amp; =P(X=x) \cdot P(Y=y)
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-236 preview-line 236" data_line_start="236" data_line_end="236" data_line="236,237" count_line="1"><span class="math-inline ">$\alpha$</span></div>
+<div class="preview-paragraph-236 preview-line 236" data_line_start="236" data_line_end="236" data_line="236,237" count_line="1"><span class="math-inline ">or <br> </span></div>
 <div class="preview-paragraph-237 preview-line 237 238 239 240 241" data_line_start="237" data_line_end="241" data_line="237,242" count_line="5"><span class="math-block ">$$
 \begin{equation*}
 P(\{X=x\} \cap\{Y=y\})=P(X=x) \cdot P(Y=y) . \tag{*}
 \end{equation*}
 $$</span></div>
-<div class="preview-paragraph-243 preview-line 243" data_line_start="243" data_line_end="243" data_line="243,244" count_line="1">This argument is reversible and if we were to take ( <span class="math-inline ">$\forall$</span> instead as our defa of independence, we would again find that <span class="math-inline ">$f(b), y)=g h(y) h(y)$</span> and so we would recover the carlier definition . of indupendence for dwo dascreta revit.</div>
-<div class="preview-paragraph-245 preview-line 245" data_line_start="245" data_line_end="245" data_line="245,246" count_line="1">Ex. For <span class="math-inline ">$n$</span> independent flips of a coin, let <span class="math-inline ">$X_{i}$</span> be the nor of heads <span class="math-inline ">$(0$</span> on 1<span class="math-inline ">$)$</span> obtained in the ith flip fer <span class="math-inline ">$1 \leq i \leq n$</span>. Find the joint PDF of <span class="math-inline ">$x_{1}, \ldots, x_{n}$</span>.</div>
-<div class="preview-paragraph-247 preview-line 247 248" data_line_start="247" data_line_end="248" data_line="247,249" count_line="2">Soln<br>
-Each <span class="math-inline ">$x_{i}$</span> has preb dashe <span class="math-inline ">$f_{i}$</span> bril wath</div>
+<div class="preview-paragraph-243 preview-line 243" data_line_start="243" data_line_end="243" data_line="243,244" count_line="1"> <br> This argument is reversible and if we were to take  <span class="math-inline ">$(*)$</span> instead as our definition of independence, we would again find that <span class="math-inline ">$f(x, y)=g(x) h(y)$</span> and so we would recover the earlier definition . of indupendence for two descrete random variables.</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-245 preview-line 245" data_line_start="245" data_line_end="245" data_line="245,246" count_line="1"> <br> <h2 style="color:rgb(0,150,0)">Example).</h2> For <span class="math-inline ">$n$</span> independent flips of a coin, let <span class="math-inline ">$X_{i}$</span> be the nnumber of heads <span class="math-inline ">$(0$</span> on 1<span class="math-inline ">$)$</span> obtained in the ith flip for <span class="math-inline ">$1 \leq i \leq n$</span>. Find the joint PDF of <span class="math-inline ">$x_{1}, \ldots, x_{n}$</span>.</div>
+<div class="preview-paragraph-247 preview-line 247 248" data_line_start="247" data_line_end="248" data_line="247,249" count_line="2"> <br>  <h3 style="color:rgb(200,0,0)">Solution).</h3> <br>
+Each <span class="math-inline ">$x_{i}$</span> has probability distribution <span class="math-inline ">$f_{i}(x_i)$</span>  with</div><br>
 <div class="preview-paragraph-249 preview-line 249 250 251" data_line_start="249" data_line_end="251" data_line="249,252" count_line="3"><span class="math-block ">$$
 f_{i}\left(x_{i}\right)= \begin{cases}\frac{1}{2}, &amp; x_{i}=0,1 \\ 0 &amp; \text { otherwise }\end{cases}
 $$</span></div>
-<div class="preview-paragraph-253 preview-line 253 254" data_line_start="253" data_line_end="254" data_line="253,255" count_line="2">Since these rovs are rind. He joint PDF is <span class="math-inline ">$f\left(x_{1}, \ldots, x_{n}\right)=f_{1}\left(x_{1}\right) f_{2}\left(x_{2}\right) \cdots f_{n}\left(x_{n}\right)$</span><br>
-so that</div>
+
+<br>
+
+<div class="preview-paragraph-253 preview-line 253 254" data_line_start="253" data_line_end="254" data_line="253,255" count_line="2">Since these random variables are independent, the joint PDF is <br><br> <span class="math-block ">  $$f\left(x_{1}, \ldots, x_{n}\right)=f_{1}\left(x_{1}\right) f_{2}\left(x_{2}\right) \cdots f_{n}\left(x_{n}\right)$$</span><br>
+<br> so that</div>
 <div class="preview-paragraph-255 preview-line 255 256 257" data_line_start="255" data_line_end="257" data_line="255,258" count_line="3"><span class="math-block ">$$
-f\left(x_{1,2} x_{n}\right)= \begin{cases}\frac{1}{2^{n}}, &amp; x_{1}=0 \text { or } 1 \\ 0 &amp; \text { freeach } \\ 0 &amp; \text { othemise }\end{cases}
+f\left(x_{1,2} x_{n}\right)= \begin{cases}\frac{1}{2^{n}}, &amp; x_{1}=0 \text { or } 1 \quad \text{ for each } 1 \leq i \leq n \\ 0 &amp;  \text { othemise }\end{cases}
 $$</span></div>
-<div class="preview-paragraph-259 preview-line 259" data_line_start="259" data_line_end="259" data_line="259,260" count_line="1">Ex. Given the independent random variables <span class="math-inline ">$X_{1}, X_{2}, X_{3}$</span> with PDFS</div>
+
+<br>
+<hr>
+
+
+<div class="preview-paragraph-259 preview-line 259" data_line_start="259" data_line_end="259" data_line="259,260" count_line="1"> <br> <h2 style="color:rgb(0,150,0)">Example).</h2> Given the independent random variables <span class="math-inline ">$X_{1}, X_{2}, X_{3}$</span> with PDFS <br><br> </div>
 <div class="preview-paragraph-260 preview-line 260 261 262 263 264 265 266 267 268 269" data_line_start="260" data_line_end="269" data_line="260,270" count_line="10"><span class="math-block ">$$
 \begin{aligned}
 &amp; f_{1}\left(x_{1}\right)= \begin{cases}e^{-x_{1}}, &amp; x_{1}&gt;0 \\
@@ -1296,11 +1307,23 @@ $$</span></div>
 0 &amp; \text { elsiwhere }\end{cases}
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-270 preview-line 270" data_line_start="270" data_line_end="270" data_line="270,271" count_line="1">  find the joint <span class="math-inline ">$P D F$</span> and ux it to get</div>
+
+<br>
+
+<div class="preview-paragraph-270 preview-line 270" data_line_start="270" data_line_end="270" data_line="270,271" count_line="1">  find the joint PDF and use it to get</div>
+<br>
+
+
 <div class="preview-paragraph-271 preview-line 271 272 273" data_line_start="271" data_line_end="273" data_line="271,274" count_line="3"><span class="math-block ">$$
 P\left(x_{1}+x_{2} \leq 1, x_{3}&gt;1\right)
 $$</span></div>
-<div class="preview-paragraph-275 preview-line 275" data_line_start="275" data_line_end="275" data_line="275,276" count_line="1">Suln. Since <span class="math-inline ">$x_{1}, x_{2}, x_{3}$</span> are inde, the joint PDF <span class="math-inline ">$f\left(x_{1}, x_{2}, x_{3}\right)$</span> is given by</div>
+
+<br>
+
+<div class="preview-paragraph-275 preview-line 275" data_line_start="275" data_line_end="275" data_line="275,276" count_line="1"> <h3 style="color:rgb(200,0,0)">Solution).</h3> Since <span class="math-inline ">$x_{1}, x_{2}, x_{3}$</span> are independent, the joint PDF <span class="math-inline ">$f\left(x_{1}, x_{2}, x_{3}\right)$</span> is given by</div>
+
+<br>
+
 <div class="preview-paragraph-276 preview-line 276 277 278 279 280 281 282 283 284" data_line_start="276" data_line_end="284" data_line="276,285" count_line="9"><span class="math-block ">$$
 \begin{aligned}
 &amp; f\left(x_{1}, x_{2}, x_{3}\right)=f_{1}\left(x_{1}\right) f_{2}\left(x_{2}\right) f_{3}\left(x_{3}\right) \text { or } \\
@@ -1310,11 +1333,19 @@ $$</span></div>
 \end{array}\right.
 \end{aligned}
 $$</span></div>
+
+<br>
+
 <div class="preview-paragraph-286 preview-line 286 287 288 289 290 291 292 293" data_line_start="286" data_line_end="293" data_line="286,294" count_line="8">Then<br>
 <span class="math-inline ">$P\left(x_{1}+x_{2} \leq 1, x_{3}&gt;1\right)$</span><br>
+
+<br><br>
+
 <span class="math-inline ">$=\int_{1}^{\infty} \int_{-\infty}^{\infty} \int_{-\infty}^{1-x_{2}} f\left(x_{1}, x_{2}, x_{3}\right) d x_{1} d x_{2} d x_{3}$</span><br>
-<figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/530aaa4a-06f3-46ec-bc0a-b4ff32a72c37-18.jpg?height=687&amp;width=669&amp;top_left_y=166&amp;top_left_x=1416" alt="" data-align="center"></figure><br>
-<span class="math-inline ">$=\int_{1}^{\infty} \int_{0}^{\infty} \int_{0}^{1-x_{2}} f\left(x_{1}, x_{2}, x_{3}\right) d x_{1} d x_{2} d x_{3}$</span><br>
+
+<img src="../Images/Chapter3/3.7_Conditional_Distributions/pdf_domain.png">
+
+<span class="math-inline ">$=\int_{1}^{\infty} \int_{0}^{\infty} \int_{0}^{1-x_{2}} f\left(x_{1}, x_{2}, x_{3}\right) d x_{1} d x_{2} d x_{3} \text{ as } f(x_1,x_2,x_3)=0 \text{ if }x_1<0,x_2<0 $</span><br>
 <span class="math-inline ">$=\int_{1}^{\infty} \int_{0}^{1} \int_{0}^{1-x_{2}} f\left(x_{1}, x_{2}, x_{3}\right) d x_{1} d x_{2} d x_{3}$</span> or <span class="math-inline ">$x_{2}&lt;0$</span> as if <span class="math-inline ">$x_{2}&gt;1$</span>, then <span class="math-inline ">$1-x_{2}&lt;0$</span> and <span class="math-inline ">$x_{1}&lt;1-x_{2}$</span><br>
 <span class="math-inline ">$=\int_{1}^{\infty} \int_{0}^{1} \int_{0}^{1-x_{2}} 6 e^{-x_{1}-2 x_{2}-3 x_{3}} d x_{1} d x_{2} d x_{3} \Rightarrow x_{1}&lt;0$</span> and so <span class="math-inline ">$f\left(x_{1}, x_{2}, x_{3}\right)=0$</span><br>
 <span class="math-inline ">$=\int_{1}^{\infty} \int_{0}^{1} 6 e^{-2 x_{2}} e^{-3 x_{3}} \int_{0}^{1-x_{2}} e^{-x_{1}} d x_{1}$</span></div>
@@ -1336,19 +1367,41 @@ $$</span></div>
 &amp; =\left(1-2 e^{-1}+\frac{1}{2} e^{-2}\right) \cdot e^{-3}
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-313 preview-line 313 314 315 316" data_line_start="313" data_line_end="316" data_line="313,317" count_line="4">Ex: The tablets (yet) again. Recall that X (# of aspinin) and <span class="math-inline ">$Y$</span> (# of sedatives) had the following joint distribution and marginals<br>
-<figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/530aaa4a-06f3-46ec-bc0a-b4ff32a72c37-21.jpg?height=1056&amp;width=1017&amp;top_left_y=894&amp;top_left_x=328" alt="" data-align="center"></figure><br>
-Q. Are <span class="math-inline ">$X$</span> and <span class="math-inline ">$Y$</span> inclep?<br>
+
+<br><hr><br>
+
+<div class="preview-paragraph-313 preview-line 313 314 315 316" data_line_start="313" data_line_end="316" data_line="313,317" count_line="4"> <h2 style="color:rgb(0,150,0)">Example).</h2>  The tablets (yet) again. Recall that X (Number of aspirin) and <span class="math-inline ">$Y$</span> (Number of sedatives) had the following joint distribution and marginals<br>
+
+  <img src="../Images/Chapter3/3.7_Conditional_Distributions/marg_dist_table.png">  
+
+Q. Are <span class="math-inline ">$X$</span> and <span class="math-inline ">$Y$</span> independent?<br>
 A. No, e.g. <span class="math-inline ">$P(X=2, Y=2)=0$</span>, but</div>
+
+<br> 
+
 <div class="preview-paragraph-317 preview-line 317 318 319" data_line_start="317" data_line_end="319" data_line="317,320" count_line="3"><span class="math-block ">$$
 P(x=2) \cdot P(y=2)=\frac{1}{12} \times \frac{1}{36}=\frac{1}{432}
 $$</span></div>
-<div class="preview-paragraph-321 preview-line 321" data_line_start="321" data_line_end="321" data_line="321,322" count_line="1">FACT If the set of values where the joint PDF is non-zero is not a 'rectangle' (u. a cortesian product of a set of <span class="math-inline ">$x$</span>-values and a set of <span class="math-inline ">$y$</span>-values), then <span class="math-inline ">$X$</span> and <span class="math-inline ">$Y$</span> are not inclep.</div>
-<div class="preview-paragraph-323 preview-line 323" data_line_start="323" data_line_end="323" data_line="323,324" count_line="1">True for both discrete and continuousrandom variables. Similar conclusions hold for the joint PDF of any number of random variables.</div>
+
+<br>
+
+<div class="preview-paragraph-321 preview-line 321" data_line_start="321" data_line_end="321" data_line="321,322" count_line="1"> <h3 style="color:rgb(200,0,0)">FACT: </h3>  If the set of values where the joint PDF is non-zero is not a 'rectangle' (i.e. a cartesian product of a set of <span class="math-inline ">$x$</span>-values and a set of <span class="math-inline ">$y$</span>-values), then <span class="math-inline ">$X$</span> and <span class="math-inline ">$Y$</span> are not independent.</div>
+
+<br>
+
+<div class="preview-paragraph-323 preview-line 323" data_line_start="323" data_line_end="323" data_line="323,324" count_line="1">True for both discrete and continuous random variables. Similar conclusions hold for the joint PDF of any number of random variables.</div>
+
+
+<br> 
+
 <div class="preview-paragraph-325 preview-line 325 326" data_line_start="325" data_line_end="326" data_line="325,327" count_line="2">Eg. (Discrete case).<br>
-<figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/530aaa4a-06f3-46ec-bc0a-b4ff32a72c37-22.jpg?height=625&amp;width=664&amp;top_left_y=1625&amp;top_left_x=164" alt="" data-align="center"></figure></div>
+
+<img src="../Images/Chapter3/3.7_Conditional_Distributions">
+
 <div class="preview-paragraph-328 preview-line 328 329" data_line_start="328" data_line_end="329" data_line="328,330" count_line="2">Definitely not independent<br>
-<figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/530aaa4a-06f3-46ec-bc0a-b4ff32a72c37-22.jpg?height=615&amp;width=736&amp;top_left_y=1625&amp;top_left_x=1151" alt="" data-align="center"></figure></div>
+
+<img src="../Images/Chapter3/3.7_Conditional_Distributions/lattice.png">
+
 <div class="preview-paragraph-331 preview-line 331" data_line_start="331" data_line_end="331" data_line="331,332" count_line="1">May (or may not) be independent. Needs further investigation.</div>
 
     </div>
