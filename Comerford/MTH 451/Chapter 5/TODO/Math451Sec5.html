@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Math451Sec5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.mathpix.com/fonts/cmu.css"/>
+    <style>html,body {
+  width: 100%;
+  height: 100%;
+}
+*, *::before,*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  color: #1E2029;
+  font-size: 14px;
+  line-height: normal;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 500;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+ol, ul, dl {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+ol ol, ul ul, ol ul, ul ol {
+  margin-bottom: 0;
+}
+dt {
+  font-weight: 500;
+}
+dd {
+  margin-bottom: 0.5em;
+  margin-left: 0;
+}
+blockquote {
+  margin: 0 0 1em;
+}
+dfn {
+  font-style: italic;
+}
+b, strong {
+  font-weight: bolder;
+}
+small {
+  font-size: 80%;
+}
+sub, sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+a {
+  color: #0B93ff;
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+a:hover {
+  color: #33aaff;
+}
+a:active {
+  color: #0070d9;
+}
+a:active, a:hover {
+  text-decoration: none;
+  outline: 0;
+}
+a[disabled] {
+  color: rgba(0, 0, 0, 0.25);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+pre, code, kbd, samp {
+  font-size: 1em;
+}
+pre {
+  margin-top: 0;
+  margin-bottom: 1em;
+  overflow: auto;
+}
+figure {
+  margin: 0 0 1em;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+table {
+  border-collapse: collapse;
+}
+caption {
+  padding-top: 0.75em;
+  padding-bottom: 0.3em;
+  color: rgba(0, 0, 0, 0.45);
+  text-align: left;
+  caption-side: bottom;
+}
+th {
+  text-align: inherit;
+}
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+  stroke-width: 3;
+}
+#setText > div {
+  justify-content: inherit;
+  margin-top: 0;
+  margin-bottom: 1em;
+  
+  
+}
+#setText div:last-child {
+  margin-bottom: 0 !important;
+}
+#setText > br, #preview-content br {
+  line-height: 1.2;
+}
+#preview-content > div {
+  margin-top: 0;
+  margin-bottom: 1em;
+  
+}
+.proof > div,
+#preview-content .proof > div, #setText .proof > div,
+.theorem > div,
+#preview-content .theorem > div, #setText .theorem > div {
+  margin-top: 1rem;
+}
+mjx-container {
+  text-indent: 0;
+  overflow-y: hidden;
+  overflow-x: auto;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  
+}
+.math-inline mjx-container {
+  display: inline-block !important;
+  page-break-inside: avoid;
+  max-width: 100%;
+  padding: 0;
+  line-height: 0;
+}
+.math-inline[data-overflow="visible"] mjx-container {
+  overflow: visible;
+}
+.math-inline mjx-container mjx-assistive-mml {
+  max-width: 100%;
+}
+.math-block {
+  align-items: center;
+  page-break-after: auto;
+  page-break-inside: avoid;
+  margin: 0;
+  display: block;
+}
+.math-inline {
+  display: inline-flex;
+  max-width: 100%;
+}
+.math-block[data-width="full"] {
+  overflow-x: auto;
+  display: flex;
+}
+.math-block[data-width="full"] mjx-container[jax=SVG][display=true] {
+  display: flex;
+  flex: 1 1;
+  justify-content: center;
+}
+svg .math-inline {
+  display: initial;
+  max-width: initial;
+}
+svg .math-inline mjx-container {
+  max-width: initial;
+}
+svg mjx-container {
+  overflow: visible;
+  padding: 0;
+}
+svg .math-block[data-width="full"] {
+  overflow: visible;
+}
+.math-block, .math-inline {
+  --mmd-highlight-color: rgba(0, 147, 255, 0.25);
+  --mmd-highlight-text-color: #1e2029;
+}
+.math-block[data-highlight-color] mjx-container[jax="SVG"] > svg {
+  background-color: var(--mmd-highlight-color);
+}
+.math-block[data-highlight-text-color] mjx-container[jax="SVG"] > svg {
+  color: var(--mmd-highlight-text-color);
+}
+.math-inline[data-highlight-color] mjx-container[jax="SVG"] {
+  background-color: var(--mmd-highlight-color);
+}
+.math-inline[data-highlight-text-color] mjx-container[jax="SVG"] {
+  color: var(--mmd-highlight-text-color);
+}
+.math-block p {
+  flex-shrink: 1;
+}
+.math-block mjx-container {
+  margin: 0 !important;
+}
+.math-error {
+  background-color: yellow;
+  color: red;
+}
+#preview-content img, #setText img {
+  max-width: 100%;
+}
+#preview-content blockquote, #setText blockquote {
+  page-break-inside: avoid;
+  color: #666;
+  margin: 0 0 1em 0;
+  padding-left: 3em;
+  border-left: .5em solid #eee;
+}
+#preview-content pre, #setText pre {
+  border: none;
+  padding: 0;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background: #f8f8fa;
+}
+#preview-content pre code, #setText pre code {
+  padding: 1rem;
+  display: block;
+  overflow-x: auto;
+  line-height: 24px;
+}
+#preview-content table, #setText table {
+  display: table;
+  overflow: auto;
+  max-width: 100%;
+  border-collapse: collapse;
+  page-break-inside: avoid;
+  margin-bottom: 1em;
+}
+#preview-content table th, #setText table th {
+  text-align: center;
+  font-weight: bold;
+}
+#preview-content table td, #setText table td,
+#preview-content table th, #setText table th {
+  border: 1px solid #dfe2e5;
+  padding: 6px 13px;
+}
+#preview-content table tr, #setText table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+#preview-content table tr:nth-child(2n), #setText table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+.main-title,
+#preview-content .main-title, #setText .main-title {
+  text-align: center;
+  line-height: 1.2;
+  margin: 0 auto 1em auto;
+}
+.author,
+#preview-content .author, #setText .author {
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.author p,
+#preview-content .author p, #setText .author p {
+  min-width: 30%;
+  max-width: 50%;
+  padding: 0 7px;
+}
+.author > p > span,
+#preview-content .author > p > span, #setText .author > p > span {
+  display: block;
+  text-align: center;
+}
+.section-title,
+#preview-content .section-title, #setText .section-title {
+  margin-top: 1.5em;
+}
+.abstract,
+#preview-content .abstract, #setText .abstract {
+  text-align: justify;
+  margin-bottom: 1em;
+}
+.abstract p,
+#preview-content .abstract p, #setText .abstract p {
+  margin-bottom: 0;
+}
+#preview-content sup, #setText sup {
+  top: -.5em;
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+.text-url,
+#preview-content .text-url, #setText .text-url {
+  color: #0B93ff;
+  cursor: text;
+  pointer-events: none;
+}
+.text-url a:hover,
+#preview-content .text-url a:hover, #setText .text-url a:hover {
+  color: #0B93ff;
+}
+mark,
+#preview-content mark, #setText mark {
+  background-color: #feffe6;
+}
+span[data-underline-type] mark,
+#preview-content span[data-underline-type] mark,
+#setText span[data-underline-type] mark {
+  background: inherit;
+  background-color: #feffe6;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+*[data-has-dotfill] {
+  position: relative;
+  overflow: hidden;
+}
+*[data-has-dotfill] .dotfill::after {
+  position: absolute;
+  padding-left: .25ch;
+  content: " . . . . . . . . . . . . . . . . . . . "
+      ". . . . . . . . . . . . . . . . . . . . . . . "
+      ". . . . . . . . . . . . . . . . . . . . . . . "
+      ". . . . . . . . . . . . . . . . . . . . . . . "
+      ". . . . . . . . . . . . . . . . . . . . . . . "
+      ". . . . . . . . . . . . . . . . . . . . . . . "
+      ". . . . . . . . . . . . . . . . . . . . . . . ";
+  text-align: right;
+}
+.smiles,
+#preview-content .smiles, #setText .smiles {
+  text-align: center;
+}
+div.svg-container,
+#preview-content > div.svg-container,
+#setText > div.svg-container {
+  display: flex;
+  justify-content: center;
+}
+@media print {
+  #preview {
+    font-size: 10pt !important;
+  }
+  .math-block svg, .math-inline svg {
+    shape-rendering: crispEdges;
+    margin-top: 1px;
+  }
+  #preview-content img, #setText img {
+    display: block;
+  }
+  #preview-content .figure_img img, #setText .figure_img img {
+    display: inline;
+  }
+  #preview-content h1, #preview-content h2, #preview-content h3,
+  #preview-content h4, #preview-content h5, #preview-content h6,
+  #setText h1, #setText h2, #setText h3,
+  #setText h4, #setText h5, #setText h6 {
+    page-break-inside: avoid;
+    position: relative;
+    border: 2px solid transparent;
+  }
+  #preview-content h1::after, #preview-content h2::after, #preview-content h3::after,
+  #preview-content h4::after, #preview-content h5::after, #preview-content h6::after,
+  #setText h1::after, #setText h2::after, #setText h3::after,
+  #setText h4::after, #setText h5::after, #setText h6::after {
+    content: "";
+    display: block;
+    height: 100px;
+    margin-bottom: -100px;
+    position: relative;
+  }
+}
+#preview-content code, #setText code {
+  font-family: Inconsolata;
+  font-size: inherit;
+  display: initial;
+  background: #f8f8fa;
+}
+#preview-content .mmd-highlight code, #setText .mmd-highlight code,
+#preview-content pre.mmd-highlight code, #setText pre.mmd-highlight code {
+  background-color: transparent;
+}
+#preview-content pre code, #setText pre code {
+  font-family: 'DM Mono', Inconsolata, monospace;
+  color: #333;
+  font-size: 15px;
+}
+.hljs-comment, .hljs-quote,
+#preview-content .hljs-comment, #setText .hljs-comment,
+#preview-content .hljs-quote, #setText .hljs-quote {
+  color: #998;
+  font-style: italic;
+}
+.hljs-command,
+#preview-content .hljs-command, #setText .hljs-command {
+  color: #005cc5;
+}
+.hljs-keyword, .hljs-selector-tag, .hljs-subst,
+#preview-content .hljs-keyword, #setText .hljs-keyword,
+#preview-content .hljs-selector-tag, #setText .hljs-selector-tag,
+#preview-content .hljs-subst, #setText .hljs-subst {
+  color: #d73a49;
+  font-weight: bold;
+}
+.hljs-number, .hljs-literal, .hljs-variable,
+.hljs-template-variable, .hljs-tag .hljs-attr,
+#preview-content .hljs-number, #setText .hljs-number,
+#preview-content .hljs-literal, #setText .hljs-literal,
+#preview-content .hljs-variable, #setText .hljs-variable,
+#preview-content .hljs-template-variable, #setText .hljs-template-variable,
+#preview-content .hljs-tag .hljs-attr, #setText .hljs-tag .hljs-attr {
+  color: #005cc5;
+}
+.hljs-string, .hljs-doctag,
+#preview-content .hljs-string, #setText .hljs-string,
+#preview-content .hljs-doctag, #setText .hljs-doctag {
+  color: #24292e;
+}
+.hljs-title, .hljs-section, .hljs-selector-id,
+#preview-content .hljs-title, #setText .hljs-title,
+#preview-content .hljs-section, #setText .hljs-section,
+#preview-content .hljs-selector-id, #setText .hljs-selector-id {
+  color: #6f42c1;
+  font-weight: bold;
+}
+.hljs-subst,
+#preview-content .hljs-subst, #setText .hljs-subst {
+  font-weight: normal;
+}
+.hljs-type, .hljs-class .hljs-title,
+#preview-content .hljs-type, #setText .hljs-type,
+#preview-content .hljs-class .hljs-title, #setText .hljs-class .hljs-title {
+  color: #458;
+  font-weight: bold;
+}
+.hljs-tag, .hljs-name, .hljs-attribute,
+#preview-content .hljs-tag, #setText .hljs-tag,
+#preview-content .hljs-name, #setText .hljs-name,
+#preview-content .hljs-attribute, #setText .hljs-attribute {
+  color: #000080;
+  font-weight: normal;
+}
+.hljs-regexp, .hljs-link,
+#preview-content .hljs-regexp, #setText .hljs-regexp,
+#preview-content .hljs-link, #setText .hljs-link {
+  color: #009926;
+}
+.hljs-symbol, .hljs-bullet,
+#preview-content .hljs-symbol, #setText .hljs-symbol,
+#preview-content .hljs-bullet, #setText .hljs-bullet {
+  color: #990073;
+}
+.hljs-built_in, .hljs-builtin-name,
+#preview-content .hljs-built_in, #setText .hljs-built_in,
+#preview-content .hljs-builtin-name, #setText .hljs-builtin-name {
+  color: #24292e;
+}
+.hljs-meta,
+#preview-content .hljs-meta, #setText .hljs-meta {
+  color: #999;
+  font-weight: bold;
+}
+.hljs-meta-keyword,
+#preview-content .hljs-meta-keyword, #setText .hljs-meta-keyword {
+  color: #d73a49;
+}
+.hljs-meta-string,
+#preview-content .hljs-meta-string, #setText .hljs-meta-string {
+  color: #032f62;
+}
+.hljs-deletion,
+#preview-content .hljs-deletion, #setText .hljs-deletion {
+  background: #fdd;
+}
+.hljs-addition,
+#preview-content .hljs-addition, #setText .hljs-addition {
+  background: #dfd;
+}
+.hljs-emphasis,
+#preview-content .hljs-emphasis, #setText .hljs-emphasis {
+  font-style: italic;
+}
+.hljs-strong,
+#preview-content .hljs-strong, #setText .hljs-strong {
+  font-weight: bold;
+}
+.table_tabular,
+#preview-content .table_tabular, #setText .table_tabular {
+  overflow-x: auto;
+  padding: 0 2px 0.5em 2px;
+}
+.tabular,
+#preview-content .tabular, #setText .tabular {
+  display: inline-table !important;
+  width: auto;
+  table-layout: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0 0 1em;
+  font-size: inherit;
+  height: fit-content;
+}
+.tabular th,
+#preview-content .tabular th, #setText .tabular th {
+  border: none !important;
+  padding: 6px 13px;
+  background-color: transparent;
+  font-weight: bold;
+}
+.tabular tr,
+#preview-content .tabular tr, #setText .tabular tr {
+  border-top: none !important;
+  border-bottom: none !important;
+  background-color: transparent;
+}
+.tabular td,
+#preview-content .tabular td, #setText .tabular td {
+  border-style: none !important;
+  background-color: #fff;
+  border-color: #000 !important;
+  word-break: keep-all;
+  padding: 0.1em 0.5em !important;
+}
+.tabular td > p,
+#preview-content .tabular td > p, #setText .tabular td > p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.tabular td._empty,
+#preview-content .tabular td._empty, #setText .tabular td._empty {
+  height: 1.3em;
+}
+.tabular td .f,
+#preview-content .tabular td .f, #setText .tabular td .f {
+  opacity: 0;
+}
+#preview-content .sub-table table, #setText .sub-table table {
+  margin-bottom: 0;
+}
+html[data-theme="dark"] .tabular tr,
+html[data-theme="dark"] #preview-content .tabular tr, html[data-theme="dark"] #setText .tabular tr,
+html[data-theme="dark"] .tabular td,
+html[data-theme="dark"] #preview-content .tabular td, html[data-theme="dark"] #setText .tabular td {
+  background-color: #202226;
+  border-color: #fff !important;
+}
+.figure_img,
+#preview-content .figure_img, #setText .figure_img {
+  margin-bottom: 0.5em;
+  overflow-x: auto;
+}
+div.figure_img img,
+#preview-content div.figure_img img, #setText div.figure_img img {
+  display: inline;
+  margin: 0;
+}
+ol.enumerate, ul.itemize,
+#preview-content ol.enumerate, #setText ol.enumerate,
+#preview-content ul.itemize, #setText ul.itemize {
+  padding-inline-start: 40px;
+  margin: 0 0 1em 0;
+}
+li > ol.enumerate, li > ul.itemize,
+#preview-content li > ol.enumerate, #setText li > ol.enumerate,
+#preview-content li > ul.itemize, #setText li > ul.itemize {
+  margin: 0;
+}
+ul.itemize > li,
+#preview-content ul.itemize > li, #setText ul.itemize > li {
+  position: relative;
+  min-height: 1.4em;
+  margin-bottom: 0;
+}
+.enumerate > .li_enumerate,
+#preview-content .enumerate > .li_enumerate, #setText .enumerate > .li_enumerate {
+  margin-bottom: 0;
+}
+.itemize > li > span.li_level, .li_enumerate.not_number > span.li_level,
+#preview-content .itemize > li > span.li_level, #setText .itemize > li > span.li_level,
+#preview-content .li_enumerate.not_number > span.li_level, #setText .li_enumerate.not_number > span.li_level {
+  position: absolute;
+  right: 100%;
+  white-space: nowrap;
+  width: max-content;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.li_enumerate.not_number,
+#preview-content .li_enumerate.not_number, #setText .li_enumerate.not_number {
+  position: relative;
+  display: inline-block;
+  list-style-type: none;
+  min-height: 1.4em;
+}
+.itemize > li > span.li_level .math-inline,
+.enumerate > li > span.li_level .math-inline,
+#preview-content .itemize > li > span.li_level .math-inline,
+#setText .itemize > li > span.li_level .math-inline,
+#preview-content .enumerate > li > span.li_level .math-inline,
+#setText .enumerate > li > span.li_level .math-inline {
+  display: inline-block;
+}
+#preview {
+  font-family: 'CMU Serif', 'Georgia', Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  visibility: visible;
+  word-break: break-word;
+  padding: 2.5em;
+  max-width: 800px;
+  margin: auto;
+  box-sizing: content-box;
+}
+#preview h1, #preview h2, #preview h3, #preview h4, #preview h5, #preview strong {
+  font-family: 'CMU Serif Bold', 'Georgia', Helvetica, Arial, sans-serif;
+}
+#preview i, #preview em {
+  font-family: 'CMU Serif Italic', 'Georgia', Helvetica, Arial, sans-serif;
+}
+.mmd-menu {
+  max-width: 320px;
+  position: absolute;
+  background-color: white;
+  color: black;
+  width: auto;
+  padding: 5px 0;
+  border: 1px solid #E5E6EB;
+  margin: 0;
+  cursor: default;
+  font: menu;
+  text-align: left;
+  text-indent: 0;
+  text-transform: none;
+  line-height: normal;
+  letter-spacing: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  float: none;
+  z-index: 201;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  box-shadow: 0 10px 20px #808080;
+  -webkit-box-shadow: 0 10px 20px #808080;
+  -moz-box-shadow: 0 10px 20px #808080;
+  -khtml-box-shadow: 0 10px 20px #808080;
+}
+.mmd-menu:focus { outline: none; }
+.mmd-menu.mmd-menu-sm {
+  max-width: 100vw;
+  padding-bottom: 34px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -khtml-border-radius: 0;
+}
+.mmd-menu-item-icon {
+  color: #1E2029;
+  margin-left: auto;
+  align-items: center;
+  display: none;
+  flex-shrink: 0;
+}
+.mmd-menu-item {
+  padding: 8px 1.25rem;
+  display: flex;
+  background: transparent;
+  height: 52px;
+  max-height: 52px;
+}
+.mmd-menu-item:focus { outline: none; }
+.mmd-menu-item.active {
+  background-color: #e1e0e5;
+}
+.mmd-menu-item.active .mmd-menu-item-icon {
+  display: flex;
+}
+.mmd-menu-item-container {
+  overflow: hidden;
+}
+.mmd-menu-item-title {
+  color: #1E2029;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 20px;
+}
+.mmd-menu-item-value {
+  color: #7d829c;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 16px;
+}
+html[data-theme="dark"] .mmd-menu-item-title {
+  color: #ebefe7;
+}
+html[data-theme="dark"] .mmd-menu-item.active .mmd-menu-item-title {
+  color: #1E2029;
+}
+html[data-theme="dark"] .mmd-menu {
+  background-color: #33363a;
+}
+.mmd-context-menu-overlay {
+  background: rgba(0, 0, 0, 0.56);
+}
+.ClipboardButton {
+  padding: 0;
+  margin: 0.5rem;
+  display: inline-block;
+  cursor: pointer;
+  color: rgb(36, 41, 47);
+  background: rgb(246, 248, 250);
+  border-radius: 6px;
+  border: 1px solid rgba(31, 35, 40, 0.15);
+  box-shadow: rgba(31, 35, 40, 0.04) 0 1px 0 0, rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
+  position: relative;
+}
+.ClipboardButton:hover {
+  background-color: rgb(243, 244, 246);
+  border-color: rgba(31, 35, 40, 0.15);
+  transition-duration: .1s;
+}
+td .mmd-clipboard-copy-container {
+  line-height: 0;
+}
+td .ClipboardButton {
+  margin: 1px;
+  line-height: 0;
+}
+td .ClipboardButton .mmd-clipboard-icon {
+  margin: 1px !important;
+  transform: scale(0.6);
+}
+.mmd-clipboard-icon {
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+.mmd-clipboard-copy-icon {
+  color: rgb(101, 109, 118);
+}
+.mmd-clipboard-check-icon {
+  color: rgb(26, 127, 55);
+}
+.mmd-tooltipped-no-delay:hover::before,
+.mmd-tooltipped-no-delay:hover::after {
+  animation-delay: 0s;
+}
+.mmd-tooltipped:hover::before,
+.mmd-tooltipped:hover::after {
+  display: inline-block;
+  text-decoration: none;
+  animation-name: tooltip-appear;
+  animation-duration: .1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-delay: .4s;
+}
+.mmd-tooltipped-w::before {
+  top: 50%;
+  bottom: 50%;
+  left: -7px;
+  margin-top: -6px;
+  border-left-color: rgb(36, 41, 47);
+}
+.mmd-tooltipped::before {
+  position: absolute;
+  z-index: 1000001;
+  display: none;
+  width: 0;
+  height: 0;
+  color: rgb(36, 41, 47);
+  pointer-events: none;
+  content: "";
+  border: 6px solid transparent;
+  opacity: 0;
+}
+.mmd-tooltipped-w::after {
+  right: 100%;
+  bottom: 50%;
+  margin-right: 6px;
+  transform: translateY(50%);
+}
+.mmd-tooltipped::after {
+  position: absolute;
+  z-index: 1000000;
+  display: none;
+  padding: 0.5em 0.75em;
+  font: normal normal 11px/1.5 'CMU Serif', 'Georgia', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: break-word;
+  white-space: pre;
+  pointer-events: none;
+  content: attr(aria-label);
+  background: rgb(36, 41, 47);
+  border-radius: 6px;
+  opacity: 0;
+}</style>
+</head>
+<body>
+  <div id="preview" class="preview scrollEditor">
+    <div id="container-ruller" />
+    <div id="preview-content">
+      <h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-0 preview-line 0" id="chapter-5-specia" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1">
+Chapter 5 Specia</h2>
+<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-2 preview-line 2" id="probability-distributions" data_line_start="2" data_line_end="2" data_line="2,3" count_line="1">
+Probability Distributions</h2>
+<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-4 preview-line 4" id="%24%5Cdelta-5.1%24-introduction" data_line_start="4" data_line_end="4" data_line="4,5" count_line="1">
+<span class="math-inline ">$\delta 5.1$</span> Introduction</h2>
+<div class="preview-paragraph-6 preview-line 6 7 8" data_line_start="6" data_line_end="8" data_line="6,9" count_line="3">In this chapter we introduce several common pelf's associated with discrete and continuous rov.'s.<br>
+§5.2 The Discrete Uniform Distribution<br>
+If a discrete r.v. takes on <span class="math-inline ">$k$</span> values with equal probability we say it has a discrete uniform distribution.</div>
+<div class="preview-paragraph-10 preview-line 10" data_line_start="10" data_line_end="10" data_line="10,11" count_line="1">Defn A riv. <span class="math-inline ">$X$</span> has a discrete uniform distribution iff its <span class="math-inline ">$p d f$</span> is given by</div>
+<div class="preview-paragraph-11 preview-line 11 12 13" data_line_start="11" data_line_end="13" data_line="11,14" count_line="3"><span class="math-block ">$$
+f(x)=\frac{1}{k}, \quad x=x_{1}, x_{2}, \ldots, x_{k}
+$$</span></div>
+<div class="preview-paragraph-14 preview-line 14" data_line_start="14" data_line_end="14" data_line="14,15" count_line="1">where <span class="math-inline ">$x_{1}, x_{2}, x_{n}$</span> are all distinct In this case we have</div>
+<div class="preview-paragraph-15 preview-line 15 16 17 18 19 20" data_line_start="15" data_line_end="20" data_line="15,21" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+&amp; \mu=E(X)=\sum_{i=1}^{b} x_{i} \cdot \frac{1}{k} \\
+&amp; \sigma^{2}=V(X)=\sum_{i=1}^{b}\left(x_{i}-\mu\right)^{2} \cdot \frac{1}{k} .
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-22 preview-line 22" data_line_start="22" data_line_end="22" data_line="22,23" count_line="1">An important special cax is when <span class="math-inline ">$x_{i}=1$</span>, <span class="math-inline ">$1 \leq i \leq k$</span>.</div>
+<div class="preview-paragraph-24 preview-line 24" data_line_start="24" data_line_end="24" data_line="24,25" count_line="1">Here</div>
+<div class="preview-paragraph-25 preview-line 25 26 27" data_line_start="25" data_line_end="27" data_line="25,28" count_line="3"><span class="math-block ">$$
+\mu=\sum_{i=1}^{k} \frac{i}{k}=\frac{1}{k} \cdot \frac{k(k+1)}{2}=\frac{k+1}{2}
+$$</span></div>
+<div class="preview-paragraph-28 preview-line 28 29" data_line_start="28" data_line_end="29" data_line="28,30" count_line="2"><span class="math-inline ">$\mu_{2}^{\prime}=E(X)^{2}=\sum_{k=1}^{k} \frac{i^{2}}{k}=\frac{1}{k} \cdot \frac{k(k+1)(2 k+1)}{6}=\frac{(k+1)(2 k+1)}{6}$</span><br>
+So <span class="math-inline ">$\sigma^{2}=\mu_{2}^{\prime}-\mu^{2}=\frac{(k+1)(2 k+1)}{6}-\frac{(k+1)^{2}}{4}=\frac{\left(k^{2}-1\right.}{12}$</span>.</div>
+<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-31 preview-line 31" id="%C2%A75.3-bernoulli-distribution" data_line_start="31" data_line_end="31" data_line="31,32" count_line="1">
+§5.3 Bernoulli Distribution</h2>
+<div class="preview-paragraph-33 preview-line 33" data_line_start="33" data_line_end="33" data_line="33,34" count_line="1">Suppore 1 flip a brased coin once where the chance is <span class="math-inline ">$\theta$</span> I get a <span class="math-inline ">$H$</span> and <span class="math-inline ">$1-\theta$</span> I get a tail (here <span class="math-inline ">$0&lt;\theta&lt;1$</span> ). This is an example. of a Bemalli randam variable.</div>
+<div class="preview-paragraph-35 preview-line 35" data_line_start="35" data_line_end="35" data_line="35,36" count_line="1">Defn. A r.v. <span class="math-inline ">$x$</span> has a Bemoulli <span class="math-inline ">$(\theta)$</span> distribution for some <span class="math-inline ">$\theta \in(0,1)$</span> iff its <span class="math-inline ">$p d t$</span> satisfies</div>
+<div class="preview-paragraph-36 preview-line 36 37 38" data_line_start="36" data_line_end="38" data_line="36,39" count_line="3"><span class="math-block ">$$
+f(x ; \theta)= \begin{cases}1-\theta, &amp; x=0 \\ \theta, &amp; x=1 \\ 0 &amp; \text { otherwise } .\end{cases}
+$$</span></div>
+<div class="preview-paragraph-40 preview-line 40" data_line_start="40" data_line_end="40" data_line="40,41" count_line="1">Can also write thus as</div>
+<div class="preview-paragraph-41 preview-line 41 42 43" data_line_start="41" data_line_end="43" data_line="41,44" count_line="3"><span class="math-block ">$$
+f(x ; \theta)=\theta^{x}(1-\theta)^{1-x}, x=0,1 .
+$$</span></div>
+<div class="preview-paragraph-45 preview-line 45" data_line_start="45" data_line_end="45" data_line="45,46" count_line="1">Thus <span class="math-inline ">$f\left(0^{;}, \theta\right)=1-\theta$</span></div>
+<div class="preview-paragraph-46 preview-line 46 47 48" data_line_start="46" data_line_end="48" data_line="46,49" count_line="3"><span class="math-block ">$$
+f(1 ; \theta)=\theta
+$$</span></div>
+<div class="preview-paragraph-49 preview-line 49" data_line_start="49" data_line_end="49" data_line="49,50" count_line="1">and we can calculabe</div>
+<div class="preview-paragraph-50 preview-line 50 51 52 53 54 55 56 57" data_line_start="50" data_line_end="57" data_line="50,58" count_line="8"><span class="math-block ">$$
+\begin{aligned}
+\mu=E(x) &amp; =0 \cdot(1-\theta)+1 \cdot \theta=\theta \\
+\sigma^{2}=V(x) &amp; =\mu_{2}^{\prime}-\mu^{2} \\
+&amp; =0 \cdot(1-\theta)+1^{2} \cdot \theta-\theta^{2} \\
+&amp; =\theta(1-\theta) .
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-59 preview-line 59" data_line_start="59" data_line_end="59" data_line="59,60" count_line="1">This will be useful to us later When we deal with the next type of puf, the binomial distribution.</div>
+<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-61 preview-line 61" id="%C2%A75.4-binomial-distribution" data_line_start="61" data_line_end="61" data_line="61,62" count_line="1">
+§5.4 Binomial Distribution</h2>
+<div class="preview-paragraph-63 preview-line 63" data_line_start="63" data_line_end="63" data_line="63,64" count_line="1">Suppose now I flip the same biased coin of the last section <span class="math-inline ">$n$</span> times. What is the prob. that in the <span class="math-inline ">$n$</span> flips I get <span class="math-inline ">$x$</span> heads (where <span class="math-inline ">$0 \leqslant x \leqslant n$</span> )?</div>
+<div class="preview-paragraph-65 preview-line 65" data_line_start="65" data_line_end="65" data_line="65,66" count_line="1">Well, the chance of getting <span class="math-inline ">$x$</span> heads and <span class="math-inline ">$n-x$</span> tails in a partizular oveler is</div>
+<div class="preview-paragraph-66 preview-line 66 67 68" data_line_start="66" data_line_end="68" data_line="66,69" count_line="3"><span class="math-block ">$$
+\theta^{x}(1-\theta)^{n-x}
+$$</span></div>
+<div class="preview-paragraph-69 preview-line 69" data_line_start="69" data_line_end="69" data_line="69,70" count_line="1">and there are <span class="math-inline ">$\binom{n}{x}$</span> suitable arderings. Thus, the prob. I qet exactly <span class="math-inline ">$x$</span> heads in <span class="math-inline ">$n$</span> flips is</div>
+<div class="preview-paragraph-70 preview-line 70 71 72" data_line_start="70" data_line_end="72" data_line="70,73" count_line="3"><span class="math-block ">$$
+\binom{n}{x} \theta^{x}(1-\theta)^{n-x} .
+$$</span></div>
+<div class="preview-paragraph-74 preview-line 74" data_line_start="74" data_line_end="74" data_line="74,75" count_line="1">Defn A rov. has a binomial ( <span class="math-inline ">$n, \theta$</span> ) distribution <span class="math-inline ">$(n \in \mathbb{N}, 0&lt;\theta&lt;1)$</span> iff its <span class="math-inline ">$p d f$</span> is given by</div>
+<div class="preview-paragraph-75 preview-line 75 76 77" data_line_start="75" data_line_end="77" data_line="75,78" count_line="3"><span class="math-block ">$$
+b(x ; n, \theta)=\binom{n}{x} \theta^{x}(1-\theta)^{n-x}, x=0,1,2, \ldots, n .
+$$</span></div>
+<div class="preview-paragraph-79 preview-line 79" data_line_start="79" data_line_end="79" data_line="79,80" count_line="1">Note that if <span class="math-inline ">$n=1,\binom{n}{x}=1$</span> for <span class="math-inline ">$x=0,1$</span> and</div>
+<div class="preview-paragraph-80 preview-line 80 81 82" data_line_start="80" data_line_end="82" data_line="80,83" count_line="3"><span class="math-block ">$$
+b(x ; 1, \theta)=\theta^{x}(1-\theta)^{1-x}, x=0,1
+$$</span></div>
+<div class="preview-paragraph-83 preview-line 83 84" data_line_start="83" data_line_end="84" data_line="83,85" count_line="2">and we recover the Bemoulli distribution (a) we would expect - why?). Thus the binanial distribution generalizes the Bernoulli distribution.<br>
+N.b. the <span class="math-inline ">$n$</span> flips (trials/expenments) must be independent if we are to get a binamial <span class="math-inline ">$(n, \theta)$</span> r.v. from <span class="math-inline ">$n$</span> Bemalli <span class="math-inline ">$(\theta)$</span> riv's.</div>
+<div class="preview-paragraph-86 preview-line 86" data_line_start="86" data_line_end="86" data_line="86,87" count_line="1">Ex. The prob. of getting <span class="math-inline ">$5 \mathrm{H} \&amp; 7 \mathrm{~T}$</span> in 12 flips of a balanced coin is</div>
+<div class="preview-paragraph-87 preview-line 87 88 89 90 91 92" data_line_start="87" data_line_end="92" data_line="87,93" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+b\left(5 ; 12, \frac{1}{2}\right) &amp; =\binom{12}{5} \cdot\left(\frac{1}{2}\right)^{5}\left(1-\frac{1}{2}\right)^{12-5} \\
+&amp; =\binom{12}{5} \cdot\left(\frac{1}{2}\right)^{12}
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-93 preview-line 93 94 95" data_line_start="93" data_line_end="95" data_line="93,96" count_line="3">(Here <span class="math-inline ">$n=12, \theta=\frac{1}{2}, x=5$</span> ).<br>
+Ex. Find the prob that 7 ant of 10 people recover from a tropical disease if we assume indep, and the prob that any given person recovers is 0.8 .<br>
+Here <span class="math-inline ">$n=10, \theta=0, x=7$</span> and so the answer is</div>
+<div class="preview-paragraph-96 preview-line 96 97 98" data_line_start="96" data_line_end="98" data_line="96,99" count_line="3"><span class="math-block ">$$
+b(7 ; 10,0.8)=\binom{10}{7}(.8)^{7}(.2)^{.3} \approx .2
+$$</span></div>
+<div class="preview-paragraph-100 preview-line 100" data_line_start="100" data_line_end="100" data_line="100,101" count_line="1">Back to coin flips for a while...</div>
+<div class="preview-paragraph-102 preview-line 102" data_line_start="102" data_line_end="102" data_line="102,103" count_line="1">If I flip the brased coin <span class="math-inline ">$n$</span> times, then, since we are measuring the total number of successes (heads) in the <span class="math-inline ">$n$</span> trials, if <span class="math-inline ">$x_{1}, x_{2}, \ldots, x_{n}$</span> are <span class="math-inline ">$n$</span> inclep Bemalli ( <span class="math-inline ">$\theta$</span> ) r.v'a, one for each flip, then</div>
+<div class="preview-paragraph-103 preview-line 103 104 105" data_line_start="103" data_line_end="105" data_line="103,106" count_line="3"><span class="math-block ">$$
+x=x_{1}+x_{2}+\cdots+x_{n}
+$$</span></div>
+<div class="preview-paragraph-106 preview-line 106 107 108" data_line_start="106" data_line_end="108" data_line="106,109" count_line="3">is binamial <span class="math-inline ">$(n, \theta)$</span>.<br>
+Here the rovi's <span class="math-inline ">$X_{1}, \ldots X_{n}$</span> are said to be independent identically distributed (iid), an important term we will meet later.<br>
+In general, r.v.'s <span class="math-inline ">$Y_{1,}, Y_{n}$</span> are iid If they are inclep &amp; have the same pdf.</div>
+<div class="preview-paragraph-110 preview-line 110" data_line_start="110" data_line_end="110" data_line="110,111" count_line="1">This representation of a bincmial <span class="math-inline ">$(n, \theta) r \cdot v$</span> as the sum of <span class="math-inline ">$n$</span> iid Benoulli( <span class="math-inline ">$\theta$</span> ) r.v's is useful for calculating - the mean and variance of this pdf.</div>
+<div class="preview-paragraph-112 preview-line 112" data_line_start="112" data_line_end="112" data_line="112,113" count_line="1">Indeed, recalling from the last section that the Bermoulli ( 0 ) distrib. has mean <span class="math-inline ">$\theta$</span> &amp; ramiance <span class="math-inline ">$\theta(1-\theta)$</span>, we get</div>
+<div class="preview-paragraph-113 preview-line 113 114 115 116 117 118 119 120" data_line_start="113" data_line_end="120" data_line="113,121" count_line="8"><span class="math-block ">$$
+\begin{aligned}
+\mu=E(x) &amp; =E\left(x_{1}+\quad+x_{n}\right) \\
+&amp; =\sum_{i=1}^{n} E\left(x_{i}\right) \quad \text { (Thm 4.3, p. 133) } \\
+&amp; =\sum_{i=1}^{n} \theta \quad \text { by ind } \\
+&amp; =n \theta
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-121 preview-line 121 122 123 124 125 126 127 128" data_line_start="121" data_line_end="128" data_line="121,129" count_line="8"><span class="math-block ">$$
+\begin{aligned}
+\sigma^{2}=V(x) &amp; =V\left(x_{1}+\cdots+x_{n}\right) \\
+&amp; =\sum_{i=1}^{n} V\left(x_{i}\right) \quad \text { by cor } 4.3, p 154 \\
+&amp; =\sum_{i=1}^{n} \theta(1-\theta) \quad \text { as } x_{i}, \ldots, x_{n} \text { are } \\
+&amp; =n \theta(1-\theta) .
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-130 preview-line 130 131" data_line_start="130" data_line_end="131" data_line="130,132" count_line="2">We have proved<br>
+Theorem 5.2 The mean and variance of the binomial <span class="math-inline ">$(n, \theta)$</span> distrib. are</div>
+<div class="preview-paragraph-132 preview-line 132 133 134" data_line_start="132" data_line_end="134" data_line="132,135" count_line="3"><span class="math-block ">$$
+\mu=n \theta, \quad \sigma^{2}=n \theta(1-\theta) .
+$$</span></div>
+<div class="preview-paragraph-135 preview-line 135" data_line_start="135" data_line_end="135" data_line="135,136" count_line="1">n.b. This can also be calculated directly from</div>
+<div class="preview-paragraph-136 preview-line 136 137 138" data_line_start="136" data_line_end="138" data_line="136,139" count_line="3"><span class="math-block ">$$
+b(x ; n, \theta)=\binom{n}{x} \theta^{x}(1-\theta)^{n-x}
+$$</span></div>
+<ul class="preview-paragraph-139 preview-line 139 140" data_line_start="139" data_line_end="140" data_line="139,141" count_line="2">
+<li>see the book.</li>
+</ul>
+<div class="preview-paragraph-141 preview-line 141" data_line_start="141" data_line_end="141" data_line="141,142" count_line="1">Another way to obtain the mean &amp; variance is ria the MGF.</div>
+<div class="preview-paragraph-143 preview-line 143" data_line_start="143" data_line_end="143" data_line="143,144" count_line="1">Thm 504 The MGF of the binamial <span class="math-inline ">$(n, \theta)$</span> distribution is given by</div>
+<div class="preview-paragraph-144 preview-line 144 145 146" data_line_start="144" data_line_end="146" data_line="144,147" count_line="3"><span class="math-block ">$$
+M_{x}(t)=\left[1+\theta\left(e^{t}-1\right)\right]^{n} .
+$$</span></div>
+<div class="preview-paragraph-147 preview-line 147" data_line_start="147" data_line_end="147" data_line="147,148" count_line="1">ff. <span class="math-inline ">$\quad M_{x}(t)=E\left(e^{x t}\right)$</span></div>
+<div class="preview-paragraph-148 preview-line 148 149 150 151 152 153 154 155 156" data_line_start="148" data_line_end="156" data_line="148,157" count_line="9"><span class="math-block ">$$
+\begin{aligned}
+&amp; =\sum_{x} e^{x t} f(x) \\
+&amp; =\sum_{x=0}^{n} e^{x t}\binom{n}{x} \theta^{x}(1-\theta)^{n-x} \\
+&amp; =\sum_{x=0}^{n}\binom{n}{x}\left(\theta e^{t}\right)^{x}(1-\theta)^{n-x} \\
+&amp; =\left[\theta e^{t}+(1-\theta)\right]^{n} \text { by the Brimial thin. } \\
+&amp; =\left[1+\theta\left(e^{t}-1\right)\right]^{n} .
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-158 preview-line 158" data_line_start="158" data_line_end="158" data_line="158,159" count_line="1">If we diff <span class="math-inline ">$M_{x}(t)$</span> thice wrt <span class="math-inline ">$t$</span>, then</div>
+<div class="preview-paragraph-159 preview-line 159 160 161 162 163 164 165 166" data_line_start="159" data_line_end="166" data_line="159,167" count_line="8"><span class="math-block ">$$
+\begin{aligned}
+M_{x}^{\prime}(t)= &amp; n \theta e^{t}\left[1+\theta\left(e^{t}-1\right)\right]^{n-1} \\
+M_{x}^{\prime \prime}(t)= &amp; n \theta e^{t}\left[1+\theta\left(e^{t}-1\right)\right]^{n-1} \\
+&amp; +n(n-1) \theta^{2} e^{2 t}\left[1+\theta\left(e^{t}-1\right)\right]^{n-2} \\
+= &amp; n \theta e^{t}\left(1-\theta+n \theta e^{t}\right)\left[1+\theta\left(e^{t}-1\right)\right]^{n-2}
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-168 preview-line 168" data_line_start="168" data_line_end="168" data_line="168,169" count_line="1">And if we subst <span class="math-inline ">$t=0$</span>, we get by Thm 4.9 p. 145</div>
+<div class="preview-paragraph-169 preview-line 169 170 171 172 173 174" data_line_start="169" data_line_end="174" data_line="169,175" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+&amp; \mu=\left.\frac{d}{d t} M_{x}(t)\right|_{t=0}=n \theta \\
+&amp; \mu_{2}^{\prime}=\left.\frac{d^{2}}{d t^{2}} M_{x}(t)\right|_{t=0}=n \theta(1-\theta+n \theta)
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-176 preview-line 176" data_line_start="176" data_line_end="176" data_line="176,177" count_line="1">So that</div>
+<div class="preview-paragraph-177 preview-line 177 178 179 180 181 182" data_line_start="177" data_line_end="182" data_line="177,183" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+\sigma^{2}=\mu_{2}^{\prime}-\mu^{2} &amp; =n \theta(1-\theta \operatorname{tn} \theta)-n^{2} \theta^{2} \\
+&amp; =n \theta(1-\theta)
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-183 preview-line 183" data_line_start="183" data_line_end="183" data_line="183,184" count_line="1">as before.</div>
+<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-185 preview-line 185" id="s5.5-the-negative-binomial-and" data_line_start="185" data_line_end="185" data_line="185,186" count_line="1">
+S5.5 The Negative Binomial and</h2>
+<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-187 preview-line 187" id="geometric-distributions" data_line_start="187" data_line_end="187" data_line="187,188" count_line="1">
+Geometric Distributions</h2>
+<div class="preview-paragraph-189 preview-line 189" data_line_start="189" data_line_end="189" data_line="189,190" count_line="1">Back to the repeated Bernoulli trials (coin flips).</div>
+<div class="preview-paragraph-191 preview-line 191" data_line_start="191" data_line_end="191" data_line="191,192" count_line="1">Suppose we want to know the prob. that it will take <span class="math-inline ">$x$</span> trials until we have <span class="math-inline ">$k$</span> successes.</div>
+<div class="preview-paragraph-193 preview-line 193" data_line_start="193" data_line_end="193" data_line="193,194" count_line="1">Well, the last trial must be a success and fer a Dermoulli <span class="math-inline ">$(\theta)$</span> i.v. the prob. of this success is <span class="math-inline ">$\theta$</span>.</div>
+<div class="preview-paragraph-195 preview-line 195" data_line_start="195" data_line_end="195" data_line="195,196" count_line="1">Of the remaining <span class="math-inline ">$x-1$</span> trials which went befere, exactly <span class="math-inline ">$k-1$</span> must be successes and as we saw with the binamial distr, the prob. of this is</div>
+<div class="preview-paragraph-196 preview-line 196 197 198" data_line_start="196" data_line_end="198" data_line="196,199" count_line="3"><span class="math-block ">$$
+\binom{x-1}{k-1} \theta^{k-1}(1-\theta)^{(k-1)-(k-1)}
+$$</span></div>
+<div class="preview-paragraph-200 preview-line 200" data_line_start="200" data_line_end="200" data_line="200,201" count_line="1">Since the trials are inclependent, to find the prob that the beth success occus on the <span class="math-inline ">$x$</span> th trial, we multiply these probs to get</div>
+<div class="preview-paragraph-201 preview-line 201 202 203 204 205 206" data_line_start="201" data_line_end="206" data_line="201,207" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+&amp; \theta\binom{x-1}{k-1} \theta^{k-1}(1-\theta)^{(x-1)-(k-1)} \\
+= &amp; \binom{x-1}{k-1} \theta^{k}(1-\theta)^{x-k}
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-208 preview-line 208" data_line_start="208" data_line_end="208" data_line="208,209" count_line="1">Defn A r.v. <span class="math-inline ">$X$</span> has a negative bincmial <span class="math-inline ">$(k, \theta)$</span> distribution iff its pdf is given by</div>
+<div class="preview-paragraph-209 preview-line 209 210 211 212 213 214 215" data_line_start="209" data_line_end="215" data_line="209,216" count_line="7"><span class="math-block ">$$
+\begin{gathered}
+b^{*}(x ; k, \theta)=\binom{x-1}{k-1} \theta^{k}(1-\theta)^{x-k} \\
+x=k, k+1, \ldots \\
+(0&lt;\theta&lt;1) .
+\end{gathered}
+$$</span></div>
+<div class="preview-paragraph-217 preview-line 217" data_line_start="217" data_line_end="217" data_line="217,218" count_line="1">Ex. If the prob. is or that a child expued to a certain contagrous disease will catch it, what is the prob. that the <span class="math-inline ">$10^{\text {th }}$</span> child exposed will be the <span class="math-inline ">$3^{\text {rd }}$</span> to catch the disease?</div>
+<div class="preview-paragraph-219 preview-line 219" data_line_start="219" data_line_end="219" data_line="219,220" count_line="1">Suln. Here <span class="math-inline ">$x=10, k=3, \theta=0.4$</span> and the answer is</div>
+<div class="preview-paragraph-220 preview-line 220 221 222 223 224 225" data_line_start="220" data_line_end="225" data_line="220,226" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+b^{*}(10 ; 3, .4) &amp; =\binom{9}{2}(.4)^{3}(.6)^{7} \\
+&amp; =.0645
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-227 preview-line 227" data_line_start="227" data_line_end="227" data_line="227,228" count_line="1">We have the following relationship between the negative binomial and the binmial.</div>
+<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-229 preview-line 229" id="thm-5.5" data_line_start="229" data_line_end="229" data_line="229,230" count_line="1">
+Thm 5.5</h2>
+<div class="preview-paragraph-230 preview-line 230 231 232" data_line_start="230" data_line_end="232" data_line="230,233" count_line="3"><span class="math-block ">$$
+b^{*}(x ; k, \theta)=\frac{k}{x} \cdot b(k ; x, \theta) .
+$$</span></div>
+<div class="preview-paragraph-234 preview-line 234 235" data_line_start="234" data_line_end="235" data_line="234,236" count_line="2">One can shar the following<br>
+Thm 5.6 The mean &amp; variance of the negative binemial distr. are</div>
+<div class="preview-paragraph-236 preview-line 236 237 238" data_line_start="236" data_line_end="238" data_line="236,239" count_line="3"><span class="math-block ">$$
+\mu=\frac{k}{\theta} \text { and } \sigma^{2}=\frac{k}{\theta}\left(\frac{1}{\theta}-1\right) \text {. }
+$$</span></div>
+<div class="preview-paragraph-240 preview-line 240" data_line_start="240" data_line_end="240" data_line="240,241" count_line="1">An important special case of the negative binamial is the quometric distribution Here <span class="math-inline ">$k=1$</span> and we want the prob. that the first success occurs on the <span class="math-inline ">$x$</span> th trial.</div>
+<div class="preview-paragraph-242 preview-line 242" data_line_start="242" data_line_end="242" data_line="242,243" count_line="1">Defis A riv. <span class="math-inline ">$X$</span> has a geometric distribution iff its pdf is given by</div>
+<div class="preview-paragraph-243 preview-line 243 244 245" data_line_start="243" data_line_end="245" data_line="243,246" count_line="3"><span class="math-block ">$$
+g(x ; \theta)=\theta(1-\theta)^{x-1}, \quad x=1,2,3
+$$</span></div>
+<div class="preview-paragraph-247 preview-line 247" data_line_start="247" data_line_end="247" data_line="247,248" count_line="1">Note that the mean &amp; variance of the geom dism. are</div>
+<div class="preview-paragraph-248 preview-line 248 249 250" data_line_start="248" data_line_end="250" data_line="248,251" count_line="3"><span class="math-block ">$$
+\mu=\frac{1}{\theta}, \quad \sigma^{2}=\frac{1}{\theta}\left(\frac{1}{\theta}-1\right) .
+$$</span></div>
+<div class="preview-paragraph-251 preview-line 251" data_line_start="251" data_line_end="251" data_line="251,252" count_line="1">by Thm 5.6 with <span class="math-inline ">$k=1$</span>.</div>
+<div class="preview-paragraph-253 preview-line 253" data_line_start="253" data_line_end="253" data_line="253,254" count_line="1">Ex 5.5 It the prob. is .75 that an applicant for a diviver's Ircence will pass the rood test on any given try, what is the prob the applizant will pass the test on the 4th attempt?</div>
+<div class="preview-paragraph-255 preview-line 255" data_line_start="255" data_line_end="255" data_line="255,256" count_line="1">Saln Here <span class="math-inline ">$x=4, \theta=.75$</span> and the answer is</div>
+<div class="preview-paragraph-256 preview-line 256 257 258 259 260 261 262" data_line_start="256" data_line_end="262" data_line="256,263" count_line="7"><span class="math-block ">$$
+\begin{aligned}
+g(4 ; .75) &amp; =.75(1-.75)^{4-1} \\
+&amp; =.75(.25)^{3} \\
+&amp; =.0117 .
+\end{aligned}
+$$</span></div>
+<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-264 preview-line 264" id="%24%5Cdelta-5.7%24-the-poisson-distribution" data_line_start="264" data_line_end="264" data_line="264,265" count_line="1">
+<span class="math-inline ">$\delta 5.7$</span> The Poisson Distribution</h2>
+<div class="preview-paragraph-266 preview-line 266" data_line_start="266" data_line_end="266" data_line="266,267" count_line="1">Useful for calculating the number of successo When we have many trials and the chance of success in each trial is low (and the same).</div>
+<div class="preview-paragraph-268 preview-line 268" data_line_start="268" data_line_end="268" data_line="268,269" count_line="1">Another way of saying this is that the Poisson distribution is useful for calculating the number of occurrences of rase events (erg. road accidents).</div>
+<div class="preview-paragraph-270 preview-line 270" data_line_start="270" data_line_end="270" data_line="270,271" count_line="1">Defn. A r.v. <span class="math-inline ">$X$</span> has a Poissen ( <span class="math-inline ">$\lambda$</span> ) distribution iff its <span class="math-inline ">$p d f$</span> is given by</div>
+<div class="preview-paragraph-271 preview-line 271 272 273" data_line_start="271" data_line_end="273" data_line="271,274" count_line="3"><span class="math-block ">$$
+p(x ; \lambda)=\frac{\lambda^{x} e^{-\lambda}}{x!}, x=0,1,2,
+$$</span></div>
+<div class="preview-paragraph-275 preview-line 275" data_line_start="275" data_line_end="275" data_line="275,276" count_line="1">Note that <span class="math-inline ">$p(x ; \lambda) \geqslant 0$</span> everywhere and</div>
+<div class="preview-paragraph-276 preview-line 276 277 278 279 280 281" data_line_start="276" data_line_end="281" data_line="276,282" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+\sum_{x} p(x ; \lambda)=\sum_{x=0}^{\infty} \frac{\lambda^{x} e^{-\lambda}}{x!} &amp; =e^{-\lambda} \sum_{x=0}^{\infty} \frac{\lambda^{x}}{x!} \\
+&amp; =e^{-\lambda} \cdot e^{\lambda}=1
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-282 preview-line 282 283" data_line_start="282" data_line_end="283" data_line="282,284" count_line="2">and so we do have a genuine pdf.<br>
+In practice if we have <span class="math-inline ">$n$</span> trials with prob <span class="math-inline ">$\theta$</span> of success in each, then if <span class="math-inline ">$n$</span>. is large and <span class="math-inline ">$\theta$</span> small and we set <span class="math-inline ">$\lambda=n \theta$</span>, then the prob-of <span class="math-inline ">$x$</span> successes is exactly</div>
+<div class="preview-paragraph-284 preview-line 284 285 286" data_line_start="284" data_line_end="286" data_line="284,287" count_line="3"><span class="math-block ">$$
+\binom{n}{x} \theta^{x}(1-\theta)^{n-x}
+$$</span></div>
+<div class="preview-paragraph-287 preview-line 287" data_line_start="287" data_line_end="287" data_line="287,288" count_line="1">is well approxmated by</div>
+<div class="preview-paragraph-288 preview-line 288 289 290" data_line_start="288" data_line_end="290" data_line="288,291" count_line="3"><span class="math-block ">$$
+\frac{\lambda^{x} e^{-\lambda}}{x!} \quad(\lambda=n \theta) .
+$$</span></div>
+<div class="preview-paragraph-292 preview-line 292" data_line_start="292" data_line_end="292" data_line="292,293" count_line="1">Ex If <span class="math-inline ">$2 \%$</span> of the books at a certain bindery have defective bindings, Find the <span class="math-inline ">$\Lambda$</span> paprox that 5 out of 400 books bound by this bindery have defective bindings.</div>
+<div class="preview-paragraph-294 preview-line 294" data_line_start="294" data_line_end="294" data_line="294,295" count_line="1">Sun. Here <span class="math-inline ">$x=5, \lambda=n \theta=400 \times 02=8$</span> and the answer is</div>
+<div class="preview-paragraph-295 preview-line 295 296 297" data_line_start="295" data_line_end="297" data_line="295,298" count_line="3"><span class="math-block ">$$
+p(5 ; 8)=\frac{8^{5} \cdot e^{-8}}{5!} \approx .093 .
+$$</span></div>
+<div class="preview-paragraph-299 preview-line 299 300 301" data_line_start="299" data_line_end="301" data_line="299,302" count_line="3">Ex. Records shar that the prob. is - 00005 that a car will have a flat tyre crossing the bridge to Newport. Use the poision distrib to approx. the binomial probs. that among 10,000 cars crossing this bridge<br>
+a) exactly one will have o flat tyre:<br>
+b) at most two will have a flat tyre.</div>
+<div class="preview-paragraph-303 preview-line 303" data_line_start="303" data_line_end="303" data_line="303,304" count_line="1">Soln. a) Here <span class="math-inline ">$x=2, \lambda=10,000(000005)=.5$</span> and the answer is</div>
+<div class="preview-paragraph-304 preview-line 304 305 306" data_line_start="304" data_line_end="306" data_line="304,307" count_line="3"><span class="math-block ">$$
+p(2 ; .5)=\frac{(.5)^{2} e^{-.5}}{2!} \approx .0758
+$$</span></div>
+<div class="preview-paragraph-307 preview-line 307 308 309 310 311 312 313 314" data_line_start="307" data_line_end="314" data_line="307,315" count_line="8">b) In terms of events<br>
+{at most 2 cars have a flat tyre}<br>
+<span class="math-inline ">$=$</span> {no car has a flat tyre}<br>
+U<br>
+{exactly one car has a flat tyre}<br>
+<span class="math-inline ">$U$</span><br>
+{exactly two cars have a flat tyre?<br>
+and this union is (paimise) disjoint.</div>
+<div class="preview-paragraph-316 preview-line 316" data_line_start="316" data_line_end="316" data_line="316,317" count_line="1">We already knar the prob of the third event. For the first two, <span class="math-inline ">$x=0,1$</span> and the resp probs. using <span class="math-inline ">$P(x ; 5)$</span> are approx .6065 and .3033 resp.</div>
+<div class="preview-paragraph-318 preview-line 318" data_line_start="318" data_line_end="318" data_line="318,319" count_line="1">The total prob that at most 2 cars have a flat tyre is then approx.</div>
+<div class="preview-paragraph-319 preview-line 319 320 321" data_line_start="319" data_line_end="321" data_line="319,322" count_line="3"><span class="math-block ">$$
+.6065+.3033+.0758=.9856
+$$</span></div>
+<div class="preview-paragraph-323 preview-line 323" data_line_start="323" data_line_end="323" data_line="323,324" count_line="1">In order to calculate the mean and variance of the poisson distrib, we will ux the MGF.</div>
+<div class="preview-paragraph-325 preview-line 325" data_line_start="325" data_line_end="325" data_line="325,326" count_line="1">Theorem 5.9 The MGF of the Poisism (d) distribution is</div>
+<div class="preview-paragraph-326 preview-line 326 327 328" data_line_start="326" data_line_end="328" data_line="326,329" count_line="3"><span class="math-block ">$$
+M_{x}(t)=e^{\lambda\left(e^{t}-1\right)}
+$$</span></div>
+<div class="preview-paragraph-330 preview-line 330" data_line_start="330" data_line_end="330" data_line="330,331" count_line="1">Pf.</div>
+<div class="preview-paragraph-331 preview-line 331 332 333 334 335 336 337 338 339 340" data_line_start="331" data_line_end="340" data_line="331,341" count_line="10"><span class="math-block ">$$
+\begin{aligned}
+M_{x}(t) &amp; =E\left(e^{t x}\right) \\
+&amp; =\sum_{x} e^{x t} \cdot f(x) \\
+&amp; =\sum_{x=0}^{\infty} e^{x t} \cdot \frac{\lambda^{x} e^{-\lambda}}{x!} \\
+&amp; =e^{-\lambda} \sum_{x=0}^{\infty} \frac{\left(\lambda e^{t}\right)^{x}}{x!} \\
+&amp; =e^{-\lambda} \cdot e^{\lambda e^{t}} \\
+&amp; =e^{\lambda\left(e^{t}-1\right)}
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-342 preview-line 342" data_line_start="342" data_line_end="342" data_line="342,343" count_line="1">If we now diff turice unt <span class="math-inline ">$t$</span>, we get</div>
+<div class="preview-paragraph-343 preview-line 343 344 345 346 347 348" data_line_start="343" data_line_end="348" data_line="343,349" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+&amp; M_{x}^{\prime}(t)=\lambda e^{t} e^{\lambda\left(e^{t}-1\right)} \\
+&amp; M_{x}^{\prime \prime}(t)=\lambda e^{t} e^{\lambda\left(e^{t}-1\right)}+\lambda^{2} e^{2 t} e^{\lambda\left(e^{t}-1\right)}
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-350 preview-line 350" data_line_start="350" data_line_end="350" data_line="350,351" count_line="1">Setting too and using Thm <span class="math-inline ">$4 q$</span> piks as before gives</div>
+<div class="preview-paragraph-351 preview-line 351 352 353 354 355 356 357 358" data_line_start="351" data_line_end="358" data_line="351,359" count_line="8"><span class="math-block ">$$
+\begin{aligned}
+\mu=\mu_{1}^{\prime}=M_{x}^{\prime}(0) &amp; =\lambda \\
+\mu_{2}^{\prime}=M_{x}^{\prime \prime}(0) &amp; =\lambda+\lambda^{2} \\
+\sigma^{2}=M_{2}^{\prime}-\mu^{2} &amp; =\lambda+\lambda^{2}-\lambda^{2} \\
+&amp; =\lambda
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-360 preview-line 360 361" data_line_start="360" data_line_end="361" data_line="360,362" count_line="2">We have proved<br>
+Thm 5.8 The mean and variance of the Poisson <span class="math-inline ">$(\lambda)$</span> distrib are given by</div>
+<div class="preview-paragraph-362 preview-line 362 363 364" data_line_start="362" data_line_end="364" data_line="362,365" count_line="3"><span class="math-block ">$$
+\mu=\lambda, \quad \sigma^{2}=\lambda .
+$$</span></div>
+<div class="preview-paragraph-366 preview-line 366" data_line_start="366" data_line_end="366" data_line="366,367" count_line="1">Since the expectation of a Poisen ( <span class="math-inline ">$\lambda$</span> ) distrib is <span class="math-inline ">$\lambda$</span>, we can uxe it to model the number of (rare) events in a given time interval, given that we already know the average number of events in that much time.</div>
+<div class="preview-paragraph-368 preview-line 368" data_line_start="368" data_line_end="368" data_line="368,369" count_line="1">Ex. The average no of trucks arriving on any one day at a truck deport is 12. What is the prob that on a given day ferrer than 9 truiks arrive at the depot?</div>
+<div class="preview-paragraph-370 preview-line 370" data_line_start="370" data_line_end="370" data_line="370,371" count_line="1">Suln. Here <span class="math-inline ">$\lambda=12$</span> and the answer is</div>
+<div class="preview-paragraph-371 preview-line 371 372 373" data_line_start="371" data_line_end="373" data_line="371,374" count_line="3"><span class="math-block ">$$
+P(x&lt;q)=\sum_{x=0}^{8} P(x ; 12) \approx .1550 .
+$$</span></div>
+<div class="preview-paragraph-375 preview-line 375 376" data_line_start="375" data_line_end="376" data_line="375,377" count_line="2">Suppore we observe on average 2 accidents per hour on a certain stritch of 1-95.<br>
+If we watched for 2 hours (or 2 separate I how interrals), we would expect an average of 4 acciedents</div>
+<div class="preview-paragraph-378 preview-line 378" data_line_start="378" data_line_end="378" data_line="378,379" count_line="1">If we watched for 3 hours, we would expect an average of <span class="math-inline ">$t$</span> accidents, and so on.</div>
+<div class="preview-paragraph-380 preview-line 380" data_line_start="380" data_line_end="380" data_line="380,381" count_line="1">In general, if the average number of successes per unit time/area <span class="math-inline ">$4, \alpha$</span>, then on a time interval of length <span class="math-inline ">$t$</span> or a region of area <span class="math-inline ">$\alpha$</span>, we would expect at successes.</div>
+<div class="preview-paragraph-382 preview-line 382" data_line_start="382" data_line_end="382" data_line="382,383" count_line="1">On this interral, we would have a poissen <span class="math-inline ">$(\alpha t)$</span> r.v. with distrib.</div>
+<div class="preview-paragraph-383 preview-line 383 384 385" data_line_start="383" data_line_end="385" data_line="383,386" count_line="3"><span class="math-block ">$$
+p(x ; \alpha t)=\frac{e^{-\alpha t}(\alpha t)^{x}}{x!}, x \in 0,1,2 \ldots
+$$</span></div>
+<div class="preview-paragraph-387 preview-line 387" data_line_start="387" data_line_end="387" data_line="387,388" count_line="1">Ex. A certain kind of sheet metal hus on average 5 defects per <span class="math-inline ">$10 \mathrm{ft}^{2}$</span>. If re assume a poissen distrib, what is the prob. that a <span class="math-inline ">$15 \mathrm{ft}^{2}$</span> sheet will have at least 6 defects?</div>
+<div class="preview-paragraph-389 preview-line 389" data_line_start="389" data_line_end="389" data_line="389,390" count_line="1">Suln. Les <span class="math-inline ">$X=\#$</span> defects in a <span class="math-inline ">$15 \mathrm{ft}^{2}$</span> sheet. Since the (unit) area is loft2, we have that <span class="math-inline ">$X$</span> is Poisson ( <span class="math-inline ">$\lambda$</span> ) with</div>
+<div class="preview-paragraph-390 preview-line 390 391 392" data_line_start="390" data_line_end="392" data_line="390,393" count_line="3"><span class="math-block ">$$
+\lambda=5(1.5)=7.5 .
+$$</span></div>
+<div class="preview-paragraph-394 preview-line 394" data_line_start="394" data_line_end="394" data_line="394,395" count_line="1">THen</div>
+<div class="preview-paragraph-395 preview-line 395 396 397 398 399 400 401 402 403 404" data_line_start="395" data_line_end="404" data_line="395,405" count_line="10"><span class="math-block ">$$
+\begin{aligned}
+P(x \geqslant 6)= &amp; 1-P(x \leqslant 5) \\
+= &amp; 1-P(x=0)-P(x=1)-P(x=2) \\
+&amp; -P(x=3)-P(x=4)-P(x=5) \\
+= &amp; 1-e^{-7.5} \frac{(7.5)^{0}}{0!}-e^{-7.5} \frac{(7.5)^{1}}{1!}-e^{-7.5} \frac{(7.5)^{2}}{2!} \\
+&amp; -e^{-7.5} \frac{(7.5)^{3}}{3!}-e^{-7.5} \frac{(7.5)^{4}}{4!}-e^{-7.5} \frac{(7.5)^{5}}{5!} \\
+\approx &amp; 0.7586
+\end{aligned}
+$$</span></div>
+<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-406 preview-line 406" id="%C2%A75.8-multinomial-distribution" data_line_start="406" data_line_end="406" data_line="406,407" count_line="1">
+§5.8 Multinomial Distribution</h2>
+<div class="preview-paragraph-408 preview-line 408" data_line_start="408" data_line_end="408" data_line="408,409" count_line="1">We consider a generalization of the repeated coin flips where there are several possible outcomes.</div>
+<div class="preview-paragraph-410 preview-line 410" data_line_start="410" data_line_end="410" data_line="410,411" count_line="1">To be specific suppore we have <span class="math-inline ">$n$</span> inclependent trials with <span class="math-inline ">$k$</span> mutually exclusive outcomes whose resp. probs. are <span class="math-inline ">$\theta_{1}, \theta_{2}, \ldots, \theta_{k}$</span> so that</div>
+<div class="preview-paragraph-411 preview-line 411 412 413" data_line_start="411" data_line_end="413" data_line="411,414" count_line="3"><span class="math-block ">$$
+\sum_{i=1}^{k} \theta_{i}=1 .
+$$</span></div>
+<div class="preview-paragraph-415 preview-line 415 416 417 418 419 420 421" data_line_start="415" data_line_end="421" data_line="415,422" count_line="7">Suppore we want<br>
+<span class="math-inline ">$x_{1}$</span> out comes of the first kind<br>
+<span class="math-inline ">$x_{2} \ldots$</span><br>
+second...<br>
+<span class="math-inline ">$x_{k}$</span>.<br>
+keth<br>
+where of course <span class="math-inline ">$x_{1}+x_{2}+\cdots+x_{6}=n$</span>,</div>
+<div class="preview-paragraph-423 preview-line 423" data_line_start="423" data_line_end="423" data_line="423,424" count_line="1">The chance of getting these outcomes in a particular order is</div>
+<div class="preview-paragraph-424 preview-line 424 425 426" data_line_start="424" data_line_end="426" data_line="424,427" count_line="3"><span class="math-block ">$$
+\theta_{1}^{x_{1}} \theta_{2}^{x_{2}} \cdots \theta_{k}^{x_{k}}
+$$</span></div>
+<div class="preview-paragraph-427 preview-line 427" data_line_start="427" data_line_end="427" data_line="427,428" count_line="1">while the number of possible (favourable) orderings is given by the multinamial coefficient</div>
+<div class="preview-paragraph-428 preview-line 428 429 430" data_line_start="428" data_line_end="430" data_line="428,431" count_line="3"><span class="math-block ">$$
+\binom{n}{x_{1}, x_{2}, \rightarrow x_{k}}=\frac{n!}{x_{1}!x_{2}!\cdots x_{k}!}
+$$</span></div>
+<div class="preview-paragraph-432 preview-line 432" data_line_start="432" data_line_end="432" data_line="432,433" count_line="1">Defn The riv's <span class="math-inline ">$X_{1}, \ldots, X_{k}$</span> have a multinumial <span class="math-inline ">$\left(n, \theta_{1}, \ldots, \theta_{6}\right)$</span> distribution iff their joint puf is given by</div>
+<div class="preview-paragraph-433 preview-line 433 434 435" data_line_start="433" data_line_end="435" data_line="433,436" count_line="3"><span class="math-block ">$$
+f\left(x_{1}, \ldots, x_{k} ; n_{1} \theta_{1}, \ldots, \theta_{k}\right)=\binom{n}{x_{n}-x_{k}} \theta_{1}^{x_{n}} \ldots \theta_{k}^{x_{k}}
+$$</span></div>
+<div class="preview-paragraph-436 preview-line 436" data_line_start="436" data_line_end="436" data_line="436,437" count_line="1">for <span class="math-inline ">$x_{i}=0, \ldots, n$</span> with <span class="math-inline ">$\sum_{i=1}^{n} x_{i}=n, \sum_{i=1}^{k} \theta_{i}=1$</span>.</div>
+<div class="preview-paragraph-438 preview-line 438" data_line_start="438" data_line_end="438" data_line="438,439" count_line="1">Ex. A certain city has 3 TV stations. On sat evening Channel 12 has <span class="math-inline ">$50 \%$</span> of the viening audience, Ch 10 has <span class="math-inline ">$30 \%$</span> and Ch3 has <span class="math-inline ">$20 \%$</span>.</div>
+<div class="preview-paragraph-440 preview-line 440" data_line_start="440" data_line_end="440" data_line="440,441" count_line="1">Find the prob that among 8 TV viewers in the city, 5 will be watching <span class="math-inline ">$C h 12$</span>, 2 will be watching <span class="math-inline ">$C h 10$</span> and 1 will be watching Ch3.</div>
+<div class="preview-paragraph-442 preview-line 442" data_line_start="442" data_line_end="442" data_line="442,443" count_line="1">Suln, Here <span class="math-inline ">$n=8, x_{1}=5, x_{2}=2, x_{3}=1 \theta_{1}=0.5, \theta_{2}=0.3, \theta_{3}=.2$</span> and the answer is</div>
+<div class="preview-paragraph-443 preview-line 443 444 445 446 447 448 449" data_line_start="443" data_line_end="449" data_line="443,450" count_line="7"><span class="math-block ">$$
+\begin{aligned}
+&amp; f(5,2,1 ; 8,05,03,2) \\
+&amp; \quad=\frac{8!}{5!2!1!}(.5)^{5}(.3)^{2}(.2) \\
+&amp; \quad=.0945
+\end{aligned}
+$$</span></div>
+
+    </div>
+  </div>
+  <script>
+(() => {
+  window.MathpixRenderConfig = {"width":1200,"outMath":{"output_format":"svg","include_svg":true,"include_asciimath":true,"include_latex":true,"include_mathml":true,"include_mathml_word":true,"include_tsv":true,"include_table_markdown":true,"include_smiles":true},"accessibility":{"assistive_mml":true,"include_speech":false}};
+  const autoScript = document.createElement('script');
+  autoScript.src = "https://cdn.jsdelivr.net/npm/mathpix-markdown-it@2.0.37/es5/browser/auto-render.js";
+  autoScript.onload = () => {
+    console.log("[Mathpix] auto-render loaded");
+  };
+  autoScript.onerror = () => {
+    console.error("[Mathpix] Failed to load auto-render script:", autoScript.src);
+  };
+  document.head.append(autoScript);
+})();
+</script>
+    <script>
+(() => {
+  const ctxScript = document.createElement('script');
+  ctxScript.src = "https://cdn.jsdelivr.net/npm/mathpix-markdown-it@2.0.37/es5/context-menu.js";
+  ctxScript.onload = () => {
+    const init = () => {
+      window.addListenerContextMenuEvents?.();
+    };
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init, { once: true });
+    } else {
+      init();
+    }
+    if (!window.__mathpixContextMenuKeyHandlerInstalled) {
+      window.__mathpixContextMenuKeyHandlerInstalled = true;
+      document.addEventListener("keydown", (e) => {
+        if (e.key !== "ArrowUp" && e.key !== "ArrowDown") return;
+        const el = document.querySelector(".mmd-menu");
+        if (el) e.preventDefault();
+      });
+    }
+  };
+  ctxScript.onerror = () => {
+    console.error("[Mathpix] Failed to load context-menu script:", ctxScript.src);
+  };
+  document.head.appendChild(ctxScript);
+})();
+</script>
+</body>
+</html>

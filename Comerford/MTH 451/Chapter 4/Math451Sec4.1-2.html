@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Math451Sec4.1-2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.mathpix.com/fonts/cmu.css"/>
+    <style>html,body {
+  width: 100%;
+  height: 100%;
+}
+*, *::before,*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  color: #1E2029;
+  font-size: 14px;
+  line-height: normal;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 500;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+ol, ul, dl {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+ol ol, ul ul, ol ul, ul ol {
+  margin-bottom: 0;
+}
+dt {
+  font-weight: 500;
+}
+dd {
+  margin-bottom: 0.5em;
+  margin-left: 0;
+}
+blockquote {
+  margin: 0 0 1em;
+}
+dfn {
+  font-style: italic;
+}
+b, strong {
+  font-weight: bolder;
+}
+small {
+  font-size: 80%;
+}
+sub, sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+a {
+  color: #0B93ff;
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+a:hover {
+  color: #33aaff;
+}
+a:active {
+  color: #0070d9;
+}
+a:active, a:hover {
+  text-decoration: none;
+  outline: 0;
+}
+a[disabled] {
+  color: rgba(0, 0, 0, 0.25);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+pre, code, kbd, samp {
+  font-size: 1em;
+}
+pre {
+  margin-top: 0;
+  margin-bottom: 1em;
+  overflow: auto;
+}
+figure {
+  margin: 0 0 1em;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+table {
+  border-collapse: collapse;
+}
+caption {
+  padding-top: 0.75em;
+  padding-bottom: 0.3em;
+  color: rgba(0, 0, 0, 0.45);
+  text-align: left;
+  caption-side: bottom;
+}
+th {
+  text-align: inherit;
+}
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+  stroke-width: 3;
+}
+#setText > div {
+  justify-content: inherit;
+  margin-top: 0;
+  margin-bottom: 1em;
+  
+  
+}
+#setText div:last-child {
+  margin-bottom: 0 !important;
+}
+#setText > br, #preview-content br {
+  line-height: 1.2;
+}
+#preview-content > div {
+  margin-top: 0;
+  margin-bottom: 1em;
+  
+}
+.proof > div,
+#preview-content .proof > div, #setText .proof > div,
+.theorem > div,
+#preview-content .theorem > div, #setText .theorem > div {
+  margin-top: 1rem;
+}
+mjx-container {
+  text-indent: 0;
+  overflow-y: hidden;
+  overflow-x: auto;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  
+}
+.math-inline mjx-container {
+  display: inline-block !important;
+  page-break-inside: avoid;
+  max-width: 100%;
+  padding: 0;
+  line-height: 0;
+}
+.math-inline[data-overflow="visible"] mjx-container {
+  overflow: visible;
+}
+.math-inline mjx-container mjx-assistive-mml {
+  max-width: 100%;
+}
+.math-block {
+  align-items: center;
+  page-break-after: auto;
+  page-break-inside: avoid;
+  margin: 0;
+  display: block;
+}
+.math-inline {
+  display: inline-flex;
+  max-width: 100%;
+}
+.math-block[data-width="full"] {
+  overflow-x: auto;
+  display: flex;
+}
+.math-block[data-width="full"] mjx-container[jax=SVG][display=true] {
+  display: flex;
+  flex: 1 1;
+  justify-content: center;
+}
+svg .math-inline {
+  display: initial;
+  max-width: initial;
+}
+svg .math-inline mjx-container {
+  max-width: initial;
+}
+svg mjx-container {
+  overflow: visible;
+  padding: 0;
+}
+svg .math-block[data-width="full"] {
+  overflow: visible;
+}
+.math-block, .math-inline {
+  --mmd-highlight-color: rgba(0, 147, 255, 0.25);
+  --mmd-highlight-text-color: #1e2029;
+}
+.math-block[data-highlight-color] mjx-container[jax="SVG"] > svg {
+  background-color: var(--mmd-highlight-color);
+}
+.math-block[data-highlight-text-color] mjx-container[jax="SVG"] > svg {
+  color: var(--mmd-highlight-text-color);
+}
+.math-inline[data-highlight-color] mjx-container[jax="SVG"] {
+  background-color: var(--mmd-highlight-color);
+}
+.math-inline[data-highlight-text-color] mjx-container[jax="SVG"] {
+  color: var(--mmd-highlight-text-color);
+}
+.math-block p {
+  flex-shrink: 1;
+}
+.math-block mjx-container {
+  margin: 0 !important;
+}
+.math-error {
+  background-color: yellow;
+  color: red;
+}
+#preview-content img, #setText img {
+  max-width: 100%;
+}
+#preview-content blockquote, #setText blockquote {
+  page-break-inside: avoid;
+  color: #666;
+  margin: 0 0 1em 0;
+  padding-left: 3em;
+  border-left: .5em solid #eee;
+}
+#preview-content pre, #setText pre {
+  border: none;
+  padding: 0;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background: #f8f8fa;
+}
+#preview-content pre code, #setText pre code {
+  padding: 1rem;
+  display: block;
+  overflow-x: auto;
+  line-height: 24px;
+}
+#preview-content table, #setText table {
+  display: table;
+  overflow: auto;
+  max-width: 100%;
+  border-collapse: collapse;
+  page-break-inside: avoid;
+  margin-bottom: 1em;
+}
+#preview-content table th, #setText table th {
+  text-align: center;
+  font-weight: bold;
+}
+#preview-content table td, #setText table td,
+#preview-content table th, #setText table th {
+  border: 1px solid #dfe2e5;
+  padding: 6px 13px;
+}
+#preview-content table tr, #setText table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+#preview-content table tr:nth-child(2n), #setText table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+.main-title,
+#preview-content .main-title, #setText .main-title {
+  text-align: center;
+  line-height: 1.2;
+  margin: 0 auto 1em auto;
+}
+.author,
+#preview-content .author, #setText .author {
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.author p,
+#preview-content .author p, #setText .author p {
+  min-width: 30%;
+  max-width: 50%;
+  padding: 0 7px;
+}
+.author > p > span,
+#preview-content .author > p > span, #setText .author > p > span {
+  display: block;
+  text-align: center;
+}
+.section-title,
+#preview-content .section-title, #setText .section-title {
+  margin-top: 1.5em;
+}
+.abstract,
+#preview-content .abstract, #setText .abstract {
+  text-align: justify;
+  margin-bottom: 1em;
+}
+.abstract p,
+#preview-content .abstract p, #setText .abstract p {
+  margin-bottom: 0;
+}
+#preview-content sup, #setText sup {
+  top: -.5em;
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+.text-url,
+#preview-content .text-url, #setText .text-url {
+  color: #0B93ff;
+  cursor: text;
+  pointer-events: none;
+}
+.text-url a:hover,
+#preview-content .text-url a:hover, #setText .text-url a:hover {
+  color: #0B93ff;
+}
+mark,
+#preview-content mark, #setText mark {
+  background-color: #feffe6;
+}
+span[data-underline-type] mark,
+#preview-content span[data-underline-type] mark,
+#setText span[data-underline-type] mark {
+  background: inherit;
+  background-color: #feffe6;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+*[data-has-dotfill] {
+  position: relative;
+  overflow: hidden;
+}
+*[data-has-dotfill] .dotfill::after {
+  position: absolute;
+  padding-left: .25ch;
+  content: " . . . . . . . . . . . . . . . . . . . "
+      ". . . . . . . . . . . . . . . . . . . . . . . "
+      ". . . . . . . . . . . . . . . . . . . . . . . "
+      ". . . . . . . . . . . . . . . . . . . . . . . "
+      ". . . . . . . . . . . . . . . . . . . . . . . "
+      ". . . . . . . . . . . . . . . . . . . . . . . "
+      ". . . . . . . . . . . . . . . . . . . . . . . ";
+  text-align: right;
+}
+.smiles,
+#preview-content .smiles, #setText .smiles {
+  text-align: center;
+}
+div.svg-container,
+#preview-content > div.svg-container,
+#setText > div.svg-container {
+  display: flex;
+  justify-content: center;
+}
+@media print {
+  #preview {
+    font-size: 10pt !important;
+  }
+  .math-block svg, .math-inline svg {
+    shape-rendering: crispEdges;
+    margin-top: 1px;
+  }
+  #preview-content img, #setText img {
+    display: block;
+  }
+  #preview-content .figure_img img, #setText .figure_img img {
+    display: inline;
+  }
+  #preview-content h1, #preview-content h2, #preview-content h3,
+  #preview-content h4, #preview-content h5, #preview-content h6,
+  #setText h1, #setText h2, #setText h3,
+  #setText h4, #setText h5, #setText h6 {
+    page-break-inside: avoid;
+    position: relative;
+    border: 2px solid transparent;
+  }
+  #preview-content h1::after, #preview-content h2::after, #preview-content h3::after,
+  #preview-content h4::after, #preview-content h5::after, #preview-content h6::after,
+  #setText h1::after, #setText h2::after, #setText h3::after,
+  #setText h4::after, #setText h5::after, #setText h6::after {
+    content: "";
+    display: block;
+    height: 100px;
+    margin-bottom: -100px;
+    position: relative;
+  }
+}
+#preview-content code, #setText code {
+  font-family: Inconsolata;
+  font-size: inherit;
+  display: initial;
+  background: #f8f8fa;
+}
+#preview-content .mmd-highlight code, #setText .mmd-highlight code,
+#preview-content pre.mmd-highlight code, #setText pre.mmd-highlight code {
+  background-color: transparent;
+}
+#preview-content pre code, #setText pre code {
+  font-family: 'DM Mono', Inconsolata, monospace;
+  color: #333;
+  font-size: 15px;
+}
+.hljs-comment, .hljs-quote,
+#preview-content .hljs-comment, #setText .hljs-comment,
+#preview-content .hljs-quote, #setText .hljs-quote {
+  color: #998;
+  font-style: italic;
+}
+.hljs-command,
+#preview-content .hljs-command, #setText .hljs-command {
+  color: #005cc5;
+}
+.hljs-keyword, .hljs-selector-tag, .hljs-subst,
+#preview-content .hljs-keyword, #setText .hljs-keyword,
+#preview-content .hljs-selector-tag, #setText .hljs-selector-tag,
+#preview-content .hljs-subst, #setText .hljs-subst {
+  color: #d73a49;
+  font-weight: bold;
+}
+.hljs-number, .hljs-literal, .hljs-variable,
+.hljs-template-variable, .hljs-tag .hljs-attr,
+#preview-content .hljs-number, #setText .hljs-number,
+#preview-content .hljs-literal, #setText .hljs-literal,
+#preview-content .hljs-variable, #setText .hljs-variable,
+#preview-content .hljs-template-variable, #setText .hljs-template-variable,
+#preview-content .hljs-tag .hljs-attr, #setText .hljs-tag .hljs-attr {
+  color: #005cc5;
+}
+.hljs-string, .hljs-doctag,
+#preview-content .hljs-string, #setText .hljs-string,
+#preview-content .hljs-doctag, #setText .hljs-doctag {
+  color: #24292e;
+}
+.hljs-title, .hljs-section, .hljs-selector-id,
+#preview-content .hljs-title, #setText .hljs-title,
+#preview-content .hljs-section, #setText .hljs-section,
+#preview-content .hljs-selector-id, #setText .hljs-selector-id {
+  color: #6f42c1;
+  font-weight: bold;
+}
+.hljs-subst,
+#preview-content .hljs-subst, #setText .hljs-subst {
+  font-weight: normal;
+}
+.hljs-type, .hljs-class .hljs-title,
+#preview-content .hljs-type, #setText .hljs-type,
+#preview-content .hljs-class .hljs-title, #setText .hljs-class .hljs-title {
+  color: #458;
+  font-weight: bold;
+}
+.hljs-tag, .hljs-name, .hljs-attribute,
+#preview-content .hljs-tag, #setText .hljs-tag,
+#preview-content .hljs-name, #setText .hljs-name,
+#preview-content .hljs-attribute, #setText .hljs-attribute {
+  color: #000080;
+  font-weight: normal;
+}
+.hljs-regexp, .hljs-link,
+#preview-content .hljs-regexp, #setText .hljs-regexp,
+#preview-content .hljs-link, #setText .hljs-link {
+  color: #009926;
+}
+.hljs-symbol, .hljs-bullet,
+#preview-content .hljs-symbol, #setText .hljs-symbol,
+#preview-content .hljs-bullet, #setText .hljs-bullet {
+  color: #990073;
+}
+.hljs-built_in, .hljs-builtin-name,
+#preview-content .hljs-built_in, #setText .hljs-built_in,
+#preview-content .hljs-builtin-name, #setText .hljs-builtin-name {
+  color: #24292e;
+}
+.hljs-meta,
+#preview-content .hljs-meta, #setText .hljs-meta {
+  color: #999;
+  font-weight: bold;
+}
+.hljs-meta-keyword,
+#preview-content .hljs-meta-keyword, #setText .hljs-meta-keyword {
+  color: #d73a49;
+}
+.hljs-meta-string,
+#preview-content .hljs-meta-string, #setText .hljs-meta-string {
+  color: #032f62;
+}
+.hljs-deletion,
+#preview-content .hljs-deletion, #setText .hljs-deletion {
+  background: #fdd;
+}
+.hljs-addition,
+#preview-content .hljs-addition, #setText .hljs-addition {
+  background: #dfd;
+}
+.hljs-emphasis,
+#preview-content .hljs-emphasis, #setText .hljs-emphasis {
+  font-style: italic;
+}
+.hljs-strong,
+#preview-content .hljs-strong, #setText .hljs-strong {
+  font-weight: bold;
+}
+.table_tabular,
+#preview-content .table_tabular, #setText .table_tabular {
+  overflow-x: auto;
+  padding: 0 2px 0.5em 2px;
+}
+.tabular,
+#preview-content .tabular, #setText .tabular {
+  display: inline-table !important;
+  width: auto;
+  table-layout: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0 0 1em;
+  font-size: inherit;
+  height: fit-content;
+}
+.tabular th,
+#preview-content .tabular th, #setText .tabular th {
+  border: none !important;
+  padding: 6px 13px;
+  background-color: transparent;
+  font-weight: bold;
+}
+.tabular tr,
+#preview-content .tabular tr, #setText .tabular tr {
+  border-top: none !important;
+  border-bottom: none !important;
+  background-color: transparent;
+}
+.tabular td,
+#preview-content .tabular td, #setText .tabular td {
+  border-style: none !important;
+  background-color: #fff;
+  border-color: #000 !important;
+  word-break: keep-all;
+  padding: 0.1em 0.5em !important;
+}
+.tabular td > p,
+#preview-content .tabular td > p, #setText .tabular td > p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.tabular td._empty,
+#preview-content .tabular td._empty, #setText .tabular td._empty {
+  height: 1.3em;
+}
+.tabular td .f,
+#preview-content .tabular td .f, #setText .tabular td .f {
+  opacity: 0;
+}
+#preview-content .sub-table table, #setText .sub-table table {
+  margin-bottom: 0;
+}
+html[data-theme="dark"] .tabular tr,
+html[data-theme="dark"] #preview-content .tabular tr, html[data-theme="dark"] #setText .tabular tr,
+html[data-theme="dark"] .tabular td,
+html[data-theme="dark"] #preview-content .tabular td, html[data-theme="dark"] #setText .tabular td {
+  background-color: #202226;
+  border-color: #fff !important;
+}
+.figure_img,
+#preview-content .figure_img, #setText .figure_img {
+  margin-bottom: 0.5em;
+  overflow-x: auto;
+}
+div.figure_img img,
+#preview-content div.figure_img img, #setText div.figure_img img {
+  display: inline;
+  margin: 0;
+}
+ol.enumerate, ul.itemize,
+#preview-content ol.enumerate, #setText ol.enumerate,
+#preview-content ul.itemize, #setText ul.itemize {
+  padding-inline-start: 40px;
+  margin: 0 0 1em 0;
+}
+li > ol.enumerate, li > ul.itemize,
+#preview-content li > ol.enumerate, #setText li > ol.enumerate,
+#preview-content li > ul.itemize, #setText li > ul.itemize {
+  margin: 0;
+}
+ul.itemize > li,
+#preview-content ul.itemize > li, #setText ul.itemize > li {
+  position: relative;
+  min-height: 1.4em;
+  margin-bottom: 0;
+}
+.enumerate > .li_enumerate,
+#preview-content .enumerate > .li_enumerate, #setText .enumerate > .li_enumerate {
+  margin-bottom: 0;
+}
+.itemize > li > span.li_level, .li_enumerate.not_number > span.li_level,
+#preview-content .itemize > li > span.li_level, #setText .itemize > li > span.li_level,
+#preview-content .li_enumerate.not_number > span.li_level, #setText .li_enumerate.not_number > span.li_level {
+  position: absolute;
+  right: 100%;
+  white-space: nowrap;
+  width: max-content;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.li_enumerate.not_number,
+#preview-content .li_enumerate.not_number, #setText .li_enumerate.not_number {
+  position: relative;
+  display: inline-block;
+  list-style-type: none;
+  min-height: 1.4em;
+}
+.itemize > li > span.li_level .math-inline,
+.enumerate > li > span.li_level .math-inline,
+#preview-content .itemize > li > span.li_level .math-inline,
+#setText .itemize > li > span.li_level .math-inline,
+#preview-content .enumerate > li > span.li_level .math-inline,
+#setText .enumerate > li > span.li_level .math-inline {
+  display: inline-block;
+}
+#preview {
+  font-family: 'CMU Serif', 'Georgia', Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  visibility: visible;
+  word-break: break-word;
+  padding: 2.5em;
+  max-width: 800px;
+  margin: auto;
+  box-sizing: content-box;
+}
+#preview h1, #preview h2, #preview h3, #preview h4, #preview h5, #preview strong {
+  font-family: 'CMU Serif Bold', 'Georgia', Helvetica, Arial, sans-serif;
+}
+#preview i, #preview em {
+  font-family: 'CMU Serif Italic', 'Georgia', Helvetica, Arial, sans-serif;
+}
+.mmd-menu {
+  max-width: 320px;
+  position: absolute;
+  background-color: white;
+  color: black;
+  width: auto;
+  padding: 5px 0;
+  border: 1px solid #E5E6EB;
+  margin: 0;
+  cursor: default;
+  font: menu;
+  text-align: left;
+  text-indent: 0;
+  text-transform: none;
+  line-height: normal;
+  letter-spacing: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  float: none;
+  z-index: 201;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  box-shadow: 0 10px 20px #808080;
+  -webkit-box-shadow: 0 10px 20px #808080;
+  -moz-box-shadow: 0 10px 20px #808080;
+  -khtml-box-shadow: 0 10px 20px #808080;
+}
+.mmd-menu:focus { outline: none; }
+.mmd-menu.mmd-menu-sm {
+  max-width: 100vw;
+  padding-bottom: 34px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -khtml-border-radius: 0;
+}
+.mmd-menu-item-icon {
+  color: #1E2029;
+  margin-left: auto;
+  align-items: center;
+  display: none;
+  flex-shrink: 0;
+}
+.mmd-menu-item {
+  padding: 8px 1.25rem;
+  display: flex;
+  background: transparent;
+  height: 52px;
+  max-height: 52px;
+}
+.mmd-menu-item:focus { outline: none; }
+.mmd-menu-item.active {
+  background-color: #e1e0e5;
+}
+.mmd-menu-item.active .mmd-menu-item-icon {
+  display: flex;
+}
+.mmd-menu-item-container {
+  overflow: hidden;
+}
+.mmd-menu-item-title {
+  color: #1E2029;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 20px;
+}
+.mmd-menu-item-value {
+  color: #7d829c;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 16px;
+}
+html[data-theme="dark"] .mmd-menu-item-title {
+  color: #ebefe7;
+}
+html[data-theme="dark"] .mmd-menu-item.active .mmd-menu-item-title {
+  color: #1E2029;
+}
+html[data-theme="dark"] .mmd-menu {
+  background-color: #33363a;
+}
+.mmd-context-menu-overlay {
+  background: rgba(0, 0, 0, 0.56);
+}
+.ClipboardButton {
+  padding: 0;
+  margin: 0.5rem;
+  display: inline-block;
+  cursor: pointer;
+  color: rgb(36, 41, 47);
+  background: rgb(246, 248, 250);
+  border-radius: 6px;
+  border: 1px solid rgba(31, 35, 40, 0.15);
+  box-shadow: rgba(31, 35, 40, 0.04) 0 1px 0 0, rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
+  position: relative;
+}
+.ClipboardButton:hover {
+  background-color: rgb(243, 244, 246);
+  border-color: rgba(31, 35, 40, 0.15);
+  transition-duration: .1s;
+}
+td .mmd-clipboard-copy-container {
+  line-height: 0;
+}
+td .ClipboardButton {
+  margin: 1px;
+  line-height: 0;
+}
+td .ClipboardButton .mmd-clipboard-icon {
+  margin: 1px !important;
+  transform: scale(0.6);
+}
+.mmd-clipboard-icon {
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+.mmd-clipboard-copy-icon {
+  color: rgb(101, 109, 118);
+}
+.mmd-clipboard-check-icon {
+  color: rgb(26, 127, 55);
+}
+.mmd-tooltipped-no-delay:hover::before,
+.mmd-tooltipped-no-delay:hover::after {
+  animation-delay: 0s;
+}
+.mmd-tooltipped:hover::before,
+.mmd-tooltipped:hover::after {
+  display: inline-block;
+  text-decoration: none;
+  animation-name: tooltip-appear;
+  animation-duration: .1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-delay: .4s;
+}
+.mmd-tooltipped-w::before {
+  top: 50%;
+  bottom: 50%;
+  left: -7px;
+  margin-top: -6px;
+  border-left-color: rgb(36, 41, 47);
+}
+.mmd-tooltipped::before {
+  position: absolute;
+  z-index: 1000001;
+  display: none;
+  width: 0;
+  height: 0;
+  color: rgb(36, 41, 47);
+  pointer-events: none;
+  content: "";
+  border: 6px solid transparent;
+  opacity: 0;
+}
+.mmd-tooltipped-w::after {
+  right: 100%;
+  bottom: 50%;
+  margin-right: 6px;
+  transform: translateY(50%);
+}
+.mmd-tooltipped::after {
+  position: absolute;
+  z-index: 1000000;
+  display: none;
+  padding: 0.5em 0.75em;
+  font: normal normal 11px/1.5 'CMU Serif', 'Georgia', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: break-word;
+  white-space: pre;
+  pointer-events: none;
+  content: attr(aria-label);
+  background: rgb(36, 41, 47);
+  border-radius: 6px;
+  opacity: 0;
+}</style>
+</head>
+<body>
+  <div id="preview" class="preview scrollEditor">
+    <div id="container-ruller" />
+    <div id="preview-content">
+      <h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-0 preview-line 0" id="chapter-4-mathematical-expectation" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1">
+Chapter 4 Mathematical Expectation</h2>
+<div class="preview-paragraph-2 preview-line 2" data_line_start="2" data_line_end="2" data_line="2,3" count_line="1">S4.1,4.2 Introduction and the Expectation of a Random Variable</div>
+<div class="preview-paragraph-4 preview-line 4 5 6 7 8" data_line_start="4" data_line_end="8" data_line="4,9" count_line="5">Basically the expectation of a random variable is the average or expected value of the r.v.<br>
+e.g. I play a game in which I roll a (fair) die.<br>
+If 1 roll a 1,1 win <span class="math-inline ">$\$ 2$</span><br>
+If 1 roll a 2 or a 3,1 win <span class="math-inline ">$\$ 1$</span><br>
+If 1 roll a 4,5 , or 6,1 lax <span class="math-inline ">$\$ 1$</span>.</div>
+<div class="preview-paragraph-10 preview-line 10" data_line_start="10" data_line_end="10" data_line="10,11" count_line="1">On average (ire if 1 play the game many times), I would expect to win.</div>
+<div class="preview-paragraph-11 preview-line 11 12 13 14 15 16" data_line_start="11" data_line_end="16" data_line="11,17" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+2 \times \frac{1}{6}+1 \times \frac{1}{3}-1 \times \frac{1}{2} &amp; =\$ \frac{1}{6} \\
+&amp; =174 .
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-18 preview-line 18" data_line_start="18" data_line_end="18" data_line="18,19" count_line="1">What we did was multiply the value of each outcome by the prob of that outcome and then sum over all possible outcomes.</div>
+<div class="preview-paragraph-20 preview-line 20" data_line_start="20" data_line_end="20" data_line="20,21" count_line="1">Defn. If <span class="math-inline ">$x$</span> is 0 discrete r.v. with <span class="math-inline ">$p d f(h x)$</span>, the expected value of <span class="math-inline ">$X$</span> is</div>
+<div class="preview-paragraph-21 preview-line 21 22 23" data_line_start="21" data_line_end="23" data_line="21,24" count_line="3"><span class="math-block ">$$
+E(x)=\sum_{x} x \cdot f(x)
+$$</span></div>
+<div class="preview-paragraph-25 preview-line 25" data_line_start="25" data_line_end="25" data_line="25,26" count_line="1">If <span class="math-inline ">$X$</span> is a cts r.v. with density <span class="math-inline ">$f(x)$</span>, the expected value of <span class="math-inline ">$X$</span> is</div>
+<div class="preview-paragraph-26 preview-line 26 27 28" data_line_start="26" data_line_end="28" data_line="26,29" count_line="3"><span class="math-block ">$$
+E(x)=\int_{-\infty}^{\infty} x f(x) d x
+$$</span></div>
+<div class="preview-paragraph-29 preview-line 29 30" data_line_start="29" data_line_end="30" data_line="29,31" count_line="2">N.b. we assume here, of course that the sum and integral are defined.<br>
+It is in fact possible that o r.v. can have infirite expectation!</div>
+<div class="preview-paragraph-32 preview-line 32" data_line_start="32" data_line_end="32" data_line="32,33" count_line="1">Remark For the physreists among you, note the similarity with centre of mass and ulso the position operater in quantum mechanis!</div>
+<div class="preview-paragraph-34 preview-line 34 35 36 37" data_line_start="34" data_line_end="37" data_line="34,38" count_line="4">Ex. A lot of 12 tvs includes 2 with white cords. If a shipment includes 3 tos choren at random, har many can one expect to have white cords.<br>
+Soln Let <span class="math-inline ">$X=$</span> # tos shipped with white cords. If we choos <span class="math-inline ">$x$</span> tos with white cords where <span class="math-inline ">$x=0,1,2 \ldots$</span> then there are <span class="math-inline ">$\binom{2}{x}$</span> ways of choosing the <span class="math-inline ">$x$</span> tos with white cords<br>
+and <span class="math-inline ">$\binom{10}{3-x}$</span> ways of choosing the remaining <span class="math-inline ">$3-x$</span> which don't have white cords.<br>
+Since there are <span class="math-inline ">$\binom{12}{3}$</span> ways of choosing the 3 tvs altogether, if we let <span class="math-inline ">$f(x)$</span> be the pdf of <span class="math-inline ">$X$</span>, then by Thm 202</div>
+<div class="preview-paragraph-38 preview-line 38 39 40" data_line_start="38" data_line_end="40" data_line="38,41" count_line="3"><span class="math-block ">$$
+f(x)=\frac{\binom{2}{x}\binom{10}{3-x}}{\binom{12}{3}}, x=0,1,2
+$$</span></div>
+<div class="preview-paragraph-41 preview-line 41 42" data_line_start="41" data_line_end="42" data_line="41,43" count_line="2">and <span class="math-inline ">$f(x)=0$</span> othermile.<br>
+Can make a table</div>
+<div class="table_tabular preview-paragraph-44 preview-line 44 45 46 47" style="text-align: center" data_line_start="44" data_line_end="47" data_line="44,48" count_line="4">
+<div class="inline-tabular"><table class="tabular">
+<tbody>
+<tr style="border-top: none !important; border-bottom: none !important;">
+<td style="text-align: center; border-left: none !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; "><span class="math-inline ">$x$</span></td>
+<td style="text-align: center; border-right: none !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; ">0</td>
+<td style="text-align: center; border-right: none !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; ">1</td>
+<td style="text-align: center; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; ">2</td>
+</tr>
+<tr style="border-top: none !important; border-bottom: none !important;">
+<td style="text-align: center; border-left: none !important; border-right-style: solid !important; border-right-width: 1px !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; "><span class="math-inline ">$f(x)$</span></td>
+<td style="text-align: center; border-right: none !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; "><span class="math-inline ">$\frac{6}{11}$</span></td>
+<td style="text-align: center; border-right: none !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; "><span class="math-inline ">$\frac{9}{22}$</span></td>
+<td style="text-align: center; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; "><span class="math-inline ">$\frac{1}{22}$</span></td>
+</tr>
+</tbody>
+</table>
+</div></div>
+<div class="preview-paragraph-49 preview-line 49" data_line_start="49" data_line_end="49" data_line="49,50" count_line="1">Then</div>
+<div class="preview-paragraph-50 preview-line 50 51 52 53 54 55 56 57" data_line_start="50" data_line_end="57" data_line="50,58" count_line="8"><span class="math-block ">$$
+\begin{aligned}
+E(x)= &amp; 0 \cdot P(x=0)+1 \cdot P(x=1) \\
+&amp; +2 \cdot P(x=2) \\
+= &amp; 0 \cdot f(0)+1 \cdot f(1)+2 \cdot f(2) \\
+= &amp; 0 \cdot \frac{6}{11}+1 \cdot \frac{9}{22}+2 \cdot \frac{1}{22}=\frac{1}{2}
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-59 preview-line 59" data_line_start="59" data_line_end="59" data_line="59,60" count_line="1">Note that this is not a whole number!</div>
+<div class="preview-paragraph-61 preview-line 61" data_line_start="61" data_line_end="61" data_line="61,62" count_line="1">Ex <span class="math-inline ">$A$</span> cts r.v. <span class="math-inline ">$X$</span> has pdf</div>
+<div class="preview-paragraph-62 preview-line 62 63 64 65 66 67" data_line_start="62" data_line_end="67" data_line="62,68" count_line="6"><span class="math-block ">$$
+f(x)=\left\{\begin{array}{l}
+\frac{4}{\pi\left(1+x^{2}\right)}, 0&lt;x&lt;1 \\
+0 \text { elsewhere. }
+\end{array}\right.
+$$</span></div>
+<div class="preview-paragraph-69 preview-line 69" data_line_start="69" data_line_end="69" data_line="69,70" count_line="1">Find <span class="math-inline ">$E(X)$</span>.</div>
+<div class="preview-paragraph-70 preview-line 70 71 72 73 74 75 76 77 78 79 80" data_line_start="70" data_line_end="80" data_line="70,81" count_line="11"><span class="math-block ">$$
+\begin{aligned}
+E(x)=\int_{-\infty}^{\infty} x f(x) d x &amp; =\frac{4}{\pi} \int_{0}^{1} \frac{x}{1+x^{2}} d x \\
+&amp; =\frac{2}{\pi} \int_{0}^{1} \frac{2 x}{1+x^{2}} d x \\
+&amp; =\frac{2}{\pi} \int_{1}^{2} \frac{d u}{u} \\
+&amp; =\frac{2}{\pi}[\ln |u|]_{1}^{2} \\
+&amp; =\frac{2}{\pi}(\ln 2-\ln 1) \\
+&amp; =\frac{2}{\pi} \ln 2 \\
+&amp; =\frac{\ln 4}{\pi} \approx .4413
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-82 preview-line 82" data_line_start="82" data_line_end="82" data_line="82,83" count_line="1">Often we want to know the expectation of a fu <span class="math-inline ">$g(x)$</span> of a r.v. <span class="math-inline ">$X$</span> (note that <span class="math-inline ">$g(X)$</span> is pust another r.v.!).</div>
+<div class="preview-paragraph-84 preview-line 84" data_line_start="84" data_line_end="84" data_line="84,85" count_line="1">Thm 4.1 If <span class="math-inline ">$x$</span> is a discrete r.v. wth pdf <span class="math-inline ">$f(x)$</span>, then the expected value of <span class="math-inline ">$g(x)$</span> is given by</div>
+<div class="preview-paragraph-85 preview-line 85 86 87" data_line_start="85" data_line_end="87" data_line="85,88" count_line="3"><span class="math-block ">$$
+E(g(x))=\sum_{x} g(x) \cdot f(x) .
+$$</span></div>
+<div class="preview-paragraph-89 preview-line 89" data_line_start="89" data_line_end="89" data_line="89,90" count_line="1">If <span class="math-inline ">$X$</span> is a cts r.v. with density <span class="math-inline ">$f(x)$</span>, then the expected value of <span class="math-inline ">$g(x)$</span> is given by</div>
+<div class="preview-paragraph-90 preview-line 90 91 92" data_line_start="90" data_line_end="92" data_line="90,93" count_line="3"><span class="math-block ">$$
+E(g(x))=\int_{-\infty}^{\infty} g(x) \cdot f(x) d x
+$$</span></div>
+<div class="preview-paragraph-94 preview-line 94" data_line_start="94" data_line_end="94" data_line="94,95" count_line="1">Pf. Will only do this in the simplest cax when <span class="math-inline ">$X$</span> is discrete and takes on ftely many values and <span class="math-inline ">$g$</span> is only finite - to -one.</div>
+<div class="preview-paragraph-96 preview-line 96" data_line_start="96" data_line_end="96" data_line="96,97" count_line="1">Suppore that <span class="math-inline ">$g(x)$</span> takes on the value gi when <span class="math-inline ">$x=x_{i 1}, x_{i 2} \ldots, x_{i n}$</span></div>
+<div class="preview-paragraph-98 preview-line 98" data_line_start="98" data_line_end="98" data_line="98,99" count_line="1">Then</div>
+<div class="preview-paragraph-99 preview-line 99 100 101 102 103 104" data_line_start="99" data_line_end="104" data_line="99,105" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+P\left(g(x)=g_{i}\right) &amp; =f\left(x_{i 1}\right)+\cdots+f\left(x_{i n_{i}}\right) \\
+&amp; =\sum_{j=1}^{n_{i}} f\left(x_{i j}\right)
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-105 preview-line 105" data_line_start="105" data_line_end="105" data_line="105,106" count_line="1">and if <span class="math-inline ">$g(x)$</span> takes on the values <span class="math-inline ">$g_{1}, g_{2}, \ldots, g_{m}$</span>, then</div>
+<div class="preview-paragraph-106 preview-line 106 107 108 109 110 111 112" data_line_start="106" data_line_end="112" data_line="106,113" count_line="7"><span class="math-block ">$$
+\begin{aligned}
+E(g(x)) &amp; =\sum_{i=1}^{m} g_{i} P\left(g(x)=g_{i}\right) \\
+&amp; =\sum_{i=1}^{m} g_{i} \sum_{j=1}^{n} f\left(x_{i j}\right) \\
+&amp; =\sum_{i=1}^{m} \sum_{i=1}^{n} g_{i} f\left(x_{i j}\right)
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-113 preview-line 113 114 115" data_line_start="113" data_line_end="115" data_line="113,116" count_line="3"><span class="math-block ">$$
+=\sum_{x} g(x) \cdot f(x)
+$$</span></div>
+<div class="preview-paragraph-117 preview-line 117" data_line_start="117" data_line_end="117" data_line="117,118" count_line="1">Where this summation is over all possible ralues of <span class="math-inline ">$X$</span>.</div>
+<div class="preview-paragraph-119 preview-line 119" data_line_start="119" data_line_end="119" data_line="119,120" count_line="1">Ex. If <span class="math-inline ">$X$</span> is the number of points rolled with a balanced dir, then if <span class="math-inline ">$g(x)=2 x^{2}+1$</span></div>
+<div class="preview-paragraph-120 preview-line 120 121 122 123 124 125 126" data_line_start="120" data_line_end="126" data_line="120,127" count_line="7"><span class="math-block ">$$
+\begin{aligned}
+E(g(x)) &amp; =\sum_{x=1}^{6}\left(2 x^{2}+1\right) \cdot \frac{1}{6} \\
+&amp; =\left(2 \cdot 1^{2}+1\right) \cdot \frac{1}{6}+\cdots+\left(2 \cdot 6^{2}+1\right) \cdot \frac{1}{6} \\
+&amp; =\frac{94}{3} .
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-128 preview-line 128" data_line_start="128" data_line_end="128" data_line="128,129" count_line="1">Ex. If <span class="math-inline ">$X$</span> is a cto <span class="math-inline ">$r+v$</span>. with pdf</div>
+<div class="preview-paragraph-129 preview-line 129 130 131" data_line_start="129" data_line_end="131" data_line="129,132" count_line="3"><span class="math-block ">$$
+f(x)= \begin{cases}e^{-x}, &amp; x&gt;0 \\ 0, &amp; x \leq 0\end{cases}
+$$</span></div>
+<div class="preview-paragraph-132 preview-line 132 133" data_line_start="132" data_line_end="133" data_line="132,134" count_line="2">and <span class="math-inline ">$g(x)=e^{3 \times 14}$</span>, find <span class="math-inline ">$E(g(x))$</span>.<br>
+Suln. By Thm L.1,</div>
+<div class="preview-paragraph-134 preview-line 134 135 136 137 138 139 140 141 142" data_line_start="134" data_line_end="142" data_line="134,143" count_line="9"><span class="math-block ">$$
+\begin{aligned}
+E\left(e^{3 \times 1 / 4}\right) &amp; =\int_{0}^{\infty} e^{3 x / 4} e^{-x} d x \\
+&amp; =\int_{0}^{\infty} e^{-x / 4} d x \\
+&amp; =\lim _{M \rightarrow \infty}\left[\int_{0}^{M} e^{-x / 4} d x\right] \\
+&amp; =\lim _{M \rightarrow \infty}\left[-4 e^{-x / 4}\right]_{0}^{M} \\
+&amp; =\lim _{M \rightarrow \infty}\left(-4 e^{-M / 4}-(-4)\right)=4
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-144 preview-line 144" data_line_start="144" data_line_end="144" data_line="144,145" count_line="1">Useful facts.</div>
+<div class="preview-paragraph-146 preview-line 146" data_line_start="146" data_line_end="146" data_line="146,147" count_line="1">Thm 4.2 If <span class="math-inline ">$a, b$</span> are constants, then</div>
+<div class="preview-paragraph-147 preview-line 147 148 149" data_line_start="147" data_line_end="149" data_line="147,150" count_line="3"><span class="math-block ">$$
+E(a x+b)=a E(x)+b .
+$$</span></div>
+<div class="preview-paragraph-151 preview-line 151 152" data_line_start="151" data_line_end="152" data_line="151,153" count_line="2">EF. Discrete care - see book for cts case.<br>
+Let <span class="math-inline ">$g(x)=a x+b$</span>. Then by Thm Lol</div>
+<div class="preview-paragraph-153 preview-line 153 154 155 156 157 158 159 160 161 162 163" data_line_start="153" data_line_end="163" data_line="153,164" count_line="11"><span class="math-block ">$$
+\begin{aligned}
+&amp; E(a x+b)=\sum_{x}(a x+b) f(x) d x \\
+&amp; \begin{array}{l}
+=a \sum_{x} x f(x) d x+b \sum_{x} f(x) d x \\
+=a E(x)+b 0 \quad \text { II }
+\end{array} \\
+&amp; \text { a) } f \text { is } \\
+&amp; \text { a pdf! }
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-165 preview-line 165" data_line_start="165" data_line_end="165" data_line="165,166" count_line="1">Cer 6.1 If <span class="math-inline ">$a$</span> is a constant, then</div>
+<div class="preview-paragraph-166 preview-line 166 167 168" data_line_start="166" data_line_end="168" data_line="166,169" count_line="3"><span class="math-block ">$$
+E(a X)=a E(X)
+$$</span></div>
+<div class="preview-paragraph-170 preview-line 170" data_line_start="170" data_line_end="170" data_line="170,171" count_line="1">Cor 4.2 If <span class="math-inline ">$b$</span> is a constent, then <span class="math-inline ">$E(b)=b \quad$</span> (here <span class="math-inline ">$b$</span> is regarded as a contantage re. which has</div>
+<div class="preview-paragraph-172 preview-line 172" data_line_start="172" data_line_end="172" data_line="172,173" count_line="1">Thm 4.3 If <span class="math-inline ">$c_{1}, \ldots, c_{n}$</span> are constants, then</div>
+<div class="preview-paragraph-173 preview-line 173 174 175" data_line_start="173" data_line_end="175" data_line="173,176" count_line="3"><span class="math-block ">$$
+E\left[\sum_{i=1}^{n} c_{i} g_{i}(x)\right]=\sum_{i=1}^{n} c_{i} E\left(g_{i}(x)\right)
+$$</span></div>
+<div class="preview-paragraph-177 preview-line 177" data_line_start="177" data_line_end="177" data_line="177,178" count_line="1">Ef. Cts case- see book for discrete By Thm L.1, if <span class="math-inline ">$g(x)=\sum_{i=1}^{n} g_{i}(x)$</span>,</div>
+<div class="preview-paragraph-178 preview-line 178 179 180 181 182 183 184 185 186 187" data_line_start="178" data_line_end="187" data_line="178,188" count_line="10"><span class="math-block ">$$
+\begin{aligned}
+&amp; E\left[\sum_{i=1}^{n} c_{i} g_{i}(x)\right]=E(g(x)) \\
+&amp;=\int_{-\infty}^{\infty} g(x) f(x) d x \\
+&amp;=\int_{-\infty}^{\infty}\left(\sum_{i=1}^{n} c_{i} g_{i}(x)\right) f(x) d x \\
+&amp;=\sum_{i=1}^{n} c_{i}\left(\int_{-\infty}^{\infty} g_{i}(x) f(x) d x\right) \\
+&amp;=\sum_{i=1}^{n} c_{i} E\left(g_{i}(x)\right) \text { by Thm 401 } \\
+&amp; \text { (backwrards) }
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-189 preview-line 189" data_line_start="189" data_line_end="189" data_line="189,190" count_line="1">Ex. If <span class="math-inline ">$X$</span> is a cts. r.v. with density</div>
+<div class="preview-paragraph-190 preview-line 190 191 192 193 194 195" data_line_start="190" data_line_end="195" data_line="190,196" count_line="6"><span class="math-block ">$$
+f(x)=\left\{\begin{array}{cc}
+2(1-x), &amp; 0&lt;x&lt;1 \\
+0 &amp; \text { elsowhere }
+\end{array}\right.
+$$</span></div>
+<div class="preview-paragraph-196 preview-line 196" data_line_start="196" data_line_end="196" data_line="196,197" count_line="1">a) shar that</div>
+<div class="preview-paragraph-197 preview-line 197 198 199" data_line_start="197" data_line_end="199" data_line="197,200" count_line="3"><span class="math-block ">$$
+E\left(X^{r}\right)=\frac{2}{(r+1)(r+2)}, \quad r \neq-1,-2
+$$</span></div>
+<div class="preview-paragraph-200 preview-line 200" data_line_start="200" data_line_end="200" data_line="200,201" count_line="1">b) Use this to evaluate</div>
+<div class="preview-paragraph-201 preview-line 201 202 203" data_line_start="201" data_line_end="203" data_line="201,204" count_line="3"><span class="math-block ">$$
+E\left((2 x+1)^{2}\right)
+$$</span></div>
+<div class="preview-paragraph-205 preview-line 205 206" data_line_start="205" data_line_end="206" data_line="205,207" count_line="2">Soln.<br>
+a)</div>
+<div class="preview-paragraph-207 preview-line 207 208 209 210 211 212 213" data_line_start="207" data_line_end="213" data_line="207,214" count_line="7"><span class="math-block ">$$
+\begin{aligned}
+E\left(X^{r}\right) &amp; =\int_{-\infty}^{\infty} x^{r} \cdot f(x) d x \\
+&amp; =\int_{0}^{1} x^{r} \cdot 2(1-x) d x \\
+&amp; =2 \int_{0}^{1}\left(x^{r}-x^{r+1}\right) d x
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-214 preview-line 214 215" data_line_start="214" data_line_end="215" data_line="214,216" count_line="2"><span class="math-inline ">$=2\left(\frac{1}{r+1}-\frac{1}{r+2}\right)=\frac{2}{(r+1)(r+2)}$</span>.<br>
+b)</div>
+<div class="preview-paragraph-216 preview-line 216 217 218 219 220 221 222 223 224" data_line_start="216" data_line_end="224" data_line="216,225" count_line="9"><span class="math-block ">$$
+\begin{aligned}
+&amp; E\left((2 x+1)^{2}\right)=E\left(4 x^{2}+4 x+1\right) \\
+&amp; =4 E\left(x^{2}\right)+4 E(x)+1 \\
+&amp; =4 \cdot \frac{2}{(2+1)(2+2)}+4 \cdot \frac{2}{(1+1)(1+2)}+1 \\
+&amp; \text { by a) with } r=2, r=1, \\
+&amp; =\frac{8}{12}+\frac{8}{6}+1=3 .
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-226 preview-line 226" data_line_start="226" data_line_end="226" data_line="226,227" count_line="1">Ex. Shar that</div>
+<div class="preview-paragraph-227 preview-line 227 228 229" data_line_start="227" data_line_end="229" data_line="227,230" count_line="3"><span class="math-block ">$$
+E\left((a x+b)^{n}\right)=\sum_{i=0}^{n}\binom{n}{i} a^{n-i} b^{i} E\left(x^{n-i}\right)
+$$</span></div>
+<div class="preview-paragraph-231 preview-line 231" data_line_start="231" data_line_end="231" data_line="231,232" count_line="1">Sun. Since <span class="math-inline ">$(a x+b)^{n}=\sum_{i=0}^{n}\binom{n}{i}(a x)^{n-i} b^{i}$</span>,</div>
+<div class="preview-paragraph-232 preview-line 232 233 234 235 236 237" data_line_start="232" data_line_end="237" data_line="232,238" count_line="6"><span class="math-block ">$$
+\begin{aligned}
+E\left((a x+b)^{n}\right) &amp; =E\left[\sum_{i=0}^{n}\binom{n}{i} a^{n-i} b^{i} x^{n-i}\right] \\
+&amp; =\sum_{i=0}^{n}\binom{n}{i} a^{n-i} b^{i} E\left(x^{n-i}\right) .
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-239 preview-line 239" data_line_start="239" data_line_end="239" data_line="239,240" count_line="1">Can also extend expectution to the situation of cre random variable which is a fas of two or more other ruvis which have a joint density.</div>
+<div class="preview-paragraph-241 preview-line 241" data_line_start="241" data_line_end="241" data_line="241,242" count_line="1">Thml.L If <span class="math-inline ">$X$</span> &amp; <span class="math-inline ">$Y$</span> are cliscre r.v.s with joint pdf <span class="math-inline ">$f(x, y)$</span>, the expected value of <span class="math-inline ">$g(X, Y)$</span> (where <span class="math-inline ">$g$</span> is a fn from <span class="math-inline ">$\mathbb{R}^{2} \rightarrow \mathbb{R}$</span> and <span class="math-inline ">$g(X, Y)$</span> a <span class="math-inline ">$\left.r . V_{0}\right)$</span> is</div>
+<div class="preview-paragraph-242 preview-line 242 243 244" data_line_start="242" data_line_end="244" data_line="242,245" count_line="3"><span class="math-block ">$$
+E(g(x, y))=\sum_{x} \sum_{y} g(x, y) \cdot f(x, y) .
+$$</span></div>
+<div class="preview-paragraph-246 preview-line 246" data_line_start="246" data_line_end="246" data_line="246,247" count_line="1">If <span class="math-inline ">$x, y$</span> are cts with joint density <span class="math-inline ">$f(x, y)$</span>, the expected value of <span class="math-inline ">$g(X, Y)$</span> is</div>
+<div class="preview-paragraph-247 preview-line 247 248 249" data_line_start="247" data_line_end="249" data_line="247,250" count_line="3"><span class="math-block ">$$
+E(g(x, y))=\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} g(x, y) \cdot f(x, y) d x d y .
+$$</span></div>
+<div class="preview-paragraph-251 preview-line 251" data_line_start="251" data_line_end="251" data_line="251,252" count_line="1">Similar statements exist for fos of three or more rariables.</div>
+<div class="preview-paragraph-253 preview-line 253" data_line_start="253" data_line_end="253" data_line="253,254" count_line="1">Ex. For the tablets (yest again), find <span class="math-inline ">$E(x+y)$</span>.</div>
+<div class="preview-paragraph-255 preview-line 255" data_line_start="255" data_line_end="255" data_line="255,256" count_line="1">Recall <span class="math-inline ">$X, Y=$</span> #aspirin, sedative resp when 2 tablets are taken from a buttle containing 3 aspirin, 2 sedative and 4 laxative tablets. <span class="math-inline ">$X \&amp; Y$</span> had pint pdf.</div>
+<div class="table_tabular preview-paragraph-257 preview-line 257 258 259 260 261 262 263" style="text-align: center" data_line_start="257" data_line_end="263" data_line="257,264" count_line="7">
+<div class="inline-tabular"><table class="tabular">
+<tbody>
+<tr style="border-top: none !important; border-bottom: none !important;">
+<td style="text-align: left; border-left: none !important; border-right: none !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; " class="_empty"></td>
+<td style="text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; " class="_empty"></td>
+<td style="text-align: left; border-right: none !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; ">0</td>
+<td style="text-align: left; border-right: none !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; ">1</td>
+<td style="text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; ">2</td>
+</tr>
+<tr style="border-top: none !important; border-bottom: none !important;">
+<td style="text-align: left; border-left: none !important; border-right: none !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; " class="_empty"></td>
+<td style="text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; ">0</td>
+<td style="text-align: left; border-right: none !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; "><span class="math-inline ">$\frac{1}{6}$</span></td>
+<td style="text-align: left; border-right: none !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; "><span class="math-inline ">$\frac{1}{3}$</span></td>
+<td style="text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; "><span class="math-inline ">$\frac{1}{12}$</span></td>
+</tr>
+<tr style="border-top: none !important; border-bottom: none !important;">
+<td style="text-align: left; border-left: none !important; border-right: none !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; " class="_empty"></td>
+<td style="text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; ">1</td>
+<td style="text-align: left; border-right: none !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; "><span class="math-inline ">$\frac{2}{9}$</span></td>
+<td style="text-align: left; border-right: none !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; "><span class="math-inline ">$\frac{1}{6}$</span></td>
+<td style="text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; " class="_empty"></td>
+</tr>
+<tr style="border-top: none !important; border-bottom: none !important;">
+<td style="text-align: left; border-left: none !important; border-right: none !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; " class="_empty"></td>
+<td style="text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; ">2</td>
+<td style="text-align: left; border-right: none !important; border-bottom-style: solid !important; border-bottom-width: 1px !important; border-top: none !important; width: auto; vertical-align: middle; "><span class="math-inline ">$\frac{1}{36}$</span></td>
+<td style="text-align: left; border-right: none !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; " class="_empty"></td>
+<td style="text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; " class="_empty"></td>
+</tr>
+<tr style="border-top: none !important; border-bottom: none !important;">
+<td style="text-align: left; border-left: none !important; border-right: none !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; " class="_empty"></td>
+<td style="text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; " class="_empty"></td>
+<td style="text-align: left; border-right: none !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; " class="_empty"></td>
+<td style="text-align: left; border-right: none !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; " class="_empty"></td>
+<td style="text-align: left; border-right-style: solid !important; border-right-width: 1px !important; border-bottom: none !important; border-top: none !important; width: auto; vertical-align: middle; " class="_empty"></td>
+</tr>
+</tbody>
+</table>
+</div></div>
+<div class="preview-paragraph-265 preview-line 265" data_line_start="265" data_line_end="265" data_line="265,266" count_line="1">Then</div>
+<div class="preview-paragraph-266 preview-line 266 267 268 269 270 271 272 273" data_line_start="266" data_line_end="273" data_line="266,274" count_line="8"><span class="math-block ">$$
+\begin{aligned}
+E(X+Y)= &amp; \sum_{x=0}^{2} \sum_{y=0}^{2}(x+y) f(x, y) \\
+= &amp; (0+0) \cdot \frac{1}{6}+(0+1) \cdot \frac{2}{9}+(0+2) \cdot \frac{1}{36} \\
+&amp; +(1+0) \cdot \frac{1}{3}+(1+1) \cdot \frac{1}{6}+(2+0) \cdot \frac{1}{12} \\
+= &amp; \frac{10}{9}
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-275 preview-line 275" data_line_start="275" data_line_end="275" data_line="275,276" count_line="1">Ex. If <span class="math-inline ">$x, y$</span> are ctb with joint pdf</div>
+<div class="preview-paragraph-276 preview-line 276 277 278" data_line_start="276" data_line_end="278" data_line="276,279" count_line="3"><span class="math-block ">$$
+f(x, y)= \begin{cases}\frac{2}{7}(x+2 y), &amp; 0&lt;x&lt;1,0&lt;y&lt;2 \\ 0 &amp; \text { elsewhere }\end{cases}
+$$</span></div>
+<div class="preview-paragraph-279 preview-line 279" data_line_start="279" data_line_end="279" data_line="279,280" count_line="1">find the expected value of <span class="math-inline ">$g(x, y)=x / y^{3}$</span></div>
+<div class="preview-paragraph-281 preview-line 281" data_line_start="281" data_line_end="281" data_line="281,282" count_line="1">Sun.</div>
+<div class="preview-paragraph-282 preview-line 282 283 284 285 286 287 288 289 290" data_line_start="282" data_line_end="290" data_line="282,291" count_line="9"><span class="math-block ">$$
+\begin{aligned}
+&amp; E\left(x / y^{3}\right)=\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \frac{x}{y^{3}} \cdot f(x, y) d x d y \\
+&amp; =\int_{1}^{2} \int_{0}^{1} \frac{x}{y^{3}} \cdot \frac{2(x+2 y)}{7} d x d y \\
+&amp; =\frac{2}{7} \int_{1}^{2} \int_{0}^{1}\left(\frac{x^{2}}{y^{2}}+\frac{2 x}{y^{2}}\right) d x d y \\
+&amp; =\frac{2}{7} \int_{1}^{2}\left(\frac{1}{3 y^{3}}+\frac{1}{y^{2}}\right) d y \\
+&amp; =\frac{15}{84} .
+\end{aligned}
+$$</span></div>
+<div class="preview-paragraph-292 preview-line 292" data_line_start="292" data_line_end="292" data_line="292,293" count_line="1">A final useful result.</div>
+<div class="preview-paragraph-294 preview-line 294" data_line_start="294" data_line_end="294" data_line="294,295" count_line="1">Thm 4.5 If <span class="math-inline ">$c_{1,}, c_{n}$</span> are consts., then</div>
+<div class="preview-paragraph-295 preview-line 295 296 297" data_line_start="295" data_line_end="297" data_line="295,298" count_line="3"><span class="math-block ">$$
+E\left[\sum_{i=1}^{n} c_{i} g_{i}\left(x_{1}, \ldots, x_{k}\right)\right]=\sum_{i=1}^{n} c_{i} E\left(g_{i}\left(x_{1}, \ldots, x_{k}\right)\right) .
+$$</span></div>
+
+    </div>
+  </div>
+  <script>
+(() => {
+  window.MathpixRenderConfig = {"width":1200,"outMath":{"output_format":"svg","include_svg":true,"include_asciimath":true,"include_latex":true,"include_mathml":true,"include_mathml_word":true,"include_tsv":true,"include_table_markdown":true,"include_smiles":true},"accessibility":{"assistive_mml":true,"include_speech":false}};
+  const autoScript = document.createElement('script');
+  autoScript.src = "https://cdn.jsdelivr.net/npm/mathpix-markdown-it@2.0.37/es5/browser/auto-render.js";
+  autoScript.onload = () => {
+    console.log("[Mathpix] auto-render loaded");
+  };
+  autoScript.onerror = () => {
+    console.error("[Mathpix] Failed to load auto-render script:", autoScript.src);
+  };
+  document.head.append(autoScript);
+})();
+</script>
+    <script>
+(() => {
+  const ctxScript = document.createElement('script');
+  ctxScript.src = "https://cdn.jsdelivr.net/npm/mathpix-markdown-it@2.0.37/es5/context-menu.js";
+  ctxScript.onload = () => {
+    const init = () => {
+      window.addListenerContextMenuEvents?.();
+    };
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init, { once: true });
+    } else {
+      init();
+    }
+    if (!window.__mathpixContextMenuKeyHandlerInstalled) {
+      window.__mathpixContextMenuKeyHandlerInstalled = true;
+      document.addEventListener("keydown", (e) => {
+        if (e.key !== "ArrowUp" && e.key !== "ArrowDown") return;
+        const el = document.querySelector(".mmd-menu");
+        if (el) e.preventDefault();
+      });
+    }
+  };
+  ctxScript.onerror = () => {
+    console.error("[Mathpix] Failed to load context-menu script:", ctxScript.src);
+  };
+  document.head.appendChild(ctxScript);
+})();
+</script>
+</body>
+</html>
