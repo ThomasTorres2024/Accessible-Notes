@@ -254,7 +254,7 @@ mjx-status {
 }
 
 foreignObject[data-mjx-xml] {
-  font-family: initial;
+  font-family: sans-serif;
   line-height: normal;
   overflow: visible;
 }
@@ -544,7 +544,7 @@ div.svg-container,
   }
 }
 #preview-content code, #setText code {
-  font-family: Inconsolata;
+  font-family: sans-serif;
   font-size: inherit;
   display: initial;
   background: #f8f8fa;
@@ -554,7 +554,7 @@ div.svg-container,
   background-color: transparent;
 }
 #preview-content pre code, #setText pre code {
-  font-family: 'DM Mono', Inconsolata, monospace;
+  font-family: sans-serif;
   color: #333;
   font-size: 15px;
 }
@@ -776,7 +776,7 @@ ul.itemize > li,
   display: inline-block;
 }
 #preview {
-  font-family: 'CMU Serif', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
   font-size: 17px;
   visibility: visible;
   word-break: break-word;
@@ -786,10 +786,10 @@ ul.itemize > li,
   box-sizing: content-box;
 }
 #preview h1, #preview h2, #preview h3, #preview h4, #preview h5, #preview strong {
-  font-family: 'CMU Serif Bold', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
 }
 #preview i, #preview em {
-  font-family: 'CMU Serif Italic', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
 }
 .mmd-menu {
   max-width: 320px;
@@ -985,38 +985,56 @@ td .ClipboardButton .mmd-clipboard-icon {
   <div id="preview" class="preview scrollEditor">
     <div id="container-ruller" />
     <div id="preview-content">
-      <h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-0 preview-line 0" id="%24%5Cdelta-4.3%24-moments" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1">
-<span class="math-inline ">$\delta 4.3$</span> Moments</h2>
-<div class="preview-paragraph-2 preview-line 2" data_line_start="2" data_line_end="2" data_line="2,3" count_line="1">Defn The r-th moment about the ongin of a r.v. <span class="math-inline ">$X$</span>, denoted by <span class="math-inline ">$\mu_{r}^{\prime}$</span> is <span class="math-inline ">$E\left(X^{r}\right)$</span>, the expected value of <span class="math-inline ">$X^{r}$</span>. In the discrete case</div>
+      <h1 type="section" data-unnumbered="true" class="section-title preview-paragraph-0 preview-line 0" id="%24%5Cdelta-4.3%24-moments" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1" style="color:rgb(200,0,0)">
+<span class="math-inline ">$\S 4.3$</span> Moments</h1>
+
+
+<div class="preview-paragraph-2 preview-line 2" data_line_start="2" data_line_end="2" data_line="2,3" count_line="1"><h2 style="color:rgb(0,0,200)">Definition).</h4><br> The <u>r-th moment about the origin </u> of a random variable <span class="math-inline ">$X$</span>, denoted by <span class="math-inline ">$\mu_{r}^{\prime}$</span> is <span class="math-inline ">$E\left(X^{r}\right)$</span>, the expected value of <span class="math-inline ">$X^{r}$</span>. In the discrete case</div>
 <div class="preview-paragraph-3 preview-line 3 4 5" data_line_start="3" data_line_end="5" data_line="3,6" count_line="3"><span class="math-block ">$$
 \mu_{r}^{\prime}=E\left(x^{r}\right)=\sum_{x} x^{r} \cdot f(x)
 $$</span></div>
-<div class="preview-paragraph-6 preview-line 6" data_line_start="6" data_line_end="6" data_line="6,7" count_line="1">and in the ots case</div>
+<div class="preview-paragraph-6 preview-line 6" data_line_start="6" data_line_end="6" data_line="6,7" count_line="1">and in the continuous case</div>
 <div class="preview-paragraph-7 preview-line 7 8 9" data_line_start="7" data_line_end="9" data_line="7,10" count_line="3"><span class="math-block ">$$
 \mu_{r}^{\prime}=E\left(x^{r}\right)=\int_{-\infty}^{\infty} x^{r} \cdot f(x) d x
 $$</span></div>
-<div class="preview-paragraph-10 preview-line 10 11" data_line_start="10" data_line_end="11" data_line="10,12" count_line="2">n.b usually (nearly always), <span class="math-inline ">$r$</span> is a non-negative integer ie <span class="math-inline ">$r=0,1,2 \ldots$</span><br>
-N.b. the analogy with moments of inertia in physres, whence the name.</div>
-<div class="preview-paragraph-13 preview-line 13" data_line_start="13" data_line_end="13" data_line="13,14" count_line="1">When <span class="math-inline ">$r=0, \quad \mu_{0}^{\prime}=E\left(X^{0}\right)=E(1)=1$</span>, by Car 2 of Thm 4.2.</div>
-<div class="preview-paragraph-15 preview-line 15" data_line_start="15" data_line_end="15" data_line="15,16" count_line="1">When <span class="math-inline ">$r=1, \mu_{1}^{\prime}=E\left(X^{\prime}\right)=E(X)$</span>, the expectation of <span class="math-inline ">$X$</span>. This is also called the mean of the r.v. <span class="math-inline ">$X$</span>,</div>
-<div class="preview-paragraph-17 preview-line 17" data_line_start="17" data_line_end="17" data_line="17,18" count_line="1">Defn. <span class="math-inline ">$\mu_{1}^{\prime}$</span> is called the mean of the distribution of <span class="math-inline ">$X$</span>, or simply the mean of <span class="math-inline ">$X$</span> and it is denoted by <span class="math-inline ">$\mu$</span>.</div>
+<div class="preview-paragraph-10 preview-line 10 11" data_line_start="10" data_line_end="11" data_line="10,12" count_line="2">N.b usually (nearly always), <span class="math-inline ">$r$</span> is a non-negative integer i.e. <span class="math-inline ">$r=0,1,2 \ldots$</span><br>
+N.b. the analogy with moments of inertia in physics, whence the name.</div>
+
+<br>
+
+<div class="preview-paragraph-13 preview-line 13" data_line_start="13" data_line_end="13" data_line="13,14" count_line="1">When <span class="math-inline ">$r=0, \quad \mu_{0}^{\prime}=E\left(X^{0}\right)=E(1)=1$</span>, by Corollary 2 of Theorem 4.2.</div>
+<div class="preview-paragraph-15 preview-line 15" data_line_start="15" data_line_end="15" data_line="15,16" count_line="1">When <span class="math-inline ">$r=1, \mu_{1}^{\prime}=E\left(X^{\prime}\right)=E(X)$</span>, the expectation of <span class="math-inline ">$X$</span>. This is also called the <b>mean</b> of the random variable <span class="math-inline ">$X$</span>.</div>
+
+<br><hr><br>
+
+
+<div class="preview-paragraph-17 preview-line 17" data_line_start="17" data_line_end="17" data_line="17,18" count_line="1"><h2 style="color:rgb(0,0,200)">Definition).</h4><br> <span class="math-inline ">$\mu_{1}^{\prime}$</span> is called the mean of the distribution of <span class="math-inline ">$X$</span>, or simply the mean of <span class="math-inline ">$X$</span> and it is denoted by <span class="math-inline ">$\mu$</span>.</div>
 <div class="preview-paragraph-19 preview-line 19 20" data_line_start="19" data_line_end="20" data_line="19,21" count_line="2">Of importance to us are the following.<br>
-Defn. The rth moment about the mean of a r.v, <span class="math-inline ">$X$</span>, denoted by <span class="math-inline ">$\mu r$</span> is the expected value of <span class="math-inline ">$(X-\mu)^{r}$</span>.</div>
+
+<br><hr><br>
+
+  <h2 style="color:rgb(0,0,200)">Definition).</h4><br> The rth moment about the mean of a random variable, <span class="math-inline ">$X$</span>, denoted by <span class="math-inline ">$\mu_r$</span> is the expected value of <span class="math-inline ">$(X-\mu)^{r}$</span>.</div>
 <div class="preview-paragraph-22 preview-line 22" data_line_start="22" data_line_end="22" data_line="22,23" count_line="1">In the discrete case</div>
 <div class="preview-paragraph-23 preview-line 23 24 25" data_line_start="23" data_line_end="25" data_line="23,26" count_line="3"><span class="math-block ">$$
 \mu_{r}=E\left((x-\mu)^{r}\right)=\sum_{x}(x-\mu)^{r} \cdot f(x)
 $$</span></div>
-<div class="preview-paragraph-26 preview-line 26" data_line_start="26" data_line_end="26" data_line="26,27" count_line="1">and in the cts case</div>
+<div class="preview-paragraph-26 preview-line 26" data_line_start="26" data_line_end="26" data_line="26,27" count_line="1">and in the continuous case</div>
 <div class="preview-paragraph-27 preview-line 27 28 29" data_line_start="27" data_line_end="29" data_line="27,30" count_line="3"><span class="math-block ">$$
-\mu r=E\left((x-\mu)^{r}\right)=\int_{-\infty}^{\infty}(x-\mu)^{r} \cdot f(x) d x
+\mu_r=E\left((x-\mu)^{r}\right)=\int_{-\infty}^{\infty}(x-\mu)^{r} \cdot f(x) d x
 $$</span></div>
 <div class="preview-paragraph-31 preview-line 31 32" data_line_start="31" data_line_end="32" data_line="31,33" count_line="2">Again, usually <span class="math-inline ">$r=0,1,2, \ldots$</span>.<br>
-Note that <span class="math-inline ">$\mu_{0}=1$</span> and <span class="math-inline ">$\mu_{1}=0$</span> fer any r.v. for which <span class="math-inline ">$\mu$</span> exists. <span class="math-inline ">$\mu_{2}$</span> is of special importence.</div>
-<div class="preview-paragraph-34 preview-line 34 35 36" data_line_start="34" data_line_end="36" data_line="34,37" count_line="3">Defn. <span class="math-inline ">$\mu_{2}$</span> is called the variance of the distribution of <span class="math-inline ">$X$</span>, or simply the variance of <span class="math-inline ">$X$</span> and it is denoted by <span class="math-inline ">$\sigma^{2}, \operatorname{var}(X)$</span>, or <span class="math-inline ">$V(X) ; \sigma$</span>, the positive square root of the variance is called the standard deviation<br>
-<span class="math-inline ">$\mu_{2}$</span> (or <span class="math-inline ">$\sigma$</span> ) measures how clocky the values of a r.v. are clustered around the mean.<br>
-<span class="math-inline ">$M_{3}$</span> measures hav asymmetrical about the mean the disribution of <span class="math-inline ">$X$</span>.</div>
-<div class="preview-paragraph-38 preview-line 38" data_line_start="38" data_line_end="38" data_line="38,39" count_line="1">Thm 4.6 <span class="math-inline ">$\quad \sigma^{2}=\mu_{2}^{\prime}-\mu^{2}$</span></div>
-<div class="preview-paragraph-40 preview-line 40" data_line_start="40" data_line_end="40" data_line="40,41" count_line="1">Pf. <span class="math-inline ">$\quad \sigma^{2}=E\left((X-\mu)^{2}\right)$</span></div>
+Note that <span class="math-inline ">$\mu_{0}=1$</span> and <span class="math-inline ">$\mu_{1}=0$</span> for any random variable for which <span class="math-inline ">$\mu$</span> exists. <span class="math-inline ">$\mu_{2}$</span> is of special importance.</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-34 preview-line 34 35 36" data_line_start="34" data_line_end="36" data_line="34,37" count_line="3"><h2 style="color:rgb(0,0,200)">Definition).</h4><br> <span class="math-inline ">$\mu_{2}$</span> is called the <b>variance</b> of the distribution of <span class="math-inline ">$X$</span>, or simply the <b>variance </b> of <span class="math-inline ">$X$</span> and it is denoted by <span class="math-inline ">$\sigma^{2}, \operatorname{var}(X)$</span>, or <span class="math-inline ">$V(X) ; \sigma$</span>, the positive square root of the variance is called the <b>standard deviation </b> <br>  <br>
+<span class="math-inline ">$\mu_{2}$</span> (or <span class="math-inline ">$\sigma$</span> ) measures how clocky the values of a random variable are clustered around the mean.<br> <br>
+<span class="math-inline ">$\mu_{3}$</span> measures how asymmetrical about the mean the disribution of <span class="math-inline ">$X$</span>.</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-38 preview-line 38" data_line_start="38" data_line_end="38" data_line="38,39" count_line="1"> <h2 style="color:rgb(200,0,0)">Theorem 4.6 </h2> <span class="math-inline ">$\quad \sigma^{2}=\mu_{2}^{\prime}-\mu^{2}$</span></div>
+<div class="preview-paragraph-40 preview-line 40" data_line_start="40" data_line_end="40" data_line="40,41" count_line="1">  <span class="math-inline ">$Proof.) \quad \sigma^{2}=E\left((X-\mu)^{2}\right)$</span></div>
 <div class="preview-paragraph-41 preview-line 41 42 43 44 45 46 47 48 49" data_line_start="41" data_line_end="49" data_line="41,50" count_line="9"><span class="math-block ">$$
 \begin{aligned}
 &amp; =E\left(X^{2}-2 \mu X+\mu^{2}\right) \\
@@ -1026,31 +1044,38 @@ Note that <span class="math-inline ">$\mu_{0}=1$</span> and <span class="math-in
 &amp; =\mu_{2}^{\prime}-\mu^{2} .
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-51 preview-line 51" data_line_start="51" data_line_end="51" data_line="51,52" count_line="1">One often uxes <span class="math-inline ">$T_{m}$</span> L 6 to calculate the variance of a given r.v..</div>
-<div class="preview-paragraph-53 preview-line 53" data_line_start="53" data_line_end="53" data_line="53,54" count_line="1">Ex. Use Thm L. 6 to calculate the Varrance of <span class="math-inline ">$X$</span>, representing the number of points rolled with a balanced dre.</div>
-<div class="preview-paragraph-55 preview-line 55" data_line_start="55" data_line_end="55" data_line="55,56" count_line="1">Soln. <span class="math-inline ">$\mu=E(x)=1 \cdot \frac{1}{6}+2 \cdot \frac{1}{6}+\ldots \cdot \frac{1}{6}$</span></div>
+<div class="preview-paragraph-51 preview-line 51" data_line_start="51" data_line_end="51" data_line="51,52" count_line="1">One often uses Theorem <span class="math-inline ">$4.6$</span> to calculate the variance of a given random variable.</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-53 preview-line 53" data_line_start="53" data_line_end="53" data_line="53,54" count_line="1"> <h2 style="color:rgb(0,150,0)">Example).</h2> Use Theorem 4.6 to calculate the Varrance of <span class="math-inline ">$X$</span>, representing the number of points rolled with a balanced die.</div>
+<div class="preview-paragraph-55 preview-line 55" data_line_start="55" data_line_end="55" data_line="55,56" count_line="1"> <h4 style="color:rgb(200,0,0)">Solution).</h4>  <span class="math-inline ">$\mu=E(x)=1 \cdot \frac{1}{6}+2 \cdot \frac{1}{6}+ \cdots + 6 \cdot \frac{1}{6}$</span></div>
 <div class="preview-paragraph-56 preview-line 56 57 58 59 60 61 62" data_line_start="56" data_line_end="62" data_line="56,63" count_line="7"><span class="math-block ">$$
 \begin{aligned}
 &amp; =\frac{7}{2} \\
 \mu_{2}^{\prime}=E\left(x^{2}\right) &amp; =1^{2} \cdot \frac{1}{6}+2^{2} \cdot \frac{1}{6}+\cdots+6^{2} \cdot \frac{1}{6} \\
+
 &amp; =\frac{91}{6}
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-64 preview-line 64" data_line_start="64" data_line_end="64" data_line="64,65" count_line="1">Then by Then 4.6</div>
+<div class="preview-paragraph-64 preview-line 64" data_line_start="64" data_line_end="64" data_line="64,65" count_line="1">Then by Theorem 4.6</div>
 <div class="preview-paragraph-65 preview-line 65 66 67 68 69 70" data_line_start="65" data_line_end="70" data_line="65,71" count_line="6"><span class="math-block ">$$
 \begin{aligned}
 \sigma^{2}=\mu_{2}^{\prime}-\mu^{2} &amp; =\frac{91}{6}-\frac{49}{4} \\
 &amp; =\frac{35}{12}
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-72 preview-line 72" data_line_start="72" data_line_end="72" data_line="72,73" count_line="1">Ex. Recall the example of a cos r.v. <span class="math-inline ">$X$</span> in the last section whose polf was</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-72 preview-line 72" data_line_start="72" data_line_end="72" data_line="72,73" count_line="1"> <h2 style="color:rgb(0,150,0)">Example).</h2> Recall the example of a continuous random variable <span class="math-inline ">$X$</span> in the last section whose PDF was</div>
 <div class="preview-paragraph-73 preview-line 73 74 75 76 77 78" data_line_start="73" data_line_end="78" data_line="73,79" count_line="6"><span class="math-block ">$$
 f(x)=\left\{\begin{array}{cc}
 \frac{4}{\pi\left(1+x^{2}\right)}, &amp; 0&lt;x&lt;1 \\
 0 &amp; \text { elsewhere }
 \end{array}\right.
 $$</span></div>
-<div class="preview-paragraph-80 preview-line 80" data_line_start="80" data_line_end="80" data_line="80,81" count_line="1">We alreaty shored <span class="math-inline ">$\mu=E(x)=\frac{\ln 4}{\pi} \approx .4413$</span>.</div>
+<div class="preview-paragraph-80 preview-line 80" data_line_start="80" data_line_end="80" data_line="80,81" count_line="1">We alreaty shored <span class="math-inline ">$\mu=E(x)=\frac{\ln 4}{\pi} \approx 0.4413$</span>.</div>
 <div class="preview-paragraph-81 preview-line 81 82 83 84 85 86 87 88 89" data_line_start="81" data_line_end="89" data_line="81,90" count_line="9"><span class="math-block ">$$
 \begin{aligned}
 \mu_{2}^{\prime}=E\left(x^{2}\right) &amp; =\frac{4}{\pi} \int_{0}^{1} \frac{x^{2}}{1+x^{2}} d x \\
@@ -1064,25 +1089,29 @@ $$</span></div>
 <div class="preview-paragraph-92 preview-line 92 93 94 95 96 97" data_line_start="92" data_line_end="97" data_line="92,98" count_line="6"><span class="math-block ">$$
 \begin{aligned}
 \sigma^{2}=\mu_{2}^{\prime}-\mu^{2} &amp; =\frac{4}{\pi}-1-\left(\frac{\ln 4}{\pi}\right)^{2} \\
-&amp; \approx .0785
+&amp; \approx 0.0785
 \end{aligned}
 $$</span></div>
 <div class="preview-paragraph-98 preview-line 98" data_line_start="98" data_line_end="98" data_line="98,99" count_line="1">and</div>
 <div class="preview-paragraph-99 preview-line 99 100 101" data_line_start="99" data_line_end="101" data_line="99,102" count_line="3"><span class="math-block ">$$
-\sigma \approx \sqrt{.0785} \approx .2802
+\sigma \approx \sqrt{0.0785} \approx 0.2802
 $$</span></div>
-<div class="preview-paragraph-103 preview-line 103 104" data_line_start="103" data_line_end="104" data_line="103,105" count_line="2">Another useful result.<br>
-Thm 4.7 if <span class="math-inline ">$x$</span> has variance <span class="math-inline ">$\sigma^{2}$</span>, then</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-103 preview-line 103 104" data_line_start="103" data_line_end="104" data_line="103,105" count_line="2">Another useful result.<br><br>
+
+<h2 style="color:rgb(0,0,200)">Theorem 4.7</h2> if <span class="math-inline ">$x$</span> has variance <span class="math-inline ">$\sigma^{2}$</span>, then</div>
 <div class="preview-paragraph-105 preview-line 105 106 107" data_line_start="105" data_line_end="107" data_line="105,108" count_line="3"><span class="math-block ">$$
 \operatorname{Var}(a X+b)=a^{2} \sigma^{2}
 $$</span></div>
-<div class="preview-paragraph-108 preview-line 108" data_line_start="108" data_line_end="108" data_line="108,109" count_line="1">ff. Ex ,</div>
+<div class="preview-paragraph-108 preview-line 108" data_line_start="108" data_line_end="108" data_line="108,109" count_line="1"> <span class="math-inline">$Proof.)$</span> Ex ,</div>
 
     </div>
   </div>
   <script>
 (() => {
-  window.MathpixRenderConfig = {"width":1200,"outMath":{"output_format":"svg","include_svg":true,"include_asciimath":true,"include_latex":true,"include_mathml":true,"include_mathml_word":true,"include_tsv":true,"include_table_markdown":true,"include_smiles":true},"accessibility":{"assistive_mml":true,"include_speech":false}};
+  window.MathpixRenderConfig = {"width":1200,"outMath":{"output_format":"svg","include_svg":true,"include_asciimath":true,"include_latex":true,"include_maTheoreml":true,"include_maTheoreml_word":true,"include_tsv":true,"include_table_markdown":true,"include_smiles":true},"accessibility":{"assistive_mml":true,"include_speech":false}};
   const autoScript = document.createElement('script');
   autoScript.src = "https://cdn.jsdelivr.net/npm/mathpix-markdown-it@2.0.37/es5/browser/auto-render.js";
   autoScript.onload = () => {
