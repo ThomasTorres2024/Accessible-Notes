@@ -254,7 +254,7 @@ mjx-status {
 }
 
 foreignObject[data-mjx-xml] {
-  font-family: initial;
+  font-family: sans-serif;
   line-height: normal;
   overflow: visible;
 }
@@ -544,7 +544,7 @@ div.svg-container,
   }
 }
 #preview-content code, #setText code {
-  font-family: Inconsolata;
+  font-family: sans-serif;
   font-size: inherit;
   display: initial;
   background: #f8f8fa;
@@ -554,7 +554,7 @@ div.svg-container,
   background-color: transparent;
 }
 #preview-content pre code, #setText pre code {
-  font-family: 'DM Mono', Inconsolata, monospace;
+  font-family: sans-serif
   color: #333;
   font-size: 15px;
 }
@@ -776,7 +776,7 @@ ul.itemize > li,
   display: inline-block;
 }
 #preview {
-  font-family: 'CMU Serif', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
   font-size: 17px;
   visibility: visible;
   word-break: break-word;
@@ -786,10 +786,10 @@ ul.itemize > li,
   box-sizing: content-box;
 }
 #preview h1, #preview h2, #preview h3, #preview h4, #preview h5, #preview strong {
-  font-family: 'CMU Serif Bold', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
 }
 #preview i, #preview em {
-  font-family: 'CMU Serif Italic', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
 }
 .mmd-menu {
   max-width: 320px;
@@ -985,42 +985,57 @@ td .ClipboardButton .mmd-clipboard-icon {
   <div id="preview" class="preview scrollEditor">
     <div id="container-ruller" />
     <div id="preview-content">
-      <h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-0 preview-line 0" id="chapter-4-mathematical-expectation" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1">
-Chapter 4 Mathematical Expectation</h2>
-<div class="preview-paragraph-2 preview-line 2" data_line_start="2" data_line_end="2" data_line="2,3" count_line="1">S4.1,4.2 Introduction and the Expectation of a Random Variable</div>
-<div class="preview-paragraph-4 preview-line 4 5 6 7 8" data_line_start="4" data_line_end="8" data_line="4,9" count_line="5">Basically the expectation of a random variable is the average or expected value of the r.v.<br>
-e.g. I play a game in which I roll a (fair) die.<br>
-If 1 roll a 1,1 win <span class="math-inline ">$\$ 2$</span><br>
-If 1 roll a 2 or a 3,1 win <span class="math-inline ">$\$ 1$</span><br>
-If 1 roll a 4,5 , or 6,1 lax <span class="math-inline ">$\$ 1$</span>.</div>
-<div class="preview-paragraph-10 preview-line 10" data_line_start="10" data_line_end="10" data_line="10,11" count_line="1">On average (ire if 1 play the game many times), I would expect to win.</div>
+      <h1 type="section" data-unnumbered="true" class="section-title preview-paragraph-0 preview-line 0" id="chapter-4-mathematical-expectation" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1" style="color:rgb(200,0,0)">
+Chapter 4 Mathematical Expectation</h1>
+
+<h1 style="color:rgb(200,0,0)">
+  <div class="preview-paragraph-2 preview-line 2" data_line_start="2" data_line_end="2" data_line="2,3" count_line="1"> <span class="math-inline">$\S$</span> 4.1,4.2 Introduction and the Expectation of a Random Variable</div>
+</h1>
+
+
+
+<div class="preview-paragraph-4 preview-line 4 5 6 7 8" data_line_start="4" data_line_end="8" data_line="4,9" count_line="5">Basically the expectation of a random variable is the average or <b>expected value</b> of the random variable.<br>
+<br> e.g. I play a game in which I roll a (fair) die.<br><br>
+If 1 roll a 1,I win <span class="math-inline ">$\$ 2$</span><br>
+If 1 roll a 2 or a 3,I win <span class="math-inline ">$\$ 1$</span><br>
+If 1 roll a 4,5 , or 6,I lose <span class="math-inline ">$\$ 1$</span>.</div>
+<div class="preview-paragraph-10 preview-line 10" data_line_start="10" data_line_end="10" data_line="10,11" count_line="1">On average (i.e. if I play the game many times), I would expect to win.</div>
 <div class="preview-paragraph-11 preview-line 11 12 13 14 15 16" data_line_start="11" data_line_end="16" data_line="11,17" count_line="6"><span class="math-block ">$$
 \begin{aligned}
 2 \times \frac{1}{6}+1 \times \frac{1}{3}-1 \times \frac{1}{2} &amp; =\$ \frac{1}{6} \\
-&amp; =174 .
+&amp; =17 \text{ cents } .
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-18 preview-line 18" data_line_start="18" data_line_end="18" data_line="18,19" count_line="1">What we did was multiply the value of each outcome by the prob of that outcome and then sum over all possible outcomes.</div>
-<div class="preview-paragraph-20 preview-line 20" data_line_start="20" data_line_end="20" data_line="20,21" count_line="1">Defn. If <span class="math-inline ">$x$</span> is 0 discrete r.v. with <span class="math-inline ">$p d f(h x)$</span>, the expected value of <span class="math-inline ">$X$</span> is</div>
+<div class="preview-paragraph-18 preview-line 18" data_line_start="18" data_line_end="18" data_line="18,19" count_line="1">What we did was multiply the value of each outcome by the probability of that outcome and then sum over all possible outcomes.</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-20 preview-line 20" data_line_start="20" data_line_end="20" data_line="20,21" count_line="1"> <h2 style="color:rgb(0,0,200)">Definition).</h2> If <span class="math-inline ">$x$</span> is a discrete random variable with PDF <span class="math-inline ">$f(x)$</span>, the <b>expected value</b> of <span class="math-inline ">$X$</span> is</div>
 <div class="preview-paragraph-21 preview-line 21 22 23" data_line_start="21" data_line_end="23" data_line="21,24" count_line="3"><span class="math-block ">$$
 E(x)=\sum_{x} x \cdot f(x)
 $$</span></div>
-<div class="preview-paragraph-25 preview-line 25" data_line_start="25" data_line_end="25" data_line="25,26" count_line="1">If <span class="math-inline ">$X$</span> is a cts r.v. with density <span class="math-inline ">$f(x)$</span>, the expected value of <span class="math-inline ">$X$</span> is</div>
+<div class="preview-paragraph-25 preview-line 25" data_line_start="25" data_line_end="25" data_line="25,26" count_line="1">If <span class="math-inline ">$X$</span> is a continuous random variable with density <span class="math-inline ">$f(x)$</span>, the <b>expected value</b> of <span class="math-inline ">$X$</span> is</div>
 <div class="preview-paragraph-26 preview-line 26 27 28" data_line_start="26" data_line_end="28" data_line="26,29" count_line="3"><span class="math-block ">$$
 E(x)=\int_{-\infty}^{\infty} x f(x) d x
 $$</span></div>
 <div class="preview-paragraph-29 preview-line 29 30" data_line_start="29" data_line_end="30" data_line="29,31" count_line="2">N.b. we assume here, of course that the sum and integral are defined.<br>
-It is in fact possible that o r.v. can have infirite expectation!</div>
-<div class="preview-paragraph-32 preview-line 32" data_line_start="32" data_line_end="32" data_line="32,33" count_line="1">Remark For the physreists among you, note the similarity with centre of mass and ulso the position operater in quantum mechanis!</div>
-<div class="preview-paragraph-34 preview-line 34 35 36 37" data_line_start="34" data_line_end="37" data_line="34,38" count_line="4">Ex. A lot of 12 tvs includes 2 with white cords. If a shipment includes 3 tos choren at random, har many can one expect to have white cords.<br>
-Soln Let <span class="math-inline ">$X=$</span> # tos shipped with white cords. If we choos <span class="math-inline ">$x$</span> tos with white cords where <span class="math-inline ">$x=0,1,2 \ldots$</span> then there are <span class="math-inline ">$\binom{2}{x}$</span> ways of choosing the <span class="math-inline ">$x$</span> tos with white cords<br>
+It is in fact possible that a random variable can have infinite expectation!</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-32 preview-line 32" data_line_start="32" data_line_end="32" data_line="32,33" count_line="1"> <h2 style="color:rgb(0,0,200)">Remark</h2>  For the physicists among you, note the similarity with centre of mass and also the position operator in quantum mechanics!</div>
+<div class="preview-paragraph-34 preview-line 34 35 36 37" data_line_start="34" data_line_end="37" data_line="34,38" count_line="4"><br><hr><br> <h2 style="color:rgb(0,150,0)">Example). </h2> A lot of 12 televisions includes 2 with white cords. If a shipment includes 3 televisions chosen at random, how many can one expect to have white cords? <br> <br>
+<h4 style="color:rgb(200,0,0)">Solution).</h4> Let <span class="math-inline ">$X=$</span> # televisions shipped with white cords. If we choose <span class="math-inline ">$x$</span> televisions with white cords where <span class="math-inline ">$x=0,1,2 \ldots$</span> then there are <span class="math-inline ">$\binom{2}{x}$</span> ways of choosing the <span class="math-inline ">$x$</span> televisions with white cords<br>
 and <span class="math-inline ">$\binom{10}{3-x}$</span> ways of choosing the remaining <span class="math-inline ">$3-x$</span> which don't have white cords.<br>
-Since there are <span class="math-inline ">$\binom{12}{3}$</span> ways of choosing the 3 tvs altogether, if we let <span class="math-inline ">$f(x)$</span> be the pdf of <span class="math-inline ">$X$</span>, then by Thm 202</div>
+
+<br>
+
+Since there are <span class="math-inline ">$\binom{12}{3}$</span> ways of choosing the 3 televisions altogether, if we let <span class="math-inline ">$f(x)$</span> be the PDF of <span class="math-inline ">$X$</span>, then by Theorem 2.02</div>
 <div class="preview-paragraph-38 preview-line 38 39 40" data_line_start="38" data_line_end="40" data_line="38,41" count_line="3"><span class="math-block ">$$
 f(x)=\frac{\binom{2}{x}\binom{10}{3-x}}{\binom{12}{3}}, x=0,1,2
 $$</span></div>
-<div class="preview-paragraph-41 preview-line 41 42" data_line_start="41" data_line_end="42" data_line="41,43" count_line="2">and <span class="math-inline ">$f(x)=0$</span> othermile.<br>
-Can make a table</div>
+<div class="preview-paragraph-41 preview-line 41 42" data_line_start="41" data_line_end="42" data_line="41,43" count_line="2">and <span class="math-inline ">$f(x)=0$</span> otherwise.<br>
+<br> We can make a table: </div>
 <div class="table_tabular preview-paragraph-44 preview-line 44 45 46 47" style="text-align: center" data_line_start="44" data_line_end="47" data_line="44,48" count_line="4">
 <div class="inline-tabular"><table class="tabular">
 <tbody>
@@ -1049,7 +1064,10 @@ E(x)= &amp; 0 \cdot P(x=0)+1 \cdot P(x=1) \\
 \end{aligned}
 $$</span></div>
 <div class="preview-paragraph-59 preview-line 59" data_line_start="59" data_line_end="59" data_line="59,60" count_line="1">Note that this is not a whole number!</div>
-<div class="preview-paragraph-61 preview-line 61" data_line_start="61" data_line_end="61" data_line="61,62" count_line="1">Ex <span class="math-inline ">$A$</span> cts r.v. <span class="math-inline ">$X$</span> has pdf</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-61 preview-line 61" data_line_start="61" data_line_end="61" data_line="61,62" count_line="1"> <h2 style="color:rgb(0,150,0)">Example).</h2> A continuous random variable <span class="math-inline ">$X$</span> has PDF</div>
 <div class="preview-paragraph-62 preview-line 62 63 64 65 66 67" data_line_start="62" data_line_end="67" data_line="62,68" count_line="6"><span class="math-block ">$$
 f(x)=\left\{\begin{array}{l}
 \frac{4}{\pi\left(1+x^{2}\right)}, 0&lt;x&lt;1 \\
@@ -1068,17 +1086,20 @@ E(x)=\int_{-\infty}^{\infty} x f(x) d x &amp; =\frac{4}{\pi} \int_{0}^{1} \frac{
 &amp; =\frac{\ln 4}{\pi} \approx .4413
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-82 preview-line 82" data_line_start="82" data_line_end="82" data_line="82,83" count_line="1">Often we want to know the expectation of a fu <span class="math-inline ">$g(x)$</span> of a r.v. <span class="math-inline ">$X$</span> (note that <span class="math-inline ">$g(X)$</span> is pust another r.v.!).</div>
-<div class="preview-paragraph-84 preview-line 84" data_line_start="84" data_line_end="84" data_line="84,85" count_line="1">Thm 4.1 If <span class="math-inline ">$x$</span> is a discrete r.v. wth pdf <span class="math-inline ">$f(x)$</span>, then the expected value of <span class="math-inline ">$g(x)$</span> is given by</div>
+<div class="preview-paragraph-82 preview-line 82" data_line_start="82" data_line_end="82" data_line="82,83" count_line="1">Often we want to know the expectation of a function <span class="math-inline ">$g(x)$</span> of a random variable. <span class="math-inline ">$X$</span> (note that <span class="math-inline ">$g(X)$</span> is just another random variable!).</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-84 preview-line 84" data_line_start="84" data_line_end="84" data_line="84,85" count_line="1"> <h2 style="color:rgb(0,0,200)">Theorem 4.1 </h2> If <span class="math-inline ">$x$</span> is a discrete random variable wth PDF <span class="math-inline ">$f(x)$</span>, then the expected value of <span class="math-inline ">$g(x)$</span> is given by</div>
 <div class="preview-paragraph-85 preview-line 85 86 87" data_line_start="85" data_line_end="87" data_line="85,88" count_line="3"><span class="math-block ">$$
 E(g(x))=\sum_{x} g(x) \cdot f(x) .
 $$</span></div>
-<div class="preview-paragraph-89 preview-line 89" data_line_start="89" data_line_end="89" data_line="89,90" count_line="1">If <span class="math-inline ">$X$</span> is a cts r.v. with density <span class="math-inline ">$f(x)$</span>, then the expected value of <span class="math-inline ">$g(x)$</span> is given by</div>
+<div class="preview-paragraph-89 preview-line 89" data_line_start="89" data_line_end="89" data_line="89,90" count_line="1">If <span class="math-inline ">$X$</span> is a continuous random variable. with density <span class="math-inline ">$f(x)$</span>, then the expected value of <span class="math-inline ">$g(x)$</span> is given by</div>
 <div class="preview-paragraph-90 preview-line 90 91 92" data_line_start="90" data_line_end="92" data_line="90,93" count_line="3"><span class="math-block ">$$
 E(g(x))=\int_{-\infty}^{\infty} g(x) \cdot f(x) d x
 $$</span></div>
-<div class="preview-paragraph-94 preview-line 94" data_line_start="94" data_line_end="94" data_line="94,95" count_line="1">Pf. Will only do this in the simplest cax when <span class="math-inline ">$X$</span> is discrete and takes on ftely many values and <span class="math-inline ">$g$</span> is only finite - to -one.</div>
-<div class="preview-paragraph-96 preview-line 96" data_line_start="96" data_line_end="96" data_line="96,97" count_line="1">Suppore that <span class="math-inline ">$g(x)$</span> takes on the value gi when <span class="math-inline ">$x=x_{i 1}, x_{i 2} \ldots, x_{i n}$</span></div>
+<div class="preview-paragraph-94 preview-line 94" data_line_start="94" data_line_end="94" data_line="94,95" count_line="1"> <span class="math-inline">$Proof).$</span>  We will only do this in the simplest case when <span class="math-inline ">$X$</span> is discrete and takes on finitely many values and <span class="math-inline ">$g$</span> is only finite - to -one.</div>
+<div class="preview-paragraph-96 preview-line 96" data_line_start="96" data_line_end="96" data_line="96,97" count_line="1">Suppore that <span class="math-inline ">$g(x)$</span> takes on the value gi when <span class="math-inline ">$x=x_{i 1}, x_{i 2} \ldots, x_{i n_i}$</span></div>
 <div class="preview-paragraph-98 preview-line 98" data_line_start="98" data_line_end="98" data_line="98,99" count_line="1">Then</div>
 <div class="preview-paragraph-99 preview-line 99 100 101 102 103 104" data_line_start="99" data_line_end="104" data_line="99,105" count_line="6"><span class="math-block ">$$
 \begin{aligned}
@@ -1098,7 +1119,7 @@ $$</span></div>
 =\sum_{x} g(x) \cdot f(x)
 $$</span></div>
 <div class="preview-paragraph-117 preview-line 117" data_line_start="117" data_line_end="117" data_line="117,118" count_line="1">Where this summation is over all possible ralues of <span class="math-inline ">$X$</span>.</div>
-<div class="preview-paragraph-119 preview-line 119" data_line_start="119" data_line_end="119" data_line="119,120" count_line="1">Ex. If <span class="math-inline ">$X$</span> is the number of points rolled with a balanced dir, then if <span class="math-inline ">$g(x)=2 x^{2}+1$</span></div>
+<div class="preview-paragraph-119 preview-line 119" data_line_start="119" data_line_end="119" data_line="119,120" count_line="1"><br><hr><br> <h2 style="color:rgb(0,150,0)">Example). </h2> If <span class="math-inline ">$X$</span> is the number of points rolled with a balanced die, then if <span class="math-inline ">$g(x)=2 x^{2}+1$</span></div>
 <div class="preview-paragraph-120 preview-line 120 121 122 123 124 125 126" data_line_start="120" data_line_end="126" data_line="120,127" count_line="7"><span class="math-block ">$$
 \begin{aligned}
 E(g(x)) &amp; =\sum_{x=1}^{6}\left(2 x^{2}+1\right) \cdot \frac{1}{6} \\
@@ -1106,28 +1127,39 @@ E(g(x)) &amp; =\sum_{x=1}^{6}\left(2 x^{2}+1\right) \cdot \frac{1}{6} \\
 &amp; =\frac{94}{3} .
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-128 preview-line 128" data_line_start="128" data_line_end="128" data_line="128,129" count_line="1">Ex. If <span class="math-inline ">$X$</span> is a cto <span class="math-inline ">$r+v$</span>. with pdf</div>
+<div class="preview-paragraph-128 preview-line 128" data_line_start="128" data_line_end="128" data_line="128,129" count_line="1"><br><hr><br> <h2 style="color:rgb(0,150,0)">Example). </h2> If <span class="math-inline ">$X$</span> is a continuous <span class="math-inline ">random variable</span>. with PDF</div>
 <div class="preview-paragraph-129 preview-line 129 130 131" data_line_start="129" data_line_end="131" data_line="129,132" count_line="3"><span class="math-block ">$$
 f(x)= \begin{cases}e^{-x}, &amp; x&gt;0 \\ 0, &amp; x \leq 0\end{cases}
 $$</span></div>
-<div class="preview-paragraph-132 preview-line 132 133" data_line_start="132" data_line_end="133" data_line="132,134" count_line="2">and <span class="math-inline ">$g(x)=e^{3 \times 14}$</span>, find <span class="math-inline ">$E(g(x))$</span>.<br>
-Suln. By Thm L.1,</div>
+
+<br>
+
+<div class="preview-paragraph-132 preview-line 132 133" data_line_start="132" data_line_end="133" data_line="132,134" count_line="2">and <span class="math-inline ">$g(x)=e^{3x/14}$</span>, find <span class="math-inline ">$E(g(x))$</span>.<br>
+<h4 style="color:rgb(200,0,0)">Solution).</h4> By Theorem 4.1,</div>
 <div class="preview-paragraph-134 preview-line 134 135 136 137 138 139 140 141 142" data_line_start="134" data_line_end="142" data_line="134,143" count_line="9"><span class="math-block ">$$
 \begin{aligned}
-E\left(e^{3 \times 1 / 4}\right) &amp; =\int_{0}^{\infty} e^{3 x / 4} e^{-x} d x \\
+E\left(e^{3x / 4}\right) &amp; =\int_{0}^{\infty} e^{3 x / 4} e^{-x} d x \\
 &amp; =\int_{0}^{\infty} e^{-x / 4} d x \\
 &amp; =\lim _{M \rightarrow \infty}\left[\int_{0}^{M} e^{-x / 4} d x\right] \\
 &amp; =\lim _{M \rightarrow \infty}\left[-4 e^{-x / 4}\right]_{0}^{M} \\
 &amp; =\lim _{M \rightarrow \infty}\left(-4 e^{-M / 4}-(-4)\right)=4
 \end{aligned}
 $$</span></div>
+
+<br><hr><br>
+
 <div class="preview-paragraph-144 preview-line 144" data_line_start="144" data_line_end="144" data_line="144,145" count_line="1">Useful facts.</div>
-<div class="preview-paragraph-146 preview-line 146" data_line_start="146" data_line_end="146" data_line="146,147" count_line="1">Thm 4.2 If <span class="math-inline ">$a, b$</span> are constants, then</div>
+
+
+<div class="preview-paragraph-146 preview-line 146" data_line_start="146" data_line_end="146" data_line="146,147" count_line="1"> <h2 style="color:rgb(0,0,200)">Theorem 4.2).</h2>  If <span class="math-inline ">$a, b$</span> are constants, then</div>
 <div class="preview-paragraph-147 preview-line 147 148 149" data_line_start="147" data_line_end="149" data_line="147,150" count_line="3"><span class="math-block ">$$
 E(a x+b)=a E(x)+b .
 $$</span></div>
-<div class="preview-paragraph-151 preview-line 151 152" data_line_start="151" data_line_end="152" data_line="151,153" count_line="2">EF. Discrete care - see book for cts case.<br>
-Let <span class="math-inline ">$g(x)=a x+b$</span>. Then by Thm Lol</div>
+<div class="preview-paragraph-151 preview-line 151 152" data_line_start="151" data_line_end="152" data_line="151,153" count_line="2"> <span class="math-inline">$Proof)$</span>. Discrete case - see book for continuous case.<br>
+
+  <br>
+
+  Let <span class="math-inline ">$g(x)=a x+b$</span>. Then by Theorem Lol</div>
 <div class="preview-paragraph-153 preview-line 153 154 155 156 157 158 159 160 161 162 163" data_line_start="153" data_line_end="163" data_line="153,164" count_line="11"><span class="math-block ">$$
 \begin{aligned}
 &amp; E(a x+b)=\sum_{x}(a x+b) f(x) d x \\
@@ -1136,7 +1168,7 @@ Let <span class="math-inline ">$g(x)=a x+b$</span>. Then by Thm Lol</div>
 =a E(x)+b 0 \quad \text { II }
 \end{array} \\
 &amp; \text { a) } f \text { is } \\
-&amp; \text { a pdf! }
+&amp; \text { a PDF! }
 \end{aligned}
 $$</span></div>
 <div class="preview-paragraph-165 preview-line 165" data_line_start="165" data_line_end="165" data_line="165,166" count_line="1">Cer 6.1 If <span class="math-inline ">$a$</span> is a constant, then</div>
@@ -1144,22 +1176,22 @@ $$</span></div>
 E(a X)=a E(X)
 $$</span></div>
 <div class="preview-paragraph-170 preview-line 170" data_line_start="170" data_line_end="170" data_line="170,171" count_line="1">Cor 4.2 If <span class="math-inline ">$b$</span> is a constent, then <span class="math-inline ">$E(b)=b \quad$</span> (here <span class="math-inline ">$b$</span> is regarded as a contantage re. which has</div>
-<div class="preview-paragraph-172 preview-line 172" data_line_start="172" data_line_end="172" data_line="172,173" count_line="1">Thm 4.3 If <span class="math-inline ">$c_{1}, \ldots, c_{n}$</span> are constants, then</div>
+<div class="preview-paragraph-172 preview-line 172" data_line_start="172" data_line_end="172" data_line="172,173" count_line="1">Theorem 4.3 If <span class="math-inline ">$c_{1}, \ldots, c_{n}$</span> are constants, then</div>
 <div class="preview-paragraph-173 preview-line 173 174 175" data_line_start="173" data_line_end="175" data_line="173,176" count_line="3"><span class="math-block ">$$
 E\left[\sum_{i=1}^{n} c_{i} g_{i}(x)\right]=\sum_{i=1}^{n} c_{i} E\left(g_{i}(x)\right)
 $$</span></div>
-<div class="preview-paragraph-177 preview-line 177" data_line_start="177" data_line_end="177" data_line="177,178" count_line="1">Ef. Cts case- see book for discrete By Thm L.1, if <span class="math-inline ">$g(x)=\sum_{i=1}^{n} g_{i}(x)$</span>,</div>
+<div class="preview-paragraph-177 preview-line 177" data_line_start="177" data_line_end="177" data_line="177,178" count_line="1">Ef. continuous case- see book for discrete By Theorem L.1, if <span class="math-inline ">$g(x)=\sum_{i=1}^{n} g_{i}(x)$</span>,</div>
 <div class="preview-paragraph-178 preview-line 178 179 180 181 182 183 184 185 186 187" data_line_start="178" data_line_end="187" data_line="178,188" count_line="10"><span class="math-block ">$$
 \begin{aligned}
 &amp; E\left[\sum_{i=1}^{n} c_{i} g_{i}(x)\right]=E(g(x)) \\
 &amp;=\int_{-\infty}^{\infty} g(x) f(x) d x \\
 &amp;=\int_{-\infty}^{\infty}\left(\sum_{i=1}^{n} c_{i} g_{i}(x)\right) f(x) d x \\
 &amp;=\sum_{i=1}^{n} c_{i}\left(\int_{-\infty}^{\infty} g_{i}(x) f(x) d x\right) \\
-&amp;=\sum_{i=1}^{n} c_{i} E\left(g_{i}(x)\right) \text { by Thm 401 } \\
+&amp;=\sum_{i=1}^{n} c_{i} E\left(g_{i}(x)\right) \text { by Theorem 401 } \\
 &amp; \text { (backwrards) }
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-189 preview-line 189" data_line_start="189" data_line_end="189" data_line="189,190" count_line="1">Ex. If <span class="math-inline ">$X$</span> is a cts. r.v. with density</div>
+<div class="preview-paragraph-189 preview-line 189" data_line_start="189" data_line_end="189" data_line="189,190" count_line="1"><br><hr><br> <h2 style="color:rgb(0,150,0)">Example). </h2> If <span class="math-inline ">$X$</span> is a cts. random variable. with density</div>
 <div class="preview-paragraph-190 preview-line 190 191 192 193 194 195" data_line_start="190" data_line_end="195" data_line="190,196" count_line="6"><span class="math-block ">$$
 f(x)=\left\{\begin{array}{cc}
 2(1-x), &amp; 0&lt;x&lt;1 \\
@@ -1174,7 +1206,7 @@ $$</span></div>
 <div class="preview-paragraph-201 preview-line 201 202 203" data_line_start="201" data_line_end="203" data_line="201,204" count_line="3"><span class="math-block ">$$
 E\left((2 x+1)^{2}\right)
 $$</span></div>
-<div class="preview-paragraph-205 preview-line 205 206" data_line_start="205" data_line_end="206" data_line="205,207" count_line="2">Soln.<br>
+<div class="preview-paragraph-205 preview-line 205 206" data_line_start="205" data_line_end="206" data_line="205,207" count_line="2"><h4 style="color:rgb(200,0,0)">Solution).</h4>.<br>
 a)</div>
 <div class="preview-paragraph-207 preview-line 207 208 209 210 211 212 213" data_line_start="207" data_line_end="213" data_line="207,214" count_line="7"><span class="math-block ">$$
 \begin{aligned}
@@ -1194,7 +1226,7 @@ b)</div>
 &amp; =\frac{8}{12}+\frac{8}{6}+1=3 .
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-226 preview-line 226" data_line_start="226" data_line_end="226" data_line="226,227" count_line="1">Ex. Shar that</div>
+<div class="preview-paragraph-226 preview-line 226" data_line_start="226" data_line_end="226" data_line="226,227" count_line="1"><br><hr><br> <h2 style="color:rgb(0,150,0)">Example). </h2> Shar that</div>
 <div class="preview-paragraph-227 preview-line 227 228 229" data_line_start="227" data_line_end="229" data_line="227,230" count_line="3"><span class="math-block ">$$
 E\left((a x+b)^{n}\right)=\sum_{i=0}^{n}\binom{n}{i} a^{n-i} b^{i} E\left(x^{n-i}\right)
 $$</span></div>
@@ -1206,17 +1238,17 @@ E\left((a x+b)^{n}\right) &amp; =E\left[\sum_{i=0}^{n}\binom{n}{i} a^{n-i} b^{i}
 \end{aligned}
 $$</span></div>
 <div class="preview-paragraph-239 preview-line 239" data_line_start="239" data_line_end="239" data_line="239,240" count_line="1">Can also extend expectution to the situation of cre random variable which is a fas of two or more other ruvis which have a joint density.</div>
-<div class="preview-paragraph-241 preview-line 241" data_line_start="241" data_line_end="241" data_line="241,242" count_line="1">Thml.L If <span class="math-inline ">$X$</span> &amp; <span class="math-inline ">$Y$</span> are cliscre r.v.s with joint pdf <span class="math-inline ">$f(x, y)$</span>, the expected value of <span class="math-inline ">$g(X, Y)$</span> (where <span class="math-inline ">$g$</span> is a fn from <span class="math-inline ">$\mathbb{R}^{2} \rightarrow \mathbb{R}$</span> and <span class="math-inline ">$g(X, Y)$</span> a <span class="math-inline ">$\left.r . V_{0}\right)$</span> is</div>
+<div class="preview-paragraph-241 preview-line 241" data_line_start="241" data_line_end="241" data_line="241,242" count_line="1">Thml.L If <span class="math-inline ">$X$</span> &amp; <span class="math-inline ">$Y$</span> are cliscre random variable.s with joint PDF <span class="math-inline ">$f(x, y)$</span>, the expected value of <span class="math-inline ">$g(X, Y)$</span> (where <span class="math-inline ">$g$</span> is a fn from <span class="math-inline ">$\mathbb{R}^{2} \rightarrow \mathbb{R}$</span> and <span class="math-inline ">$g(X, Y)$</span> a <span class="math-inline ">$\left.r . V_{0}\right)$</span> is</div>
 <div class="preview-paragraph-242 preview-line 242 243 244" data_line_start="242" data_line_end="244" data_line="242,245" count_line="3"><span class="math-block ">$$
 E(g(x, y))=\sum_{x} \sum_{y} g(x, y) \cdot f(x, y) .
 $$</span></div>
-<div class="preview-paragraph-246 preview-line 246" data_line_start="246" data_line_end="246" data_line="246,247" count_line="1">If <span class="math-inline ">$x, y$</span> are cts with joint density <span class="math-inline ">$f(x, y)$</span>, the expected value of <span class="math-inline ">$g(X, Y)$</span> is</div>
+<div class="preview-paragraph-246 preview-line 246" data_line_start="246" data_line_end="246" data_line="246,247" count_line="1">If <span class="math-inline ">$x, y$</span> are continuous with joint density <span class="math-inline ">$f(x, y)$</span>, the expected value of <span class="math-inline ">$g(X, Y)$</span> is</div>
 <div class="preview-paragraph-247 preview-line 247 248 249" data_line_start="247" data_line_end="249" data_line="247,250" count_line="3"><span class="math-block ">$$
 E(g(x, y))=\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} g(x, y) \cdot f(x, y) d x d y .
 $$</span></div>
 <div class="preview-paragraph-251 preview-line 251" data_line_start="251" data_line_end="251" data_line="251,252" count_line="1">Similar statements exist for fos of three or more rariables.</div>
-<div class="preview-paragraph-253 preview-line 253" data_line_start="253" data_line_end="253" data_line="253,254" count_line="1">Ex. For the tablets (yest again), find <span class="math-inline ">$E(x+y)$</span>.</div>
-<div class="preview-paragraph-255 preview-line 255" data_line_start="255" data_line_end="255" data_line="255,256" count_line="1">Recall <span class="math-inline ">$X, Y=$</span> #aspirin, sedative resp when 2 tablets are taken from a buttle containing 3 aspirin, 2 sedative and 4 laxative tablets. <span class="math-inline ">$X \&amp; Y$</span> had pint pdf.</div>
+<div class="preview-paragraph-253 preview-line 253" data_line_start="253" data_line_end="253" data_line="253,254" count_line="1"><br><hr><br> <h2 style="color:rgb(0,150,0)">Example). </h2> For the tablets (yest again), find <span class="math-inline ">$E(x+y)$</span>.</div>
+<div class="preview-paragraph-255 preview-line 255" data_line_start="255" data_line_end="255" data_line="255,256" count_line="1">Recall <span class="math-inline ">$X, Y=$</span> #aspirin, sedative resp when 2 tablets are taken from a buttle containing 3 aspirin, 2 sedative and 4 laxative tablets. <span class="math-inline ">$X \&amp; Y$</span> had pint PDF.</div>
 <div class="table_tabular preview-paragraph-257 preview-line 257 258 259 260 261 262 263" style="text-align: center" data_line_start="257" data_line_end="263" data_line="257,264" count_line="7">
 <div class="inline-tabular"><table class="tabular">
 <tbody>
@@ -1267,7 +1299,7 @@ E(X+Y)= &amp; \sum_{x=0}^{2} \sum_{y=0}^{2}(x+y) f(x, y) \\
 = &amp; \frac{10}{9}
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-275 preview-line 275" data_line_start="275" data_line_end="275" data_line="275,276" count_line="1">Ex. If <span class="math-inline ">$x, y$</span> are ctb with joint pdf</div>
+<div class="preview-paragraph-275 preview-line 275" data_line_start="275" data_line_end="275" data_line="275,276" count_line="1"><br><hr><br> <h2 style="color:rgb(0,150,0)">Example). </h2> If <span class="math-inline ">$x, y$</span> are ctb with joint PDF</div>
 <div class="preview-paragraph-276 preview-line 276 277 278" data_line_start="276" data_line_end="278" data_line="276,279" count_line="3"><span class="math-block ">$$
 f(x, y)= \begin{cases}\frac{2}{7}(x+2 y), &amp; 0&lt;x&lt;1,0&lt;y&lt;2 \\ 0 &amp; \text { elsewhere }\end{cases}
 $$</span></div>
@@ -1283,7 +1315,7 @@ $$</span></div>
 \end{aligned}
 $$</span></div>
 <div class="preview-paragraph-292 preview-line 292" data_line_start="292" data_line_end="292" data_line="292,293" count_line="1">A final useful result.</div>
-<div class="preview-paragraph-294 preview-line 294" data_line_start="294" data_line_end="294" data_line="294,295" count_line="1">Thm 4.5 If <span class="math-inline ">$c_{1,}, c_{n}$</span> are consts., then</div>
+<div class="preview-paragraph-294 preview-line 294" data_line_start="294" data_line_end="294" data_line="294,295" count_line="1">Theorem 4.5 If <span class="math-inline ">$c_{1,}, c_{n}$</span> are consts., then</div>
 <div class="preview-paragraph-295 preview-line 295 296 297" data_line_start="295" data_line_end="297" data_line="295,298" count_line="3"><span class="math-block ">$$
 E\left[\sum_{i=1}^{n} c_{i} g_{i}\left(x_{1}, \ldots, x_{k}\right)\right]=\sum_{i=1}^{n} c_{i} E\left(g_{i}\left(x_{1}, \ldots, x_{k}\right)\right) .
 $$</span></div>
