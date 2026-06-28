@@ -996,7 +996,7 @@ $$</span></div>
 <div class="preview-paragraph-10 preview-line 10 11 12" data_line_start="10" data_line_end="12" data_line="10,13" count_line="3"><span class="math-block ">$$
 M_{x}(t)=E\left(e^{t x}\right)=\sum_{x} e^{t x} \cdot f(x) .
 $$</span></div>
-<div class="preview-paragraph-14 preview-line 14" data_line_start="14" data_line_end="14" data_line="14,15" count_line="1">When <span class="math-inline ">$X$</span> is cts, we have (by Theorem 4.1 again)</div>
+<div class="preview-paragraph-14 preview-line 14" data_line_start="14" data_line_end="14" data_line="14,15" count_line="1">When <span class="math-inline ">$X$</span> is continuous, we have (by Theorem 4.1 again)</div>
 <div class="preview-paragraph-15 preview-line 15 16 17" data_line_start="15" data_line_end="17" data_line="15,18" count_line="3"><span class="math-block ">$$
 M_{x}(t)=E\left(e^{t x}\right)=\int_{-\infty}^{\infty} e^{t x} \cdot f(x) d x
 $$</span></div>
@@ -1025,7 +1025,7 @@ $$</span></div>
 $$</span></div>
 <div class="preview-paragraph-44 preview-line 44" data_line_start="44" data_line_end="44" data_line="44,45" count_line="1">(formal interchange of sums ok)</div>
 <div class="preview-paragraph-45 preview-line 45 46 47" data_line_start="45" data_line_end="47" data_line="45,48" count_line="3"><span class="math-block ">$$
-=I+\mu t+\mu_{2}^{\prime} \frac{t^{2}}{2!}+\cdots+\mu_{r}^{\prime} \frac{t^{\prime}}{r!}+\cdots
+=1+\mu t+\mu_{2}^{\prime} \frac{t^{2}}{2!}+\cdots+\mu_{r}^{\prime} \frac{t^{\prime}}{r!}+\cdots
 $$</span></div>
 <div class="preview-paragraph-49 preview-line 49" data_line_start="49" data_line_end="49" data_line="49,50" count_line="1">Thus the function <span class="math-inline ">$M_{x}(t)$</span> itself has a McLaurin series about <span class="math-inline ">$0$</span> and the coefficient of <span class="math-inline ">$t^{r}$</span> in this series is <span class="math-inline ">$\frac{\mu_{r}!}{r!}$</span> (where <span class="math-inline ">$\mu_{r}^{\prime}$</span> is the <span class="math-inline ">$r$</span>-th moment of <span class="math-inline ">$x$</span> about 0 ).</div>
 <div class="preview-paragraph-51 preview-line 51" data_line_start="51" data_line_end="51" data_line="51,52" count_line="1">A similar argument holds in the continuous case.</div>
@@ -1046,7 +1046,7 @@ Theorem 4.9</h2>
 <div class="preview-paragraph-65 preview-line 65 66 67" data_line_start="65" data_line_end="67" data_line="65,68" count_line="3"><span class="math-block ">$$
 \left.\frac{d^{r} M_{x}(t)}{d t^{r}}\right|_{t=0}=\mu_{r}^{\prime}
 $$</span></div>
-<div class="preview-paragraph-69 preview-line 69" data_line_start="69" data_line_end="69" data_line="69,70" count_line="1">This result shows us how to obtain the moments of <span class="math-inline ">$X$</span> from the <span class="math-inline ">$M G F$</span>.</div>
+<div class="preview-paragraph-69 preview-line 69" data_line_start="69" data_line_end="69" data_line="69,70" count_line="1">This result shows us how to obtain the moments of <span class="math-inline ">$X$</span> from the <span class="math-inline ">MGF</span>.</div>
 
 <br><hr><br>
 
@@ -1083,13 +1083,13 @@ M_{x}(t) &amp; =1+t+t^{2}+\cdots+t^{r}+\cdots \\
 $$</span></div>
 
 <div class="preview-paragraph-104 preview-line 104 105" data_line_start="104" data_line_end="105" data_line="104,106" count_line="2">and so <span class="math-inline ">$\mu_{r}^{\prime}=r!, \quad r=0,1,2, \ldots \ldots$</span><br>
-<br><hr><br> Often the main difficulty with using <span class="math-inline ">$M G F s$</span> is not finding <span class="math-inline ">$M_{x}(t)$</span>, but finding its <span class="math-inline ">$M_{c}$</span> Laurin series. However, if we only require a few of the moments, this problem can be got round by appealing to Theorem 4.9 and differentiating.</div>
-<div class="preview-paragraph-107 preview-line 107" data_line_start="107" data_line_end="107" data_line="107,108" count_line="1">Ex. Suppox <span class="math-inline ">$X$</span> is discrete with puf.</div>
+<br><hr><br> Often the main difficulty with using <span class="math-inline ">MGFs</span> is not finding <span class="math-inline ">$M_{x}(t)$</span>, but finding its <span class="math-inline ">Mc</span>Laurin series. However, if we only require a few of the moments, this problem can be got round by appealing to Theorem 4.9 and differentiating.</div>
+<div class="preview-paragraph-107 preview-line 107" data_line_start="107" data_line_end="107" data_line="107,108" count_line="1"> <h2 style="color:rgb(0,150,0)">Example).</h2>  Suppose <span class="math-inline ">$X$</span> is discrete with PDF:</div>
 <div class="preview-paragraph-108 preview-line 108 109 110" data_line_start="108" data_line_end="110" data_line="108,111" count_line="3"><span class="math-block ">$$
 f(x)=\frac{1}{8}\binom{3}{x}, \quad x=0,1,2,3 .
 $$</span></div>
 <div class="preview-paragraph-112 preview-line 112" data_line_start="112" data_line_end="112" data_line="112,113" count_line="1">Find the MGF of <span class="math-inline ">$X$</span> and use it to determine <span class="math-inline ">$\mu_{1}$</span> ' and <span class="math-inline ">$\mu_{2}$</span> '.</div>
-<div class="preview-paragraph-114 preview-line 114" data_line_start="114" data_line_end="114" data_line="114,115" count_line="1">Suln. By defn.</div>
+<div class="preview-paragraph-114 preview-line 114" data_line_start="114" data_line_end="114" data_line="114,115" count_line="1"> <h4 style="color:rgb(200,0,0)">Solution).</h4> By definition,</div>
 <div class="preview-paragraph-115 preview-line 115 116 117 118 119 120 121" data_line_start="115" data_line_end="121" data_line="115,122" count_line="7"><span class="math-block ">$$
 \begin{aligned}
 M_{X}(t) &amp; =E\left(e^{t x}\right)=\frac{1}{8} \sum_{x=0}^{3} e^{t x}\binom{3}{x} \\
@@ -1097,32 +1097,35 @@ M_{X}(t) &amp; =E\left(e^{t x}\right)=\frac{1}{8} \sum_{x=0}^{3} e^{t x}\binom{3
 &amp; =\frac{1}{8}\left(1+e^{t}\right)^{3}
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-123 preview-line 123" data_line_start="123" data_line_end="123" data_line="123,124" count_line="1">It would be rather hard to find the McLaurin series of this fy. Hewever, by Theorem 4.9</div>
+<div class="preview-paragraph-123 preview-line 123" data_line_start="123" data_line_end="123" data_line="123,124" count_line="1">It would be rather hard to find the McLaurin series of this function. However, by Theorem 4.9</div>
 <div class="preview-paragraph-124 preview-line 124 125 126" data_line_start="124" data_line_end="126" data_line="124,127" count_line="3"><span class="math-block ">$$
 \mu_{1}^{\prime}=M_{x}^{\prime}(0)=\left.\frac{3}{8}\left(1+e^{t}\right)^{2} \cdot e^{t}\right|_{t=0}=\frac{3}{2}
 $$</span></div>
 <div class="preview-paragraph-127 preview-line 127" data_line_start="127" data_line_end="127" data_line="127,128" count_line="1">and</div>
 <div class="preview-paragraph-128 preview-line 128 129 130 131 132 133 134 135" data_line_start="128" data_line_end="135" data_line="128,136" count_line="8"><span class="math-block ">$$
 \begin{aligned}
-\mu_{2}^{\prime}=M_{x}^{\prime \prime}(0)= &amp; \left.\frac{3}{4}\left(1+e^{t}\right) \cdot e^{2 t}\right|_{1=0} \\
-&amp; +\left.\frac{3}{8}\left(1+e^{t}\right)^{2} \cdot e^{t}\right|_{1=0} \\
+\mu_{2}^{\prime}=M_{x}^{\prime \prime}(0)= &amp; \left.\frac{3}{4}\left(1+e^{t}\right) \cdot e^{2 t}\right|_{t=0} \\
+&amp; +\left.\frac{3}{8}\left(1+e^{t}\right)^{2} \cdot e^{t}\right|_{t=0} \\
 = &amp; \frac{3}{4} \cdot 2+\frac{3}{8} \cdot 4 \\
 = &amp; 3
 \end{aligned}
 $$</span></div>
+
+<br><hr><br>
+
 <div class="preview-paragraph-137 preview-line 137 138" data_line_start="137" data_line_end="138" data_line="137,139" count_line="2">Finally, a useful result for calculating MGFs<br>
-Theorem 4.10 If <span class="math-inline ">$a$</span> and <span class="math-inline ">$b$</span> are constemts, then</div>
+<br> <h2 style="color:rgb(0,0,200)">Theorem 4.10</h2> If <span class="math-inline ">$a$</span> and <span class="math-inline ">$b$</span> are constants, then</div>
 <ol class="preview-paragraph-139 preview-line 139 140 141 142" data_line_start="139" data_line_end="142" data_line="139,143" count_line="4">
 <li><span class="math-inline ">$M_{x+a}(t)=E\left(e^{(x+a) t}\right)=e^{a t} M_{x}(t)$</span></li>
 <li><span class="math-inline ">$M_{b x}(t)=E\left(e^{b x t}\right)=M_{x}(b t)$</span></li>
 <li><span class="math-inline ">$M_{\frac{x+a}{b}}(t)=E\left(e^{\left(\frac{x+a}{b}\right) t}\right)=e^{\frac{a}{b} t} M_{x}\left(\frac{t}{b}\right)$</span></li>
 </ol>
-<div class="preview-paragraph-143 preview-line 143" data_line_start="143" data_line_end="143" data_line="143,144" count_line="1">Pf. Exerise. (eary).</div>
-<div class="preview-paragraph-145 preview-line 145" data_line_start="145" data_line_end="145" data_line="145,146" count_line="1">Part 1 of this Theorem is uxtul when <span class="math-inline ">$a=-\mu$</span> and part 2 is uxful when <span class="math-inline ">$a=-\mu, b=\sigma$</span> in which case</div>
+<div class="preview-paragraph-143 preview-line 143" data_line_start="143" data_line_end="143" data_line="143,144" count_line="1"> <span class="math-inline">$Proof).$</span> Exercise. (easy).</div>
+<div class="preview-paragraph-145 preview-line 145" data_line_start="145" data_line_end="145" data_line="145,146" count_line="1">Part 1 of this Theorem is useful when <span class="math-inline ">$a=-\mu$</span> and part 2 is useful when <span class="math-inline ">$a=-\mu, b=\sigma$</span> in which case</div>
 <div class="preview-paragraph-146 preview-line 146 147 148" data_line_start="146" data_line_end="148" data_line="146,149" count_line="3"><span class="math-block ">$$
 M_{\frac{x-\mu}{\sigma}}(t)=e^{-\frac{\mu t}{\sigma}} M_{x}\left(\frac{t}{\sigma}\right)
 $$</span></div>
-<div class="preview-paragraph-150 preview-line 150" data_line_start="150" data_line_end="150" data_line="150,151" count_line="1">This trick is useful for using MGFs to 'prove' the contral limit theorem (see later).</div>
+<div class="preview-paragraph-150 preview-line 150" data_line_start="150" data_line_end="150" data_line="150,151" count_line="1">This trick is useful for using MGFs to 'prove' the central limit theorem (see later).</div>
 <div class="preview-paragraph-152 preview-line 152" data_line_start="152" data_line_end="152" data_line="152,153" count_line="1">As an exercise, show that if <span class="math-inline ">$X$</span> has mean <span class="math-inline ">$\mu$</span> and variance <span class="math-inline ">$\sigma$</span>, then</div>
 <div class="preview-paragraph-153 preview-line 153 154 155" data_line_start="153" data_line_end="155" data_line="153,156" count_line="3"><span class="math-block ">$$
 \frac{X-\mu}{\sigma}
