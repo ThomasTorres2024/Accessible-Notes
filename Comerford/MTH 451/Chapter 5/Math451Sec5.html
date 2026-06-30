@@ -1000,7 +1000,7 @@ If a discrete random variable takes on <span class="math-inline ">$k$</span> val
 
 <br><hr><br>
 
-<div class="preview-paragraph-10 preview-line 10" data_line_start="10" data_line_end="10" data_line="10,11" count_line="1"> <h2 style="color:rgb(0,0,200)">Definition).</h2>  <span class="math-inline ">$X$</span> has a discrete uniform distribution if and only if  its <span class="math-inline ">PDF</span> is given by</div>
+<div class="preview-paragraph-10 preview-line 10" data_line_start="10" data_line_end="10" data_line="10,11" count_line="1"> <h2 style="color:rgb(0,0,200)">Definition).</h2> We say that a random variable  <span class="math-inline ">$X$</span> has a discrete uniform distribution if and only if  its <span class="math-inline ">PDF</span> is given by</div>
 <div class="preview-paragraph-11 preview-line 11 12 13" data_line_start="11" data_line_end="13" data_line="11,14" count_line="3"><span class="math-block ">$$
 f(x)=\frac{1}{k}, \quad x=x_{1}, x_{2}, \ldots, x_{k}
 $$</span></div>
@@ -1011,24 +1011,24 @@ $$</span></div>
 &amp; \sigma^{2}=V(X)=\sum_{i=1}^{b}\left(x_{i}-\mu\right)^{2} \cdot \frac{1}{k} .
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-22 preview-line 22" data_line_start="22" data_line_end="22" data_line="22,23" count_line="1">An important special case is when <span class="math-inline ">$x_{i}=1$</span>, <span class="math-inline ">$1 \leq i \leq k$</span>.</div>
+<div class="preview-paragraph-22 preview-line 22" data_line_start="22" data_line_end="22" data_line="22,23" count_line="1">An important special case is when <span class="math-inline ">$x_{i}=i$</span>, <span class="math-inline ">$1 \leq i \leq k$</span>.</div>
 <div class="preview-paragraph-24 preview-line 24" data_line_start="24" data_line_end="24" data_line="24,25" count_line="1">Here</div>
 <div class="preview-paragraph-25 preview-line 25 26 27" data_line_start="25" data_line_end="27" data_line="25,28" count_line="3"><span class="math-block ">$$
 \mu=\sum_{i=1}^{k} \frac{i}{k}=\frac{1}{k} \cdot \frac{k(k+1)}{2}=\frac{k+1}{2}
 $$</span></div>
-<div class="preview-paragraph-28 preview-line 28 29" data_line_start="28" data_line_end="29" data_line="28,30" count_line="2"><span class="math-inline ">$\mu_{2}^{\prime}=E(X)^{2}=\sum_{k=1}^{k} \frac{i^{2}}{k}=\frac{1}{k} \cdot \frac{k(k+1)(2 k+1)}{6}=\frac{(k+1)(2 k+1)}{6}$</span><br>
+<div class="preview-paragraph-28 preview-line 28 29" data_line_start="28" data_line_end="29" data_line="28,30" count_line="2"><span class="math-inline ">$\mu_{2}^{\prime}=E(X)^{2}=\sum_{i=1}^{k} \frac{i^{2}}{k}=\frac{1}{k} \cdot \frac{k(k+1)(2 k+1)}{6}=\frac{(k+1)(2 k+1)}{6}$</span><br>
 So <span class="math-inline ">$\sigma^{2}=\mu_{2}^{\prime}-\mu^{2}=\frac{(k+1)(2 k+1)}{6}-\frac{(k+1)^{2}}{4}=\frac{\left(k^{2}-1 \right)}{12}$</span></div>
 
 <br><hr><br>
 
 <h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-31 preview-line 31" id="%C2%A75.3-bernoulli-distribution" data_line_start="31" data_line_end="31" data_line="31,32" count_line="1" style="color:rgb(200,0,0)">
 §5.3 Bernoulli Distribution</h2>
-<div class="preview-paragraph-33 preview-line 33" data_line_start="33" data_line_end="33" data_line="33,34" count_line="1">Suppose I flip a biased coin once where the chance is <span class="math-inline ">$\theta$</span> I get a <span class="math-inline ">$H$</span> and <span class="math-inline ">$1-\theta$</span> I get a tail (here <span class="math-inline ">$0&lt;\theta&lt;1$</span> ). This is an example. of a Bernoulli randm variable.</div>
+<div class="preview-paragraph-33 preview-line 33" data_line_start="33" data_line_end="33" data_line="33,34" count_line="1">Suppose I flip a biased coin once where the chance is <span class="math-inline ">$\theta$</span> I get a <span class="math-inline ">$H$</span> and <span class="math-inline ">$1-\theta$</span> I get a tail (here <span class="math-inline ">$0&lt;\theta&lt;1$</span> ). This is an example of a <b>Bernoulli randm variable</b> .</div>
 <div class="preview-paragraph-35 preview-line 35" data_line_start="35" data_line_end="35" data_line="35,36" count_line="1"><h2 style="color:rgb(0,0,200)">Definition).</h2>A random variable <span class="math-inline ">$x$</span> has a Bemoulli <span class="math-inline ">$(\theta)$</span> distribution for some <span class="math-inline ">$\theta \in(0,1)$</span> if and only if  its <span class="math-inline ">PDF</span> satisfies</div>
 <div class="preview-paragraph-36 preview-line 36 37 38" data_line_start="36" data_line_end="38" data_line="36,39" count_line="3"><span class="math-block ">$$
-f(x , \theta)= \begin{cases}1-\theta, &amp; x=0 \\ \theta, &amp; x=1 \\ 0 &amp; \text { otherwise } .\end{cases}
+f(x ; \theta)= \begin{cases}1-\theta, &amp; x=0 \\ \theta, &amp; x=1 \\ 0 &amp; \text { otherwise } .\end{cases}
 $$</span></div>
-<div class="preview-paragraph-40 preview-line 40" data_line_start="40" data_line_end="40" data_line="40,41" count_line="1">Can also write thus as</div>
+<div class="preview-paragraph-40 preview-line 40" data_line_start="40" data_line_end="40" data_line="40,41" count_line="1">Can also write this as</div>
 <div class="preview-paragraph-41 preview-line 41 42 43" data_line_start="41" data_line_end="43" data_line="41,44" count_line="3"><span class="math-block ">$$
 f(x ; \theta)=\theta^{x}(1-\theta)^{1-x}, x=0,1 .
 $$</span></div>
@@ -1056,13 +1056,13 @@ $$</span></div>
 <div class="preview-paragraph-66 preview-line 66 67 68" data_line_start="66" data_line_end="68" data_line="66,69" count_line="3"><span class="math-block ">$$
 \theta^{x}(1-\theta)^{n-x}
 $$</span></div>
-<div class="preview-paragraph-69 preview-line 69" data_line_start="69" data_line_end="69" data_line="69,70" count_line="1">and there are <span class="math-inline ">$\binom{n}{x}$</span> suitable orderings. Thus, the probability I qet exactly <span class="math-inline ">$x$</span> heads in <span class="math-inline ">$n$</span> flips is</div>
+<div class="preview-paragraph-69 preview-line 69" data_line_start="69" data_line_end="69" data_line="69,70" count_line="1">and there are <span class="math-inline ">$\binom{n}{x}$</span> suitable orderings. Thus, the probability I get exactly <span class="math-inline ">$x$</span> heads in <span class="math-inline ">$n$</span> flips is</div>
 <div class="preview-paragraph-70 preview-line 70 71 72" data_line_start="70" data_line_end="72" data_line="70,73" count_line="3"><span class="math-block ">$$
 \binom{n}{x} \theta^{x}(1-\theta)^{n-x} .
 $$</span></div>
 <div class="preview-paragraph-74 preview-line 74" data_line_start="74" data_line_end="74" data_line="74,75" count_line="1"><h2 style="color:rgb(0,0,200)">Definition).</h2> A random variable has a binomial ( <span class="math-inline ">$n, \theta$</span> ) distribution <span class="math-inline ">$(n \in \mathbb{N}, 0&lt;\theta&lt;1)$</span> if and only if  its <span class="math-inline ">PDF</span> is given by</div>
 <div class="preview-paragraph-75 preview-line 75 76 77" data_line_start="75" data_line_end="77" data_line="75,78" count_line="3"><span class="math-block ">$$
-b(x ; n, \theta)=\binom{n}{x} \theta^{x}(1-\theta)^{n-x}, x=0,1,2, \cdots, n .
+b(x ; n, \theta)=\binom{n}{x} \theta^{x}(1-\theta)^{n-x}, x=0,1,2, \cdots,n .
 $$</span></div>
 <div class="preview-paragraph-79 preview-line 79" data_line_start="79" data_line_end="79" data_line="79,80" count_line="1">Note that if <span class="math-inline ">$n=1,\binom{n}{x}=1$</span> for <span class="math-inline ">$x=0,1$</span> and</div>
 <div class="preview-paragraph-80 preview-line 80 81 82" data_line_start="80" data_line_end="82" data_line="80,83" count_line="3"><span class="math-block ">$$
@@ -1071,7 +1071,7 @@ $$</span></div>
 <div class="preview-paragraph-83 preview-line 83 84" data_line_start="83" data_line_end="84" data_line="83,85" count_line="2">and we recover the Bemoulli distribution (a) we would expect - why?). Thus the binomial distribution generalizes the Bernoulli distribution.<br>
 
   <br>
-  N.b. the <span class="math-inline">$n$</span> flips (trials/expenments) must be independent if we are to get a binomial <span class="math-inline ">$(n, \theta)$</span> random variable from <span class="math-inline ">$n$</span> Bernoulli <span class="math-inline "> $(\theta)$ </span> random variable's.</div>
+  N.b. the <span class="math-inline">$n$</span> flips (trials/expenments) must be <b>independent</b> if we are to get a binomial <span class="math-inline ">$(n, \theta)$</span> random variable from <span class="math-inline ">$n$</span> Bernoulli <span class="math-inline "> $(\theta)$ </span> random variable.</div>
 <div class="preview-paragraph-86 preview-line 86" data_line_start="86" data_line_end="86" data_line="86,87" count_line="1"><br><hr><br> <h2 style="color:rgb(0,150,0)">Example).</h2>  The probability of getting <span class="math-inline ">$5 \mathrm{H} \&amp; 7 \mathrm{~T}$</span> in 12 flips of a balanced coin is</div>
 <div class="preview-paragraph-87 preview-line 87 88 89 90 91 92" data_line_start="87" data_line_end="92" data_line="87,93" count_line="6"><span class="math-block ">$$
 \begin{aligned}
@@ -1089,7 +1089,7 @@ Here <span class="math-inline ">$n=10, \theta=0.8, x=7$</span> and so the answer
 b(7 ; 10,0.8)=\binom{10}{7}(.8)^{7}(.2)^{.3} \approx .2
 $$</span></div>
 <div class="preview-paragraph-100 preview-line 100" data_line_start="100" data_line_end="100" data_line="100,101" count_line="1">Back to coin flips for a while...</div>
-<div class="preview-paragraph-102 preview-line 102" data_line_start="102" data_line_end="102" data_line="102,103" count_line="1">If I flip the biased coin <span class="math-inline ">$n$</span> times, then, since we are measuring the <b>total</b> number of successes (heads) in the <span class="math-inline ">$n$</span> trials, if <span class="math-inline ">$x_{1}, x_{2}, \ldots, x_{n}$</span> are <span class="math-inline ">$n$</span> independent Bernoulli ( <span class="math-inline ">$\theta$</span> ) random variables, one for each flip, then</div>
+<div class="preview-paragraph-102 preview-line 102" data_line_start="102" data_line_end="102" data_line="102,103" count_line="1">If I flip the biased coin <span class="math-inline ">$n$</span> times, then, since we are measuring the <b>total</b> number of successes (heads) in the <span class="math-inline ">$n$</span> trials, if <span class="math-inline ">$x_{1}, x_{2}, \ldots, x_{n}$</span> are <span class="math-inline ">$n$</span> independent Bernoulli(<span class="math-inline">$\theta$</span>) random variables, one for each flip, then</div>
 <div class="preview-paragraph-103 preview-line 103 104 105" data_line_start="103" data_line_end="105" data_line="103,106" count_line="3"><span class="math-block ">$$
 x=x_{1}+x_{2}+\cdots+x_{n}
 $$</span></div>
@@ -1098,27 +1098,27 @@ $$</span></div>
 <br>
 
   Here the random variables, <span class="math-inline ">$X_{1}, \ldots X_{n}$</span> are said to be <b>independent identically distributed </b> (iid), an important term we will meet later. <br> <br>
-In general, random variable's <span class="math-inline ">$Y_{1,}, Y_{n}$</span> are iid If they are independent &amp; have the same pdf.</div>
-<div class="preview-paragraph-110 preview-line 110" data_line_start="110" data_line_end="110" data_line="110,111" count_line="1">This representation of a binomial <span class="math-inline ">$(n, \theta)$</span> random variable as the sum of <span class="math-inline ">$n$</span> iid Benoulli( <span class="math-inline ">$\theta$</span> ) random variables is useful for calculating - the mean and variance of this pdf.</div>
-<div class="preview-paragraph-112 preview-line 112" data_line_start="112" data_line_end="112" data_line="112,113" count_line="1">Indeed, recalling from the last section that the Bernoulli<span class="math-inline>$\Theta$</span> distribution has mean <span class="math-inline ">$\theta$</span> &amp; ramiance <span class="math-inline ">$\theta(1-\theta)$</span>, we get</div>
+In general, random variables <span class="math-inline ">$Y_{1}, \cdots,  Y_{n}$</span> are iid If they are independent &amp; have the same PDF.</div>
+<div class="preview-paragraph-110 preview-line 110" data_line_start="110" data_line_end="110" data_line="110,111" count_line="1">This representation of a binomial <span class="math-inline ">$(n, \theta)$</span> random variable as the sum of <span class="math-inline ">$n$</span> iid Benoulli( <span class="math-inline ">$\theta$</span> ) random variables is useful for calculating - the mean and variance of this PDF.</div>
+<div class="preview-paragraph-112 preview-line 112" data_line_start="112" data_line_end="112" data_line="112,113" count_line="1">Indeed, recalling from the last section that the Benoulli( <span class="math-inline ">$\theta$</span> )  distribution has mean <span class="math-inline ">$\theta$</span> &amp; variance <span class="math-inline ">$\theta(1-\theta)$</span>, we get</div>
 <div class="preview-paragraph-113 preview-line 113 114 115 116 117 118 119 120" data_line_start="113" data_line_end="120" data_line="113,121" count_line="8"><span class="math-block ">$$
 \begin{aligned}
-\mu=E(x) &amp; =E\left(x_{1}+\quad+x_{n}\right) \\
-&amp; =\sum_{i=1}^{n} E\left(x_{i}\right) \quad \text { (Thm 4.3, p. 133) } \\
-&amp; =\sum_{i=1}^{n} \theta \quad \text { by ind } \\
+\mu=E(x) &amp; =E\left(x_{1}+\cdots+x_{n}\right) \\
+&amp; =\sum_{i=1}^{n} E\left(x_{i}\right) \quad \text { (Theorem 4.3, p. 133) } \\
+&amp; =\sum_{i=1}^{n} \theta \quad \text { by iid } \\
 &amp; =n \theta
 \end{aligned}
 $$</span></div>
 <div class="preview-paragraph-121 preview-line 121 122 123 124 125 126 127 128" data_line_start="121" data_line_end="128" data_line="121,129" count_line="8"><span class="math-block ">$$
 \begin{aligned}
 \sigma^{2}=V(x) &amp; =V\left(x_{1}+\cdots+x_{n}\right) \\
-&amp; =\sum_{i=1}^{n} V\left(x_{i}\right) \quad \text { by cor } 4.3, p 154 \\
-&amp; =\sum_{i=1}^{n} \theta(1-\theta) \quad \text { as } x_{i}, \ldots, x_{n} \text { are } \\
+&amp; =\sum_{i=1}^{n} V\left(x_{i}\right) \quad \text { by corrolary } 4.3, p 154, \text { as } x_{i}, \ldots, x_{n} \text { are independent} \\
+&amp; =\sum_{i=1}^{n} \theta(1-\theta) \quad \text{(by iid)}  \\
 &amp; =n \theta(1-\theta) .
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-130 preview-line 130 131" data_line_start="130" data_line_end="131" data_line="130,132" count_line="2">We have proved<br>
-Theorem 5.2 The mean and variance of the binomial <span class="math-inline ">$(n, \theta)$</span> distribution are</div>
+<div class="preview-paragraph-130 preview-line 130 131" data_line_start="130" data_line_end="131" data_line="130,132" count_line="2">We have proved the following result:<br>
+<br><hr> <h2 style="color:rgb(0,0,200)">Theorem 5.2). </h2> The mean and variance of the binomial <span class="math-inline ">$(n, \theta)$</span> distribution are</div>
 <div class="preview-paragraph-132 preview-line 132 133 134" data_line_start="132" data_line_end="134" data_line="132,135" count_line="3"><span class="math-block ">$$
 \mu=n \theta, \quad \sigma^{2}=n \theta(1-\theta) .
 $$</span></div>
@@ -1129,22 +1129,26 @@ $$</span></div>
 <ul class="preview-paragraph-139 preview-line 139 140" data_line_start="139" data_line_end="140" data_line="139,141" count_line="2">
 <li>see the book.</li>
 </ul>
-<div class="preview-paragraph-141 preview-line 141" data_line_start="141" data_line_end="141" data_line="141,142" count_line="1">Another way to obtain the mean &amp; variance is ria the MGF.</div>
-<div class="preview-paragraph-143 preview-line 143" data_line_start="143" data_line_end="143" data_line="143,144" count_line="1">Thm 504 The MGF of the binomial <span class="math-inline ">$(n, \theta)$</span> distribution is given by</div>
+<div class="preview-paragraph-141 preview-line 141" data_line_start="141" data_line_end="141" data_line="141,142" count_line="1">Another way to obtain the mean &amp; variance is via the MGF, the Moment Generating Function.</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-143 preview-line 143" data_line_start="143" data_line_end="143" data_line="143,144" count_line="1"> <h2 style="color:rgb(0,0,200)">Theorem 5.4)</h2> The MGF of the binomial <span class="math-inline ">$(n, \theta)$</span> distribution is given by</div>
 <div class="preview-paragraph-144 preview-line 144 145 146" data_line_start="144" data_line_end="146" data_line="144,147" count_line="3"><span class="math-block ">$$
 M_{x}(t)=\left[1+\theta\left(e^{t}-1\right)\right]^{n} .
 $$</span></div>
-<div class="preview-paragraph-147 preview-line 147" data_line_start="147" data_line_end="147" data_line="147,148" count_line="1">ff. <span class="math-inline ">$\quad M_{x}(t)=E\left(e^{x t}\right)$</span></div>
+<div class="preview-paragraph-147 preview-line 147" data_line_start="147" data_line_end="147" data_line="147,148" count_line="1">  <span class="math-inline ">$ Proof). $</span></div>
 <div class="preview-paragraph-148 preview-line 148 149 150 151 152 153 154 155 156" data_line_start="148" data_line_end="156" data_line="148,157" count_line="9"><span class="math-block ">$$
 \begin{aligned}
+&amp; \quad M_{x}(t)=E\left(e^{x t}\right)\\
 &amp; =\sum_{x} e^{x t} f(x) \\
 &amp; =\sum_{x=0}^{n} e^{x t}\binom{n}{x} \theta^{x}(1-\theta)^{n-x} \\
 &amp; =\sum_{x=0}^{n}\binom{n}{x}\left(\theta e^{t}\right)^{x}(1-\theta)^{n-x} \\
-&amp; =\left[\theta e^{t}+(1-\theta)\right]^{n} \text { by the Brimial thin. } \\
+&amp; =\left[\theta e^{t}+(1-\theta)\right]^{n} \text { by the Binomial Theorem. } \\
 &amp; =\left[1+\theta\left(e^{t}-1\right)\right]^{n} .
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-158 preview-line 158" data_line_start="158" data_line_end="158" data_line="158,159" count_line="1">If we dif and only if  <span class="math-inline ">$M_{x}(t)$</span> thice wrt <span class="math-inline ">$t$</span>, then</div>
+<div class="preview-paragraph-158 preview-line 158" data_line_start="158" data_line_end="158" data_line="158,159" count_line="1">If we differentiate <span class="math-inline ">$M_{x}(t)$</span> thice with respect to <span class="math-inline ">$t$</span>, then</div>
 <div class="preview-paragraph-159 preview-line 159 160 161 162 163 164 165 166" data_line_start="159" data_line_end="166" data_line="159,167" count_line="8"><span class="math-block ">$$
 \begin{aligned}
 M_{x}^{\prime}(t)= &amp; n \theta e^{t}\left[1+\theta\left(e^{t}-1\right)\right]^{n-1} \\
@@ -1153,7 +1157,7 @@ M_{x}^{\prime \prime}(t)= &amp; n \theta e^{t}\left[1+\theta\left(e^{t}-1\right)
 = &amp; n \theta e^{t}\left(1-\theta+n \theta e^{t}\right)\left[1+\theta\left(e^{t}-1\right)\right]^{n-2}
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-168 preview-line 168" data_line_start="168" data_line_end="168" data_line="168,169" count_line="1">And if we subst <span class="math-inline ">$t=0$</span>, we get by Thm 4.9 p. 145</div>
+<div class="preview-paragraph-168 preview-line 168" data_line_start="168" data_line_end="168" data_line="168,169" count_line="1">And if we substitute <span class="math-inline ">$t=0$</span>, we get by Theorem 4.9 p. 145</div>
 <div class="preview-paragraph-169 preview-line 169 170 171 172 173 174" data_line_start="169" data_line_end="174" data_line="169,175" count_line="6"><span class="math-block ">$$
 \begin{aligned}
 &amp; \mu=\left.\frac{d}{d t} M_{x}(t)\right|_{t=0}=n \theta \\
@@ -1168,25 +1172,26 @@ $$</span></div>
 \end{aligned}
 $$</span></div>
 <div class="preview-paragraph-183 preview-line 183" data_line_start="183" data_line_end="183" data_line="183,184" count_line="1">as before.</div>
-<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-185 preview-line 185" id="s5.5-the-negative-binomial-and" data_line_start="185" data_line_end="185" data_line="185,186" count_line="1">
-S5.5 The Negative Binomial and</h2>
-<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-187 preview-line 187" id="geometric-distributions" data_line_start="187" data_line_end="187" data_line="187,188" count_line="1">
-Geometric Distributions</h2>
+
+<br><hr><br>
+
+<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-185 preview-line 185" id="s5.5-the-negative-binomial-and" data_line_start="185" data_line_end="185" data_line="185,186" count_line="1" style="color:rgb(200,0,0)">
+<span class="math-inline">$\S 5.5$</span> The Negative Binomial and Geometric Distributions</h2>
 <div class="preview-paragraph-189 preview-line 189" data_line_start="189" data_line_end="189" data_line="189,190" count_line="1">Back to the repeated Bernoulli trials (coin flips).</div>
 <div class="preview-paragraph-191 preview-line 191" data_line_start="191" data_line_end="191" data_line="191,192" count_line="1">Suppose we want to know the probability that it will take <span class="math-inline ">$x$</span> trials until we have <span class="math-inline ">$k$</span> successes.</div>
-<div class="preview-paragraph-193 preview-line 193" data_line_start="193" data_line_end="193" data_line="193,194" count_line="1">Well, the last trial must be a success and fer a Dermoulli <span class="math-inline ">$(\theta)$</span> i.v. the probability of this success is <span class="math-inline ">$\theta$</span>.</div>
-<div class="preview-paragraph-195 preview-line 195" data_line_start="195" data_line_end="195" data_line="195,196" count_line="1">Of the remaining <span class="math-inline ">$x-1$</span> trials which went befere, exactly <span class="math-inline ">$k-1$</span> must be successes and as we saw with the binomial distr, the probability of this is</div>
+<div class="preview-paragraph-193 preview-line 193" data_line_start="193" data_line_end="193" data_line="193,194" count_line="1">Well, the last trial must be a success and for a Bernoulli <span class="math-inline ">$(\theta)$</span> random variable the probability of this success is <span class="math-inline ">$\theta$</span>.</div>
+<div class="preview-paragraph-195 preview-line 195" data_line_start="195" data_line_end="195" data_line="195,196" count_line="1">Of the remaining <span class="math-inline ">$x-1$</span> trials which went befere, exactly <span class="math-inline ">$k-1$</span> must be successes and as we saw with the binomial distribution, the probability of this is</div>
 <div class="preview-paragraph-196 preview-line 196 197 198" data_line_start="196" data_line_end="198" data_line="196,199" count_line="3"><span class="math-block ">$$
 \binom{x-1}{k-1} \theta^{k-1}(1-\theta)^{(k-1)-(k-1)}
 $$</span></div>
-<div class="preview-paragraph-200 preview-line 200" data_line_start="200" data_line_end="200" data_line="200,201" count_line="1">Since the trials are independent, to find the probability that the beth success occus on the <span class="math-inline ">$x$</span> th trial, we multiply these probs to get</div>
+<div class="preview-paragraph-200 preview-line 200" data_line_start="200" data_line_end="200" data_line="200,201" count_line="1">Since the trials are independent, to find the probability that the both success occurs on the <span class="math-inline ">$x$</span>th trial, we multiply these probs to get</div>
 <div class="preview-paragraph-201 preview-line 201 202 203 204 205 206" data_line_start="201" data_line_end="206" data_line="201,207" count_line="6"><span class="math-block ">$$
 \begin{aligned}
 &amp; \theta\binom{x-1}{k-1} \theta^{k-1}(1-\theta)^{(x-1)-(k-1)} \\
 = &amp; \binom{x-1}{k-1} \theta^{k}(1-\theta)^{x-k}
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-208 preview-line 208" data_line_start="208" data_line_end="208" data_line="208,209" count_line="1"><h2 style="color:rgb(0,0,200)">Definition).</h2> A random variable <span class="math-inline ">$X$</span> has a negative binomial <span class="math-inline ">$(k, \theta)$</span> distribution if and only if  its pdf is given by</div>
+<div class="preview-paragraph-208 preview-line 208" data_line_start="208" data_line_end="208" data_line="208,209" count_line="1"><h2 style="color:rgb(0,0,200)">Definition).</h2> A random variable <span class="math-inline ">$X$</span> has a negative binomial <span class="math-inline ">$(k, \theta)$</span> distribution if and only if  its PDF is given by</div>
 <div class="preview-paragraph-209 preview-line 209 210 211 212 213 214 215" data_line_start="209" data_line_end="215" data_line="209,216" count_line="7"><span class="math-block ">$$
 \begin{gathered}
 b^{*}(x ; k, \theta)=\binom{x-1}{k-1} \theta^{k}(1-\theta)^{x-k} \\
@@ -1194,37 +1199,48 @@ x=k, k+1, \ldots \\
 (0&lt;\theta&lt;1) .
 \end{gathered}
 $$</span></div>
-<div class="preview-paragraph-217 preview-line 217" data_line_start="217" data_line_end="217" data_line="217,218" count_line="1"><br><hr><br> <h2 style="color:rgb(0,150,0)">Example).</h2>  If the probability is or that a child expued to a certain contagrous disease will catch it, what is the probability that the <span class="math-inline ">$10^{\text {th }}$</span> child exposed will be the <span class="math-inline ">$3^{\text {rd }}$</span> to catch the disease?</div>
-<div class="preview-paragraph-219 preview-line 219" data_line_start="219" data_line_end="219" data_line="219,220" count_line="1">Suln. Here <span class="math-inline ">$x=10, k=3, \theta=0.4$</span> and the answer is</div>
+<div class="preview-paragraph-217 preview-line 217" data_line_start="217" data_line_end="217" data_line="217,218" count_line="1"><br><hr><br> <h2 style="color:rgb(0,150,0)">Example).</h2>  If the probability is <span class="math-inline">$0.4$</span> that a child exposed to a certain contagious disease will catch it, what is the probability that the <span class="math-inline ">$10^{\text {th }}$</span> child exposed will be the <span class="math-inline ">$3^{\text {rd }}$</span> to catch the disease?</div>
+<div class="preview-paragraph-219 preview-line 219" data_line_start="219" data_line_end="219" data_line="219,220" count_line="1"> <h4 style="color:rgb(200,0,0)">Solution).</h4> Here <span class="math-inline ">$x=10, k=3, \theta=0.4$</span> and the answer is</div>
 <div class="preview-paragraph-220 preview-line 220 221 222 223 224 225" data_line_start="220" data_line_end="225" data_line="220,226" count_line="6"><span class="math-block ">$$
 \begin{aligned}
 b^{*}(10 ; 3, .4) &amp; =\binom{9}{2}(.4)^{3}(.6)^{7} \\
 &amp; =.0645
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-227 preview-line 227" data_line_start="227" data_line_end="227" data_line="227,228" count_line="1">We have the following relationship between the negative binomial and the binmial.</div>
-<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-229 preview-line 229" id="thm-5.5" data_line_start="229" data_line_end="229" data_line="229,230" count_line="1">
-Thm 5.5</h2>
+<div class="preview-paragraph-227 preview-line 227" data_line_start="227" data_line_end="227" data_line="227,228" count_line="1">We have the following relationship between the negative binomial and the binomial.</div>
+
+<hr>
+
+<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-229 preview-line 229" id="thm-5.5" data_line_start="229" data_line_end="229" data_line="229,230" count_line="1" style="color:rgb(0,0,200)">
+Theorem 5.5</h2>
 <div class="preview-paragraph-230 preview-line 230 231 232" data_line_start="230" data_line_end="232" data_line="230,233" count_line="3"><span class="math-block ">$$
-b^{*}(x ; k, \theta)=\frac{k}{x} \cdot b(k ; x, \theta) .
+b^{*}(x ; k, \theta)=\frac{k}{x} \cdot b(k ; x , \theta) .
 $$</span></div>
-<div class="preview-paragraph-234 preview-line 234 235" data_line_start="234" data_line_end="235" data_line="234,236" count_line="2">One can shar the following<br>
-Thm 5.6 The mean &amp; variance of the negative binemial distr. are</div>
+<div class="preview-paragraph-234 preview-line 234 235" data_line_start="234" data_line_end="235" data_line="234,236" count_line="2">One can show the following<br>
+
+<br> 
+  <h2 style="color:rgb(0,0,200)">Theorem 5.6</h2> The mean &amp; variance of the negative binomial distribution are</div>
 <div class="preview-paragraph-236 preview-line 236 237 238" data_line_start="236" data_line_end="238" data_line="236,239" count_line="3"><span class="math-block ">$$
 \mu=\frac{k}{\theta} \text { and } \sigma^{2}=\frac{k}{\theta}\left(\frac{1}{\theta}-1\right) \text {. }
 $$</span></div>
-<div class="preview-paragraph-240 preview-line 240" data_line_start="240" data_line_end="240" data_line="240,241" count_line="1">An important special case of the negative binomial is the quometric distribution Here <span class="math-inline ">$k=1$</span> and we want the probability that the first success occurs on the <span class="math-inline ">$x$</span> th trial.</div>
-<div class="preview-paragraph-242 preview-line 242" data_line_start="242" data_line_end="242" data_line="242,243" count_line="1">Defis A random variable. <span class="math-inline ">$X$</span> has a geometric distribution if and only if  its pdf is given by</div>
+<div class="preview-paragraph-240 preview-line 240" data_line_start="240" data_line_end="240" data_line="240,241" count_line="1">An important special case of the negative binomial is the Geometric Distribution. Here <span class="math-inline ">$k=1$</span> and we want the probability that the first success occurs on the <span class="math-inline ">$x$</span>th trial.</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-242 preview-line 242" data_line_start="242" data_line_end="242" data_line="242,243" count_line="1"> <h2 style="color:rgb(0,0,200)">Definition).</h2> A random variable <span class="math-inline ">$X$</span> has a geometric distribution if and only if  its PDF is given by</div>
 <div class="preview-paragraph-243 preview-line 243 244 245" data_line_start="243" data_line_end="245" data_line="243,246" count_line="3"><span class="math-block ">$$
-g(x ; \theta)=\theta(1-\theta)^{x-1}, \quad x=1,2,3
+g(x ; \theta)=\theta(1-\theta)^{x-1}, \quad x=1,2,3,\cdots
 $$</span></div>
 <div class="preview-paragraph-247 preview-line 247" data_line_start="247" data_line_end="247" data_line="247,248" count_line="1">Note that the mean &amp; variance of the geom dism. are</div>
 <div class="preview-paragraph-248 preview-line 248 249 250" data_line_start="248" data_line_end="250" data_line="248,251" count_line="3"><span class="math-block ">$$
 \mu=\frac{1}{\theta}, \quad \sigma^{2}=\frac{1}{\theta}\left(\frac{1}{\theta}-1\right) .
 $$</span></div>
-<div class="preview-paragraph-251 preview-line 251" data_line_start="251" data_line_end="251" data_line="251,252" count_line="1">by Thm 5.6 with <span class="math-inline ">$k=1$</span>.</div>
-<div class="preview-paragraph-253 preview-line 253" data_line_start="253" data_line_end="253" data_line="253,254" count_line="1">Ex 5.5 It the probability is .75 that an applicant for a diviver's Ircence will pass the rood test on any given try, what is the probability the applizant will pass the test on the 4th attempt?</div>
-<div class="preview-paragraph-255 preview-line 255" data_line_start="255" data_line_end="255" data_line="255,256" count_line="1">Saln Here <span class="math-inline ">$x=4, \theta=.75$</span> and the answer is</div>
+<div class="preview-paragraph-251 preview-line 251" data_line_start="251" data_line_end="251" data_line="251,252" count_line="1">by Theorem 5.6 with <span class="math-inline ">$k=1$</span>.</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-253 preview-line 253" data_line_start="253" data_line_end="253" data_line="253,254" count_line="1"> <h2 style="color:rgb(0,150,0)">Example 5.5).</h2> It the probability is .75 that an applicant for a driver's license will pass the road test on any given try, what is the probability the applicant will pass the test on the 4th attempt?</div>
+<div class="preview-paragraph-255 preview-line 255" data_line_start="255" data_line_end="255" data_line="255,256" count_line="1"> <h4 style="color:rgb(200,0,0)">Solution).</h4> Here <span class="math-inline ">$x=4, \theta=.75$</span> and the answer is</div>
 <div class="preview-paragraph-256 preview-line 256 257 258 259 260 261 262" data_line_start="256" data_line_end="262" data_line="256,263" count_line="7"><span class="math-block ">$$
 \begin{aligned}
 g(4 ; .75) &amp; =.75(1-.75)^{4-1} \\
@@ -1232,13 +1248,16 @@ g(4 ; .75) &amp; =.75(1-.75)^{4-1} \\
 &amp; =.0117 .
 \end{aligned}
 $$</span></div>
-<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-264 preview-line 264" id="%24%5Cdelta-5.7%24-the-poisson-distribution" data_line_start="264" data_line_end="264" data_line="264,265" count_line="1">
-<span class="math-inline ">$\delta 5.7$</span> The Poisson Distribution</h2>
-<div class="preview-paragraph-266 preview-line 266" data_line_start="266" data_line_end="266" data_line="266,267" count_line="1">Useful for calculating the number of successo When we have many trials and the chance of success in each trial is low (and the same).</div>
-<div class="preview-paragraph-268 preview-line 268" data_line_start="268" data_line_end="268" data_line="268,269" count_line="1">Another way of saying this is that the Poisson distribution is useful for calculating the number of occurrences of rase events (erg. road accidents).</div>
-<div class="preview-paragraph-270 preview-line 270" data_line_start="270" data_line_end="270" data_line="270,271" count_line="1"><h2 style="color:rgb(0,0,200)">Definition).</h2>. A random variable <span class="math-inline ">$X$</span> has a Poissen ( <span class="math-inline ">$\lambda$</span> ) distribution if and only if  its <span class="math-inline ">PDF</span> is given by</div>
+
+<br><hr><br>
+
+<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-264 preview-line 264" id="%24%5Cdelta-5.7%24-the-poisson-distribution" data_line_start="264" data_line_end="264" data_line="264,265" count_line="1" style="color:rgb(200,0,0)">
+<span class="math-inline ">$\S 5.7$</span> The Poisson Distribution</h2>
+<div class="preview-paragraph-266 preview-line 266" data_line_start="266" data_line_end="266" data_line="266,267" count_line="1">Useful for calculating the number of successes when we have many trials and the chance of success in each trial is low (and the same).</div>
+<div class="preview-paragraph-268 preview-line 268" data_line_start="268" data_line_end="268" data_line="268,269" count_line="1">Another way of saying this is that the Poisson distribution is useful for calculating the number of occurrences of rare events (erg. road accidents).</div>
+<div class="preview-paragraph-270 preview-line 270" data_line_start="270" data_line_end="270" data_line="270,271" count_line="1"><h2 style="color:rgb(0,0,200)">Definition).</h2>A random variable <span class="math-inline ">$X$</span> has a <b>Poisson ( <span class="math-inline ">$\lambda$</span> ) distribution</b> if and only if  its <span class="math-inline ">PDF</span> is given by</div>
 <div class="preview-paragraph-271 preview-line 271 272 273" data_line_start="271" data_line_end="273" data_line="271,274" count_line="3"><span class="math-block ">$$
-p(x ; \lambda)=\frac{\lambda^{x} e^{-\lambda}}{x!}, x=0,1,2,\cdots,n
+p(x ; \lambda)=\frac{\lambda^{x} e^{-\lambda}}{x!}, x=0,1,2,\cdots
 $$</span></div>
 <div class="preview-paragraph-275 preview-line 275" data_line_start="275" data_line_end="275" data_line="275,276" count_line="1">Note that <span class="math-inline ">$p(x ; \lambda) \geqslant 0$</span> everywhere and</div>
 <div class="preview-paragraph-276 preview-line 276 277 278 279 280 281" data_line_start="276" data_line_end="281" data_line="276,282" count_line="6"><span class="math-block ">$$
@@ -1247,8 +1266,8 @@ $$</span></div>
 &amp; =e^{-\lambda} \cdot e^{\lambda}=1
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-282 preview-line 282 283" data_line_start="282" data_line_end="283" data_line="282,284" count_line="2">and so we do have a genuine pdf.<br>
-In practice if we have <span class="math-inline ">$n$</span> trials with probability <span class="math-inline ">$\theta$</span> of success in each, then if <span class="math-inline ">$n$</span>. is large and <span class="math-inline ">$\theta$</span> small and we set <span class="math-inline ">$\lambda=n \theta$</span>, then the prob-of <span class="math-inline ">$x$</span> successes is exactly</div>
+<div class="preview-paragraph-282 preview-line 282 283" data_line_start="282" data_line_end="283" data_line="282,284" count_line="2">and so we do have a genuine PDF.<br>
+<br> <b>In practice</b> if we have <span class="math-inline ">$n$</span> trials with probability <span class="math-inline ">$\theta$</span> of success in each, then if <span class="math-inline ">$n$</span>. is large and <span class="math-inline ">$\theta$</span> small and we set <span class="math-inline ">$\lambda=n \theta$</span>, then the prob-of <span class="math-inline ">$x$</span> successes is exactly</div>
 <div class="preview-paragraph-284 preview-line 284 285 286" data_line_start="284" data_line_end="286" data_line="284,287" count_line="3"><span class="math-block ">$$
 \binom{n}{x} \theta^{x}(1-\theta)^{n-x}
 $$</span></div>
@@ -1256,37 +1275,38 @@ $$</span></div>
 <div class="preview-paragraph-288 preview-line 288 289 290" data_line_start="288" data_line_end="290" data_line="288,291" count_line="3"><span class="math-block ">$$
 \frac{\lambda^{x} e^{-\lambda}}{x!} \quad(\lambda=n \theta) .
 $$</span></div>
-<div class="preview-paragraph-292 preview-line 292" data_line_start="292" data_line_end="292" data_line="292,293" count_line="1">Ex If <span class="math-inline ">$2 \%$</span> of the books at a certain bindery have defective bindings, Find the <span class="math-inline ">$\Lambda$</span> paprox that 5 out of 400 books bound by this bindery have defective bindings.</div>
-<div class="preview-paragraph-294 preview-line 294" data_line_start="294" data_line_end="294" data_line="294,295" count_line="1">Sun. Here <span class="math-inline ">$x=5, \lambda=n \theta=400 \times 02=8$</span> and the answer is</div>
+<div class="preview-paragraph-292 preview-line 292" data_line_start="292" data_line_end="292" data_line="292,293" count_line="1"> <h2 style="color:rgb(0,150,0)">Example).</h2> If <span class="math-inline ">$2 \%$</span> of the books at a certain bindery have defective bindings, Find the approximate probability that 5 out of 400 books bound by this bindery have defective bindings.</div>
+<div class="preview-paragraph-294 preview-line 294" data_line_start="294" data_line_end="294" data_line="294,295" count_line="1"> <h4 style="color:rgb(200,0,0)">Solution).</h4> Here <span class="math-inline ">$x=5, \lambda=n \theta=400 \times 0.02=8$</span> and the answer is</div>
 <div class="preview-paragraph-295 preview-line 295 296 297" data_line_start="295" data_line_end="297" data_line="295,298" count_line="3"><span class="math-block ">$$
 p(5 ; 8)=\frac{8^{5} \cdot e^{-8}}{5!} \approx .093 .
 $$</span></div>
-<div class="preview-paragraph-299 preview-line 299 300 301" data_line_start="299" data_line_end="301" data_line="299,302" count_line="3"><br><hr><br> <h2 style="color:rgb(0,150,0)">Example).</h2>  Records shar that the probability is - 00005 that a car will have a flat tyre crossing the bridge to Newport. Use the poision distrib to approx. the binomial probs. that among 10,000 cars crossing this bridge<br>
-a) exactly one will have o flat tyre:<br>
-b) at most two will have a flat tyre.</div>
-<div class="preview-paragraph-303 preview-line 303" data_line_start="303" data_line_end="303" data_line="303,304" count_line="1">Soln. a) Here <span class="math-inline ">$x=2, \lambda=10,000(000005)=.5$</span> and the answer is</div>
+
+<div class="preview-paragraph-299 preview-line 299 300 301" data_line_start="299" data_line_end="301" data_line="299,302" count_line="3"><br><hr><br> <h2 style="color:rgb(0,150,0)">Example).</h2>  Records show that the probability is - <span class="math-inline">$0.00005$</span> that a car will have a flat tire crossing the bridge to Newport. Use the poision distribution to approximate the binomial probabilities that among 10,000 cars crossing this bridge <br> <br>
+a) exactly one will have a flat tire:<br>
+b) at most two will have a flat tire.</div>
+<div class="preview-paragraph-303 preview-line 303" data_line_start="303" data_line_end="303" data_line="303,304" count_line="1"> <h4 style="color:rgb(200,0,0)">Solution).</h4> a) Here <span class="math-inline ">$x=2, \lambda=10,000(0.00005)=0.5$</span> and the answer is</div>
 <div class="preview-paragraph-304 preview-line 304 305 306" data_line_start="304" data_line_end="306" data_line="304,307" count_line="3"><span class="math-block ">$$
 p(2 ; .5)=\frac{(.5)^{2} e^{-.5}}{2!} \approx .0758
 $$</span></div>
-<div class="preview-paragraph-307 preview-line 307 308 309 310 311 312 313 314" data_line_start="307" data_line_end="314" data_line="307,315" count_line="8">b) In terms of events<br>
-{at most 2 cars have a flat tyre}<br>
-<span class="math-inline ">$=$</span> {no car has a flat tyre}<br>
-U<br>
-{exactly one car has a flat tyre}<br>
-<span class="math-inline ">$U$</span><br>
-{exactly two cars have a flat tyre?<br>
-and this union is (paimise) disjoint.</div>
-<div class="preview-paragraph-316 preview-line 316" data_line_start="316" data_line_end="316" data_line="316,317" count_line="1">We already knar the probability of the third event. For the first two, <span class="math-inline ">$x=0,1$</span> and the resp probs. using <span class="math-inline ">$P(x ; 5)$</span> are approx .6065 and .3033 resp.</div>
-<div class="preview-paragraph-318 preview-line 318" data_line_start="318" data_line_end="318" data_line="318,319" count_line="1">The total probability that at most 2 cars have a flat tyre is then approx.</div>
+<div class="preview-paragraph-307 preview-line 307 308 309 310 311 312 313 314" data_line_start="307" data_line_end="314" data_line="307,315" count_line="8">b) In terms of events: <br> <br>
+
+
+<span class="math-block"> $$ \begin{align*} \{ \text{ at most 2 cars have a flat tire  } \} =\{ \text{ no car 2 car has a flat tire  } \} \\ \cup \{ \text{ exactly 1 car has a flat tire }  \} \cup \{ \text{ exactly 2 cas have a flat tire }  \}  \end{align*} $$ </span>
+Notice that this union is (pairwise) <b>disjoint</b>.</div>
+<div class="preview-paragraph-316 preview-line 316" data_line_start="316" data_line_end="316" data_line="316,317" count_line="1">We already know the probability of the third event. For the first two, <span class="math-inline ">$x=0,1$</span> and the respective probabilities using <span class="math-inline ">$P(x ; 5)$</span> are approximately: <span class="math-inline">$0.6065$</span> and <span class="math-inline">$0.3033$</span>  respectively. </div>
+<div class="preview-paragraph-318 preview-line 318" data_line_start="318" data_line_end="318" data_line="318,319" count_line="1">The total probability that at most 2 cars have a flat tire is then approximately: </div>
 <div class="preview-paragraph-319 preview-line 319 320 321" data_line_start="319" data_line_end="321" data_line="319,322" count_line="3"><span class="math-block ">$$
-.6065+.3033+.0758=.9856
+0.6065+0.3033+0.0758=0.9856
 $$</span></div>
-<div class="preview-paragraph-323 preview-line 323" data_line_start="323" data_line_end="323" data_line="323,324" count_line="1">In order to calculate the mean and variance of the poisson distrib, we will ux the MGF.</div>
-<div class="preview-paragraph-325 preview-line 325" data_line_start="325" data_line_end="325" data_line="325,326" count_line="1">Theorem 5.9 The MGF of the Poisism (d) distribution is</div>
+<div class="preview-paragraph-323 preview-line 323" data_line_start="323" data_line_end="323" data_line="323,324" count_line="1">In order to calculate the mean and variance of the Poisson distribution, we will use its MGF.</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-325 preview-line 325" data_line_start="325" data_line_end="325" data_line="325,326" count_line="1"> <h2 style="color:rgb(0,0,200)">Theorem 5.9)</h2>The MGF of the Poisson (d) distribution is</div>
 <div class="preview-paragraph-326 preview-line 326 327 328" data_line_start="326" data_line_end="328" data_line="326,329" count_line="3"><span class="math-block ">$$
 M_{x}(t)=e^{\lambda\left(e^{t}-1\right)}
 $$</span></div>
-<div class="preview-paragraph-330 preview-line 330" data_line_start="330" data_line_end="330" data_line="330,331" count_line="1">Pf.</div>
+<div class="preview-paragraph-330 preview-line 330" data_line_start="330" data_line_end="330" data_line="330,331" count_line="1"> <span class="math-inline">$Proof).$</span> </div>
 <div class="preview-paragraph-331 preview-line 331 332 333 334 335 336 337 338 339 340" data_line_start="331" data_line_end="340" data_line="331,341" count_line="10"><span class="math-block ">$$
 \begin{aligned}
 M_{x}(t) &amp; =E\left(e^{t x}\right) \\
@@ -1294,53 +1314,57 @@ M_{x}(t) &amp; =E\left(e^{t x}\right) \\
 &amp; =\sum_{x=0}^{\infty} e^{x t} \cdot \frac{\lambda^{x} e^{-\lambda}}{x!} \\
 &amp; =e^{-\lambda} \sum_{x=0}^{\infty} \frac{\left(\lambda e^{t}\right)^{x}}{x!} \\
 &amp; =e^{-\lambda} \cdot e^{\lambda e^{t}} \\
-&amp; =e^{\lambda\left(e^{t}-1\right)}
+&amp; =e^{\lambda\left(e^{t}-1\right)} \\
+&amp; &amp; \blacksquare
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-342 preview-line 342" data_line_start="342" data_line_end="342" data_line="342,343" count_line="1">If we now dif and only if  turice unt <span class="math-inline ">$t$</span>, we get</div>
+<div class="preview-paragraph-342 preview-line 342" data_line_start="342" data_line_end="342" data_line="342,343" count_line="1">If we now differentiate  twice with respect to <span class="math-inline ">$t$</span>, we get</div>
 <div class="preview-paragraph-343 preview-line 343 344 345 346 347 348" data_line_start="343" data_line_end="348" data_line="343,349" count_line="6"><span class="math-block ">$$
 \begin{aligned}
 &amp; M_{x}^{\prime}(t)=\lambda e^{t} e^{\lambda\left(e^{t}-1\right)} \\
 &amp; M_{x}^{\prime \prime}(t)=\lambda e^{t} e^{\lambda\left(e^{t}-1\right)}+\lambda^{2} e^{2 t} e^{\lambda\left(e^{t}-1\right)}
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-350 preview-line 350" data_line_start="350" data_line_end="350" data_line="350,351" count_line="1">Setting too and using Thm <span class="math-inline ">$4 q$</span> piks as before gives</div>
+<div class="preview-paragraph-350 preview-line 350" data_line_start="350" data_line_end="350" data_line="350,351" count_line="1">Setting <span class="math-inline">$t=0$</span> and using Theorem <span class="math-inline ">$4.9$</span> (p. 145) as before gives</div>
 <div class="preview-paragraph-351 preview-line 351 352 353 354 355 356 357 358" data_line_start="351" data_line_end="358" data_line="351,359" count_line="8"><span class="math-block ">$$
 \begin{aligned}
 \mu=\mu_{1}^{\prime}=M_{x}^{\prime}(0) &amp; =\lambda \\
 \mu_{2}^{\prime}=M_{x}^{\prime \prime}(0) &amp; =\lambda+\lambda^{2} \\
-\sigma^{2}=M_{2}^{\prime}-\mu^{2} &amp; =\lambda+\lambda^{2}-\lambda^{2} \\
+\sigma^{2}=\mu_{2}^{\prime}-\mu^{2} &amp; =\lambda+\lambda^{2}-\lambda^{2} \\
 &amp; =\lambda
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-360 preview-line 360 361" data_line_start="360" data_line_end="361" data_line="360,362" count_line="2">We have proved<br>
-Thm 5.8 The mean and variance of the Poisson <span class="math-inline ">$(\lambda)$</span> distrib are given by</div>
+<div class="preview-paragraph-360 preview-line 360 361" data_line_start="360" data_line_end="361" data_line="360,362" count_line="2">We have proved the following result: <br>
+
+  <br><hr><br>
+
+  <h2 style="color:rgb(0,0,200)">Theorem 5.8)</h2> The mean and variance of the Poisson <span class="math-inline ">$(\lambda)$</span> distribution are given by</div>
 <div class="preview-paragraph-362 preview-line 362 363 364" data_line_start="362" data_line_end="364" data_line="362,365" count_line="3"><span class="math-block ">$$
 \mu=\lambda, \quad \sigma^{2}=\lambda .
 $$</span></div>
-<div class="preview-paragraph-366 preview-line 366" data_line_start="366" data_line_end="366" data_line="366,367" count_line="1">Since the expectation of a Poisen ( <span class="math-inline ">$\lambda$</span> ) distrib is <span class="math-inline ">$\lambda$</span>, we can uxe it to model the number of (rare) events in a given time interval, given that we already know the average number of events in that much time.</div>
-<div class="preview-paragraph-368 preview-line 368" data_line_start="368" data_line_end="368" data_line="368,369" count_line="1"><br><hr><br> <h2 style="color:rgb(0,150,0)">Example).</h2>  The average no of trucks arrandom variableing on any one day at a truck deport is 12. What is the probability that on a given day ferrer than 9 truiks arrandom variablee at the depot?</div>
-<div class="preview-paragraph-370 preview-line 370" data_line_start="370" data_line_end="370" data_line="370,371" count_line="1">Suln. Here <span class="math-inline ">$\lambda=12$</span> and the answer is</div>
+<div class="preview-paragraph-366 preview-line 366" data_line_start="366" data_line_end="366" data_line="366,367" count_line="1">Since the expectation of a Poisson ( <span class="math-inline ">$\lambda$</span> ) distribution is <span class="math-inline ">$\lambda$</span>, we can uxe it to model the number of (rare) events in a given time interval, given that we already know the average number of events in that much time.</div>
+<div class="preview-paragraph-368 preview-line 368" data_line_start="368" data_line_end="368" data_line="368,369" count_line="1"><br><hr><br> <h2 style="color:rgb(0,150,0)">Example).</h2>  The average number of trucks arriving on any one day at a truck deport is 12. What is the probability that on a given day fewer than 9 trucks arrive at the depot?</div>
+<div class="preview-paragraph-370 preview-line 370" data_line_start="370" data_line_end="370" data_line="370,371" count_line="1"> <h4 style="color:rgb(200,0,0)">Solution).</h4> Here <span class="math-inline ">$\lambda=12$</span> and the answer is</div>
 <div class="preview-paragraph-371 preview-line 371 372 373" data_line_start="371" data_line_end="373" data_line="371,374" count_line="3"><span class="math-block ">$$
-P(x&lt;q)=\sum_{x=0}^{8} P(x ; 12) \approx .1550 .
+P(x&lt;9)=\sum_{x=0}^{8} P(x ; 12) \approx .1550 .
 $$</span></div>
-<div class="preview-paragraph-375 preview-line 375 376" data_line_start="375" data_line_end="376" data_line="375,377" count_line="2">Suppose we observe on average 2 accidents per hour on a certain stritch of 1-95.<br>
-If we watched for 2 hours (or 2 separate I how interrals), we would expect an average of 4 acciedents</div>
+<div class="preview-paragraph-375 preview-line 375 376" data_line_start="375" data_line_end="376" data_line="375,377" count_line="2">Suppose we observe on average 2 accidents per hour on a certain stretch of the I-95.<br>
+<br> If we watched for 2 hours (or 2 separate 1 hour intervals), we would expect an average of 4 accidents</div>
 <div class="preview-paragraph-378 preview-line 378" data_line_start="378" data_line_end="378" data_line="378,379" count_line="1">If we watched for 3 hours, we would expect an average of <span class="math-inline ">$t$</span> accidents, and so on.</div>
 
 <br>
 
-<div class="preview-paragraph-380 preview-line 380" data_line_start="380" data_line_end="380" data_line="380,381" count_line="1">In general, if the average number of successes per unit time/area <span class="math-inline ">$4, \alpha$</span>, then on a time interval of length <span class="math-inline ">$t$</span> or a region of area <span class="math-inline ">$\alpha$</span>, we would expect at successes.</div>
-<div class="preview-paragraph-382 preview-line 382" data_line_start="382" data_line_end="382" data_line="382,383" count_line="1">On this interral, we would have a poissen <span class="math-inline ">$(\alpha t)$</span> random variable with distribution</div>
+<div class="preview-paragraph-380 preview-line 380" data_line_start="380" data_line_end="380" data_line="380,381" count_line="1">In general, if the average number of successes per unit time/area <span class="math-inline ">$\alpha$</span>, then on a time interval of length <span class="math-inline ">$t$</span> or a region of area <span class="math-inline ">$\alpha$</span>, we would expect <span class="math-inline">$\alpha \cdot t$</span> successes.</div>
+<div class="preview-paragraph-382 preview-line 382" data_line_start="382" data_line_end="382" data_line="382,383" count_line="1">On this interral, we would have a Poisson <span class="math-inline ">$(\alpha t)$</span> random variable with distribution</div>
 <div class="preview-paragraph-383 preview-line 383 384 385" data_line_start="383" data_line_end="385" data_line="383,386" count_line="3"><span class="math-block ">$$
 p(x ; \alpha t)=\frac{e^{-\alpha t}(\alpha t)^{x}}{x!}, x \in 0,1,2 \ldots
 $$</span></div>
-<div class="preview-paragraph-387 preview-line 387" data_line_start="387" data_line_end="387" data_line="387,388" count_line="1"><br><hr><br> <h2 style="color:rgb(0,150,0)">Example).</h2>  A certain kind of sheet metal hus on average 5 defects per <span class="math-inline ">$10 \mathrm{ft}^{2}$</span>. If re assume a poissen distrib, what is the probability that a <span class="math-inline ">$15 \mathrm{ft}^{2}$</span> sheet will have at least 6 defects?</div>
-<div class="preview-paragraph-389 preview-line 389" data_line_start="389" data_line_end="389" data_line="389,390" count_line="1">Suln. Les <span class="math-inline ">$X=\#$</span> defects in a <span class="math-inline ">$15 \mathrm{ft}^{2}$</span> sheet. Since the (unit) area is loft2, we have that <span class="math-inline ">$X$</span> is Poisson ( <span class="math-inline ">$\lambda$</span> ) with</div>
+<div class="preview-paragraph-387 preview-line 387" data_line_start="387" data_line_end="387" data_line="387,388" count_line="1"><br><hr><br> <h2 style="color:rgb(0,150,0)">Example).</h2>  A certain kind of sheet metal has on average 5 defects per <span class="math-inline ">$10 \mathrm{ft}^{2}$</span>. If we assume a Poisson distribution, what is the probability that a <span class="math-inline ">$15 \mathrm{ft}^{2}$</span> sheet will have at least 6 defects?</div>
+<div class="preview-paragraph-389 preview-line 389" data_line_start="389" data_line_end="389" data_line="389,390" count_line="1"><h4 style="color:rgb(200,0,0)">Solution).</h4> Let <span class="math-inline ">$X=\#$</span> defects in a <span class="math-inline ">$15 \mathrm{ft}^{2}$</span> sheet. Since the (unit) area is <span class="math-inline">$10\text{ft}^2$</span>, we have that <span class="math-inline ">$X$</span> is Poisson ( <span class="math-inline ">$\lambda$</span> ) with</div>
 <div class="preview-paragraph-390 preview-line 390 391 392" data_line_start="390" data_line_end="392" data_line="390,393" count_line="3"><span class="math-block ">$$
 \lambda=5(1.5)=7.5 .
 $$</span></div>
-<div class="preview-paragraph-394 preview-line 394" data_line_start="394" data_line_end="394" data_line="394,395" count_line="1">THen</div>
+<div class="preview-paragraph-394 preview-line 394" data_line_start="394" data_line_end="394" data_line="394,395" count_line="1">Then</div>
 <div class="preview-paragraph-395 preview-line 395 396 397 398 399 400 401 402 403 404" data_line_start="395" data_line_end="404" data_line="395,405" count_line="10"><span class="math-block ">$$
 \begin{aligned}
 P(x \geqslant 6)= &amp; 1-P(x \leq 5) \\
@@ -1351,39 +1375,49 @@ P(x \geqslant 6)= &amp; 1-P(x \leq 5) \\
 \approx &amp; 0.7586
 \end{aligned}
 $$</span></div>
-<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-406 preview-line 406" id="%C2%A75.8-multinomial-distribution" data_line_start="406" data_line_end="406" data_line="406,407" count_line="1">
-§5.8 Multinomial Distribution</h2>
+
+<br><hr>
+
+<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-406 preview-line 406" id="%C2%A75.8-multinomial-distribution" data_line_start="406" data_line_end="406" data_line="406,407" count_line="1" style="color:rgb(200,0,0)">
+<span class="math-inline">$\S$</span>5.8 Multinomial Distribution</h2>
 <div class="preview-paragraph-408 preview-line 408" data_line_start="408" data_line_end="408" data_line="408,409" count_line="1">We consider a generalization of the repeated coin flips where there are several possible outcomes.</div>
-<div class="preview-paragraph-410 preview-line 410" data_line_start="410" data_line_end="410" data_line="410,411" count_line="1">To be specific Suppose we have <span class="math-inline ">$n$</span> independent trials with <span class="math-inline ">$k$</span> mutually exclusive outcomes whose resp. probs. are <span class="math-inline ">$\theta_{1}, \theta_{2}, \ldots, \theta_{k}$</span> so that</div>
+<div class="preview-paragraph-410 preview-line 410" data_line_start="410" data_line_end="410" data_line="410,411" count_line="1">To be specific, suppose we have <span class="math-inline ">$n$</span> independent trials with <span class="math-inline ">$k$</span> mutually exclusive outcomes whose respective probabilities are <span class="math-inline ">$\theta_{1}, \theta_{2}, \ldots, \theta_{k}$</span> so that:</div>
 <div class="preview-paragraph-411 preview-line 411 412 413" data_line_start="411" data_line_end="413" data_line="411,414" count_line="3"><span class="math-block ">$$
 \sum_{i=1}^{k} \theta_{i}=1 .
 $$</span></div>
 <div class="preview-paragraph-415 preview-line 415 416 417 418 419 420 421" data_line_start="415" data_line_end="421" data_line="415,422" count_line="7">Suppose we want<br>
-<span class="math-inline ">$x_{1}$</span> out comes of the first kind<br>
-<span class="math-inline ">$x_{2} \ldots$</span><br>
-second...<br>
-<span class="math-inline ">$x_{k}$</span>.<br>
-keth<br>
-where of course <span class="math-inline ">$x_{1}+x_{2}+\cdots+x_{6}=n$</span>,</div>
-<div class="preview-paragraph-423 preview-line 423" data_line_start="423" data_line_end="423" data_line="423,424" count_line="1">The chance of getting these outcomes in a particular order is</div>
+<br>
+<ol>
+  <ul><span class="math-inline ">$x_{1}$</span> outcomes of the first kind</ul>
+
+  <ul><span class="math-inline ">$x_{2}$</span> outcomes of the second  second...</ul>
+
+  <ul> <span class="math-inline">$\vdots$</span> </ul>
+
+  <ul> <span class="math-inline ">$x_{k}$</span> outcomes of the <span class="math-inline">$k$</span>th kind </ul>
+
+</ol>
+  
+where of course <span class="math-inline ">$x_{1}+x_{2}+\cdots+x_{k}=n$</span>,</div>
+<div class="preview-paragraph-423 preview-line 423" data_line_start="423" data_line_end="423" data_line="423,424" count_line="1">The chance of getting these outcomes <b>in a particular order</b> is</div>
 <div class="preview-paragraph-424 preview-line 424 425 426" data_line_start="424" data_line_end="426" data_line="424,427" count_line="3"><span class="math-block ">$$
 \theta_{1}^{x_{1}} \theta_{2}^{x_{2}} \cdots \theta_{k}^{x_{k}}
 $$</span></div>
-<div class="preview-paragraph-427 preview-line 427" data_line_start="427" data_line_end="427" data_line="427,428" count_line="1">while the number of possible (favourable) orderings is given by the multinamial coefficient</div>
+<div class="preview-paragraph-427 preview-line 427" data_line_start="427" data_line_end="427" data_line="427,428" count_line="1">while the number of possible (favorable) orderings is given by the multinomial coefficient</div>
 <div class="preview-paragraph-428 preview-line 428 429 430" data_line_start="428" data_line_end="430" data_line="428,431" count_line="3"><span class="math-block ">$$
-\binom{n}{x_{1}, x_{2}, \rightarrow x_{k}}=\frac{n!}{x_{1}!x_{2}!\cdots x_{k}!}
+\binom{n}{x_{1}, x_{2}, \cdots x_{k}}=\frac{n!}{x_{1}!x_{2}!\cdots x_{k}!}
 $$</span></div>
-<div class="preview-paragraph-432 preview-line 432" data_line_start="432" data_line_end="432" data_line="432,433" count_line="1"><h2 style="color:rgb(0,0,200)">Definition).</h2> The random variable's <span class="math-inline ">$X_{1}, \ldots, X_{k}$</span> have a multinumial <span class="math-inline ">$\left(n, \theta_{1}, \ldots, \theta_{6}\right)$</span> distribution if and only if  their joint PDF is given by</div>
+<div class="preview-paragraph-432 preview-line 432" data_line_start="432" data_line_end="432" data_line="432,433" count_line="1"><h2 style="color:rgb(0,0,200)">Definition).</h2> The random variables <span class="math-inline ">$X_{1}, \ldots, X_{k}$</span> have a multinomial <span class="math-inline ">$\left(n, \theta_{1}, \ldots, \theta_{k}\right)$</span> distribution if and only if  their joint PDF is given by</div>
 <div class="preview-paragraph-433 preview-line 433 434 435" data_line_start="433" data_line_end="435" data_line="433,436" count_line="3"><span class="math-block ">$$
-f\left(x_{1}, \ldots, x_{k} ; n_{1} \theta_{1}, \ldots, \theta_{k}\right)=\binom{n}{x_{n}-x_{k}} \theta_{1}^{x_{n}} \ldots \theta_{k}^{x_{k}}
+f\left(x_{1}, \ldots, x_{k} ; n, \theta_{1}, \ldots, \theta_{k}\right)=\binom{n}{x_{n}, \cdots, x_{k}} \theta_{1}^{x_{n}} \ldots \theta_{k}^{x_{k}}
 $$</span></div>
 <div class="preview-paragraph-436 preview-line 436" data_line_start="436" data_line_end="436" data_line="436,437" count_line="1">for <span class="math-inline ">$x_{i}=0, \ldots, n$</span> with <span class="math-inline ">$\sum_{i=1}^{n} x_{i}=n, \sum_{i=1}^{k} \theta_{i}=1$</span>.</div>
-<div class="preview-paragraph-438 preview-line 438" data_line_start="438" data_line_end="438" data_line="438,439" count_line="1"><br><hr><br> <h2 style="color:rgb(0,150,0)">Example).</h2>  A certain city has 3 TV stations. On sat evening Channel 12 has <span class="math-inline ">$50 \%$</span> of the viening audience, Ch 10 has <span class="math-inline ">$30 \%$</span> and Ch3 has <span class="math-inline ">$20 \%$</span>.</div>
-<div class="preview-paragraph-440 preview-line 440" data_line_start="440" data_line_end="440" data_line="440,441" count_line="1">Find the probability that among 8 TV viewers in the city, 5 will be watching <span class="math-inline ">$C h 12$</span>, 2 will be watching <span class="math-inline ">$C h 10$</span> and 1 will be watching Ch3.</div>
-<div class="preview-paragraph-442 preview-line 442" data_line_start="442" data_line_end="442" data_line="442,443" count_line="1">Suln, Here <span class="math-inline ">$n=8, x_{1}=5, x_{2}=2, x_{3}=1 \theta_{1}=0.5, \theta_{2}=0.3, \theta_{3}=.2$</span> and the answer is</div>
+<div class="preview-paragraph-438 preview-line 438" data_line_start="438" data_line_end="438" data_line="438,439" count_line="1"><br><hr><br> <h2 style="color:rgb(0,150,0)">Example).</h2>  A certain city has 3 TV stations. On Saturday evening Channel 12 has <span class="math-inline ">$50 \%$</span> of the viewing audience, Channel 10 has <span class="math-inline ">$30 \%$</span> and Channel 3 has <span class="math-inline ">$20 \%$</span>.</div>
+<div class="preview-paragraph-440 preview-line 440" data_line_start="440" data_line_end="440" data_line="440,441" count_line="1">Find the probability that among 8 TV viewers in the city, 5 will be watching <span class="math-inline ">Channel 12</span>, 2 will be watching <span class="math-inline ">Channel 10,</span> and 1 will be watching Channel 3.</div>
+<div class="preview-paragraph-442 preview-line 442" data_line_start="442" data_line_end="442" data_line="442,443" count_line="1"><h4 style="color:rgb(200,0,0)">Solution).</h4> Here <span class="math-inline ">$n=8, x_{1}=5, x_{2}=2, x_{3}=1 \quad  \theta_{1}=0.5, \theta_{2}=0.3, \theta_{3}=.2$</span> and the answer is</div>
 <div class="preview-paragraph-443 preview-line 443 444 445 446 447 448 449" data_line_start="443" data_line_end="449" data_line="443,450" count_line="7"><span class="math-block ">$$
 \begin{aligned}
-&amp; f(5,2,1 ; 8,05,03,2) \\
+&amp; f(5,2,1 ; 8,0.5,0.3,0.2) \\
 &amp; \quad=\frac{8!}{5!2!1!}(.5)^{5}(.3)^{2}(.2) \\
 &amp; \quad=.0945
 \end{aligned}
