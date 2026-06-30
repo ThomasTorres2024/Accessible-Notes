@@ -996,39 +996,51 @@ Chapter 6 Special <br>
 <div class="preview-paragraph-8 preview-line 8 9 10" data_line_start="8" data_line_end="10" data_line="8,11" count_line="3"><span class="math-block ">$$
 u(x ; \alpha, \beta)= \begin{cases}\frac{1}{\beta-\alpha}, &amp; \alpha&lt;x&lt;\beta \\ 0 &amp; \text { elsewhere. }\end{cases}
 $$</span></div>
-<div class="preview-paragraph-11 preview-line 11" data_line_start="11" data_line_end="11" data_line="11,12" count_line="1"><figure style="text-align: center"><img src="https://cdn.mathpix.com/cropped/7eb0a652-6758-42a1-8b7a-9bbafe603b98-2.jpg?height=659&amp;width=1253&amp;top_left_y=217&amp;top_left_x=203" alt="" data-align="center"></figure></div>
-<div class="preview-paragraph-13 preview-line 13" data_line_start="13" data_line_end="13" data_line="13,14" count_line="1">Thm 6.1 The mean <span class="math-inline ">$\&amp;$</span> variance of the uniform <span class="math-inline ">$(\alpha, \beta)$</span> distr. are given by</div>
+
+
+<img src="https://raw.githubusercontent.com/ThomasTorres2024/Accessible-Notes/refs/heads/main/Comerford/MTH%20451/Images/Chapter6/6_uniform_distribution_diagram.png" alt="Image of the uniform distribution. From x = alpha to x = beta where beta is greater than alpha, the distribution has a constant ratio, and everywhere else it is 0.">
+
+<div class="preview-paragraph-13 preview-line 13" data_line_start="13" data_line_end="13" data_line="13,14" count_line="1"> <h2 style="color:rgb(0,0,200)">Theorem 6.1)</h2> The mean <span class="math-inline ">$\&amp;$</span> variance of the uniform <span class="math-inline ">$(\alpha, \beta)$</span> distribution are given by</div>
 <div class="preview-paragraph-14 preview-line 14 15 16" data_line_start="14" data_line_end="16" data_line="14,17" count_line="3"><span class="math-block ">$$
 \mu=\frac{\alpha+\beta}{2}, \quad \sigma^{2}=\frac{1}{12}(\beta-\alpha)^{2} .
 $$</span></div>
-<div class="preview-paragraph-18 preview-line 18" data_line_start="18" data_line_end="18" data_line="18,19" count_line="1">Pt. Easy ex.</div>
-<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-20 preview-line 20" id="%C2%A76.3-the-exponential-distribution" data_line_start="20" data_line_end="20" data_line="20,21" count_line="1">
-§6.3 The Exponential Distribution</h2>
-<div class="preview-paragraph-22 preview-line 22" data_line_start="22" data_line_end="22" data_line="22,23" count_line="1">This distribution is used to model the waiting time for some rare event le.g. rood accident, radroactive decay, bus arriving) to occur.</div>
-<div class="preview-paragraph-24 preview-line 24" data_line_start="24" data_line_end="24" data_line="24,25" count_line="1">Defn A random variable has an exponential <span class="math-inline ">$(\lambda)$</span> distribution for some <span class="math-inline ">$\lambda&gt;0$</span> if and only ifits puf can be written</div>
+<div class="preview-paragraph-18 preview-line 18" data_line_start="18" data_line_end="18" data_line="18,19" count_line="1"> <span class="math-inline">$Proof).$</span> Easy example.</div>
+
+<br><hr><br>
+
+<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-20 preview-line 20" id="%C2%A76.3-the-exponential-distribution" data_line_start="20" data_line_end="20" data_line="20,21" count_line="1" style="color:rgb(200,0,0)">
+<span class="math-inline">$\S$</span> 6.3)  The Exponential Distribution</h2>
+<div class="preview-paragraph-22 preview-line 22" data_line_start="22" data_line_end="22" data_line="22,23" count_line="1">This distribution is used to model the waiting time for some rare event (e.g. road accident, radioactive decay, bus arriving) to occur.</div>
+<div class="preview-paragraph-24 preview-line 24" data_line_start="24" data_line_end="24" data_line="24,25" count_line="1"> <h2 style="color:rgb(0,0,200)">Definition).</h2> A random variable has an exponential <span class="math-inline ">$(\lambda)$</span> distribution for some <span class="math-inline ">$\lambda&gt;0$</span> if and only if its PDF can be written</div>
 <div class="preview-paragraph-25 preview-line 25 26 27" data_line_start="25" data_line_end="27" data_line="25,28" count_line="3"><span class="math-block ">$$
 g(x ; \lambda)= \begin{cases}\lambda e^{-\lambda x}, &amp; x&gt;0 \\ 0, &amp; x \leq 0\end{cases}
 $$</span></div>
-<div class="preview-paragraph-29 preview-line 29" data_line_start="29" data_line_end="29" data_line="29,30" count_line="1">Ex. Check <span class="math-inline ">$\quad \int_{-\infty}^{\infty} g(x ; \lambda)=1$</span>.</div>
-<div class="preview-paragraph-31 preview-line 31" data_line_start="31" data_line_end="31" data_line="31,32" count_line="1">Fact the exp ( <span class="math-inline ">$\lambda$</span> ) distr. has mean <span class="math-inline ">$\frac{1}{\lambda}$</span> and raniance <span class="math-inline ">$\lambda^{-2}$</span>.</div>
-<div class="preview-paragraph-33 preview-line 33 34" data_line_start="33" data_line_end="34" data_line="33,35" count_line="2">Pt. Ex - Integration by parts!<br>
-Fact. The MGF of an exp (d) random variable</div>
+
+
+<div class="preview-paragraph-29 preview-line 29" data_line_start="29" data_line_end="29" data_line="29,30" count_line="1"> <h2 style="color:rgb(0,150,0)">Example).</h2> Check <span class="math-inline ">$\quad \int_{-\infty}^{\infty} g(x ; \lambda)=1$</span>.</div>
+<div class="preview-paragraph-31 preview-line 31" data_line_start="31" data_line_end="31" data_line="31,32" count_line="1"> <h4 style="color:rgb(200,0,0)">Fact).</h4> the exp ( <span class="math-inline ">$\lambda$</span> ) distribution has mean <span class="math-inline ">$\frac{1}{\lambda}$</span> and variance <span class="math-inline ">$\lambda^{-2}$</span>.</div>
+<div class="preview-paragraph-33 preview-line 33 34" data_line_start="33" data_line_end="34" data_line="33,35" count_line="2"> <span class="math-inline">$Proof).$</span> Ex - Integration by parts! <br> <br>
+<h4 style="color:rgb(200,0,0)">Fact).</h4> The MGF of an exp(<span class="math-inline">$\lambda$</span>) random variable is given by:</div>
 <div class="preview-paragraph-35 preview-line 35 36 37 38 39 40 41 42 43" data_line_start="35" data_line_end="43" data_line="35,44" count_line="9"><span class="math-block ">$$
 \begin{aligned}
 &amp; M_{x}(t)=\frac{1}{1-t / \lambda}, \quad t&lt;\lambda \\
+
 &amp; M_{x}(t)=\int_{-\infty}^{\infty} e^{x t} g(x ; \lambda) d x \\
 &amp;= \int_{0}^{\infty} e^{x t} \frac{e^{-\lambda x}}{\lambda} d x \\
 &amp;= \lambda \int_{0}^{x} e^{-(\lambda-t) x} d x \\
-&amp;= \lambda \cdot \frac{1}{\lambda-t}=\frac{1}{1-t / \lambda} \quad\binom{\text { proviled }}{t&lt;\lambda}
+&amp;= \lambda \cdot \frac{1}{\lambda-t}=\frac{1}{1-t / \lambda} \quad\binom{\text { provided }}{t&lt;\lambda}
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-45 preview-line 45" data_line_start="45" data_line_end="45" data_line="45,46" count_line="1">The value <span class="math-inline ">$\frac{1}{\lambda}$</span> is often called the arrival time of the <span class="math-inline ">$\exp (\lambda)$</span>.random variable In terms of waiting times, it is the average time ane has to wait before on event occurs.</div>
-<div class="preview-paragraph-47 preview-line 47" data_line_start="47" data_line_end="47" data_line="47,48" count_line="1">Ex. At exit 22 cn I-95, one has to wait on average <span class="math-inline ">$\frac{1}{2} \mathrm{hr}$</span> to see a car doing at least 20 mph over the speed limit. Use an exponential random variable to calculate the prob. that one will have to less than 15 min to see a car doing mare than 20 mph over the limit.</div>
-<div class="preview-paragraph-49 preview-line 49" data_line_start="49" data_line_end="49" data_line="49,50" count_line="1">Soln. If we mearure time in hours, then</div>
+<div class="preview-paragraph-45 preview-line 45" data_line_start="45" data_line_end="45" data_line="45,46" count_line="1">The value <span class="math-inline ">$\frac{1}{\lambda}$</span> is often called the arrival time of the <span class="math-inline ">$\exp (\lambda)$</span> random variable. In terms of waiting times, it is the average time ane has to wait before an event occurs.</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-47 preview-line 47" data_line_start="47" data_line_end="47" data_line="47,48" count_line="1"> <h2 style="color:rgb(0,150,0)">Example).</h2> At exit 22 on the I-95, one has to wait on average <span class="math-inline ">$\frac{1}{2} \mathrm{hr}$</span> to see a car doing at least 20 mph over the speed limit. Use an exponential random variable to calculate the probability that one will have to less than 15 min to see a car doing more than 20 mph over the limit.</div>
+<div class="preview-paragraph-49 preview-line 49" data_line_start="49" data_line_end="49" data_line="49,50" count_line="1"> <h4 style="color:rgb(200,0,0)">Solution).</h4> If we measure time in hours, then</div>
 <div class="preview-paragraph-50 preview-line 50 51 52" data_line_start="50" data_line_end="52" data_line="50,53" count_line="3"><span class="math-block ">$$
-\frac{1}{\lambda}=\text { amial time }=\frac{1}{2} .
+\frac{1}{\lambda}=\text { arrial time }=\frac{1}{2} .
 $$</span></div>
-<div class="preview-paragraph-54 preview-line 54" data_line_start="54" data_line_end="54" data_line="54,55" count_line="1">Thus <span class="math-inline ">$\lambda=2$</span> and the prob. we are waiting <span class="math-inline ">$&lt;15 \mathrm{~min}\left(\frac{1}{4} \mathrm{hr}\right)$</span> is given by</div>
+<div class="preview-paragraph-54 preview-line 54" data_line_start="54" data_line_end="54" data_line="54,55" count_line="1">Thus <span class="math-inline ">$\lambda=2$</span> and the probability we are waiting <span class="math-inline ">$&lt;15 \mathrm{~min}\left(\frac{1}{4} \mathrm{hr}\right)$</span> is given by</div>
 <div class="preview-paragraph-55 preview-line 55 56 57 58 59 60 61" data_line_start="55" data_line_end="61" data_line="55,62" count_line="7"><span class="math-block ">$$
 \begin{aligned}
 &amp; \int_{0}^{\frac{1}{4}} 2 e^{-2 x} d x \\
@@ -1036,10 +1048,10 @@ $$</span></div>
 = &amp; 1-e^{-\frac{1}{2}} \approx .393
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-63 preview-line 63" data_line_start="63" data_line_end="63" data_line="63,64" count_line="1">The expenential distr. can be thought of as a cts version of the geometric distor. Where we measure time ctsly instead of in discrete intervals.</div>
-<div class="preview-paragraph-65 preview-line 65" data_line_start="65" data_line_end="65" data_line="65,66" count_line="1">The exp. &amp; Poissm distrs are related by the Poisson process. which models the occurrences of rare events. In the Poisson process:</div>
+<div class="preview-paragraph-63 preview-line 63" data_line_start="63" data_line_end="63" data_line="63,64" count_line="1">The exponential distribution can be thought of as a continuous version of the geometric distribution. Where we measure time continuously instead of in discrete intervals.</div>
+<div class="preview-paragraph-65 preview-line 65" data_line_start="65" data_line_end="65" data_line="65,66" count_line="1">The exponential &amp; Poison distributions are related by the <b>Poisson process</b>, which models the occurrences of rare events. In the Poisson process:</div>
 <ul class="preview-paragraph-66 preview-line 66 67" data_line_start="66" data_line_end="67" data_line="66,68" count_line="2">
-<li>the number of events occuring in a given time interval is a Poissen random variable</li>
+<li>the number of events occuring in a given time interval is a Poisson random variable</li>
 <li>the intervals (waiting times) between events are exponential random variables.</li>
 </ul>
 
