@@ -254,7 +254,7 @@ mjx-status {
 }
 
 foreignObject[data-mjx-xml] {
-  font-family: initial;
+  font-family: sans-serif;
   line-height: normal;
   overflow: visible;
 }
@@ -544,7 +544,7 @@ div.svg-container,
   }
 }
 #preview-content code, #setText code {
-  font-family: Inconsolata;
+  font-family: sans-serif;
   font-size: inherit;
   display: initial;
   background: #f8f8fa;
@@ -554,7 +554,7 @@ div.svg-container,
   background-color: transparent;
 }
 #preview-content pre code, #setText pre code {
-  font-family: 'DM Mono', Inconsolata, monospace;
+  font-family: sans-serif;
   color: #333;
   font-size: 15px;
 }
@@ -776,7 +776,7 @@ ul.itemize > li,
   display: inline-block;
 }
 #preview {
-  font-family: 'CMU Serif', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
   font-size: 17px;
   visibility: visible;
   word-break: break-word;
@@ -786,10 +786,10 @@ ul.itemize > li,
   box-sizing: content-box;
 }
 #preview h1, #preview h2, #preview h3, #preview h4, #preview h5, #preview strong {
-  font-family: 'CMU Serif Bold', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
 }
 #preview i, #preview em {
-  font-family: 'CMU Serif Italic', 'Georgia', Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
 }
 .mmd-menu {
   max-width: 320px;
@@ -985,10 +985,11 @@ td .ClipboardButton .mmd-clipboard-icon {
   <div id="preview" class="preview scrollEditor">
     <div id="container-ruller" />
     <div id="preview-content">
-      <h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-0 preview-line 0" id="%C2%A76.5-the-normal-distribution" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1">
-§6.5 The Normal Distribution</h2>
+      <h1 type="section" data-unnumbered="true" class="section-title preview-paragraph-0 preview-line 0" id="%C2%A76.5-the-normal-distribution" data_line_start="0" data_line_end="0" data_line="0,1" count_line="1" style="color:rgb(200,0,0)">
+§6.5 The Normal Distribution</h1>
 <div class="preview-paragraph-2 preview-line 2" data_line_start="2" data_line_end="2" data_line="2,3" count_line="1">The most famous of them all!</div>
-<div class="preview-paragraph-4 preview-line 4" data_line_start="4" data_line_end="4" data_line="4,5" count_line="1">Defn. A r.v. <span class="math-inline ">$X$</span> has a <span class="math-inline ">$\operatorname{nomal}(\mu, \sigma)$</span> distribution iff its pdf can be unitten</div>
+<div class="preview-paragraph-4 preview-line 4" data_line_start="4" data_line_end="4" data_line="4,5" count_line="1"> <h2 style="color:rgb(0,0,200)">Definition).</h2> A random variable <span class="math-inline ">$X$</span> has a <b><span class="math-inline ">$\textbf{normal}(\mu, \sigma)$</span> distribution </b> if and only if its PDF can be written as:
+</div>
 <div class="preview-paragraph-5 preview-line 5 6 7" data_line_start="5" data_line_end="7" data_line="5,8" count_line="3"><span class="math-block ">$$
 n(x ; \mu, \sigma)=\frac{1}{\sqrt{2 \pi \sigma^{2}}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}},-\infty&lt;x&lt;\infty .
 $$</span></div>
@@ -996,17 +997,19 @@ $$</span></div>
 \sigma&gt;0 .
 $$</span></div>
 <div class="table preview-paragraph-12 preview-line 12 13 14 15 16" number="1" data_line_start="12" data_line_end="16" data_line="12,17" count_line="5">
-<div class="figure_img" style="text-align: center;"><img src="https://cdn.mathpix.com/cropped/beb67e15-c1de-4738-9f91-32b55e4f8b9c-1.jpg?height=629&width=1312&top_left_y=1572&top_left_x=261" alt="" style="max-width: 100%;"/></div><div class="caption_figure">'Bell Curve'.</div></div>
-<div class="preview-paragraph-18 preview-line 18" data_line_start="18" data_line_end="18" data_line="18,19" count_line="1">An important special case is the normal <span class="math-inline ">$(0,1)$</span> distribation, also called the standard normal</div>
+
+  <img src="https://raw.githubusercontent.com/ThomasTorres2024/Accessible-Notes/refs/heads/main/Comerford/MTH%20451/Images/Chapter6/6.5_bellcurve.png" alt="Image of the bellcurve, at the origin of the plane it has its highest point, the function is even, its left and right sides decrease continually from the maximum at the origin to 0 as x tends to positive and negative infinity though it never reaches it">
+
+<div class="preview-paragraph-18 preview-line 18" data_line_start="18" data_line_end="18" data_line="18,19" count_line="1">An important special case is the normal <span class="math-inline ">$(0,1)$</span> distribution, also called the <b>standard normal</b> </div>
 <div class="preview-paragraph-19 preview-line 19 20 21" data_line_start="19" data_line_end="21" data_line="19,22" count_line="3"><span class="math-block ">$$
 n(x ; 0,1)=\frac{1}{\sqrt{2 \pi}} e^{-\frac{x^{2}}{2}} .
 $$</span></div>
-<div class="preview-paragraph-23 preview-line 23 24" data_line_start="23" data_line_end="24" data_line="23,25" count_line="2">Fact <span class="math-inline ">$\int_{-\infty}^{\infty} e^{-x^{2} / 2} d x=\sqrt{2 \pi}$</span>.<br>
-Using this it follows that the narmal <span class="math-inline ">$(0,1)$</span> disto has mass 1 and one can also see this for the general nomal <span class="math-inline ">$(\mu, \sigma)$</span> since</div>
+<div class="preview-paragraph-23 preview-line 23 24" data_line_start="23" data_line_end="24" data_line="23,25" count_line="2"> <h4 style="color:rgb(200,0,0)">Fact).</h4> <span class="math-inline ">$\int_{-\infty}^{\infty} e^{-x^{2} / 2} d x=\sqrt{2 \pi}$</span>.<br>
+Using this it follows that the normal <span class="math-inline ">$(0,1)$</span> distribution has mass 1 and one can also see this for the general normal <span class="math-inline ">$(\mu, \sigma)$</span> since</div>
 <div class="preview-paragraph-25 preview-line 25 26 27 28 29 30" data_line_start="25" data_line_end="30" data_line="25,31" count_line="6"><span class="math-block ">$$
 \begin{array}{ll}
 \int_{-\infty}^{\infty} \frac{1}{\sqrt{2 \pi \sigma^{2}}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}} d x &amp; z=\frac{x-\mu}{\sigma} \\
-=\int_{-\infty}^{\infty} \frac{1}{\sqrt{2 \pi \sigma^{2}}} \cdot \sigma e^{-z^{2} / 2} d z &amp; d z=\frac{d x}{\sigma}
+=\int_{-\infty}^{\infty} \frac{1}{\sqrt{2 \pi \sigma^{2}}} \cdot \sigma e^{-z^{2} / 2} d z &amp; d z=\frac{d x}{\sigma} \iff \sigma \cdot dz = dx 
 \end{array}
 $$</span></div>
 <div class="preview-paragraph-31 preview-line 31 32 33 34 35 36 37" data_line_start="31" data_line_end="37" data_line="31,38" count_line="7"><span class="math-block ">$$
@@ -1016,12 +1019,15 @@ $$</span></div>
 &amp; =1 .
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-39 preview-line 39" data_line_start="39" data_line_end="39" data_line="39,40" count_line="1">Of course, we expect the normal <span class="math-inline ">$\left(\mu, \sigma^{\sigma}\right)$</span> distor should have mean <span class="math-inline ">$\mu$</span> &amp; var <span class="math-inline ">$\sigma^{2}$</span> We shar this ria the MGF.</div>
-<div class="preview-paragraph-41 preview-line 41" data_line_start="41" data_line_end="41" data_line="41,42" count_line="1">Thm 6.6 The MGF of the nomal <span class="math-inline ">$(\mu, \sigma)$</span> disto is given by</div>
+<div class="preview-paragraph-39 preview-line 39" data_line_start="39" data_line_end="39" data_line="39,40" count_line="1">Of course, we expect the normal <span class="math-inline ">$\left(\mu, \sigma\right)$</span> distribution should have mean <span class="math-inline ">$\mu$</span> &amp; var <span class="math-inline ">$\sigma^{2}$</span>. We show this via the MGF.</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-41 preview-line 41" data_line_start="41" data_line_end="41" data_line="41,42" count_line="1"><h2 style="color:rgb(0,0,200)">Theorem 6.6</h2> The MGF of the normal <span class="math-inline ">$(\mu, \sigma)$</span> distribution is given by</div>
 <div class="preview-paragraph-42 preview-line 42 43 44" data_line_start="42" data_line_end="44" data_line="42,45" count_line="3"><span class="math-block ">$$
 M_{x}(t)=e^{\mu t+\frac{1}{2} \sigma^{2} t^{2}}
 $$</span></div>
-<div class="preview-paragraph-46 preview-line 46" data_line_start="46" data_line_end="46" data_line="46,47" count_line="1">Pt By defr</div>
+<div class="preview-paragraph-46 preview-line 46" data_line_start="46" data_line_end="46" data_line="46,47" count_line="1"><span class="math-inline">$Proof).$</span> By definition </div>
 <div class="preview-paragraph-47 preview-line 47 48 49 50 51 52 53 54" data_line_start="47" data_line_end="54" data_line="47,55" count_line="8"><span class="math-block ">$$
 \begin{aligned}
 &amp; M_{x}(t)=E\left(e^{x t}\right) \\
@@ -1030,7 +1036,7 @@ $$</span></div>
 &amp;
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-56 preview-line 56" data_line_start="56" data_line_end="56" data_line="56,57" count_line="1">We camplete the square in the expenent. io.</div>
+<div class="preview-paragraph-56 preview-line 56" data_line_start="56" data_line_end="56" data_line="56,57" count_line="1">We complete the square in the exponent. ie:</div>
 <div class="preview-paragraph-57 preview-line 57 58 59 60 61 62 63 64 65 66" data_line_start="57" data_line_end="66" data_line="57,67" count_line="10"><span class="math-block ">$$
 \begin{aligned}
 -2 x t \sigma^{2}+(x-\mu)^{2}= &amp; -2 x t \sigma^{2}+x^{2}-2 \mu x+\mu^{2} \\
@@ -1060,7 +1066,10 @@ $$</span></div>
 <div class="preview-paragraph-86 preview-line 86 87 88" data_line_start="86" data_line_end="88" data_line="86,89" count_line="3"><span class="math-block ">$$
 M_{x}(t)=e^{\mu t+\frac{1}{2} \sigma^{2} t^{2}} \text { as required. }
 $$</span></div>
-<div class="preview-paragraph-90 preview-line 90" data_line_start="90" data_line_end="90" data_line="90,91" count_line="1">If we diff, we get</div>
+
+<br>
+
+<div class="preview-paragraph-90 preview-line 90" data_line_start="90" data_line_end="90" data_line="90,91" count_line="1">If we differentiate, we get</div>
 <div class="preview-paragraph-91 preview-line 91 92 93 94 95 96 97" data_line_start="91" data_line_end="97" data_line="91,98" count_line="7"><span class="math-block ">$$
 \begin{aligned}
 M_{x}^{\prime}(t) &amp; =\left(\mu+\sigma^{2} t\right) e^{\mu t+\frac{1}{2} \sigma^{2} t^{2}} \\
@@ -1068,59 +1077,82 @@ M_{x}^{\prime \prime}(t) &amp; =\sigma^{2} e^{\mu t+\frac{1}{2} \sigma^{2} t^{2}
 &amp; =\left[\left(\mu+\sigma^{2} t\right)^{2}+\sigma^{2}\right] e^{\mu t+\frac{1}{2} \sigma^{2} t^{2}}
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-99 preview-line 99" data_line_start="99" data_line_end="99" data_line="99,100" count_line="1">If we then set <span class="math-inline ">$t=0$</span> and apply Thm 4.9, we get</div>
+
+<br>
+
+<div class="preview-paragraph-99 preview-line 99" data_line_start="99" data_line_end="99" data_line="99,100" count_line="1">If we then set <span class="math-inline ">$t=0$</span> and apply Theorem 4.9, we get</div>
 <div class="preview-paragraph-100 preview-line 100 101 102 103 104 105" data_line_start="100" data_line_end="105" data_line="100,106" count_line="6"><span class="math-block ">$$
 \begin{aligned}
 &amp; \mu_{1}^{\prime}=M_{x}^{\prime}(0)=\mu \\
 &amp; \mu_{2}^{\prime} M_{x}^{\prime \prime}(0)=\mu^{2}+\sigma^{2}
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-107 preview-line 107" data_line_start="107" data_line_end="107" data_line="107,108" count_line="1">Thus the namal <span class="math-inline ">$(\mu, \sigma)$</span> does incleed have mean <span class="math-inline ">$\mu$</span> and the variance is</div>
+
+<br>
+
+<div class="preview-paragraph-107 preview-line 107" data_line_start="107" data_line_end="107" data_line="107,108" count_line="1">Thus the normal <span class="math-inline ">$(\mu, \sigma)$</span> does indeed have mean <span class="math-inline ">$\mu$</span> and the variance is</div>
 <div class="preview-paragraph-108 preview-line 108 109 110" data_line_start="108" data_line_end="110" data_line="108,111" count_line="3"><span class="math-block ">$$
 \mu_{2}^{\prime}-\left(\mu_{1}^{\prime}\right)^{2}=\mu^{2}+\sigma^{2}-\mu^{2}=\sigma^{2},
 $$</span></div>
-<div class="preview-paragraph-112 preview-line 112" data_line_start="112" data_line_end="112" data_line="112,113" count_line="1">Thus. The mean and variance of the normal ( <span class="math-inline ">$\mu, \sigma$</span> ) disr are <span class="math-inline ">$\mu$</span> and <span class="math-inline ">$\sigma^{2}$</span> resp.</div>
-<div class="preview-paragraph-114 preview-line 114" data_line_start="114" data_line_end="114" data_line="114,115" count_line="1">We can also go the other way and relate the normal <span class="math-inline ">$(\mu, \sigma)$</span> to the standard nomal <span class="math-inline ">$(0,1)$</span>.</div>
-<div class="preview-paragraph-116 preview-line 116" data_line_start="116" data_line_end="116" data_line="116,117" count_line="1">Recall that if <span class="math-inline ">$X$</span> is a rev. mith mean <span class="math-inline ">$\nu$</span> &amp; var <span class="math-inline ">$\tau^{2}$</span>, then the r.v.</div>
+
+<br>
+
+<div class="preview-paragraph-112 preview-line 112" data_line_start="112" data_line_end="112" data_line="112,113" count_line="1"> <b>Thus.</b> The mean and variance of the normal ( <span class="math-inline ">$\mu, \sigma$</span> ) distribution are <span class="math-inline ">$\mu$</span> and <span class="math-inline ">$\sigma^{2}$</span> respectively.</div>
+<div class="preview-paragraph-114 preview-line 114" data_line_start="114" data_line_end="114" data_line="114,115" count_line="1">We can also go the other way and relate the normal <span class="math-inline ">$(\mu, \sigma)$</span> to the standard normal <span class="math-inline ">$(0,1)$</span>.</div>
+
+<br>
+
+Recall that <span class="math-inline ">$X$</span> is a random variable mith mean <span class="math-inline ">$\nu$</span> &amp; var <span class="math-inline ">$\tau^{2}$</span>, then the random variable</div>
 <div class="preview-paragraph-117 preview-line 117 118 119" data_line_start="117" data_line_end="119" data_line="117,120" count_line="3"><span class="math-block ">$$
 Y=a(X+b)
 $$</span></div>
-<div class="preview-paragraph-120 preview-line 120" data_line_start="120" data_line_end="120" data_line="120,121" count_line="1">has mean <span class="math-inline ">$a(v+b)$</span> and ranzuce <span class="math-inline ">$a^{2} \tau^{2}$</span>.</div>
-<div class="preview-paragraph-122 preview-line 122" data_line_start="122" data_line_end="122" data_line="122,123" count_line="1">Thus is <span class="math-inline ">$x$</span> has a romal <span class="math-inline ">$(\mu, \sigma)$</span> distr., then</div>
+<div class="preview-paragraph-120 preview-line 120" data_line_start="120" data_line_end="120" data_line="120,121" count_line="1">has mean <span class="math-inline ">$a(v+b)$</span> and variance <span class="math-inline ">$a^{2} \tau^{2}$</span>.</div>
+<div class="preview-paragraph-122 preview-line 122" data_line_start="122" data_line_end="122" data_line="122,123" count_line="1">Thus if <span class="math-inline ">$x$</span> has a romal <span class="math-inline ">$(\mu, \sigma)$</span> distr., then</div>
 <div class="preview-paragraph-123 preview-line 123 124 125" data_line_start="123" data_line_end="125" data_line="123,126" count_line="3"><span class="math-block ">$$
-y=\frac{1}{\sigma}(x-\mu)
+Y=\frac{1}{\sigma}(x-\mu)
 $$</span></div>
-<div class="preview-paragraph-126 preview-line 126" data_line_start="126" data_line_end="126" data_line="126,127" count_line="1">has mean <span class="math-inline ">$\frac{1}{\sigma}(\mu-\mu)=0$</span> and vanima <span class="math-inline ">$\frac{1}{\sigma^{2}} \cdot \sigma^{2}=1$</span>.</div>
-<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-128 preview-line 128" id="we-have-proved" data_line_start="128" data_line_end="128" data_line="128,129" count_line="1">
-We have proved</h2>
-<div class="preview-paragraph-130 preview-line 130" data_line_start="130" data_line_end="130" data_line="130,131" count_line="1">Thm 6.7 If <span class="math-inline ">$X$</span> is <span class="math-inline ">$\operatorname{normal}(\mu, \sigma)$</span>, then</div>
+<div class="preview-paragraph-126 preview-line 126" data_line_start="126" data_line_end="126" data_line="126,127" count_line="1">has mean <span class="math-inline ">$\frac{1}{\sigma}(\mu-\mu)=0$</span> and variance <span class="math-inline ">$\frac{1}{\sigma^{2}} \cdot \sigma^{2}=1$</span>.</div>
+
+We have proved the following:
+
+<br><hr><br>
+
+<h2 type="section" data-unnumbered="true" class="section-title preview-paragraph-128 preview-line 128" id="we-have-proved" data_line_start="128" data_line_end="128" data_line="128,129" count_line="1" style="color:rgb(0,0,200)">
+Theorem 6.7)</h2>
+
+
+
+<div class="preview-paragraph-130 preview-line 130" data_line_start="130" data_line_end="130" data_line="130,131" count_line="1">Theorem 6.7 states that, if <span class="math-inline ">$X$</span> is <span class="math-inline ">$\operatorname{normal}(\mu, \sigma)$</span>, then</div>
 <div class="preview-paragraph-131 preview-line 131 132 133" data_line_start="131" data_line_end="133" data_line="131,134" count_line="3"><span class="math-block ">$$
 Z=\frac{X-\mu}{\sigma}
 $$</span></div>
-<div class="preview-paragraph-134 preview-line 134" data_line_start="134" data_line_end="134" data_line="134,135" count_line="1">is a standard normal r.v.</div>
-<div class="preview-paragraph-136 preview-line 136" data_line_start="136" data_line_end="136" data_line="136,137" count_line="1">This result can be used to calculate probs. assuciated with nomal rivisThe main drarback is that there is no nice fermula for the CDF</div>
+<div class="preview-paragraph-134 preview-line 134" data_line_start="134" data_line_end="134" data_line="134,135" count_line="1">is a standard normal random variable</div>
+<div class="preview-paragraph-136 preview-line 136" data_line_start="136" data_line_end="136" data_line="136,137" count_line="1">This result can be used to calculate probabilities assuciated with normal random variables. The main drawback is that there is no nice formula for the CDF</div>
 <div class="preview-paragraph-137 preview-line 137 138 139" data_line_start="137" data_line_end="139" data_line="137,140" count_line="3"><span class="math-block ">$$
-F(x)=P(x \leqslant x)
+F(x)=P(x \leq x)
 $$</span></div>
 <div class="preview-paragraph-140 preview-line 140" data_line_start="140" data_line_end="140" data_line="140,141" count_line="1">of a normal, and we have to resort to tables. Let us denote by</div>
 <div class="preview-paragraph-141 preview-line 141 142 143" data_line_start="141" data_line_end="143" data_line="141,144" count_line="3"><span class="math-block ">$$
-\Phi(x)=P(z \leqslant x),
+\Phi(x)=P(z \leq x),
 $$</span></div>
-<div class="preview-paragraph-144 preview-line 144" data_line_start="144" data_line_end="144" data_line="144,145" count_line="1">the CDF of <span class="math-inline ">$a$</span> std nomal <span class="math-inline ">$(0,1)$</span>.</div>
-<div class="preview-paragraph-146 preview-line 146" data_line_start="146" data_line_end="146" data_line="146,147" count_line="1">Ex. Let <span class="math-inline ">$x$</span> be a normal <span class="math-inline ">$(\mu, \sigma)$</span> r.v.</div>
+<div class="preview-paragraph-144 preview-line 144" data_line_start="144" data_line_end="144" data_line="144,145" count_line="1">the CDF of <span class="math-inline ">a</span> standard normal <span class="math-inline ">$(0,1)$</span>.</div>
+
+<br><hr><br>
+
+<div class="preview-paragraph-146 preview-line 146" data_line_start="146" data_line_end="146" data_line="146,147" count_line="1"> <h2 style="color:rgb(0,150,0)">Example).</h2> Let <span class="math-inline ">$x$</span> be a normal <span class="math-inline ">$(\mu, \sigma)$</span> random variable</div>
 <div class="preview-paragraph-148 preview-line 148" data_line_start="148" data_line_end="148" data_line="148,149" count_line="1">Find the prob. the value of <span class="math-inline ">$X$</span> is within 2 standard deviations of the mean.</div>
-<div class="preview-paragraph-150 preview-line 150" data_line_start="150" data_line_end="150" data_line="150,151" count_line="1">Suln. We want</div>
+<div class="preview-paragraph-150 preview-line 150" data_line_start="150" data_line_end="150" data_line="150,151" count_line="1"> <h4 style="color:rgb(200,0,0)">Solution).</h4> We want</div>
 <div class="preview-paragraph-151 preview-line 151 152 153 154 155 156 157 158 159 160" data_line_start="151" data_line_end="160" data_line="151,161" count_line="10"><span class="math-block ">$$
 \begin{aligned}
-&amp; P(\mu-2 \sigma \leqslant x \leqslant \mu+2 \sigma) \\
-= &amp; P(-2 \sigma \leqslant x-\mu \leqslant 2 \sigma) \\
-= &amp; P\left(-2 \leqslant \frac{x-\mu}{\sigma} \leqslant 2\right) \\
-= &amp; P(-2 \leqslant z \leqslant 2) \\
+&amp; P(\mu-2 \sigma \leq x \leq \mu+2 \sigma) \\
+= &amp; P(-2 \sigma \leq x-\mu \leq 2 \sigma) \\
+= &amp; P\left(-2 \leq \frac{x-\mu}{\sigma} \leq 2\right) \\
+= &amp; P(-2 \leq z \leq 2) \\
 = &amp; \Phi(2)-\Phi(-2) \\
 \approx &amp; .95 .
 \end{aligned}
 $$</span></div>
-<div class="preview-paragraph-161 preview-line 161" data_line_start="161" data_line_end="161" data_line="161,162" count_line="1">where <span class="math-inline ">$Z$</span> is a sted. normal by thm 6.7.</div>
+<div class="preview-paragraph-161 preview-line 161" data_line_start="161" data_line_end="161" data_line="161,162" count_line="1">Notice that this result holds true since <span class="math-inline ">$Z$</span> is a standard normal by theorem 6.7.</div>
 
     </div>
   </div>
